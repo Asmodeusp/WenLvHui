@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/group"
+        android:layout_marginBottom="0dp"></com.zhy.autolayout.AutoFrameLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/H3"
+        android:weightSum="5">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/HomeButton"
+            android:layout_width="0px"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_marginTop="20px"
+                android:id="@+id/HomeImageView"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_44"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/home" />
+
+            <TextView
+                android:id="@+id/HomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/H1"
+                android:textSize="21px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/SpaceButton"
+            android:orientation="vertical"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_marginTop="20px"
+                android:id="@+id/SpaceImageView"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_44"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/space" />
+
+            <TextView
+                android:id="@+id/SpaceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空间"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/H1"
+                android:textSize="21px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ActivityButton"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_marginTop="20px"
+                android:id="@+id/ActivityImageView"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_44"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/activity" />
+
+            <TextView
+                android:id="@+id/ActivityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/H1"
+                android:textSize="21px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:orientation="vertical"
+            android:id="@+id/CircleButton"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_marginTop="20px"
+                android:id="@+id/CircleImageView"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_44"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/circle" />
+
+            <TextView
+                android:id="@+id/CircleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圈子"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/H1"
+                android:textSize="21px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:orientation="vertical"
+            android:id="@+id/MyselfButton"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_marginTop="20px"
+                android:id="@+id/MyselfImageView"
+                android:layout_width="@dimen/px_44"
+                android:layout_height="@dimen/px_44"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/myself" />
+
+            <TextView
+                android:id="@+id/MyselfText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:layout_marginTop="@dimen/px_10"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/H1"
+                android:textSize="21px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>
