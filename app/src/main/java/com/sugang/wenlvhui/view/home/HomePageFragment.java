@@ -27,6 +27,9 @@ public class HomePageFragment extends BaseFragment {
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_home_page;
+
+
+
     }
 
     @Override
