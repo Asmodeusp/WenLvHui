@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.HomePageFragment">
+
+    <com.sugang.wenlvhui.view.ui.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/HomePager_Banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_500"></com.youth.banner.Banner>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/HomePager_ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200px"></android.support.v4.view.ViewPager>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/HomePager_Tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="6px"></android.support.design.widget.TabLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.sugang.wenlvhui.view.ui.MyScrollView>
+</com.zhy.autolayout.AutoLinearLayout>
