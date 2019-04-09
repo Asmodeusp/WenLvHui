@@ -22,11 +22,37 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/HomePager_ViewPager"
                 android:layout_width="match_parent"
-                android:layout_height="200px"></android.support.v4.view.ViewPager>
-            <android.support.design.widget.TabLayout
-                android:id="@+id/HomePager_Tablayout"
+                android:layout_height="112px"></android.support.v4.view.ViewPager>
+
+            <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="6px"></android.support.design.widget.TabLayout>
+                android:layout_height="6px">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="150px"
+                    android:layout_height="6px"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <View
+                        android:background="@color/H2"
+                        android:id="@+id/Featrue_One"
+                        android:layout_width="60px"
+                        android:layout_height="6px"></View>
+
+                    <View
+                        android:background="@color/H1"
+                        android:id="@+id/Featrue_Two"
+                        android:layout_width="60px"
+                        android:layout_height="6px"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"></View>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
         </com.zhy.autolayout.AutoLinearLayout>
     </com.sugang.wenlvhui.view.ui.MyScrollView>
 </com.zhy.autolayout.AutoLinearLayout>
