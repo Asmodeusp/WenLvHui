@@ -1,9 +1,9 @@
 package com.sugang.wenlvhui.view.home;
 
 
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
@@ -28,6 +28,12 @@ public class HomePageFragment extends BaseFragment {
     ViewPager HomePagerViewPager;
 
     ArrayList<Fragment> fragments = new ArrayList<>();
+    @BindView(R.id.Featrue_One)
+    View FeatrueOne;
+    @BindView(R.id.Featrue_Two)
+    View FeatrueTwo;
+
+
     public HomePageFragment() {
         // Required empty public constructor
     }
@@ -48,6 +54,29 @@ public class HomePageFragment extends BaseFragment {
         fragments.add(featureTwoFragment);
         HomeVPAdapter homeVPAdapter = new HomeVPAdapter(getActivity().getSupportFragmentManager(), fragments);
         HomePagerViewPager.setAdapter(homeVPAdapter);
+        HomePagerViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                if (i==0) {
+                    FeatrueOne.setBackgroundColor(getResources().getColor(R.color.H2));
+                    FeatrueTwo.setBackgroundColor(getResources().getColor(R.color.H1));
+                }else{
+                    FeatrueOne.setBackgroundColor(getResources().getColor(R.color.H1));
+                    FeatrueTwo.setBackgroundColor(getResources().getColor(R.color.H2));
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
 
     }
 

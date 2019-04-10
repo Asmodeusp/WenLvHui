@@ -17,42 +17,181 @@
             <com.youth.banner.Banner
                 android:id="@+id/HomePager_Banner"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/px_500"></com.youth.banner.Banner>
+                android:layout_height="428px"></com.youth.banner.Banner>
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/HomePager_ViewPager"
                 android:layout_width="match_parent"
-                android:layout_height="112px"></android.support.v4.view.ViewPager>
+                android:layout_height="140px"></android.support.v4.view.ViewPager>
 
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="6px">
 
                 <com.zhy.autolayout.AutoRelativeLayout
-                    android:layout_width="150px"
+                    android:layout_width="110px"
                     android:layout_height="6px"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal">
 
                     <View
-                        android:background="@color/H2"
                         android:id="@+id/Featrue_One"
-                        android:layout_width="60px"
-                        android:layout_height="6px"></View>
+                        android:layout_width="40px"
+                        android:layout_height="6px"
+                        android:background="@color/H2"></View>
 
                     <View
-                        android:background="@color/H1"
                         android:id="@+id/Featrue_Two"
-                        android:layout_width="60px"
+                        android:layout_width="40px"
                         android:layout_height="6px"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"></View>
+                        android:layout_alignParentRight="true"
+                        android:background="@color/H1"></View>
 
                 </com.zhy.autolayout.AutoRelativeLayout>
-
             </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="316px"
+                android:layout_marginTop="10px"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.zhy.autolayout.AutoLinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/px_163"
+                        android:layout_height="@dimen/px_30"
+                        android:layout_marginLeft="40px"
+                        android:layout_marginTop="10px"
+                        android:background="@drawable/youhui_btn"
+                        android:gravity="center"
+                        android:text="优惠卷可用"
+                        android:textColor="#ffffff"
+                        android:textSize="18px" />
+
+                    <ImageView
+                        android:id="@+id/YouHui_Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25px"
+                            android:gravity="center"
+                            android:text="唯有匠心  不负光阴"
+                            android:textColor="#303030"
+                            android:textSize="24px" />
+
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/px_16"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="每日惊喜特大优惠"
+                                android:textColor="#8C8C8C"
+                                android:textSize="18px" />
+
+                            <ImageView
+                                android:layout_width="19px"
+                                android:layout_height="19px"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10px"
+                                android:src="@mipmap/loadmore" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="36px"
+                            android:gravity="center"
+                            android:text="给时光以生命"
+                            android:textColor="#303030"
+                            android:textSize="24px" />
+
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/px_16"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="限时抢购"
+                                android:textColor="#8C8C8C"
+                                android:textSize="18px" />
+
+                            <ImageView
+                                android:layout_width="19px"
+                                android:layout_height="19px"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10px"
+                                android:src="@mipmap/loadmore" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
         </com.zhy.autolayout.AutoLinearLayout>
     </com.sugang.wenlvhui.view.ui.MyScrollView>
 </com.zhy.autolayout.AutoLinearLayout>
