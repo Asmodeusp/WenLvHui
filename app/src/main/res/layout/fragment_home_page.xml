@@ -7,7 +7,8 @@
 
     <com.sugang.wenlvhui.view.ui.MyScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="match_parent"
@@ -61,7 +62,7 @@
                 android:weightSum="3">
 
                 <com.zhy.autolayout.AutoLinearLayout
-
+                    android:id="@+id/HomePager_YouHuijuanButton"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -82,7 +83,9 @@
                         android:id="@+id/YouHui_Image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="20px" />
+                        android:layout_marginTop="20px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher" />
                 </com.zhy.autolayout.AutoLinearLayout>
 
                 <com.zhy.autolayout.AutoLinearLayout
@@ -93,6 +96,7 @@
                     android:weightSum="2">
 
                     <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/HomePager_WeiJiangxinButton"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -132,6 +136,7 @@
                     </com.zhy.autolayout.AutoLinearLayout>
 
                     <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/HomePager_GeiShiGuangButton"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -181,17 +186,197 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/HomePager_WeiJiangxinImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5px"
+                        android:background="#FFFFFF"></View>
 
                     <ImageView
+                        android:id="@+id/HomePager_GeiShiGuangImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher" />
                 </com.zhy.autolayout.AutoLinearLayout>
 
             </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_34">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28px"
+                    android:text="最新活动"
+                    android:textColor="@color/H3"
+                    android:textSize="30px" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/HomePager_ZuiXinHuoDongMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/HomePager_ZuiXinHuoDongMoreButton"
+                        android:layout_marginRight="28px"
+                        android:text="更多>>"
+                        android:textColor="@color/H2"
+                        android:textSize="20px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18px"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/HomePager_ZuiXinHuoDongImage"
+                    android:layout_width="721px"
+                    android:layout_height="263px"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_34">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28px"
+                    android:text="最新资讯"
+                    android:textColor="@color/H3"
+                    android:textSize="30px" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/HomePager_ZuiXinZiXunMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="28px"
+                        android:text="更多>>"
+                        android:textColor="@color/H2"
+                        android:textSize="20px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_266"
+                android:layout_marginTop="18px"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="380px"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/HomePager_ZhengCeTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28px"
+                        android:layout_marginTop="20px"
+                        android:maxLength="17"
+                        android:text="2019年宁夏高考异地政策"
+                        android:textColor="@color/H3"
+                        android:textSize="@dimen/px_24" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28px"
+                        android:layout_marginTop="5px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/HomePager_ZhengCeTimeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2019/3/5"
+                            android:textColor="@color/H4"
+                            android:textSize="18px" />
+
+                        <TextView
+                            android:id="@+id/HomePager_ZhengCeAuthorText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_10"
+                            android:text="张金龙"
+                            android:textColor="@color/H4"
+                            android:textSize="18px" />
+
+                        <TextView
+                            android:id="@+id/HomePager_ZhengCeBrowseVolumeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_10"
+
+                            android:text="浏览量：1358"
+                            android:textColor="@color/H4"
+                            android:textSize="18px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28px"
+                        android:layout_marginTop="50px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/HomePager_ZhengCeDescribeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/px_32"
+                            android:text="2019/3/51234567876trertyhjhgfddrtyufdgfdgdggdgdgd"
+                            android:textColor="@color/H4"
+                            android:textSize="18px" />
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/HomePager_ZhengCeImage"
+                        android:layout_width="313px"
+                        android:layout_height="@dimen/px_222"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="18px"
+                        android:layout_marginRight="28px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
         </com.zhy.autolayout.AutoLinearLayout>
     </com.sugang.wenlvhui.view.ui.MyScrollView>
 </com.zhy.autolayout.AutoLinearLayout>

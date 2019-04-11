@@ -1,16 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.myself.MyselfFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textSize="50dp"
-        android:text="wode"
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       />
+        android:layout_height="80px">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/Myself_UserNameText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/H3"
+            android:gravity="center"
+            android:text="夏夜中的星辰"
+            android:textColor="#FFFFFF"
+            android:textSize="30px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/Myself_UserHeandImage"
+            android:layout_width="@dimen/px_124"
+            android:layout_height="@dimen/px_124"
+            android:layout_marginLeft="@dimen/px_30"
+            android:src="@mipmap/ic_launcher" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:weightSum="3">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/Myself_CollectionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="@dimen/px_188"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:background="@drawable/myself_text"
+                    android:drawableRight="@mipmap/collection"
+                    android:drawablePadding="@dimen/px_10"
+                    android:gravity="center"
+                    android:text="收藏"
+                    android:textColor="@color/H3"
+                    android:textSize="@dimen/px_20" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/Myself_CardCouponButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="@dimen/px_188"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:background="@drawable/myself_text"
+                    android:drawableRight="@mipmap/card_coupon"
+                    android:drawablePadding="@dimen/px_10"
+                    android:gravity="center"
+                    android:text="卡劵"
+                    android:textColor="@color/H3"
+                    android:textSize="@dimen/px_20" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/Myself_SettingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/px_40"
+                    android:layout_height="@dimen/px_40"
+                    android:layout_marginLeft="@dimen/px_55"
+                    android:gravity="center"
+                    android:src="@mipmap/setting" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/Myself_AllOrderButton"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_marginLeft="@dimen/px_64"
+        android:layout_marginTop="44px"
+        android:layout_marginRight="@dimen/px_64">
+
+        <TextView
+            android:id="@+id/Myself_AllOrderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部订单"
+            android:textColor="@color/H3"
+            android:textSize="@dimen/px_24" />
+
+        <ImageView
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/goin" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="721px"
+        android:layout_height="2px"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/H1"></View>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="721px"
+        android:layout_height="116px"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="5">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Myself_DaiFuKuanButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待付款"
+                android:textColor="@color/H2"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Myself_DaiFaHuoButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待发货"
+                android:textColor="@color/H2"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Myself_DaiShuoHuoButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待收货"
+                android:textColor="@color/H2"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Myself_PingJiaButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评价"
+                android:textColor="@color/H2"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Myself_TuiKuanButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款"
+                android:textColor="@color/H2"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/Myself_RenZhengCenterButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginLeft="@dimen/px_30"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="认证中心"
+            android:textColor="@color/H3"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/Myself_TouSuJianYiButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginLeft="@dimen/px_30"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投诉建议"
+            android:textColor="@color/H3"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/Myself_MesssageTongzhiButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginLeft="@dimen/px_30"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息通知"
+            android:textColor="@color/H3"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/Myself_AddressSettingButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginLeft="@dimen/px_30"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址管理"
+            android:textColor="@color/H3"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
