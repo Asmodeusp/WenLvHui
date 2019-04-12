@@ -1,10 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.circle.CircleFragment">
 
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Circle_CcreenButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/screen" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Circle_PublishButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/publish" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文旅圈"
+            android:textColor="@color/H1" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.sugang.wenlvhui.view.ui.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/Circle_MyCirleButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_127"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Circle_MyCirleImage"
+                    android:layout_width="@dimen/px_73"
+                    android:layout_height="@dimen/px_73"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/ic_launcher_round" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/px_40">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="我的圈子"
+                        android:textColor="@color/H3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/px_50"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20px"
+                        android:src="@mipmap/goin" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/Circle_MyFollowButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_127"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Circle_MyFollowImage"
+                    android:layout_width="@dimen/px_73"
+                    android:layout_height="@dimen/px_73"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/ic_launcher_round" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/px_40">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="我的关注"
+                        android:textColor="@color/H3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/px_50"
+                        android:layout_height="@dimen/px_50"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20px"
+                        android:src="@mipmap/goin" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="108px"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Circle_SearchEdText"
+                    android:layout_width="595px"
+                    android:layout_height="@dimen/px_40"
+                    android:background="@drawable/myself_text"
+                    android:gravity="center_horizontal"
+                    android:hint="请输入你想看的圈子" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:text="猜你喜欢"
+                    android:textColor="@color/H3" />
+
+                <ImageView
+                    android:id="@+id/Circle_CaiNiXiHuanRefreshButton"
+                    android:layout_width="@dimen/px_50"
+                    android:layout_height="@dimen/px_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_106"
+                    android:src="@mipmap/refresh" />
+
+                <ImageView
+                    android:id="@+id/Circle_CaiNiXiHuanMoreButton"
+                    android:layout_width="@dimen/px_50"
+                    android:layout_height="@dimen/px_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_28"
+                    android:src="@mipmap/more" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Circle_CaiNiXiHuanRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.sugang.wenlvhui.view.ui.MyScrollView>
 
 
-</FrameLayout>
+</com.zhy.autolayout.AutoLinearLayout>
