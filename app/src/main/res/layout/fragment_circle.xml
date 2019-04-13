@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="文旅圈"
-            android:textColor="@color/H1" />
+            android:textSize="@dimen/px_30"
+            android:textColor="#FFFFFF" />
     </com.zhy.autolayout.AutoRelativeLayout>
 
     <com.sugang.wenlvhui.view.ui.MyScrollView
