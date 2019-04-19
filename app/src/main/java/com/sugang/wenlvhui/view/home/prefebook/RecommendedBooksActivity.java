@@ -4,13 +4,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.base.BaseActivity;
 
 //好书推荐
-public class RecommendedBooksActivity extends AppCompatActivity {
+public class RecommendedBooksActivity extends BaseActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommended_books);
+    protected int getLayoutId() {
+        return R.layout.activity_recommended_books;
+    }
+
+    @Override
+    protected void init() {
+
+    }
+
+    @Override
+    protected void loadDate() {
+
     }
 }

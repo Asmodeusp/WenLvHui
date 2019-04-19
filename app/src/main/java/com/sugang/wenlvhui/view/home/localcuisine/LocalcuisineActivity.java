@@ -4,12 +4,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.base.BaseActivity;
+
 //地方美食
-public class LocalcuisineActivity extends AppCompatActivity {
+public class LocalcuisineActivity extends BaseActivity {
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_localcuisine);
+    protected int getLayoutId() {
+        return R.layout.activity_localcuisine;
+    }
+
+    @Override
+    protected void init() {
+
+    }
+
+    @Override
+    protected void loadDate() {
+
     }
 }

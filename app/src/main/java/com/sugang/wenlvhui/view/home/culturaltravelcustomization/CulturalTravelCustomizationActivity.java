@@ -4,13 +4,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.base.BaseActivity;
 
 //文旅定制
-public class CulturalTravelCustomizationActivity extends AppCompatActivity {
+public class CulturalTravelCustomizationActivity extends BaseActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cultural_travel_customization);
+    protected int getLayoutId() {
+        return R.layout.activity_cultural_travel_customization;
+    }
+
+    @Override
+    protected void init() {
+
+    }
+
+    @Override
+    protected void loadDate() {
+
     }
 }
