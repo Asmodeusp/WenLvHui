@@ -31,11 +31,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1">
+
         <ImageView
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/intangible_cultural_heritage"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/intangible_cultural_heritage" />
         <TextView
             android:layout_gravity="center_horizontal"
             android:text="文创非遗"
