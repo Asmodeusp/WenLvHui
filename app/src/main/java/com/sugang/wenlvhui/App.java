@@ -14,9 +14,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         AutoLayoutConifg.getInstance().useDeviceSize();
-
-
-
     }
 
 //    @Override
@@ -24,25 +21,4 @@ public class App extends Application {
 //        super.attachBaseContext(base);
 //        MultiDex.install(this);
 //    }
-
-
-
-
-//    //设置全局的下拉刷新样式
-//    static {
-//        SmartRefreshLayout.setDefaultRefreshHeaderCreater(new DefaultRefreshHeaderCreater() {
-//            @SuppressLint("ResourceAsColor")
-//            @NonNull
-//            @Override
-//            public RefreshHeader createRefreshHeader(Context context, RefreshLayout refreshLayout) {
-//                MyRefreshAnimHeader myRefreshAnimHeader = new MyRefreshAnimHeader(context);
-//                myRefreshAnimHeader.setPrimaryColors(R.color.h1);
-//                return myRefreshAnimHeader;
-//            }
-//        });
-//    }
-
-
-
-
 }
