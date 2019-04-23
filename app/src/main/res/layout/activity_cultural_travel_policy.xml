@@ -21,7 +21,7 @@
             <ImageView
                 android:layout_width="@dimen/px_50"
                 android:layout_height="@dimen/px_50"
-                android:src="@mipmap/screen" />
+                android:src="@mipmap/goback" />
         </com.zhy.autolayout.AutoLinearLayout>
 
 
@@ -39,4 +39,13 @@
         android:id="@+id/CulturalTravelPolicy_HeadImage"
         android:layout_width="match_parent"
         android:layout_height="371px" />
+    <TextView
+        android:background="@drawable/serchshape"
+        android:layout_marginRight="@dimen/px_76"
+        android:layout_marginLeft="76px"
+        android:gravity="center"
+        android:textColor="@color/H6"
+        android:text="大家正在搜：开放二胎"
+        android:layout_width="match_parent"
+        android:layout_height="40px" />
 </com.zhy.autolayout.AutoLinearLayout>
