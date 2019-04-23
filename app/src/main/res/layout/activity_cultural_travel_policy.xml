@@ -35,17 +35,124 @@
 
     </com.zhy.autolayout.AutoRelativeLayout>
 
-    <ImageView
-        android:id="@+id/CulturalTravelPolicy_HeadImage"
+    <com.sugang.wenlvhui.view.ui.MyScrollView
         android:layout_width="match_parent"
-        android:layout_height="371px" />
-    <TextView
-        android:background="@drawable/serchshape"
-        android:layout_marginRight="@dimen/px_76"
-        android:layout_marginLeft="76px"
-        android:gravity="center"
-        android:textColor="@color/H6"
-        android:text="大家正在搜：开放二胎"
-        android:layout_width="match_parent"
-        android:layout_height="40px" />
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/CulturalTravelPolicy_HeadImage"
+                android:layout_width="match_parent"
+                android:layout_height="371px" />
+
+            <TextView
+                android:id="@+id/CulturalTravelPolicy_SerchEd"
+                android:layout_width="match_parent"
+                android:layout_height="40px"
+                android:layout_marginLeft="76px"
+                android:layout_marginTop="@dimen/px_24"
+                android:layout_marginRight="@dimen/px_76"
+                android:layout_marginBottom="@dimen/px_37"
+                android:background="@drawable/serchshape"
+                android:gravity="center"
+                android:text="大家正在搜：开放二胎"
+                android:textColor="@color/H6" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="74px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:text="項目公告"
+                    android:textColor="@color/H3" />
+
+                <ImageView
+                    android:id="@+id/CulturalTravelPolicy_XiangMuGongGaoMoreButton"
+                    android:layout_width="@dimen/px_50"
+                    android:layout_height="@dimen/px_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_28"
+                    android:src="@mipmap/more" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/CulturalTravelPolicy_XiangMuGongGaoRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_14"></android.support.v7.widget.RecyclerView>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_marginTop="@dimen/px_32"
+                    android:text="资讯动态"
+                    android:textColor="@color/H3" />
+
+                <ImageView
+                    android:id="@+id/CulturalTravelPolicy_ZiXunDongTaiMoreButton"
+                    android:layout_width="@dimen/px_50"
+                    android:layout_height="@dimen/px_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_28"
+                    android:src="@mipmap/more" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/CulturalTravelPolicy_ZiXunDongTaiRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_14"></android.support.v7.widget.RecyclerView>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:layout_marginTop="@dimen/px_32"
+                    android:text="政策解读"
+                    android:textColor="@color/H3" />
+
+                <ImageView
+                    android:id="@+id/CulturalTravelPolicy_ZhenCeJieDuRMoreButton"
+                    android:layout_width="@dimen/px_50"
+                    android:layout_height="@dimen/px_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_28"
+                    android:src="@mipmap/more" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/CulturalTravelPolicy_ZhenCeJieDuRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_14"></android.support.v7.widget.RecyclerView>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.sugang.wenlvhui.view.ui.MyScrollView>
+
 </com.zhy.autolayout.AutoLinearLayout>
