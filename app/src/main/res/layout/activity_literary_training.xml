@@ -1,9 +1,354 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.home.literarytraining.LiteraryTrainingActivity">
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
 
-</android.support.constraint.ConstraintLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/LiteraryTraining_ReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文艺培训"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <com.sugang.wenlvhui.view.ui.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_7"
+                android:weightSum="2">
+                <!--唱歌-->
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_SingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/sing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="唱歌"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_DanceButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/dance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="舞蹈"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_7"
+                android:weightSum="2">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_ShuFaButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/shufa" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="书法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_PaperCutButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/paper_cut" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="剪纸"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_7"
+                android:weightSum="2">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_CixiuButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/embroidery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="刺绣"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_YueQiButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/instruments" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="乐器"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_7"
+                android:weightSum="2">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_jianshenButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/bodybuilding" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="健身"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_HuihuaButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/painting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="绘画"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_7"
+                android:weightSum="2">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_SheYingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/sheying" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="摄影"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_WushuButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/wushu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="舞蹈"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_7"
+                android:weightSum="2">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/LiteraryTraining_TabletennisButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/table_tennis" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="乒乓球"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/LiteraryTraining_SwimmingButton"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="368px"
+                        android:layout_height="@dimen/px_182"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/swimming" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="游泳"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.sugang.wenlvhui.view.ui.MyScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

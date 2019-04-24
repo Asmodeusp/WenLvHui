@@ -114,15 +114,6 @@ public class MainActivity extends BaseActivity {
 
 
 
-//    //设置字体颜色
-//    private void setTextColor(String color) {
-//
-//        HomeText.setTextColor(Color.parseColor(color));
-//        SerializationText.setTextColor(Color.parseColor(color));
-//        MessageText.setTextColor(Color.parseColor(color));
-//        MyselfText.setTextColor(Color.parseColor(color));
-//
-//    }
 
 
 }

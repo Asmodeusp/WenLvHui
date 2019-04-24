@@ -71,6 +71,7 @@ public class CulturalTravelPolicyActivity extends BaseActivity {
             case R.id.CulturalTravelPolicy_HeadImage:
                 break;
             case R.id.CulturalTravelPolicy_SerchEd:
+                startActivity(new Intent(this,SerchActivity.class));
                 break;
             case R.id.CulturalTravelPolicy_XiangMuGongGaoMoreButton:
                 startActivity(new Intent(this,XiangmugonggaoListActivity.class));
