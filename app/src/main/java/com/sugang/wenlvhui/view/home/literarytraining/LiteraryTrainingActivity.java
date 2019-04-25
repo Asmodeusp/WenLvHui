@@ -1,10 +1,13 @@
 package com.sugang.wenlvhui.view.home.literarytraining;
 
 
+import android.content.Intent;
 import android.view.View;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.AutoRelativeLayout;
 
@@ -67,39 +70,63 @@ public class LiteraryTrainingActivity extends BaseActivity {
                 break;
             //歌唱
             case R.id.LiteraryTraining_SingButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"歌唱");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //舞蹈
             case R.id.LiteraryTraining_DanceButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"舞蹈");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //书法
             case R.id.LiteraryTraining_ShuFaButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"书法");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //剪纸
             case R.id.LiteraryTraining_PaperCutButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"剪纸");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //刺绣
             case R.id.LiteraryTraining_CixiuButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"刺绣");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //乐器
             case R.id.LiteraryTraining_YueQiButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"乐器");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //健身
             case R.id.LiteraryTraining_jianshenButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"健身");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //绘画
             case R.id.LiteraryTraining_HuihuaButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"绘画");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //摄影
             case R.id.LiteraryTraining_SheYingButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"摄影");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //武术
             case R.id.LiteraryTraining_WushuButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"武术");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //乒乓球
             case R.id.LiteraryTraining_TabletennisButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"乒乓球");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //游泳
             case R.id.LiteraryTraining_SwimmingButton:
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"游泳");
+                startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
         }
     }

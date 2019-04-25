@@ -24,7 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.home.culturaltravel.SerchActivity"></activity>
+        <activity android:name=".view.home.literarytraining.LiteraryTrainingDetailsActivity"></activity>
+        <activity android:name=".view.home.culturaltravel.SerchActivity" />
         <activity android:name=".view.home.culturaltravel.ZixundongtailistActivity" />
         <activity android:name=".view.home.culturaltravel.ZhengcejiedulistActivity" />
         <activity android:name=".view.home.culturaltravel.XiangmugonggaoListActivity" />
