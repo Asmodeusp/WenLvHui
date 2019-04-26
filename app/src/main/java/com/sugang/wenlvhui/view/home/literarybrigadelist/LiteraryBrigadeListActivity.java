@@ -1,7 +1,5 @@
 package com.sugang.wenlvhui.view.home.literarybrigadelist;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
