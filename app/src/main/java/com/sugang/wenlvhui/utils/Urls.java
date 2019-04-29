@@ -2,7 +2,7 @@ package com.sugang.wenlvhui.utils;
 
 public class Urls {
     //基本路径
-    public static final String BASE_URL = "http://api.dev.zhenmanapp.com/";
+    public static final String BASE_URL = "http://47.92.174.98:8011/";
     //登陆
     public static final String LOGING = "login/passwordLogin";
     //  友盟第三方登录{QQ 微信，微博   的注册和登陆}
