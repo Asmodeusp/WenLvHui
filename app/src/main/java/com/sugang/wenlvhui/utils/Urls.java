@@ -2,7 +2,7 @@ package com.sugang.wenlvhui.utils;
 
 public class Urls {
     //基本路径
-    public static final String BASE_URL = "http://47.92.174.98:8011/";
+    public static final String BASE_URL = "http://www.zwwlh.com:8011/";
     //文旅政策
     public static final String WENLV_ZHENGCE  = "wenlv/wenlvzhengce_list";
     //  友盟第三方登录{QQ 微信，微博   的注册和登陆}
