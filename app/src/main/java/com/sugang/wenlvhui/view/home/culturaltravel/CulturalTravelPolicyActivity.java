@@ -1,22 +1,31 @@
 package com.sugang.wenlvhui.view.home.culturaltravel;
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
+import com.sugang.wenlvhui.contract.home.wlze.WlzePageContract;
+import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
+import com.sugang.wenlvhui.view.home.adapter.CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter;
+import com.sugang.wenlvhui.view.home.adapter.Wlzc_zcjdRecyAdapter;
+import com.sugang.wenlvhui.view.home.adapter.Wlzc_zxdtRecyAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 
+
+import java.util.List;
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 //文旅政策
-public class CulturalTravelPolicyActivity extends BaseActivity {
+public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter> implements WlzePageContract.WlzePageView {
     //返回
     @BindView(R.id.CulturalTravelPolicy_ReturnButton)
     AutoLinearLayout CulturalTravelPolicyReturnButton;
@@ -44,6 +53,7 @@ public class CulturalTravelPolicyActivity extends BaseActivity {
     //政策解读Recycler
     @BindView(R.id.CulturalTravelPolicy_ZhenCeJieDuRecycler)
     RecyclerView CulturalTravelPolicyZhenCeJieDuRecycler;
+    private Wenlvzhengcebean wenlvzhengcebean;
 
     @Override
     protected int getLayoutId() {
@@ -57,9 +67,9 @@ public class CulturalTravelPolicyActivity extends BaseActivity {
 
     @Override
     protected void loadDate() {
+        presenter.getWenlvzhengcebeanData("1");
 
     }
-
 
 
     @OnClick({R.id.CulturalTravelPolicy_ReturnButton, R.id.CulturalTravelPolicy_HeadImage, R.id.CulturalTravelPolicy_SerchEd, R.id.CulturalTravelPolicy_XiangMuGongGaoMoreButton, R.id.CulturalTravelPolicy_ZiXunDongTaiMoreButton, R.id.CulturalTravelPolicy_ZhenCeJieDuRMoreButton})
@@ -71,17 +81,65 @@ public class CulturalTravelPolicyActivity extends BaseActivity {
             case R.id.CulturalTravelPolicy_HeadImage:
                 break;
             case R.id.CulturalTravelPolicy_SerchEd:
-                startActivity(new Intent(this,SerchActivity.class));
+                startActivity(new Intent(this, SerchActivity.class));
                 break;
             case R.id.CulturalTravelPolicy_XiangMuGongGaoMoreButton:
-                startActivity(new Intent(this,XiangmugonggaoListActivity.class));
+                startActivity(new Intent(this, XiangmugonggaoListActivity.class));
                 break;
             case R.id.CulturalTravelPolicy_ZiXunDongTaiMoreButton:
-                startActivity(new Intent(this,ZixundongtailistActivity.class));
+                startActivity(new Intent(this, ZixundongtailistActivity.class));
                 break;
             case R.id.CulturalTravelPolicy_ZhenCeJieDuRMoreButton:
-                startActivity(new Intent(this,ZhengcejiedulistActivity.class));
+                startActivity(new Intent(this, ZhengcejiedulistActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void showWenlvzhengcebean(Wenlvzhengcebean wenlvzhengcebean) {
+
+        if (wenlvzhengcebean.getData()!=null) {
+            //项目公告
+            CulturalTravelPolicyXiangMuGongGaoRecycler.setLayoutManager(new LinearLayoutManager(this));
+            List<Wenlvzhengcebean.DataBean.PeojectBean> peoject = wenlvzhengcebean.getData().getPeoject();
+            CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter adapter = new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(peoject);
+            adapter.setRecyclerViewOnCLickListener(new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter.RecyclerViewOnCLickListener() {
+
+                @Override
+                public void myClick(View view, int position) {
+                    Toast.makeText(CulturalTravelPolicyActivity.this, "position:" + position, Toast.LENGTH_SHORT).show();
+                }
+            });
+            CulturalTravelPolicyXiangMuGongGaoRecycler.setAdapter(adapter);
+            //资讯动态
+            CulturalTravelPolicyZiXunDongTaiRecycler.setLayoutManager(new LinearLayoutManager(this));
+            Wlzc_zxdtRecyAdapter wlzc_zxdtRecyAdapter = new Wlzc_zxdtRecyAdapter(wenlvzhengcebean.getData().getZixun());
+            wlzc_zxdtRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zxdtRecyAdapter.RecyclerViewOnCLickListener() {
+                @Override
+                public void myClick(View view, int position) {
+
+                }
+            });
+            CulturalTravelPolicyZiXunDongTaiRecycler.setAdapter(wlzc_zxdtRecyAdapter);
+            //政策解读
+            CulturalTravelPolicyZhenCeJieDuRecycler.setLayoutManager(new LinearLayoutManager(this));
+            Wlzc_zcjdRecyAdapter wlzc_zcjdRecyAdapter = new Wlzc_zcjdRecyAdapter(wenlvzhengcebean.getData().getZhengce());
+            wlzc_zcjdRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zcjdRecyAdapter.RecyclerViewOnCLickListener() {
+                @Override
+                public void myClick(View view, int position) {
+
+                }
+            });
+            CulturalTravelPolicyZhenCeJieDuRecycler.setAdapter(wlzc_zcjdRecyAdapter);
+        }else{
+            Toast.makeText(this, wenlvzhengcebean.getMsg(), Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    public void showError(String string) {
+        Toast.makeText(this, string, Toast.LENGTH_SHORT).show();
+
     }
 }

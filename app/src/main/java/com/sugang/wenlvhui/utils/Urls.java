@@ -3,8 +3,8 @@ package com.sugang.wenlvhui.utils;
 public class Urls {
     //基本路径
     public static final String BASE_URL = "http://47.92.174.98:8011/";
-    //登陆
-    public static final String LOGING = "login/passwordLogin";
+    //文旅政策
+    public static final String WENLV_ZHENGCE  = "wenlv/wenlvzhengce_list";
     //  友盟第三方登录{QQ 微信，微博   的注册和登陆}
     public static final String THIRD_PARTY_LOGING = "userOauth/register";
     //请求图片验证码
@@ -17,15 +17,12 @@ public class Urls {
     public static final String FORGET_PASSWORD = "";
     //更换手机号
     public static final String CHANGE_MOBILE = "userOauth/changeMobile";
-
     //注册手机号和验证码
     public static final String REGISTER_PHONE_CODE = "login/register";
     //  三方账号绑定手机号
     public static final String THIRD_BIND_PHONE = "userOauth/bindMobile";
-
     //  注册手机号和验证码
     public static final String SET_PASSWORD = "login/setPassword";
-
     //主页热门
     public static final String HOME_HOT = "userUgcInfo/getHotList";
     //连载主页热门
@@ -70,7 +67,6 @@ public class Urls {
     public static final String UNBIND_MOBILE = "userOauth/unbindMobile";
     //  交易记录
     public static final String PURCHASE_HISTORY = "userCoinAccount/getCoinAccountOutList";
-
     //  个人主页 我的作品   短漫画
     public static final String UGS_SHORT_COMIC = "userUgcInfo/getUgcListByType";
     //  个人主页  我的作品  长漫画

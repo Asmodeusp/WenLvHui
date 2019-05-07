@@ -32,18 +32,18 @@ public class RetrofitUtils {
     private Retrofit retrofit;
 
     private RetrofitUtils() {
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.addInterceptor(addHeaderInterceptor());
+//        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+//        builder.addInterceptor(addHeaderInterceptor());
 //        错误重连
-        builder.connectTimeout(30, TimeUnit.SECONDS).
-                readTimeout(30, TimeUnit.SECONDS).
-                writeTimeout(30, TimeUnit.SECONDS);
-        builder.retryOnConnectionFailure(true);
-        OkHttpClient client = builder.build();
+//        builder.connectTimeout(30, TimeUnit.SECONDS).
+//                readTimeout(30, TimeUnit.SECONDS).
+//                writeTimeout(30, TimeUnit.SECONDS);
+//        builder.retryOnConnectionFailure(true);
+//        OkHttpClient client = builder.build();
         retrofit = new Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(client)
+//                .client(client)
                 .baseUrl(Urls.BASE_URL)
                 .build();
     }
@@ -64,74 +64,74 @@ public class RetrofitUtils {
     /**
      * 设置请求头
      */
-    private static Interceptor addHeaderInterceptor() {
-
-        Interceptor headerInterceptor = new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request originalRequest = chain.request();
-                Request.Builder requestBuilder = originalRequest.newBuilder()
-                        //添加请求头  判断IOS 还是 Android
-                        .header("os", "Android")
-                        .header("accessToken",((String) SPUtils.get(App.context, SPKey.USER_TOKEN, "")))
-//                        .header("accessToken","eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1NDA4ODMzMzIsInN1YiI6IntcInVzZXJJZFwiOjQwNixcInJvbGVUeXBlXCI6bnVsbCxcInNlc3Npb25JZFwiOlwiRTk1NjlENkRCMDREQUJFNzc0NjE0RkI1OTFBQTkxMjRcIixcInVzZXJBZ2VudFwiOlwiUG9zdG1hblJ1bnRpbWUvNy4zLjBcIixcImluZGV4XCI6MCxcInJlZnJlc2hUb2tlblwiOmZhbHNlfSIsImV4cCI6MTU3MjQxOTMzMn0.jJT8sOS4JtOJQ9W0RFYGf-zNIfeGUKzv_fUUc78JqqA")
-                        //当前手机版本号
-                        .header("osVersion", Build.VERSION.RELEASE)
-                        //当前项目版本号
-                        .header("version", "1.0.0")
-                        //添加设备唯一标识
-                        .header("deviceId",Build.FINGERPRINT)
-                        //添加手机设备名
-                        .header("deviceModel",Build.PRODUCT)
-                        .header("AppType", "TPOS")
-                        .header("Accept", "application/json")
-                        .method(originalRequest.method(), originalRequest.body());
-                Request request = requestBuilder.build();
-                return chain.proceed(request);
-            }
-        };
-
-        return headerInterceptor;
-    }
+//    private static Interceptor addHeaderInterceptor() {
+//
+//        Interceptor headerInterceptor = new Interceptor() {
+//            @Override
+//            public Response intercept(Chain chain) throws IOException {
+//                Request originalRequest = chain.request();
+//                Request.Builder requestBuilder = originalRequest.newBuilder()
+//                        //添加请求头  判断IOS 还是 Android
+//                        .header("os", "Android")
+//                        .header("accessToken",((String) SPUtils.get(App.context, SPKey.USER_TOKEN, "")))
+////                        .header("accessToken","eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1NDA4ODMzMzIsInN1YiI6IntcInVzZXJJZFwiOjQwNixcInJvbGVUeXBlXCI6bnVsbCxcInNlc3Npb25JZFwiOlwiRTk1NjlENkRCMDREQUJFNzc0NjE0RkI1OTFBQTkxMjRcIixcInVzZXJBZ2VudFwiOlwiUG9zdG1hblJ1bnRpbWUvNy4zLjBcIixcImluZGV4XCI6MCxcInJlZnJlc2hUb2tlblwiOmZhbHNlfSIsImV4cCI6MTU3MjQxOTMzMn0.jJT8sOS4JtOJQ9W0RFYGf-zNIfeGUKzv_fUUc78JqqA")
+//                        //当前手机版本号
+//                        .header("osVersion", Build.VERSION.RELEASE)
+//                        //当前项目版本号
+//                        .header("version", "1.0.0")
+//                        //添加设备唯一标识
+//                        .header("deviceId",Build.FINGERPRINT)
+//                        //添加手机设备名
+//                        .header("deviceModel",Build.PRODUCT)
+//                        .header("AppType", "TPOS")
+//                        .header("Accept", "application/json")
+//                        .method(originalRequest.method(), originalRequest.body());
+//                Request request = requestBuilder.build();
+//                return chain.proceed(request);
+//            }
+//        };
+//
+//        return headerInterceptor;
+//    }
 
     /**
      * 设置缓存
-     */
-    private static Interceptor addCacheInterceptor() {
-        Interceptor cacheInterceptor = new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request request = chain.request();
-
-                if (!isNetworkAvailable(App.context)) {
-                    request = request.newBuilder()
-
-                            .cacheControl(CacheControl.FORCE_CACHE)
-                            .build();
-
-                }
-                Response response = chain.proceed(request);
-                if (isNetworkAvailable(App.context)) {
-                    int maxAge = 0;
-                    // 有网络时 设置缓存超时时间0个小时
-                    response.newBuilder()
-                            .header("Cache-Control", "public, max-age=" + maxAge)
-                            .removeHeader("Retrofit")// 清除头信息，因为服务器如果不支持，会返回一些干扰信息，不清除下面无法生效
-                            .build();
-                } else {
-                    // 无网络时，设置超时为4周
-                    int maxStale = 60 * 60 * 24 * 28;
-                    response.newBuilder()
-                            .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)
-                            .removeHeader("nyn")
-                            .build();
-                    Toast.makeText(App.context, "网络连接错误，请检查网络！", Toast.LENGTH_SHORT).show();
-                }
-                return response;
-            }
-        };
-        return cacheInterceptor;
-    }
+//     */
+//    private static Interceptor addCacheInterceptor() {
+//        Interceptor cacheInterceptor = new Interceptor() {
+//            @Override
+//            public Response intercept(Chain chain) throws IOException {
+//                Request request = chain.request();
+//
+//                if (!isNetworkAvailable(App.context)) {
+//                    request = request.newBuilder()
+//
+//                            .cacheControl(CacheControl.FORCE_CACHE)
+//                            .build();
+//
+//                }
+//                Response response = chain.proceed(request);
+//                if (isNetworkAvailable(App.context)) {
+//                    int maxAge = 0;
+//                    // 有网络时 设置缓存超时时间0个小时
+//                    response.newBuilder()
+//                            .header("Cache-Control", "public, max-age=" + maxAge)
+//                            .removeHeader("Retrofit")// 清除头信息，因为服务器如果不支持，会返回一些干扰信息，不清除下面无法生效
+//                            .build();
+//                } else {
+//                    // 无网络时，设置超时为4周
+//                    int maxStale = 60 * 60 * 24 * 28;
+//                    response.newBuilder()
+//                            .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)
+//                            .removeHeader("nyn")
+//                            .build();
+//                    Toast.makeText(App.context, "网络连接错误，请检查网络！", Toast.LENGTH_SHORT).show();
+//                }
+//                return response;
+//            }
+//        };
+//        return cacheInterceptor;
+//    }
 
     /**
      * 判断网络

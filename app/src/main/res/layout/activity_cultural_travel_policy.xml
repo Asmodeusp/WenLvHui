@@ -91,7 +91,9 @@
                 android:id="@+id/CulturalTravelPolicy_XiangMuGongGaoRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/px_14"></android.support.v7.widget.RecyclerView>
+                android:layout_marginTop="@dimen/px_14"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
 
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
@@ -121,7 +123,10 @@
                 android:id="@+id/CulturalTravelPolicy_ZiXunDongTaiRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/px_14"></android.support.v7.widget.RecyclerView>
+                android:layout_marginTop="@dimen/px_14"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+
 
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
@@ -151,7 +156,8 @@
                 android:id="@+id/CulturalTravelPolicy_ZhenCeJieDuRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/px_14"></android.support.v7.widget.RecyclerView>
+                android:layout_marginTop="@dimen/px_14"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
         </com.zhy.autolayout.AutoLinearLayout>
     </com.sugang.wenlvhui.view.ui.MyScrollView>
 
