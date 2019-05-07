@@ -7,5 +7,5 @@ public class SPKey {
     public static String USER_MOBILE="mobile";
     public static String USER_ID="id";
     public static String WENYIPEIXUN_TYPE="wenyi_Type";
-
+    public static String NEWS_ID="NewsId";
 }

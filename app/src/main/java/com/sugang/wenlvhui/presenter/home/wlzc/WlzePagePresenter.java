@@ -9,7 +9,6 @@ import com.sugang.wenlvhui.utils.RetrofitUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -34,7 +33,6 @@ public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
 
                     @Override
                     public void onNext(Wenlvzhengcebean wenlvzhengcebean) {
-                        Log.d("WlzePagePresenter", wenlvzhengcebean.getMsg());
                         if (wenlvzhengcebean.getMsg() .equals("成功")) {
                             view.showWenlvzhengcebean(wenlvzhengcebean);
                         } else {

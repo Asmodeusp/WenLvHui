@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -25,12 +27,12 @@ import io.reactivex.annotations.NonNull;
 
 
 public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdapter.Holder> implements View.OnClickListener {
-    private List<Wenlvzhengcebean.DataBean.ZixunBean> list;
+    private List<NewsBean> list;
     private Context context;
     private boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
 
-    public Wlzc_zxdtRecyAdapter(List<Wenlvzhengcebean.DataBean.ZixunBean> list) {
+    public Wlzc_zxdtRecyAdapter(List<NewsBean> list) {
         this.list = list;
     }
 
@@ -60,10 +62,12 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
     public void setRecyclerViewOnCLickListener(RecyclerViewOnCLickListener myCLick) {
         this.myCLick = myCLick;
     }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
     @Override
-    public void onBindViewHolder(@NonNull final Holder holder, int position) {
-        final Wenlvzhengcebean.DataBean.ZixunBean data = list.get(position);
+    public void onBindViewHolder(final Holder holder, int position) {
+        Log.d("Wlzc_zxdtRecyAdapter", "position:" + position);
+        Log.d("Wlzc_zxdtRecyAdapter", "list.size():" + list.size());
+        final NewsBean data = list.get(position);
         holder.itemWlzcZxdtrecyCommentNumText.setText(data.getComment_num() + "");
         holder.itemWlzcZxdtrecyfenlieText.setText(data.getTitle_type_name() + "");
         holder.itemWlzcZxdtrecyTitleText.setText(data.getTitle() + "");

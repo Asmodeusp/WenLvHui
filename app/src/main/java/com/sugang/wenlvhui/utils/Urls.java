@@ -6,7 +6,7 @@ public class Urls {
     //文旅政策
     public static final String WENLV_ZHENGCE  = "wenlv/wenlvzhengce_list";
     //  友盟第三方登录{QQ 微信，微博   的注册和登陆}
-    public static final String THIRD_PARTY_LOGING = "userOauth/register";
+    public static final String WLZC_XMGGLIST = "/wenlv/wenlvzhengceListByType";
     //请求图片验证码
     public static final String REQUES_PICTURE_VERIFICATION_CODE = "login/getImageCode";
     //请求手机验证码

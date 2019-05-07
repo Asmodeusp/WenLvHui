@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -23,12 +24,12 @@ import butterknife.ButterKnife;
 
 
 public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdapter.Holder> implements View.OnClickListener {
-    private List<Wenlvzhengcebean.DataBean.ZhengceBean> list;
+    private List<NewsBean> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
 
-    public Wlzc_zcjdRecyAdapter(List<Wenlvzhengcebean.DataBean.ZhengceBean> list) {
+    public Wlzc_zcjdRecyAdapter(List<NewsBean> list) {
         this.list = list;
     }
 
@@ -62,7 +63,7 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
-        final Wenlvzhengcebean.DataBean.ZhengceBean data = list.get(position);
+        final NewsBean data = list.get(position);
         holder.itemWlzeZcjdCommentNumText.setText(data.getComment_num() + "");
         holder.itemWlzeZcjdfenlieText.setText(data.getTitle_type_name() + "");
         holder.itemWlzeZcjdTitleText.setText(data.getTitle() + "");
