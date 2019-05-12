@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wlze.WlzePageContract;
@@ -56,6 +58,7 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
     //政策解读Recycler
     @BindView(R.id.CulturalTravelPolicy_ZhenCeJieDuRecycler)
     RecyclerView CulturalTravelPolicyZhenCeJieDuRecycler;
+    private int id;
 
     @Override
     protected int getLayoutId() {
@@ -81,6 +84,8 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
                 finish();
                 break;
             case R.id.CulturalTravelPolicy_HeadImage:
+                SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_ID,id);
+                startActivity(new Intent(CulturalTravelPolicyActivity.this,NewsDetailsActivity.class));
                 break;
             case R.id.CulturalTravelPolicy_SerchEd:
                 startActivity(new Intent(this, SerchActivity.class));
@@ -101,6 +106,8 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
     public void showWenlvzhengcebean(final Wenlvzhengcebean wenlvzhengcebean) {
 
         if (wenlvzhengcebean.getData()!=null) {
+            Glide.with(this).load(wenlvzhengcebean.getData().getToubu().getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelPolicyHeadImage);
+            id = wenlvzhengcebean.getData().getToubu().getId();
             //项目公告
             CulturalTravelPolicyXiangMuGongGaoRecycler.setLayoutManager(new LinearLayoutManager(this));
             final List<NewsBean> peoject = wenlvzhengcebean.getData().getPeoject();
