@@ -16,6 +16,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
+import com.sugang.wenlvhui.utils.TimeUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -65,13 +66,12 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
 
     @Override
     public void onBindViewHolder(final Holder holder, int position) {
-        Log.d("Wlzc_zxdtRecyAdapter", "position:" + position);
-        Log.d("Wlzc_zxdtRecyAdapter", "list.size():" + list.size());
+
         final NewsBean data = list.get(position);
         holder.itemWlzcZxdtrecyCommentNumText.setText(data.getComment_num() + "");
-        holder.itemWlzcZxdtrecyfenlieText.setText(data.getTitle_type_name() + "");
+        holder.itemWlzcZxdtrecyfenlieText.setText(data.getTitleTypeName() + "");
         holder.itemWlzcZxdtrecyTitleText.setText(data.getTitle() + "");
-//            holder.itme_wlzc_xmggrecyDataText.setText(data.get()+"");
+        holder.itemWlzcZxdtrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
         holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getIs_up() + "");
         holder.itemWlzcZxdtrecySeeNumText.setText(data.getComment_num() + "");
         holder.itemWlzcZxdtrecyFromText.setText(data.getSource() + "");
@@ -186,5 +186,4 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
     }
 
 
-    
 }

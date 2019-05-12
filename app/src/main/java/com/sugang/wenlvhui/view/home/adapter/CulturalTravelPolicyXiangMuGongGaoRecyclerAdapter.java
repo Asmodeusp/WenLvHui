@@ -5,7 +5,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +14,8 @@ import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
-import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
+
+import com.sugang.wenlvhui.utils.TimeUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -66,9 +67,9 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
         final NewsBean data = list.get(position);
 
         holder.itmeWlzcXmggrecyCommentNumText.setText(data.getComment_num() + "");
-        holder.itmeWlzcXmggrecyfenlieText.setText(data.getTitle_type_name() + "");
+        holder.itmeWlzcXmggrecyfenlieText.setText(data.getTitleTypeName() + "");
         holder.itmeWlzcXmggrecyTitleText.setText(data.getTitle() + "");
-//            holder.itme_wlzc_xmggrecyDataText.setText(data.get()+"");
+        holder.itmeWlzcXmggrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
         holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getUp_num() + "");
         holder.itmeWlzcXmggrecySeeNumText.setText(data.getComment_num() + "");
         holder.itmeWlzcXmggrecyFromText.setText(data.getSource() + "");
@@ -103,7 +104,7 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
 //                        }
 //                        if (list.get(position).getType() == 2) {
 //                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+//                       }
                         isLike = true;
                     }
 

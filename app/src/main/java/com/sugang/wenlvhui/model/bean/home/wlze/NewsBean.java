@@ -4,25 +4,34 @@ public class NewsBean {
 
 
     /**
-     * browse : 22222
+     * backupField1 : 8
+     * backupField2 : 3
+     * browse : 6765
      * comment_num : 0
-     * cotent : 5666
-     * id : 66
-     * image : http://img01.3dmgame.com/uploads/allimg/131101/154_131101033811_1.jpg
+     * cotent : 7666
+     * createDate : 1556508358000
+     * createUser : 8
+     * id : 67
+     * image : https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556515265457&di=710d86fe5303e13fc4a169c3ca50ed18&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01afc75541ec81000001714a28c572.jpg
      * is_up : 0
-     * relay : 33
-     * source : 来自本地政府文件
-     * status : 2
+     * relay : 2
+     * source : 22
+     * status : 1
      * substance : 效益增工资
+     * textType : 3
      * title : 效益增工资
-     * title_type : 49
-     * title_type_name : 科技
+     * titleType : 48
+     * titleTypeName : 水利
      * up_num : 0
      */
 
+    private int backupField1;
+    private String backupField2;
     private int browse;
     private int comment_num;
     private String cotent;
+    private long createDate;
+    private int createUser;
     private int id;
     private String image;
     private int is_up;
@@ -30,10 +39,27 @@ public class NewsBean {
     private String source;
     private String status;
     private String substance;
+    private int textType;
     private String title;
-    private int title_type;
-    private String title_type_name;
+    private int titleType;
+    private String titleTypeName;
     private int up_num;
+
+    public int getBackupField1() {
+        return backupField1;
+    }
+
+    public void setBackupField1(int backupField1) {
+        this.backupField1 = backupField1;
+    }
+
+    public String getBackupField2() {
+        return backupField2;
+    }
+
+    public void setBackupField2(String backupField2) {
+        this.backupField2 = backupField2;
+    }
 
     public int getBrowse() {
         return browse;
@@ -57,6 +83,22 @@ public class NewsBean {
 
     public void setCotent(String cotent) {
         this.cotent = cotent;
+    }
+
+    public long getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(long createDate) {
+        this.createDate = createDate;
+    }
+
+    public int getCreateUser() {
+        return createUser;
+    }
+
+    public void setCreateUser(int createUser) {
+        this.createUser = createUser;
     }
 
     public int getId() {
@@ -115,6 +157,14 @@ public class NewsBean {
         this.substance = substance;
     }
 
+    public int getTextType() {
+        return textType;
+    }
+
+    public void setTextType(int textType) {
+        this.textType = textType;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -123,20 +173,20 @@ public class NewsBean {
         this.title = title;
     }
 
-    public int getTitle_type() {
-        return title_type;
+    public int getTitleType() {
+        return titleType;
     }
 
-    public void setTitle_type(int title_type) {
-        this.title_type = title_type;
+    public void setTitleType(int titleType) {
+        this.titleType = titleType;
     }
 
-    public String getTitle_type_name() {
-        return title_type_name;
+    public String getTitleTypeName() {
+        return titleTypeName;
     }
 
-    public void setTitle_type_name(String title_type_name) {
-        this.title_type_name = title_type_name;
+    public void setTitleTypeName(String titleTypeName) {
+        this.titleTypeName = titleTypeName;
     }
 
     public int getUp_num() {

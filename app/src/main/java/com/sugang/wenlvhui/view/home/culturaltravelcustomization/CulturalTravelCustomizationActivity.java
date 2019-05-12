@@ -1,11 +1,6 @@
 package com.sugang.wenlvhui.view.home.culturaltravelcustomization;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
-
 //文旅定制
 public class CulturalTravelCustomizationActivity extends BaseActivity {
 

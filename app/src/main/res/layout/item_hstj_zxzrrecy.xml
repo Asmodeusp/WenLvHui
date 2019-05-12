@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_250"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/px_28"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginLeft="10px"
+        android:id="@+id/item_hstj_zxzrBookNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_34"
+        android:layout_marginBottom="@dimen/px_7"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="三体"
+        android:textColor="@color/H3"
+        android:textSize="@dimen/px_16" />
+
+    <ImageView
+        android:id="@+id/item_hstj_zxzrBookImage"
+        android:layout_width="@dimen/px_138"
+        android:layout_height="@dimen/px_204"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/item_hstj_zxzrBookAutorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_7"
+        android:text="ghjkl"
+        android:textColor="@color/H4"
+        android:textSize="@dimen/px_18" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐指数："
+            android:textColor="@color/H4"
+            android:textSize="@dimen/px_16" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_31">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+
+                    android:id="@+id/item_hstj_zxzrBookStartOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/start" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookStartTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/start" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookStartThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/start" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookStartFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/start" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookStartFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/start" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookKStartOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/kongstart" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookKStartTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/kongstart" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookKStartThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/kongstart" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookKStartFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/kongstart" />
+
+                <ImageView
+                    android:id="@+id/item_hstj_zxzrBookKStartFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_0_5"
+                    android:src="@mipmap/kongstart" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -13,7 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class WlzcXmggListPresenterImp implements WlzcXmggListContract.WlzcXmggListViewPresenterImp {
+public class WlzcXmggListPresenterImp implements WlzcXmggListContract.WlzcXmggListPresenterImp {
     WlzcXmggListContract.WlzcXmggListView view;
     @Override
     public void getWlzcXmggListBeanData(String userId, String text_type) {

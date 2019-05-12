@@ -5,14 +5,14 @@ public class Urls {
     public static final String BASE_URL = "http://www.zwwlh.com:8011/";
     //文旅政策
     public static final String WENLV_ZHENGCE  = "wenlv/wenlvzhengce_list";
-    //  友盟第三方登录{QQ 微信，微博   的注册和登陆}
-    public static final String WLZC_XMGGLIST = "/wenlv/wenlvzhengceListByType";
-    //请求图片验证码
-    public static final String REQUES_PICTURE_VERIFICATION_CODE = "login/getImageCode";
-    //请求手机验证码
-    public static final String REQUEST_CELL_PHONE_VERIFICATION_CODE = "login/sendSms";
-    //    账号绑定更换前的密码校验
-    public static final String CHECK_CODE = "userOauth/checkCode";
+    //文旅政策列表页
+    public static final String WLZC_XMGGLIST = "wenlv/wenlvzhengceListByType";
+    //好书推荐 推荐
+    public static final String HSTJ_TUIJIAN = "book/book_index_tuijian";
+    //好书推荐  猜你喜欢
+    public static final String HSTJ_CNXH = "book/book_index_like";
+    // 好书推荐  最新最热
+    public static final String HSTJ_ZXZR = "book/book_index_new";
     //忘记密码
     public static final String FORGET_PASSWORD = "";
     //更换手机号

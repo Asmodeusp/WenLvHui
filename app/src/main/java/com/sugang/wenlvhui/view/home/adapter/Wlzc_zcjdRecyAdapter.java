@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
+import com.sugang.wenlvhui.utils.TimeUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -65,17 +66,17 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         final NewsBean data = list.get(position);
         holder.itemWlzeZcjdCommentNumText.setText(data.getComment_num() + "");
-        holder.itemWlzeZcjdfenlieText.setText(data.getTitle_type_name() + "");
+        holder.itemWlzeZcjdfenlieText.setText(data.getTitleTypeName() + "");
         holder.itemWlzeZcjdTitleText.setText(data.getTitle() + "");
-//            holder.itemWlzeZcjdDataText.setText(data.get()+"");
+        holder.itemWlzeZcjdDataText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
         holder.itemWlzeZcjdIsLikeNumText.setText(data.getIs_up() + "");
         holder.itemWlzeZcjdSeeNumText.setText(data.getComment_num() + "");
         holder.itemWlzeZcjdFromText.setText(data.getSource() + "");
         holder.itemView.setTag(position);
         if (data.getIs_up() == 0) {
-            isLike =false;
-        }else{
-            isLike =true;
+            isLike = false;
+        } else {
+            isLike = true;
         }
         if (isLike) {
             holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
@@ -178,6 +179,4 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
     }
 
 
- 
-   
 }

@@ -12,7 +12,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.sugang.wenlvhui"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -73,4 +73,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //富文本解析器
     implementation 'com.zzhoujay.richtext:richtext:3.0.7'
+    //
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.9'
 }

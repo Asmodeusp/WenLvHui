@@ -12,7 +12,7 @@ public interface WlzcXmggListContract {
         void showError(String string);
 
     }
-    interface  WlzcXmggListViewPresenterImp extends BasePresenter<WlzcXmggListView> {
+    interface  WlzcXmggListPresenterImp extends BasePresenter<WlzcXmggListView> {
         //文旅政策主页
         void getWlzcXmggListBeanData(String userId,String text_type);
 

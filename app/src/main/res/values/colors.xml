@@ -3,11 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="H1">#DADADA</color>
     <color name="H2">#BB1400</color>
-    <color name="H3">#303030</color>
-    <color name="H4">#8C8C8C</color>
     <color name="H5">#2C2E30</color>
     <color name="H6">#B1B1B1</color>
-
+    <color name="H4">#8C8C8C</color>
+    <color name="H1">#DADADA</color>
+    <color name="H7">#FCFCFC</color>
+    <color name="H3">#303030</color>
 </resources>
