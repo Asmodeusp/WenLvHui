@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="4"
+    android:background="#ffffff"
     tools:context=".view.home.features.FeatureTwoFragment">
 <!--文旅榜单-->
     <com.zhy.autolayout.AutoLinearLayout

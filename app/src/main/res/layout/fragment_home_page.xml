@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".view.home.HomePageFragment">
 
     <com.sugang.wenlvhui.view.ui.MyScrollView
@@ -212,6 +213,7 @@
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/H7"
                 android:layout_marginTop="@dimen/px_34">
 
                 <TextView
@@ -257,6 +259,7 @@
             <com.zhy.autolayout.AutoRelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/H7"
                 android:layout_marginTop="@dimen/px_34">
 
                 <TextView

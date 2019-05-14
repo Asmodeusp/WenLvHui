@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="28px"
     android:layout_marginTop="@dimen/px_28"
+    android:background="#ffffff"
     android:orientation="vertical">
 
     <com.zhy.autolayout.AutoLinearLayout

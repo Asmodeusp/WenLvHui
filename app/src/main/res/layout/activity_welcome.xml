@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".view.login.WelcomeActivity">
+
+    <!--<ImageView-->
+        <!--android:layout_width="@dimen/px_144"-->
+        <!--android:layout_height="@dimen/px_144"-->
+        <!--android:layout_marginTop="374px"-->
+        <!--android:src="@drawable/icon" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="650px"-->
+        <!--android:text="集文化旅游惠民于一体的生活App"-->
+        <!--android:textColor="#E60012"-->
+        <!--android:textSize="@dimen/px_30" />-->
+</com.zhy.autolayout.AutoLinearLayout>
