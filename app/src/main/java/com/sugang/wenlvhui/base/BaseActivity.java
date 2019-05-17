@@ -14,10 +14,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.FileProvider;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationListener;
+import com.amap.api.maps.CameraUpdateFactory;
+import com.amap.api.maps.model.LatLng;
 import com.gyf.barlibrary.BarHide;
 import com.gyf.barlibrary.ImmersionBar;
 import com.gyf.barlibrary.OnKeyboardListener;
@@ -25,6 +31,9 @@ import com.sugang.wenlvhui.App;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.utils.NetUtils;
 import com.sugang.wenlvhui.utils.OnBooleanListener;
+import com.sugang.wenlvhui.utils.map.LocationUtil;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.io.File;
@@ -37,18 +46,46 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
     protected T presenter;
     private Fragment lastFragment;
     private OnBooleanListener onPermissionListener;
+    private LocationUtil locationUtil;
+    //声明AMapLocationClient类对象
+    public AMapLocationClient mLocationClient = null;
+    //声明定位回调监听器
+    public AMapLocationListener mLocationListener = new AMapLocationListener() {
+        @Override
+        public void onLocationChanged(AMapLocation amapLocation) {
+            locationUtil.setAmapLocation(amapLocation);
+            int result = locationUtil.onSuccess();//获取返回信息代码
+            if (result == 0) {
 
+                double latitude = amapLocation.getLatitude();
+                SPUtils.put(BaseActivity.this, SPKey.LATITUDE,latitude);
+                double longitude = amapLocation.getLongitude();
+                SPUtils.put(BaseActivity.this, SPKey.LONGITUDE,longitude);
+                stopLocation();
+            } else {
+                //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
+                Toast.makeText(getApplicationContext(), locationUtil.getErrorCodeAndInfo(), Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return super.onTouchEvent(event);
     }
+    public void startLocation() {
+        mLocationClient.startLocation();//启动定位
+    }
 
+    public void stopLocation() {
+        mLocationClient.stopLocation();//停止定位后，本地定位服务并不会被销毁
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
-//        ImmersionBar.with(this).init();
+        initLocation();
+
         initImmersionBar();
         setInstallPermission();//8.0权限
 //        权限配置
@@ -76,6 +113,18 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
         init();
 
 
+    }
+
+    private void initLocation() {
+
+        locationUtil = new LocationUtil();
+        locationUtil.autoStart();
+        //初始化定位
+        mLocationClient = new AMapLocationClient(getApplicationContext());
+        //设置定位回调监听
+        mLocationClient.setLocationListener(mLocationListener);
+        mLocationClient.setLocationOption(locationUtil.getmLocationOption());
+        startLocation();
     }
 
     private void initImmersionBar() {

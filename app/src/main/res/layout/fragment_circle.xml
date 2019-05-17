@@ -35,7 +35,7 @@
 
             <ImageView
                 android:layout_width="@dimen/px_50"
-                android:layout_height="@dimen/px_50"
+                android:layout_height="wrap_content"
                 android:src="@mipmap/publish" />
         </com.zhy.autolayout.AutoLinearLayout>
 

@@ -8,4 +8,6 @@ public class SPKey {
     public static String USER_ID="id";
     public static String WENYIPEIXUN_TYPE="wenyi_Type";
     public static String NEWS_ID="NewsId";
+    public static String LATITUDE="latitude";
+    public static String LONGITUDE="longitude";
 }

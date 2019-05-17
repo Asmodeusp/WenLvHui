@@ -65,7 +65,7 @@ public class WelcomeActivity extends BaseActivity {
 
 // 倒计时五秒
 
-    int index = 3;
+    int index = 2;
 
     Runnable waitSendsRunnable = new Runnable() {
 

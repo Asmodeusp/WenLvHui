@@ -12,6 +12,7 @@ import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.MyLocationStyle;
+import com.gyf.barlibrary.ImmersionBar;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.utils.map.LocationUtil;
 
@@ -36,8 +37,8 @@ public class Space_MapActivity extends AppCompatActivity {
                 //获取国家省份....街道号信息
                 Toast.makeText(getApplicationContext(), locationUtil.getInfoString(), Toast.LENGTH_SHORT).show();
                 //通过经纬度得到Latlng对象
-                LatLng latLng = new LatLng(amapLocation.getLatitude(),amapLocation.getLongitude());//构造一个位置
-                aMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
+                LatLng latLng = new LatLng(amapLocation.getLatitude(), amapLocation.getLongitude());//构造一个位置
+                aMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
                 stopLocation();
             } else {
                 //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
@@ -52,7 +53,10 @@ public class Space_MapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_space__map);
         ButterKnife.bind(this);
-
+        ImmersionBar.with(this)
+                .statusBarColor(R.color.H3)     //状态栏颜色，不写默认透明色
+                .fitsSystemWindows(true)
+                .init();  //必须调用方可沉浸式
         Map.onCreate(savedInstanceState);
         if (aMap == null) {
             aMap = Map.getMap();

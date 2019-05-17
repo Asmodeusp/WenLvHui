@@ -13,10 +13,10 @@ public class Urls {
     public static final String HSTJ_CNXH = "book/book_index_like";
     // 好书推荐  最新最热
     public static final String HSTJ_ZXZR = "book/book_index_new";
-    //忘记密码
-    public static final String FORGET_PASSWORD = "";
-    //更换手机号
-    public static final String CHANGE_MOBILE = "userOauth/changeMobile";
+    //艺人主页
+    public static final String ARTIST_INDEX = "artist/artist_index";
+    //地方美食主页
+    public static final String RESTAURANT_LIST = "restaurant/restaurant_list";
     //注册手机号和验证码
     public static final String REGISTER_PHONE_CODE = "login/register";
     //  三方账号绑定手机号

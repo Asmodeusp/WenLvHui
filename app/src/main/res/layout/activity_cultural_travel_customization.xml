@@ -79,13 +79,15 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/CulturalTravelCustomization_Image"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:scaleType="fitXY"
+                    android:layout_height="376px" />
 
             </com.zhy.autolayout.AutoRelativeLayout>
 
             <TextView
-                android:id="@+id/CulturalTravelPolicy_SerchEd"
+                android:id="@+id/CulturalTravelCustomization_SerchEd"
                 android:layout_width="595px"
                 android:layout_height="40px"
                 android:layout_marginLeft="77px"
@@ -96,7 +98,29 @@
                 android:gravity="center"
                 android:text="大家正在搜：口技"
                 android:textColor="@color/H6" />
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:background="@color/H7"
+                android:layout_width="match_parent"
+                android:layout_height="74px">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:text="推荐艺人"
+                    android:textColor="@color/H3" />
+
+                <ImageView
+                    android:id="@+id/CulturalTravelCustomization_ArtistMoreButton"
+                    android:layout_width="@dimen/px_50"
+                    android:layout_height="@dimen/px_50"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_28"
+                    android:src="@mipmap/more" />
+            </com.zhy.autolayout.AutoRelativeLayout>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/CulturalTravelCustomizationRecy"
                 android:layout_width="match_parent"
