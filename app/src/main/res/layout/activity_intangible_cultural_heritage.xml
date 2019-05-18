@@ -3,9 +3,90 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="#ffffff"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".view.home.intangiblecultural.IntangibleCulturalHeritageActivity">
 
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/IntangibleCulturalHeritage_ReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/px_220"
+            android:layout_marginRight="@dimen/px_220"
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/IntangibleCulturalHeritage_ShouYiButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/IntangibleCulturalHeritage_ShouYiText"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手艺"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/px_30" />
+
+                <View
+                    android:id="@+id/IntangibleCulturalHeritage_ShouYiLine"
+                    android:layout_width="@dimen/px_59"
+                    android:layout_height="@dimen/px_9"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/H2"></View>
+            </com.zhy.autolayout.AutoRelativeLayout> <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/IntangibleCulturalHeritage_JiangRenButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/IntangibleCulturalHeritage_JiangRenText"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="匠人"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/px_30" />
+
+                <View
+                    android:id="@+id/IntangibleCulturalHeritage_JiangRenLine"
+                    android:layout_width="@dimen/px_59"
+                    android:layout_height="@dimen/px_9"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/H2"></View>
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/IntangibleCulturalHeritage_Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 </com.zhy.autolayout.AutoLinearLayout>

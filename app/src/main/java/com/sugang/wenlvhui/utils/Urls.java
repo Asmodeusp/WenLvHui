@@ -17,10 +17,12 @@ public class Urls {
     public static final String ARTIST_INDEX = "artist/artist_index";
     //地方美食主页
     public static final String RESTAURANT_LIST = "restaurant/restaurant_list";
-    //注册手机号和验证码
-    public static final String REGISTER_PHONE_CODE = "login/register";
-    //  三方账号绑定手机号
-    public static final String THIRD_BIND_PHONE = "userOauth/bindMobile";
+    //判断手机号是否注册
+    public static final String REGISTER_PHOTO = "user/getTel";
+    //用户注册
+    public static final String REGISTER = "user/regist";
+    //登录
+    public static final String LOGIN = "user/login";
     //  注册手机号和验证码
     public static final String SET_PASSWORD = "login/setPassword";
     //主页热门

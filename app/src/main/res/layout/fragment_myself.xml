@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".view.myself.MyselfFragment">
 
     <com.zhy.autolayout.AutoLinearLayout
@@ -206,6 +206,7 @@
         </com.zhy.autolayout.AutoLinearLayout>
 
     </com.zhy.autolayout.AutoLinearLayout>
+
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/Myself_RenZhengCenterButton"
         android:layout_width="match_parent"
@@ -239,7 +240,6 @@
     </com.zhy.autolayout.AutoLinearLayout>
 
 
-
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/Myself_MesssageTongzhiButton"
         android:layout_width="match_parent"
@@ -257,7 +257,6 @@
     </com.zhy.autolayout.AutoLinearLayout>
 
 
-
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/Myself_AddressSettingButton"
         android:layout_width="match_parent"
@@ -270,6 +269,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="地址管理"
+            android:textColor="@color/H3"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/Myself_MySelfSettingButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginLeft="@dimen/px_30"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的设置"
             android:textColor="@color/H3"
             android:textSize="24px" />
     </com.zhy.autolayout.AutoLinearLayout>

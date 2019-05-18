@@ -1,5 +1,7 @@
 package com.sugang.wenlvhui.model.bean.home.hstj;
 
+import com.sugang.wenlvhui.model.bean.login.UserBean;
+
 import java.util.List;
 
 public class HstjLikeBean {
@@ -238,8 +240,7 @@ public class HstjLikeBean {
                 this.tagList = tagList;
             }
 
-            public static class UserBean {
-            }
+
         }
     }
 }

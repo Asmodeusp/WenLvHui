@@ -252,7 +252,8 @@ public class TimeUtils {
 
 
     public static String parssLongTime(long time) {
-        SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+
         return sDateFormat.format(new Date(time));
     }
 

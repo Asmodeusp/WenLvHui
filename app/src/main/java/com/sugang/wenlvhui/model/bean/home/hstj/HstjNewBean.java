@@ -1,6 +1,7 @@
 package com.sugang.wenlvhui.model.bean.home.hstj;
 
 import com.google.gson.annotations.SerializedName;
+import com.sugang.wenlvhui.model.bean.login.UserBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -241,8 +242,6 @@ public class HstjNewBean {
                 this.tagList = tagList;
             }
 
-            public static class UserBean {
-            }
         }
     }
 }
