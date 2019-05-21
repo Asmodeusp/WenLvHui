@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/H8"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".view.home.intangiblecultural.ShouyiFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/H7"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ShouYi_SerchEd"
+                android:layout_width="595px"
+                android:layout_height="40px"
+                android:layout_marginTop="@dimen/px_26"
+                android:layout_marginBottom="@dimen/px_29"
+                android:background="@drawable/serchshape"
+                android:gravity="center"
+                android:text="大家正在搜：手镯"
+                android:textColor="@color/H6" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/H8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_28"
+                    android:layout_marginTop="@dimen/px_28"
+                    android:layout_marginBottom="@dimen/px_28"
+                    android:text="每日一鉴"
+                    android:textColor="@color/H5"
+                    android:textSize="@dimen/px_30" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="391px"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/ShouYi_FirtImage"
+                            android:layout_width="@dimen/px_316"
+                            android:scaleType="fitXY"
+                            android:layout_height="391px"
+                            android:layout_marginLeft="@dimen/px_28"
+                            android:tint="#444B4646" />
+
+                        <TextView
+                            android:id="@+id/ShouYi_FirtTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_48"
+                            android:layout_marginRight="@dimen/px_48"
+                            android:layout_marginTop="@dimen/px_20"
+                            android:text="@string/app_name"
+                            android:textColor="@color/H8"
+                            android:textSize="@dimen/px_22" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <com.zhy.autolayout.AutoRelativeLayout
+                            android:layout_width="368px"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5px"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:scaleType="fitXY"
+                                android:id="@+id/ShouYi_SecondImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:tint="#444B4646" />
+
+                            <TextView
+                                android:id="@+id/ShouYi_SecondText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/px_48"
+                                android:layout_marginRight="@dimen/px_48"
+                                android:layout_marginTop="@dimen/px_20"
+                                android:text="@string/app_name"
+                                android:textColor="@color/H8"
+                                android:textSize="@dimen/px_22" />
+                        </com.zhy.autolayout.AutoRelativeLayout>
+
+                        <com.zhy.autolayout.AutoRelativeLayout
+                            android:layout_width="368px"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5px"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:scaleType="fitXY"
+                                android:id="@+id/ShouYi_ThirdImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:tint="#444B4646" />
+
+                            <TextView
+                                android:id="@+id/ShouYi_ThirdText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/px_48"
+                                android:layout_marginRight="@dimen/px_48"
+                                android:layout_marginTop="@dimen/px_20"
+                                android:text="@string/app_name"
+                                android:textColor="@color/H8"
+                                android:textSize="@dimen/px_22" />
+                        </com.zhy.autolayout.AutoRelativeLayout>
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_28"
+                    android:layout_marginTop="@dimen/px_28"
+                    android:layout_marginBottom="@dimen/px_28"
+                    android:text="为你优选"
+                    android:textColor="@color/H5"
+                    android:textSize="@dimen/px_30" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ShouYi_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/H8"
+                android:layout_height="30px"></View>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

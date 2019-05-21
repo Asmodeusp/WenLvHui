@@ -84,7 +84,13 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
 
     @Override
     public void showLoginBean(LoginBean loginBean) {
-
+        if (loginBean.getMsg().equals("登陆失败")) {
+            Toast.makeText(this, "请输入正确手机号和密码", Toast.LENGTH_SHORT).show();
+        }else{
+            SPUtils.put(this, SPKey.IS_LOGIN, true);
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
         if (loginBean.getDate() != null) {
             UserBean user = loginBean.getDate().getUser();
             if (user.getPhone() != null) {
@@ -105,9 +111,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
             if (user.getUsertype() != 0) {
                 SPUtils.put(this, SPKey.USERNAME, user.getUsertype());
             }
-            SPUtils.put(this, SPKey.IS_LOGIN, true);
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finish();
+
         }
 
     }

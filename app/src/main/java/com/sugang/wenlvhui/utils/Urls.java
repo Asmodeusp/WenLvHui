@@ -23,10 +23,10 @@ public class Urls {
     public static final String REGISTER = "user/regist";
     //登录
     public static final String LOGIN = "user/login";
-    //  注册手机号和验证码
-    public static final String SET_PASSWORD = "login/setPassword";
-    //主页热门
-    public static final String HOME_HOT = "userUgcInfo/getHotList";
+    //匠人主页
+    public static final String JIANGREN_PAGER = "ymShopsTbl/list";
+    //手艺
+    public static final String SHOUYI_PAGER = "ymShopsTbl/shouyituijian";
     //连载主页热门
     public static final String SERIALIZATION_HOT = "userPgcInfo/getPgcInfo52";
     //连载主页更新

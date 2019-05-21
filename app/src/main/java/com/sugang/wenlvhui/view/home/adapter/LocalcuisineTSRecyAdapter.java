@@ -65,7 +65,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoCommentText.setText(data.getComment_num() + "");
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodPriceText.setText(data.getAverageConsumption() + "元/人");
             //餐馆类别
-//            ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodTypeText.setText(data.get());
+            ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodTypeText.setText(data.getRestaurantType());
             GlideUtils.loadCircleImage(data.getRestaurantImg(), ((ViewHolderOne) holder).itemLocalcuisinerecyVidoHeadImage, new GlideUtils.ImageLoadListener<String, GlideDrawable>() {
                 @Override
                 public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {
@@ -115,7 +115,6 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
                     foodListBeans.add(foodListBean);
                 }
             }
-
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoVido
                     .setUp(foodListBeans.get(0).getVideoUrl()
                             , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL);
@@ -127,7 +126,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageCommentText.setText(data.getComment_num() + "");
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageFoodPriceText.setText(data.getAverageConsumption() + "元/人");
             //餐馆类别
-//            ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodTypeText.setText(data.get());
+            ((ViewHolderTwo) holder).itemLocalcuisinerecyImageFoodTypeText.setText(data.getRestaurantType());
             GlideUtils.loadCircleImage(data.getRestaurantImg(), ((ViewHolderTwo) holder).itemLocalcuisinerecyImageHeadImage, new GlideUtils.ImageLoadListener<String, GlideDrawable>() {
                 @Override
                 public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {

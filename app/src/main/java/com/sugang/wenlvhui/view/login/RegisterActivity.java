@@ -37,7 +37,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class RegisterActivity extends BaseActivity <RegisterPhonePresenterImp>implements RegisterPhoneView {
+public class RegisterActivity extends BaseActivity<RegisterPhonePresenterImp> implements RegisterPhoneView {
 
 
     @BindView(R.id.ForgetPassword_return)
@@ -83,7 +83,7 @@ public class RegisterActivity extends BaseActivity <RegisterPhonePresenterImp>im
                 } else if (ForgetPasswordPhoneNumber.getText().toString().trim().isEmpty()) {
                     Toast.makeText(this, "手机号不能为空", Toast.LENGTH_SHORT).show();
                 } else {
-//               倒计时
+                //倒计时
                     smsCodeDownUtil = new SmsCodeDownUtil(ForgetPasswordPhotoCodeText, "%s", 60);
                     smsCodeDownUtil.start();
                     String countdownText = smsCodeDownUtil.getCountdownText();
@@ -93,13 +93,16 @@ public class RegisterActivity extends BaseActivity <RegisterPhonePresenterImp>im
                 }
                 break;
             case R.id.ForgetPasswordForgetPasswordbtn:
-                int code = Integer.parseInt(ForgetPasswordInputPassword.getText().toString().trim());
-                if (i==code) {
+                String teRegex = "^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$";
+                if (ForgetPasswordPhoneNumber.getText().toString().isEmpty() || ForgetPasswordInputPassword.getText().toString().isEmpty()) {
+                    Toast.makeText(this, "请检查您的手机号或验证码是否输入", Toast.LENGTH_SHORT).show();
+                } else if (!ForgetPasswordPhoneNumber.getText().toString().trim().matches(teRegex)) {
+                    Toast.makeText(this, "请输入正确手机号", Toast.LENGTH_SHORT).show();
+                }else if(Integer.parseInt(ForgetPasswordInputPassword.getText().toString().trim())==i){
                     presenter.getRegisterPhoneBean(ForgetPasswordPhoneNumber.getText().toString().trim());
-                }else{
-                    Toast.makeText(this, "验证码不正确", Toast.LENGTH_SHORT).show();
+                }else if(Integer.parseInt(ForgetPasswordInputPassword.getText().toString().trim())!=i){
+                    Toast.makeText(this, "请输入正确验证码", Toast.LENGTH_SHORT).show();
                 }
-                presenter.getRegisterPhoneBean(ForgetPasswordPhoneNumber.getText().toString().trim());
                 break;
         }
     }
@@ -107,12 +110,12 @@ public class RegisterActivity extends BaseActivity <RegisterPhonePresenterImp>im
     private void sendSMSCode() {
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
-                .add("accountSid","9897336")
-                .add("smsid","337900")
-                .add("to",ForgetPasswordPhoneNumber.getText().toString().trim())
-                .add("sig",MD5Utils.encode("9897336"+"650F7AB7-985C-0630-E3AD-BFA387A96F30"+TimeUtils.parssLongTime(new Date().getTime())))
-                .add("smsContent","您的验证码是"+i+"，千万不要告诉别人哦！小心别人偷窥你的秘密哦！")
-                .add("timestamp",TimeUtils.parssLongTime(new Date().getTime()))
+                .add("accountSid", "9897336")
+                .add("smsid", "337900")
+                .add("to", ForgetPasswordPhoneNumber.getText().toString().trim())
+                .add("sig", MD5Utils.encode("9897336" + "650F7AB7-985C-0630-E3AD-BFA387A96F30" + TimeUtils.parssLongTime(new Date().getTime())))
+                .add("smsContent", "您的验证码是" + i + "，千万不要告诉别人哦！小心别人偷窥你的秘密哦！")
+                .add("timestamp", TimeUtils.parssLongTime(new Date().getTime()))
                 .build();
         Request request = new Request.Builder().url("http://sms.hongsite.com/index.php?s=Smssend").post(body).build();
         okHttpClient.newCall(request).enqueue(new Callback() {
@@ -131,10 +134,9 @@ public class RegisterActivity extends BaseActivity <RegisterPhonePresenterImp>im
     @Override
     public void showRegisterPhoneBean(RegisterPhoneBean bookTuijianBean) {
         if (bookTuijianBean.getMsg().equals("可以注册")) {
-            SPUtils.put(RegisterActivity.this, SPKey.USER_MOBILE,ForgetPasswordPhoneNumber.getText().toString().trim());
-            startActivity(new Intent(RegisterActivity.this,SetPasswordActivity.class));
-        }
-        else {
+            SPUtils.put(RegisterActivity.this, SPKey.USER_MOBILE, ForgetPasswordPhoneNumber.getText().toString().trim());
+            startActivity(new Intent(RegisterActivity.this, SetPasswordActivity.class));
+        } else {
             Toast.makeText(this, bookTuijianBean.getMsg(), Toast.LENGTH_SHORT).show();
         }
     }

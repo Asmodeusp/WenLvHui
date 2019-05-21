@@ -3,6 +3,7 @@ package com.sugang.wenlvhui.view.home.intangiblecultural;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
@@ -33,7 +34,7 @@ public class IntangibleCulturalHeritageActivity extends BaseActivity {
     @BindView(R.id.IntangibleCulturalHeritage_JiangRenButton)
     AutoRelativeLayout IntangibleCulturalHeritageJiangRenButton;
     @BindView(R.id.IntangibleCulturalHeritage_Viewpager)
-    ViewPager IntangibleCulturalHeritageViewpager;
+    FrameLayout IntangibleCulturalHeritageViewpager;
 
     @Override
     protected int getLayoutId() {
@@ -42,7 +43,9 @@ public class IntangibleCulturalHeritageActivity extends BaseActivity {
 
     @Override
     protected void init() {
-
+        setContentView(R.id.IntangibleCulturalHeritage_Viewpager,ShouyiFragment.class);
+        IntangibleCulturalHeritageShouYiLine.setBackgroundColor(getResources().getColor(R.color.H2));
+        IntangibleCulturalHeritageJiangRenLine.setBackgroundColor(getResources().getColor(R.color.H3));
     }
 
     @Override
@@ -58,9 +61,14 @@ public class IntangibleCulturalHeritageActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.IntangibleCulturalHeritage_ShouYiButton:
-
+                setContentView(R.id.IntangibleCulturalHeritage_Viewpager,ShouyiFragment.class);
+                IntangibleCulturalHeritageShouYiLine.setBackgroundColor(getResources().getColor(R.color.H2));
+                IntangibleCulturalHeritageJiangRenLine.setBackgroundColor(getResources().getColor(R.color.H3));
                 break;
             case R.id.IntangibleCulturalHeritage_JiangRenButton:
+                setContentView(R.id.IntangibleCulturalHeritage_Viewpager,JiangRenFragment.class);
+                IntangibleCulturalHeritageShouYiLine.setBackgroundColor(getResources().getColor(R.color.H3));
+                IntangibleCulturalHeritageJiangRenLine.setBackgroundColor(getResources().getColor(R.color.H2));
                 break;
         }
     }

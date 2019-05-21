@@ -4,8 +4,8 @@ package com.sugang.wenlvhui.contract.home.wldz;
 import com.sugang.wenlvhui.base.BasePresenter;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
 
-public class WldzPageContract {
-   public interface WldzPageView {
+public interface WldzPageContract {
+    interface WldzPageView {
       
         //文旅定制主页
         void showWldzArtistindexBean(WldzArtistindexBean wldzArtistindexBean);
@@ -15,7 +15,7 @@ public class WldzPageContract {
 
     }
 
-    public interface WldzPagePresenter extends BasePresenter<WldzPageView> {
+     interface WldzPagePresenter extends BasePresenter<WldzPageView> {
 
 
         //猜你喜欢

@@ -1,6 +1,8 @@
 package com.sugang.wenlvhui.presenter.home.wldz;
 
 
+import android.util.Log;
+
 import com.sugang.wenlvhui.contract.home.wldz.WldzPageContract;
 import com.sugang.wenlvhui.model.bean.home.hstj.BookTuijianBean;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
@@ -44,7 +46,6 @@ public class WldzPagePresenterImp implements WldzPageContract.WldzPagePresenter 
 
                     @Override
                     public void onError(Throwable e) {
-
                     }
 
                     @Override

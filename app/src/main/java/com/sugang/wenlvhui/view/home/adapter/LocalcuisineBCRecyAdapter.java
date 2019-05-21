@@ -121,7 +121,7 @@ public class LocalcuisineBCRecyAdapter extends RecyclerView.Adapter<Localcuisine
         Glide.with(context).load(data.getRestaurantImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemDfmsbichiImage);
         holder.itemDfmsbichiPriceText.setText(data.getAverageConsumption() + "元/人");
         //餐馆类别
-//        holder.itemDfmsbichiTypeText.setText();
+        holder.itemDfmsbichiTypeText.setText(data.getRestaurantType());
     }
 
 

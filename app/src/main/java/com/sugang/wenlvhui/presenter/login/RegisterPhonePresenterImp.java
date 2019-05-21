@@ -41,7 +41,6 @@ public class RegisterPhonePresenterImp implements RegisterPhoneContract.Register
                     public void onError(Throwable e) {
 
                     }
-
                     @Override
                     public void onComplete() {
 
