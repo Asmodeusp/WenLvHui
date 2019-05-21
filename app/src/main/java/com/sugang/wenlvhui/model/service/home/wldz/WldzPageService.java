@@ -8,12 +8,15 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 
+import retrofit2.http.FieldMap;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.QueryMap;
 
 public interface WldzPageService {
-    //文旅政策
 
-    @GET(Urls.ARTIST_INDEX)
-    Observable<WldzArtistindexBean> GetWldzArtistindexBean(@QueryMap Map<String, String> params);
+    @FormUrlEncoded
+    @POST(Urls.ARTIST_INDEX)
+    Observable<WldzArtistindexBean> GetWldzArtistindexBean(@FieldMap Map<String, String> params);
 }
