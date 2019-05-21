@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/H8"
+    android:orientation="vertical"
+    tools:context=".view.home.intangiblecultural.JaingRenDetalisActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/JiangrenDetalis_ReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/JiangrenDetalis_ShareButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/share" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/JiangrenDetalis_NameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文旅圈"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="481px">
+
+        <ImageView
+            android:id="@+id/JiangrenDetalis_BackgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="429px"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/JiangrenDetalis_HeadImage"
+            android:layout_width="@dimen/px_104"
+            android:layout_height="@dimen/px_104"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginTop="377px" />
+
+        <TextView
+            android:id="@+id/JiangrenDetalis_ShopDetalisText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_148"
+            android:layout_marginTop="377px"
+            android:text="@string/app_name"
+            android:textColor="@color/H8"
+            android:textSize="@dimen/px_22" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/px_148"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作品："
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_20" />
+
+            <TextView
+                android:id="@+id/JiangrenDetalis_productNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2px"
+                android:text="1234"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_20" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_38"
+                android:src="@mipmap/location" />
+
+            <TextView
+                android:id="@+id/JiangrenDetalis_AdressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ningxia"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_20" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/JiangrenDetalis_IsLikeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/JiangrenDetalis_IsLikeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_44"
+                    android:src="@mipmap/dianzan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="收藏"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_20" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_54"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/JiangrenDetalis_ZuoPinButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作品" />
+
+            <View
+                android:id="@+id/JiangrenDetalis_ZuoPinLine"
+                android:layout_width="@dimen/px_54"
+                android:layout_height="@dimen/px_4"
+                android:layout_marginTop="@dimen/px_8"
+                android:background="@color/H5"></View>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/JiangrenDetalis_JieshaoButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="介绍" />
+
+            <View
+                android:id="@+id/JiangrenDetalis_JieshaoLine"
+                android:layout_width="@dimen/px_54"
+                android:layout_height="@dimen/px_4"
+                android:layout_marginTop="@dimen/px_8"
+                android:background="@color/H5"></View>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/JiangrenDetalis_ShipinButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频" />
+
+            <View
+                android:id="@+id/JiangrenDetalis_ShipinLine"
+                android:layout_width="@dimen/px_54"
+                android:layout_height="@dimen/px_4"
+                android:layout_marginTop="@dimen/px_8"
+                android:background="@color/H5"></View>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/JiangrenDetalis_Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</com.zhy.autolayout.AutoLinearLayout>

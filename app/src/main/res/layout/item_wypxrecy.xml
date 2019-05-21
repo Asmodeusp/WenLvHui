@@ -67,7 +67,7 @@
                 <ImageView
                     android:layout_width="@dimen/px_50"
                     android:layout_height="@dimen/px_50"
-                    android:src="@mipmap/dingwei" />
+                    android:src="@mipmap/location" />
 
                 <TextView
                     android:id="@+id/item_wypxrecyAddressText"

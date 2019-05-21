@@ -1,6 +1,7 @@
 package com.sugang.wenlvhui.view.home.intangiblecultural;
 
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -53,20 +54,19 @@ public class JiangRenFragment extends BaseFragment<JiangRenPagePresenterImp> imp
     }
 
     @Override
-    public void showJiangRenPageBean(JiangRenPageBean jiangRenPageBean) {
+    public void showJiangRenPageBean(final JiangRenPageBean jiangRenPageBean) {
         if (jiangRenPageBean.getData()!=null) {
             JaingRenRecy.setLayoutManager(new LinearLayoutManager(getActivity()));
             JaingRenRecyAdapter jaingRenRecyAdapter = new JaingRenRecyAdapter(jiangRenPageBean.getData().getShops());
             jaingRenRecyAdapter.setRecyclerViewOnCLickListener(new JaingRenRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
-
+                    SPUtils.put(getActivity(), SPKey.JIANGRENID,jiangRenPageBean.getData().getShops().get(position).getId());
+                    startActivity(new Intent(getActivity(),JaingRenDetalisActivity.class));
                 }
             });
             JaingRenRecy.setAdapter(jaingRenRecyAdapter);
         }
-
-
     }
 
     @Override

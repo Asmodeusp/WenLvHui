@@ -25,7 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.home.intangiblecultural.ShouyiDetalisActivity"></activity>
+        <activity android:name=".view.home.intangiblecultural.JaingRenDetalisActivity"></activity>
         <activity android:name=".view.home.literarytraining.WypxDetalisActivity" />
         <activity android:name=".view.login.SetPasswordActivity" />
         <activity android:name=".view.login.ForgetPasswordActivity" />

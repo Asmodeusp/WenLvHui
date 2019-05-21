@@ -71,13 +71,6 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
         Integer userId = (Integer) SPUtils.get(getActivity(), SPKey.USER_ID, 0);
         presenter.getShouYiPageBean(userId+"");
     }
-
-    @OnClick()
-    public void onViewClicked() {
-
-    }
-
-
     @OnClick({R.id.ShouYi_FirtImage, R.id.ShouYi_SecondImage, R.id.ShouYi_ThirdImage, R.id.ShouYi_SerchEd})
     public void onViewClicked(View view) {
         switch (view.getId()) {

@@ -19,6 +19,7 @@ public class SPKey {
     //定位经纬度
     public static String LATITUDE="latitude";
     public static String LONGITUDE="longitude";
-
+    //文创非遗 匠人
+    public static String JIANGRENID="jiangren_id";
 
 }

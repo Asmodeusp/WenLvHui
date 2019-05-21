@@ -53,6 +53,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
         boolean isLogin = (boolean) SPUtils.get(this, SPKey.IS_LOGIN, false);
         if (isLogin) {
             startActivity(new Intent(this, MainActivity.class));
+            finish();
         }
 //        finish();
     }
