@@ -59,6 +59,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
     //holder因为是多布局所以我这个holder有多个实例
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        holder.itemView.setTag(position);
         RestaurantPageBean.DataBean.TeseBean data = mList.get(position);
         if (holder instanceof ViewHolderOne &&ONE_ITEM == data.getType()) {
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidAddressText.setText(data.getCity() + "-" + data.getArea());

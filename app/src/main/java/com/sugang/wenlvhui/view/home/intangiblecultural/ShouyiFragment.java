@@ -1,13 +1,10 @@
 package com.sugang.wenlvhui.view.home.intangiblecultural;
 
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,13 +20,8 @@ import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.home.adapter.ShouYiRecyclerAdapter;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> implements ShouYiPageContract.ShouYiPageView {
 
 
@@ -49,7 +41,7 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
     TextView ShouYiThirdText;
     @BindView(R.id.ShouYi_Recycler)
     RecyclerView ShouYiRecycler;
-
+    private ShouYiPageBean.DataBean data;
 
 
     public ShouyiFragment() {
@@ -69,19 +61,23 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
     @Override
     protected void loadDate() {
         Integer userId = (Integer) SPUtils.get(getActivity(), SPKey.USER_ID, 0);
-        presenter.getShouYiPageBean(userId+"");
+        presenter.getShouYiPageBean(userId + "");
     }
+
     @OnClick({R.id.ShouYi_FirtImage, R.id.ShouYi_SecondImage, R.id.ShouYi_ThirdImage, R.id.ShouYi_SerchEd})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ShouYi_FirtImage:
-
+                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+                SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(0).getId());
                 break;
             case R.id.ShouYi_SecondImage:
-
+                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+                SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(1).getId());
                 break;
             case R.id.ShouYi_ThirdImage:
-
+                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+                SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(2).getId());
                 break;
             case R.id.ShouYi_SerchEd:
 
@@ -91,20 +87,22 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
 
     @Override
     public void showShouYiPageBean(ShouYiPageBean shouYiPageBean) {
-        if (shouYiPageBean.getData()!=null) {
+        if (shouYiPageBean.getData() != null) {
+            data = shouYiPageBean.getData();
             Glide.with(this).load(shouYiPageBean.getData().getAllday().get(0).getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ShouYiFirtImage);
             Glide.with(this).load(shouYiPageBean.getData().getAllday().get(1).getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ShouYiSecondImage);
             Glide.with(this).load(shouYiPageBean.getData().getAllday().get(2).getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ShouYiThirdImage);
             ShouYiFirtTextView.setText(shouYiPageBean.getData().getAllday().get(0).getProductName());
             ShouYiSecondText.setText(shouYiPageBean.getData().getAllday().get(1).getProductName());
             ShouYiThirdText.setText(shouYiPageBean.getData().getAllday().get(2).getProductName());
-            ShouYiRecycler.setLayoutManager(new GridLayoutManager(getActivity(),2));
+            ShouYiRecycler.setLayoutManager(new GridLayoutManager(getActivity(), 2));
             ShouYiRecyclerAdapter shouYiRecyclerAdapter = new ShouYiRecyclerAdapter(shouYiPageBean.getData().getSelect_product());
             ShouYiRecycler.setAdapter(shouYiRecyclerAdapter);
             shouYiRecyclerAdapter.setRecyclerViewOnCLickListener(new ShouYiRecyclerAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
-
+                    startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+                    SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getSelect_product().get(position).getId());
                 }
             });
 

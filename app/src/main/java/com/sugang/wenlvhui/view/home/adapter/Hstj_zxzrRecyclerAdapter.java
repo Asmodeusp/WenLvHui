@@ -65,6 +65,7 @@ public class Hstj_zxzrRecyclerAdapter extends RecyclerView.Adapter<Hstj_zxzrRecy
 
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
+        holder.itemView.setTag(position);
         HstjNewBean.DataBean.NewBean data = list.get(position);
         holder.itemHstjZxzrBookAutorText.setText(data.getBookAuther());
         Glide.with(context).load(data.getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemHstjZxzrBookImage);

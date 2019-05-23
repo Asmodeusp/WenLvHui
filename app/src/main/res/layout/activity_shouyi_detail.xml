@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/H8"
+    android:orientation="vertical"
+    tools:context=".view.home.intangiblecultural.ShouyiDetailActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ShouyiDetail_ReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ShouyiDetail_ShareButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/share" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文创非遗"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/ShouyiDetailFlyBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="821px"></com.youth.banner.Banner>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:id="@+id/ShouyiDetail_ProductNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_28"
+                android:layout_marginRight="@dimen/px_28"
+                android:text="asdfghjkl;'"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_22" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px_28"
+                        android:layout_marginTop="@dimen/px_33"
+                        android:text="￥"
+                        android:textColor="@color/H2"
+                        android:textSize="@dimen/px_24" />
+
+                    <TextView
+                        android:id="@+id/ShouyiDetail_Parice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:layout_marginTop="@dimen/px_33"
+                        android:text="30"
+                        android:textColor="@color/H2"
+                        android:textSize="@dimen/px_40" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:layout_marginTop="@dimen/px_33"
+                        android:text="￥"
+                        android:textColor="@color/H4"
+                        android:textSize="@dimen/px_24" />
+
+                    <TextView
+                        android:id="@+id/ShouyiDetail_YuanParice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_33"
+                        android:text="56"
+                        android:textColor="@color/H4"
+                        android:textSize="@dimen/px_24" />
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:id="@+id/ShouyiDetail_CommentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/px_28"
+                        android:text="12345条评论>"
+                        android:textColor="@color/H4"
+                        android:textSize="@dimen/px_22" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ShouyiDetail_ShopImage"
+                        android:layout_width="@dimen/px_104"
+                        android:layout_height="@dimen/px_104"
+                        android:layout_marginLeft="@dimen/px_28"
+                        android:layout_marginTop="@dimen/px_30"
+                        android:layout_marginRight="@dimen/px_18" />
+
+                    <TextView
+                        android:id="@+id/ShouyiDetail_shopName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123工作室"
+                        android:textColor="@color/H5"
+                        android:textSize="@dimen/px_24" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <TextView
+                    android:id="@+id/ShouyiDetail_goShopPageButton"
+                    android:layout_width="@dimen/px_166"
+                    android:layout_height="@dimen/px_37"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/youhui_btn"
+                    android:gravity="center"
+                    android:text="进入主页"
+                    android:textColor="@color/H8"
+                    android:textSize="@dimen/px_22" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ShouyiDetail_ShopRecy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_68"></android.support.v7.widget.RecyclerView>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_92"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ShouyiDetail_CollectionButton"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="@drawable/myself_text"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/ShouyiDetail_CollectionImage"
+                android:src="@mipmap/dianzan_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="收藏"
+                android:textSize="@dimen/px_24"
+                android:background="@color/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ShouyiDetail_JionShopingCarButton"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="@drawable/myself_text"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:text="加入购物车"
+                android:textSize="@dimen/px_30"
+                android:textColor="@color/H5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ShouyiDetail_LiJiGouMaiButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:text="立即购买"
+                android:textSize="@dimen/px_30"
+                android:textColor="@color/H8"
+                android:gravity="center"
+                android:background="@drawable/loginbutton"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

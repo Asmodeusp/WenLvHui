@@ -4,7 +4,7 @@ public class Urls {
     //基本路径
     public static final String BASE_URL = "http://www.zwwlh.com:8011/";
     //文旅政策
-    public static final String WENLV_ZHENGCE  = "wenlv/wenlvzhengce_list";
+    public static final String WENLV_ZHENGCE = "wenlv/wenlvzhengce_list";
     //文旅政策列表页
     public static final String WLZC_XMGGLIST = "wenlv/wenlvzhengceListByType";
     //好书推荐 推荐

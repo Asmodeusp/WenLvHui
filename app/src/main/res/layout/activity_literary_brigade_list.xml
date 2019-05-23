@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".view.home.literarybrigadelist.LiteraryBrigadeListActivity">
 
     <com.zhy.autolayout.AutoRelativeLayout
@@ -36,7 +36,114 @@
             android:textSize="@dimen/px_30" />
 
     </com.zhy.autolayout.AutoRelativeLayout>
-    <android.support.design.widget.TabLayout
+
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.design.widget.TabLayout>
+        android:layout_height="@dimen/px_63"
+        android:weightSum="6">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WLBD_WYButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/H2"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/WLBD_WYText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文艺榜"
+                android:textColor="@color/H8"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WLBD_MSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/WLBD_MSText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美食榜"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WLBD_GCButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/WLBD_GCText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="馆藏榜"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WLBD_RQButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/WLBD_RQText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人气榜"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WLBD_HSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/WLBD_HSText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="好书榜"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WLBD_LXButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/WLBD_LXText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路线榜"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/WLBD_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 </com.zhy.autolayout.AutoLinearLayout>

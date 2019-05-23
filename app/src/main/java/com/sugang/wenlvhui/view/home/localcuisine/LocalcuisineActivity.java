@@ -1,5 +1,6 @@
 package com.sugang.wenlvhui.view.home.localcuisine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,8 @@ import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.dfms.DfmsPageContract;
 import com.sugang.wenlvhui.model.bean.home.dfms.RestaurantPageBean;
 import com.sugang.wenlvhui.presenter.home.dfms.DfmsPagePresenterImp;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.home.adapter.LocalcuisineBCRecyAdapter;
 import com.sugang.wenlvhui.view.home.adapter.LocalcuisineTSRecyAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
@@ -67,7 +70,7 @@ public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> imp
     }
 
     @Override
-    public void showRestaurantPageBean(RestaurantPageBean restaurantPageBean) {
+    public void showRestaurantPageBean(final RestaurantPageBean restaurantPageBean) {
         if (restaurantPageBean.getData()!=null) {
             LocalcuisineBCRecy.setLayoutManager(new LinearLayoutManager(this));
             LocalcuisineBCRecyAdapter localcuisineBCRecyAdapter = new LocalcuisineBCRecyAdapter(restaurantPageBean.getData().getBichi());
@@ -75,7 +78,8 @@ public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> imp
             localcuisineBCRecyAdapter.setRecyclerViewOnCLickListener(new LocalcuisineBCRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
-
+                    SPUtils.put(LocalcuisineActivity.this, SPKey.RESTAURANT_ID,restaurantPageBean.getData().getBichi().get(position).getId());
+                    startActivity(new Intent(LocalcuisineActivity.this,RestaurantActivity.class));
                 }
             });
             for (RestaurantPageBean.DataBean.TeseBean teseBean : restaurantPageBean.getData().getTese()) {
@@ -91,10 +95,16 @@ public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> imp
             LocalcuisineTSRecy.setLayoutManager(new LinearLayoutManager(this));
             LocalcuisineTSRecyAdapter localcuisineTSRecyAdapter = new LocalcuisineTSRecyAdapter(restaurantPageBean.getData().getTese(), this);
             LocalcuisineTSRecy.setAdapter(localcuisineTSRecyAdapter);
+            localcuisineBCRecyAdapter.setRecyclerViewOnCLickListener(new LocalcuisineBCRecyAdapter.RecyclerViewOnCLickListener() {
+                @Override
+                public void myClick(View view, int position) {
+                    SPUtils.put(LocalcuisineActivity.this, SPKey.RESTAURANT_ID,restaurantPageBean.getData().getTese().get(position).getId());
+                    startActivity(new Intent(LocalcuisineActivity.this,RestaurantActivity.class));
+                }
+            });
+
         }
-
     }
-
     @Override
     public void showError(String string) {
 

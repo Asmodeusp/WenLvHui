@@ -61,7 +61,7 @@ public class JiangRenFragment extends BaseFragment<JiangRenPagePresenterImp> imp
             jaingRenRecyAdapter.setRecyclerViewOnCLickListener(new JaingRenRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
-                    SPUtils.put(getActivity(), SPKey.JIANGRENID,jiangRenPageBean.getData().getShops().get(position).getId());
+                    SPUtils.put(getActivity(), SPKey.SHOP_ID,jiangRenPageBean.getData().getShops().get(position).getId());
                     startActivity(new Intent(getActivity(),JaingRenDetalisActivity.class));
                 }
             });

@@ -16,10 +16,13 @@ public class SPKey {
     public static String WENYIPEIXUN_TYPE="wenyi_Type";
     //新闻Id
     public static String NEWS_ID="NewsId";
+
+    //文创非遗 匠人
+    public static String SHOP_ID="Shop_id";
+    public static String PRODUCT_ID="Product_id";
     //定位经纬度
     public static String LATITUDE="latitude";
     public static String LONGITUDE="longitude";
-    //文创非遗 匠人
-    public static String JIANGRENID="jiangren_id";
-
+    //地方美食
+    public static String RESTAURANT_ID="RestaurantId";
 }
