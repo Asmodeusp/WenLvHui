@@ -114,7 +114,7 @@ public class RegisterActivity extends BaseActivity<RegisterPhonePresenterImp> im
                 .add("smsid", "337900")
                 .add("to", ForgetPasswordPhoneNumber.getText().toString().trim()/*手机号 */)
                 .add("sig", MD5Utils.encode("9897336" + "650F7AB7-985C-0630-E3AD-BFA387A96F30" + TimeUtils.parssLongTime(new Date().getTime()/*三个MD5加密 前两个写死 最后一个 当前时间戳 转化为yyyyMMddHHmmss*/)))
-                .add("smsContent", "您的验证码是" + i /*验证码 */+ "，千万不要告诉别人哦！小心别人偷窥你的秘密哦！")
+                .add("smsContent", "您的验证码为"+i+"，打死都不要告诉别人哦！")
                 .add("timestamp", TimeUtils.parssLongTime(new Date().getTime()/*当前时间戳 转化为yyyyMMddHHmmss */))
                 .build();
         Request request = new Request.Builder().url("http://sms.hongsite.com/index.php?s=Smssend").post(body).build();

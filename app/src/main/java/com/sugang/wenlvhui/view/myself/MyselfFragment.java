@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sugang.wenlvhui.App;
 import com.sugang.wenlvhui.R;
@@ -94,10 +95,13 @@ public class MyselfFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.Myself_CollectionButton:
+                startActivity(new Intent(getActivity(),MyCollectionActivity.class));
                 break;
             case R.id.Myself_CardCouponButton:
+                Toast.makeText(getActivity(), "该功能未开放", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Myself_SettingButton:
+                startActivity(new Intent(getActivity(),MyselfSettingActivity.class));
                 break;
             case R.id.Myself_AllOrderButton:
                 break;
@@ -120,9 +124,9 @@ public class MyselfFragment extends BaseFragment {
             case R.id.Myself_AddressSettingButton:
                 break;
             case R.id.Myself_MySelfSettingButton:
-                SPUtils.clear(App.context);
-                startActivity(new Intent(App.context, LoginActivity.class));
-                getActivity().finish();
+//                SPUtils.clear(App.context);
+//                startActivity(new Intent(App.context, LoginActivity.class));
+//                getActivity().finish();
                 break;
         }
     }

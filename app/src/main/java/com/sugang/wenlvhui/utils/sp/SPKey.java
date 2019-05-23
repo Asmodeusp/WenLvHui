@@ -25,4 +25,6 @@ public class SPKey {
     public static String LONGITUDE="longitude";
     //地方美食
     public static String RESTAURANT_ID="RestaurantId";
+    //我的
+    public static String COLLECTION_TYPE="collectionType";
 }

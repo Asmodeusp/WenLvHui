@@ -25,7 +25,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.home.travelroute.WllxYlyjActivity"></activity>
+        <activity android:name=".view.myself.MyselfSettingActivity"></activity>
+        <activity android:name=".view.myself.MyCollectionListActivity" />
+        <activity android:name=".view.myself.MyCollectionActivity" />
+        <activity android:name=".view.home.travelroute.WllxYlyjActivity" />
         <activity android:name=".view.home.travelroute.WllxYxyActivity" />
         <activity android:name=".view.home.travelroute.WllxYllxActivity" />
         <activity android:name=".view.home.travelroute.WllxRqhbActivity" />
