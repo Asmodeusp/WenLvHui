@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.model.bean.VideosBean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxDetalisBean;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -27,12 +28,12 @@ public class ShipinFragmentRecyclerAdapter extends RecyclerView.Adapter<ShipinFr
 
 
 
-    private List<WypxDetalisBean.DataBean.VideosBean> list;
+    private List<VideosBean> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
 
-    public ShipinFragmentRecyclerAdapter(List<WypxDetalisBean.DataBean.VideosBean> list) {
+    public ShipinFragmentRecyclerAdapter(List<VideosBean> list) {
         this.list = list;
     }
 

@@ -1,6 +1,6 @@
 package com.sugang.wenlvhui.view.login;
 
-import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +13,6 @@ import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.utils.SmsCodeDownUtil;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ForgetPasswordActivity extends BaseActivity {

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginRight="@dimen/px_27"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="@dimen/px_27"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_wllxpageImage"
+        android:layout_width="@dimen/px_319"
+        android:layout_height="@dimen/px_231"
+        android:layout_marginTop="@dimen/px_30"
+        />
+    <TextView
+        android:id="@+id/item_wllxpageText"
+        android:textSize="@dimen/px_22"
+        android:textColor="@color/H5"
+        android:layout_marginTop="@dimen/px_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/H4"
+                android:text="推荐："
+                android:textSize="@dimen/px_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/kk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:id="@+id/item_wllxpageStartOne"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageStartTwo"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageStartThree"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageStartFour"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageStartFive"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageKStartOne"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageKStartTwo"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageKStartThree"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageKStartFour"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/item_wllxpageKStartFive"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/item_wllxpage_DateText"
+            android:textColor="@color/H4"
+            android:text="推荐："
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/px_18"
+            android:layout_marginRight="@dimen/px_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

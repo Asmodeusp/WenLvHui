@@ -14,6 +14,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wypx.WypxDetalisContract;
+import com.sugang.wenlvhui.model.bean.VideosBean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxDetalisBean;
 import com.sugang.wenlvhui.presenter.home.wypx.WypxDetalisPresenterImp;
 import com.sugang.wenlvhui.utils.sp.SPKey;
@@ -54,7 +55,7 @@ public class WypxDetalisActivity extends BaseActivity<WypxDetalisPresenterImp> i
     ImageView WypxDetalisHeadImage;
     public List<WypxDetalisBean.DataBean.ImgsBean> imgs
             = new ArrayList<>();
-    public List<WypxDetalisBean.DataBean.VideosBean> video = new ArrayList<>();
+    public List<VideosBean> video = new ArrayList<>();
     public String details;
 
     public String getDetails() {

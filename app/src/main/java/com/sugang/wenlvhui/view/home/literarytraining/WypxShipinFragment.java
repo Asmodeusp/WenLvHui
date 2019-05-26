@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
+import com.sugang.wenlvhui.model.bean.VideosBean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxDetalisBean;
 import com.sugang.wenlvhui.view.home.adapter.ShipinFragmentRecyclerAdapter;
 
@@ -32,7 +33,7 @@ public class WypxShipinFragment extends BaseFragment {
 
     @BindView(R.id.WypxShipinFragmentRecycler)
     RecyclerView WypxShipinFragmentRecycler;
-    ArrayList<WypxDetalisBean.DataBean.VideosBean> videos = new ArrayList<>();
+    ArrayList<VideosBean> videos = new ArrayList<>();
     public WypxShipinFragment() {
         // Required empty public constructor
     }

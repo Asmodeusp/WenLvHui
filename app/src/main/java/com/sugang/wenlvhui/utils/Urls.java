@@ -33,10 +33,10 @@ public class Urls {
     public static final String WYPX_LIST = "ymSchool/getSchoolsByType";
     //文艺培训学校详情
     public static final String SCHOOL_DETAILS = "ymSchool/getSchoolById";
-    //连载详情页
-    public static final String SERIALIZATION_DETAILS = "userPgcInfo/getPgcInfo";
+    //文旅路线首页
+    public static final String WLLX_PAGE = "wenbrigade/index";
     //连载目录页
-    public static final String SERIALIZATION_CATALOG = "userPgcInfo/getPgcCatalogInfo";
+    public static final String WLLX_LIST = "wenbrigade/list";
     //连载页阅读
     public static final String SERIALIZATION_CATALOG_READ = "userPgcInfo/getCatalogInfoPayPage";
     //评论列表
