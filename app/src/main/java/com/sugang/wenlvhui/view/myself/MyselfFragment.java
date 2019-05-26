@@ -98,7 +98,7 @@ public class MyselfFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(),MyCollectionActivity.class));
                 break;
             case R.id.Myself_CardCouponButton:
-                Toast.makeText(getActivity(), "该功能未开放", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "该功能未开放", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Myself_SettingButton:
                 startActivity(new Intent(getActivity(),MyselfSettingActivity.class));
@@ -124,9 +124,9 @@ public class MyselfFragment extends BaseFragment {
             case R.id.Myself_AddressSettingButton:
                 break;
             case R.id.Myself_MySelfSettingButton:
-//                SPUtils.clear(App.context);
-//                startActivity(new Intent(App.context, LoginActivity.class));
-//                getActivity().finish();
+                SPUtils.clear(App.context);
+                startActivity(new Intent(App.context, LoginActivity.class));
+                getActivity().finish();
                 break;
         }
     }

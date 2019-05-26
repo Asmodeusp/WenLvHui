@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Photo"
+        android:scaleType="fitXY"
+        android:layout_width="@dimen/px_212"
+        android:layout_height="@dimen/px_214" />
+    <TextView
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginTop="@dimen/px_16"
+        android:layout_marginBottom="@dimen/px_26"
+        android:textColor="@color/H5"
+        android:textSize="@dimen/px_22"
+        android:id="@+id/PhotoDetalisText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.zhy.autolayout.AutoLinearLayout>

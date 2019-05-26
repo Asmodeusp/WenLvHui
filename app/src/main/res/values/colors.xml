@@ -11,4 +11,7 @@
     <color name="H7">#FCFCFC</color>
     <color name="H3">#303030</color>
     <color name="H8">#FFFFFF</color>
+    <color name="H9">#4DFFFFFF</color>
+    <color name="H10">#66000000</color>
+    <color name="H11">#00000000</color>
 </resources>

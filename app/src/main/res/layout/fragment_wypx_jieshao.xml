@@ -4,20 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/H8"
     tools:context=".view.home.literarytraining.WypxJieshaoFragment">
-
-   <TextView
-       android:layout_marginBottom="@dimen/px_60"
-       android:layout_marginTop="@dimen/px_58"
-       android:lineSpacingExtra="@dimen/px_18"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" />
-    <View
-        android:background="@color/H4"
-        android:layout_width="match_parent"
-        android:layout_height="2px"></View>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_marginRight="@dimen/px_30"
+        android:layout_marginTop="@dimen/px_20"
+        android:id="@+id/WypxJieshaoRichText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 </com.zhy.autolayout.AutoLinearLayout>

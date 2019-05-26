@@ -19,13 +19,13 @@ public class UserBean {
     private String userLevel;         // `user_level` int(11) DEFAULT NULL COMMENT '会员等级',
     private long birthday;            // `birthday` datetime DEFAULT NULL COMMENT '生日',
     private long lastLoginTime;       // `last_login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
-    private int usertype;             //用户类型   1:普通用户    2：艺人    3：商家   4：餐厅     9：管理员',
+    private int userType;             //用户类型   1:普通用户    2：艺人    3：商家   4：餐厅     9：管理员',
     public int getUsertype() {
-        return usertype;
+        return userType;
     }
 
     public void setUsertype(int usertype) {
-        this.usertype = usertype;
+        this.userType = usertype;
     }
 
 

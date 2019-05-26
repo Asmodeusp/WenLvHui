@@ -27,10 +27,10 @@ public class Urls {
     public static final String JIANGREN_PAGER = "ymShopsTbl/list";
     //手艺
     public static final String SHOUYI_PAGER = "ymShopsTbl/shouyituijian";
-    //连载主页热门
-    public static final String SERIALIZATION_HOT = "userPgcInfo/getPgcInfo52";
-    //连载主页更新
-    public static final String SERIALIZATION_LATELY = "userPgcInfo/getPgcList";
+    //文艺培训列表
+    public static final String WYPX_LIST = "ymSchool/getSchoolsByType";
+    //文艺培训学校详情
+    public static final String SCHOOL_DETAILS = "ymSchool/getSchoolById";
     //连载详情页
     public static final String SERIALIZATION_DETAILS = "userPgcInfo/getPgcInfo";
     //连载目录页

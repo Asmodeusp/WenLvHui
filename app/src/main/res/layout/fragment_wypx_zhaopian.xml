@@ -7,6 +7,9 @@
     tools:context=".view.home.literarytraining.WypxZhaopianFragment">
 
     <android.support.v7.widget.RecyclerView
+        android:layout_marginRight="@dimen/px_28"
+        android:layout_marginLeft="@dimen/px_28"
+        android:id="@+id/ZhaopianFragmentRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 

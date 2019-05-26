@@ -5,7 +5,7 @@ import com.sugang.wenlvhui.model.bean.home.dfms.RestaurantPageBean;
 
 
 public interface DfmsPageContract {
-    interface  DfmsPageView {
+    interface DfmsPageView {
         //地方美食主页
         void showRestaurantPageBean(RestaurantPageBean restaurantPageBean);
         //展示错误数据
@@ -13,12 +13,9 @@ public interface DfmsPageContract {
 
     }
 
-    interface  DfmsPagePresenter extends BasePresenter< DfmsPageView> {
+    interface DfmsPagePresenter extends BasePresenter<DfmsPageView> {
         //推荐
         void getRestaurantPageBean();
-
-
-
 
     }
 }

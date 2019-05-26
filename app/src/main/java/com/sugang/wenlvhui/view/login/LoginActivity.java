@@ -87,6 +87,8 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
     public void showLoginBean(LoginBean loginBean) {
         if (loginBean.getMsg().equals("登陆失败")) {
             Toast.makeText(this, "请输入正确手机号和密码", Toast.LENGTH_SHORT).show();
+        }else if(loginBean.getDate().getUser().getUsertype()==3||loginBean.getDate().getUser().getUsertype()==9){
+           Toast.makeText(this, "请使用正确账号", Toast.LENGTH_SHORT).show();
         }else{
             SPUtils.put(this, SPKey.IS_LOGIN, true);
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -94,6 +96,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
         }
         if (loginBean.getDate() != null) {
             UserBean user = loginBean.getDate().getUser();
+
             if (user.getPhone() != null) {
                 SPUtils.put(this, SPKey.USER_MOBILE, user.getPhone());
             }
@@ -107,12 +110,11 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
                 SPUtils.put(this, SPKey.USERNAME, user.getUsername());
             }
             if (user.getHeadPic() != null) {
-                SPUtils.put(this, SPKey.USERNAME, user.getHeadPic());
+                SPUtils.put(this, SPKey.HEAD_PIC, user.getHeadPic());
             }
             if (user.getUsertype() != 0) {
-                SPUtils.put(this, SPKey.USERNAME, user.getUsertype());
+                SPUtils.put(this, SPKey.USER_TYPE, user.getUsertype());
             }
-
         }
 
     }

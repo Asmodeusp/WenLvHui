@@ -70,7 +70,7 @@ public class LiteraryTrainingActivity extends BaseActivity {
                 break;
             //歌唱
             case R.id.LiteraryTraining_SingButton:
-                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"歌唱");
+                SPUtils.put(this, SPKey.WENYIPEIXUN_TYPE,"唱歌");
                 startActivity(new Intent(this,LiteraryTrainingDetailsActivity.class));
                 break;
             //舞蹈
