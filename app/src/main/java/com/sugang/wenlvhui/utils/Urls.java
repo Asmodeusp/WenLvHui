@@ -27,6 +27,8 @@ public class Urls {
     public static final String JIANGREN_PAGER = "ymShopsTbl/list";
     //手艺
     public static final String SHOUYI_PAGER = "ymShopsTbl/shouyituijian";
+    //匠人详情
+    public static final String JIANGREN_DETAILS = "/ymShopsTbl/get";
     //文艺培训列表
     public static final String WYPX_LIST = "ymSchool/getSchoolsByType";
     //文艺培训学校详情
