@@ -14,6 +14,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wlze.WlzePageContract;
+import com.sugang.wenlvhui.model.bean.IsLikeBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
@@ -72,7 +73,8 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
 
     @Override
     protected void loadDate() {
-        presenter.getWenlvzhengcebeanData("1");
+        id = (int) SPUtils.get(this, SPKey.USER_ID, 0);
+        presenter.getWenlvzhengcebeanData(id+"");
 
     }
 
@@ -106,16 +108,17 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
     public void showWenlvzhengcebean(final Wenlvzhengcebean wenlvzhengcebean) {
 
         if (wenlvzhengcebean.getData()!=null) {
-            Glide.with(this).load(wenlvzhengcebean.getData().getToubu().getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelPolicyHeadImage);
-            id = wenlvzhengcebean.getData().getToubu().getId();
+            Glide.with(this).load(wenlvzhengcebean.getData().getFirst().getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelPolicyHeadImage);
+            id = wenlvzhengcebean.getData().getFirst().getId();
             //项目公告
             CulturalTravelPolicyXiangMuGongGaoRecycler.setLayoutManager(new LinearLayoutManager(this));
-            final List<NewsBean> peoject = wenlvzhengcebean.getData().getPeoject();
-            CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter adapter = new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(peoject);
+            final List<NewsBean> peoject = wenlvzhengcebean.getData().getProject();
+            CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter adapter = new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(peoject,presenter);
             adapter.setRecyclerViewOnCLickListener(new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter.RecyclerViewOnCLickListener() {
 
                 @Override
                 public void myClick(View view, int position) {
+                    SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_TYPE,"项目公告");
                     SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_ID,peoject.get(position).getId());
                     startActivity(new Intent(CulturalTravelPolicyActivity.this,NewsDetailsActivity.class));
                 }
@@ -123,11 +126,12 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
             CulturalTravelPolicyXiangMuGongGaoRecycler.setAdapter(adapter);
             //资讯动态
             CulturalTravelPolicyZiXunDongTaiRecycler.setLayoutManager(new LinearLayoutManager(this));
-            final List<NewsBean> zixun = wenlvzhengcebean.getData().getZixun();
-            Wlzc_zxdtRecyAdapter wlzc_zxdtRecyAdapter = new Wlzc_zxdtRecyAdapter(zixun);
+            final List<NewsBean> zixun = wenlvzhengcebean.getData().getConsul();
+            Wlzc_zxdtRecyAdapter wlzc_zxdtRecyAdapter = new Wlzc_zxdtRecyAdapter(zixun,presenter);
             wlzc_zxdtRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zxdtRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
+                    SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_TYPE,"资讯动态");
                     SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_ID,zixun.get(position).getId());
                     startActivity(new Intent(CulturalTravelPolicyActivity.this,NewsDetailsActivity.class));
                 }
@@ -135,11 +139,12 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
             CulturalTravelPolicyZiXunDongTaiRecycler.setAdapter(wlzc_zxdtRecyAdapter);
             //政策解读
             CulturalTravelPolicyZhenCeJieDuRecycler.setLayoutManager(new LinearLayoutManager(this));
-            final List<NewsBean> zhengce = wenlvzhengcebean.getData().getZhengce();
-            Wlzc_zcjdRecyAdapter wlzc_zcjdRecyAdapter = new Wlzc_zcjdRecyAdapter(zhengce);
+            final List<NewsBean> zhengce = wenlvzhengcebean.getData().getPolicy();
+            Wlzc_zcjdRecyAdapter wlzc_zcjdRecyAdapter = new Wlzc_zcjdRecyAdapter(zhengce,presenter);
             wlzc_zcjdRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zcjdRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
+                    SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_TYPE,"政策解读");
                     SPUtils.put(CulturalTravelPolicyActivity.this, SPKey.NEWS_ID,zhengce.get(position).getId());
                     startActivity(new Intent(CulturalTravelPolicyActivity.this,NewsDetailsActivity.class));
                 }
@@ -148,6 +153,11 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
         }else{
             Toast.makeText(this, wenlvzhengcebean.getMsg(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void ShowiSlike(IsLikeBean isLikeBean) {
+
     }
 
     @Override

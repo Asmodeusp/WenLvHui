@@ -11,7 +11,7 @@ public interface WypxPageContract {
         //        展示错误数据
         void showError(String string);
         void ShowiSlike(IsLikeBean isLikeBean);
-    }
+}
     interface  WypxPagePresenter extends BasePresenter<WypxPageView> {
         //文旅政策主页
         void getWypxPageBeanData(String type,String page,String num,String userid);

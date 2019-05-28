@@ -4,77 +4,51 @@ public class NewsBean {
 
 
     /**
-     * backupField1 : 8
-     * backupField2 : 3
-     * browse : 6765
-     * comment_num : 0
-     * cotent : 7666
-     * createDate : 1556508358000
-     * createUser : 8
-     * id : 67
-     * image : https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556515265457&di=710d86fe5303e13fc4a169c3ca50ed18&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01afc75541ec81000001714a28c572.jpg
-     * is_up : 0
-     * relay : 2
-     * source : 22
-     * status : 1
-     * substance : 效益增工资
-     * textType : 3
+     * image : http://img01.3dmgame.com/uploads/allimg/131101/154_131101033811_1.jpg
+     * cotent : 544
+     * text_type : 1
+     * substance : 沙和尚在流沙河
+     * relay : 4
+     * source : 来自本地政府文件呢
      * title : 效益增工资
-     * titleType : 48
-     * titleTypeName : 水利
-     * up_num : 0
+     * title_type : 金融
+     * backup_field2 : 2
+     * backup_field1 : 1
+     * islike : 1
+     * id : 71
+     * create_user : 11
+     * commens : 0
+     * create_date : 1557214508000
+     * status : 2
+     * browse : 235
+     * likes : 0
      */
 
-    private int backupField1;
-    private String backupField2;
-    private int browse;
-    private int comment_num;
-    private String cotent;
-    private long createDate;
-    private int createUser;
-    private int id;
     private String image;
-    private int is_up;
+    private String cotent;
+    private int text_type;
+    private String substance;
     private int relay;
     private String source;
-    private String status;
-    private String substance;
-    private int textType;
     private String title;
-    private String titleType;
-    private String titleTypeName;
-    private int up_num;
+    private String title_type;
+    private String backup_field2;
+    private int backup_field1;
+    private int islike;
+    private int id;
+    private int create_user;
+    private int commens;
+    private long create_date;
+    private String status;
+    private int browse;
+    private int likes;
 
-    public int getBackupField1() {
-        return backupField1;
+    public String getImage() {
+        return image;
     }
 
-    public void setBackupField1(int backupField1) {
-        this.backupField1 = backupField1;
-    }
-
-    public String getBackupField2() {
-        return backupField2;
-    }
-
-    public void setBackupField2(String backupField2) {
-        this.backupField2 = backupField2;
-    }
-
-    public int getBrowse() {
-        return browse;
-    }
-
-    public void setBrowse(int browse) {
-        this.browse = browse;
-    }
-
-    public int getComment_num() {
-        return comment_num;
-    }
-
-    public void setComment_num(int comment_num) {
-        this.comment_num = comment_num;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getCotent() {
@@ -85,44 +59,20 @@ public class NewsBean {
         this.cotent = cotent;
     }
 
-    public long getCreateDate() {
-        return createDate;
+    public int getText_type() {
+        return text_type;
     }
 
-    public void setCreateDate(long createDate) {
-        this.createDate = createDate;
+    public void setText_type(int text_type) {
+        this.text_type = text_type;
     }
 
-    public int getCreateUser() {
-        return createUser;
+    public String getSubstance() {
+        return substance;
     }
 
-    public void setCreateUser(int createUser) {
-        this.createUser = createUser;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public int getIs_up() {
-        return is_up;
-    }
-
-    public void setIs_up(int is_up) {
-        this.is_up = is_up;
+    public void setSubstance(String substance) {
+        this.substance = substance;
     }
 
     public int getRelay() {
@@ -141,30 +91,6 @@ public class NewsBean {
         this.source = source;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getSubstance() {
-        return substance;
-    }
-
-    public void setSubstance(String substance) {
-        this.substance = substance;
-    }
-
-    public int getTextType() {
-        return textType;
-    }
-
-    public void setTextType(int textType) {
-        this.textType = textType;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -173,27 +99,91 @@ public class NewsBean {
         this.title = title;
     }
 
-    public String getTitleType() {
-        return titleType;
+    public String getTitle_type() {
+        return title_type;
     }
 
-    public void setTitleType(String titleType) {
-        this.titleType = titleType;
+    public void setTitle_type(String title_type) {
+        this.title_type = title_type;
     }
 
-    public String getTitleTypeName() {
-        return titleTypeName;
+    public String getBackup_field2() {
+        return backup_field2;
     }
 
-    public void setTitleTypeName(String titleTypeName) {
-        this.titleTypeName = titleTypeName;
+    public void setBackup_field2(String backup_field2) {
+        this.backup_field2 = backup_field2;
     }
 
-    public int getUp_num() {
-        return up_num;
+    public int getBackup_field1() {
+        return backup_field1;
     }
 
-    public void setUp_num(int up_num) {
-        this.up_num = up_num;
+    public void setBackup_field1(int backup_field1) {
+        this.backup_field1 = backup_field1;
+    }
+
+    public int getIslike() {
+        return islike;
+    }
+
+    public void setIslike(int islike) {
+        this.islike = islike;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCreate_user() {
+        return create_user;
+    }
+
+    public void setCreate_user(int create_user) {
+        this.create_user = create_user;
+    }
+
+    public int getCommens() {
+        return commens;
+    }
+
+    public void setCommens(int commens) {
+        this.commens = commens;
+    }
+
+    public long getCreate_date() {
+        return create_date;
+    }
+
+    public void setCreate_date(long create_date) {
+        this.create_date = create_date;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getBrowse() {
+        return browse;
+    }
+
+    public void setBrowse(int browse) {
+        this.browse = browse;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

@@ -5,7 +5,6 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +13,11 @@ import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
-
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
 import com.sugang.wenlvhui.utils.TimeUtils;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -26,13 +28,20 @@ import butterknife.ButterKnife;
 
 
 public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerView.Adapter<CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter.Holder> implements View.OnClickListener {
+
     private List<NewsBean> list;
     private Context context;
-    boolean isLike =true;
+    boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
+    WlzePagePresenter presenter;
 
-    public CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(List<NewsBean> list) {
+    public CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(List<NewsBean> list, WlzePagePresenter presenter) {
         this.list = list;
+        this.presenter = presenter;
+    }
+
+    public CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(List<NewsBean> newsBeans, WlzcXmggListPresenterImp presenter) {
+
     }
 
     @NonNull
@@ -65,19 +74,19 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, final int position) {
         final NewsBean data = list.get(position);
-
-        holder.itmeWlzcXmggrecyCommentNumText.setText(data.getComment_num() + "");
-        holder.itmeWlzcXmggrecyfenlieText.setText(data.getTitleTypeName() + "");
+        final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
+        holder.itmeWlzcXmggrecyCommentNumText.setText(data.getCommens() + "");
+        holder.itmeWlzcXmggrecyfenlieText.setText(data.getTitle_type());
         holder.itmeWlzcXmggrecyTitleText.setText(data.getTitle() + "");
-        holder.itmeWlzcXmggrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
-        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getUp_num() + "");
-        holder.itmeWlzcXmggrecySeeNumText.setText(data.getComment_num() + "");
+        holder.itmeWlzcXmggrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreate_date()));
+        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + "");
+        holder.itmeWlzcXmggrecySeeNumText.setText(data.getBrowse() + "");
         holder.itmeWlzcXmggrecyFromText.setText(data.getSource() + "");
         holder.itemView.setTag(position);
-        if (data.getIs_up() == 0) {
-            isLike =false;
-        }else{
-            isLike =true;
+        if (data.getIslike() == 0) {
+            isLike = false;
+        } else {
+            isLike = true;
         }
         //设置喜欢图片
         if (isLike) {
@@ -88,23 +97,13 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getUp_num() - 1 + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() - 1 + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getUp_num() + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "1");
-//                       }
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
 
@@ -118,23 +117,13 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getUp_num() + 1 + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + 1 + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getUp_num() + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
 
@@ -157,9 +146,9 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
     }
 
     public class Holder extends RecyclerView.ViewHolder {
-
         @BindView(R.id.itme_wlzc_xmggrecyfenlieText)
         TextView itmeWlzcXmggrecyfenlieText;
+
         @BindView(R.id.itme_wlzc_xmggrecyTitleText)
         TextView itmeWlzcXmggrecyTitleText;
         @BindView(R.id.itme_wlzc_xmggrecyDataText)

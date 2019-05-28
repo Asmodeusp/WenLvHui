@@ -13,8 +13,11 @@ import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
-import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
 import com.sugang.wenlvhui.utils.TimeUtils;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -25,13 +28,20 @@ import butterknife.ButterKnife;
 
 
 public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdapter.Holder> implements View.OnClickListener {
+
     private List<NewsBean> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
+    WlzePagePresenter presenter;
 
-    public Wlzc_zcjdRecyAdapter(List<NewsBean> list) {
+    public Wlzc_zcjdRecyAdapter(List<NewsBean> list, WlzePagePresenter presenter) {
         this.list = list;
+        this.presenter = presenter;
+    }
+
+    public Wlzc_zcjdRecyAdapter(List<NewsBean> newsBeans, WlzcXmggListPresenterImp presenter) {
+
     }
 
     @NonNull
@@ -65,15 +75,17 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         final NewsBean data = list.get(position);
-        holder.itemWlzeZcjdCommentNumText.setText(data.getComment_num() + "");
-        holder.itemWlzeZcjdfenlieText.setText(data.getTitleTypeName() + "");
+        holder.itemWlzeZcjdfenlieText.setText(data.getTitle_type());
+        holder.itemWlzeZcjdCommentNumText.setText(data.getCommens() + "");
+        final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itemWlzeZcjdTitleText.setText(data.getTitle() + "");
-        holder.itemWlzeZcjdDataText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
-        holder.itemWlzeZcjdIsLikeNumText.setText(data.getIs_up() + "");
-        holder.itemWlzeZcjdSeeNumText.setText(data.getComment_num() + "");
+        holder.itemWlzeZcjdDataText.setText(TimeUtils.getBirthdatyData(data.getCreate_date()));
+        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
+        holder.itemWlzeZcjdSeeNumText.setText(data.getBrowse() + "");
         holder.itemWlzeZcjdFromText.setText(data.getSource() + "");
         holder.itemView.setTag(position);
-        if (data.getIs_up() == 0) {
+        if (data.getIslike() == 0) {
+
             isLike = false;
         } else {
             isLike = true;
@@ -86,23 +98,13 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getUp_num() - 1 + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() - 1 + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getUp_num() + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
 
@@ -116,23 +118,13 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getUp_num() + 1 + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + 1 + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getUp_num() + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
 

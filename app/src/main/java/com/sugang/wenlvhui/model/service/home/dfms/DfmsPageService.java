@@ -12,11 +12,6 @@ import retrofit2.http.POST;
 
 public interface DfmsPageService {
     //地方美食主页
-
     @POST(Urls.RESTAURANT_LIST)
     Observable<RestaurantPageBean> GetRestaurantPageData();
-
-
-
-
 }

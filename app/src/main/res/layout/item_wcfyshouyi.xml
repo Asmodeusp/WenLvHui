@@ -13,7 +13,7 @@
         android:layout_width="@dimen/px_324"
         android:layout_height="@dimen/px_272" />
 
-    <com.zhy.autolayout.AutoLinearLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -21,7 +21,10 @@
         <TextView
             android:id="@+id/item_wcfyshouyiNameText"
             android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/px_80"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
             android:layout_marginTop="@dimen/px_24"
             android:text="@string/app_name"
             android:textColor="@color/H5"
@@ -29,8 +32,10 @@
 
         <com.zhy.autolayout.AutoRelativeLayout
             android:id="@+id/item_wcfyshouyiIslikeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/px_55">
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_55"
+            android:layout_alignParentRight="true">
 
             <ImageView
                 android:id="@+id/item_wcfyshouyiIslikeImage"
@@ -42,7 +47,7 @@
                 android:layout_marginRight="@dimen/px_25"
                 android:src="@mipmap/dianzan" />
         </com.zhy.autolayout.AutoRelativeLayout>
-    </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
 
 
     <com.zhy.autolayout.AutoLinearLayout

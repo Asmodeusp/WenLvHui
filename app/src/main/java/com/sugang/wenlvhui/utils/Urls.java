@@ -6,7 +6,9 @@ public class Urls {
     //文旅政策
     public static final String WENLV_ZHENGCE = "wenlv/wenlvzhengce_list";
     //文旅政策列表页
-    public static final String WLZC_XMGGLIST = "wenlv/wenlvzhengceListByType";
+    public static final String WLZC_XMGGLIST = "wenlv/getlistBytype";
+    //文旅政策详情
+    public static final String WLZC_DETAILS = "wenlv/findOne";
     //好书推荐 推荐
     public static final String HSTJ_TUIJIAN = "book/book_index_tuijian";
     //好书推荐  猜你喜欢

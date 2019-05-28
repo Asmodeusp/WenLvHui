@@ -1,44 +1,43 @@
 package com.sugang.wenlvhui.presenter.home.wlzc;
 
-import android.util.Log;
-
-import com.sugang.wenlvhui.contract.home.wlze.WlzePageContract;
+import com.sugang.wenlvhui.contract.home.wlze.WlzeDetalisContract;
 import com.sugang.wenlvhui.model.bean.IsLikeBean;
-import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
-import com.sugang.wenlvhui.model.service.home.wlze.WlzcpageService;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsDetalisBean;
+import com.sugang.wenlvhui.model.service.home.wllx.WllxDetailsService;
+import com.sugang.wenlvhui.model.service.home.wlze.NewsDetalisService;
 import com.sugang.wenlvhui.model.service.other.IsLikeService;
 import com.sugang.wenlvhui.utils.RetrofitUtils;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
-    WlzePageContract.WlzePageView view;
-
+public class WlzeDetalisPresenterImp implements WlzeDetalisContract.WlzeDetalisPresenter {
+    WlzeDetalisContract.WlzeDetalisView view;
     @Override
-    public void getWenlvzhengcebeanData(String userId) {
+    public void getNewsDetalisBeanData(String userid, String id) {
         Map<String, String> paramMap = new HashMap<>();
-        paramMap.put("user_id",userId);
-        RetrofitUtils.getInstance().getService(WlzcpageService.class)
-                .GetWenlvPageData(paramMap)
+        paramMap.put("userid",userid);
+        paramMap.put("id",id);
+
+        RetrofitUtils.getInstance().getService(NewsDetalisService.class)
+                .GetNewsDetalisBeanData(paramMap)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<Wenlvzhengcebean>() {
+                .subscribe(new Observer<NewsDetalisBean>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
                     }
-
                     @Override
-                    public void onNext(Wenlvzhengcebean wenlvzhengcebean) {
-                        if (wenlvzhengcebean.getMsg() .equals("成功")) {
-                            view.showWenlvzhengcebean(wenlvzhengcebean);
+                    public void onNext(NewsDetalisBean wenlvzhengcebean) {
+                        if (wenlvzhengcebean.getMes() .equals("成功")) {
+                            view.showNewsDetalisBean(wenlvzhengcebean);
                         } else {
-                            view.showError(wenlvzhengcebean.getMsg());
+                            view.showError(wenlvzhengcebean.getMes());
                         }
                     }
 
@@ -90,14 +89,12 @@ public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
     }
 
     @Override
-    public void actualView(WlzePageContract.WlzePageView wlzePageView) {
-        this.view = wlzePageView;
-
+    public void actualView(WlzeDetalisContract.WlzeDetalisView wlzeDetalisView) {
+        this.view = wlzeDetalisView;
     }
 
     @Override
     public void unActualView() {
-        this.view = null;
-
+        this.view= null;
     }
 }

@@ -47,35 +47,35 @@
                     <ImageView
 
                         android:id="@+id/item_wllxpageStartOne"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:src="@mipmap/start" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageStartTwo"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/start" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageStartThree"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/start" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageStartFour"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/start" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageStartFive"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/start" />
                 </com.zhy.autolayout.AutoLinearLayout>
@@ -86,35 +86,35 @@
 
                     <ImageView
                         android:id="@+id/item_wllxpageKStartOne"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:src="@mipmap/kongstart" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageKStartTwo"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/kongstart" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageKStartThree"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/kongstart" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageKStartFour"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/kongstart" />
 
                     <ImageView
                         android:id="@+id/item_wllxpageKStartFive"
-                        android:layout_width="@dimen/px_25"
-                        android:layout_height="@dimen/px_25"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
                         android:layout_marginRight="@dimen/px_0_5"
                         android:src="@mipmap/kongstart" />
                 </com.zhy.autolayout.AutoLinearLayout>

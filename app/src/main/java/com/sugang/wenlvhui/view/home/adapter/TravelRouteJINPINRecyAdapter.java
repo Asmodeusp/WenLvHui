@@ -70,7 +70,7 @@ public class TravelRouteJINPINRecyAdapter extends RecyclerView.Adapter<TravelRou
        BrigadesBean data = list.get(position);
         holder.itemWllxpageText.setText(data.getReservedFields1());
         Glide.with(context).load(data.getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWllxpageImage);
-//        holder.itemWllxpageDateText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
+        holder.itemWllxpageDateText.setText(TimeUtils.strToDateLong(data.getCreateTime()));
         if (data.getRecommend() == 1) {
             holder.itemWllxpageStartOne.setVisibility(View.VISIBLE);
             holder.itemWllxpageStartTwo.setVisibility(View.GONE);

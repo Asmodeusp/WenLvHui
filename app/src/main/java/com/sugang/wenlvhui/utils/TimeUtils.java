@@ -1,5 +1,6 @@
 package com.sugang.wenlvhui.utils;
 
+import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -7,7 +8,14 @@ import java.util.TimeZone;
 
 public class TimeUtils {
 
+    public static String strToDateLong(String strDate) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        ParsePosition pos = new ParsePosition(0);
+        Date strtodate = formatter.parse(strDate, pos);
 
+         String dateString = formatter.format(strtodate);
+        return dateString;
+    }
     public  static String getChatTime(long timesamp) {
         String result = "";
         Date today = new Date(System.currentTimeMillis());

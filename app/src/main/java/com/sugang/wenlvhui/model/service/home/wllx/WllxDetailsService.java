@@ -1,7 +1,7 @@
 package com.sugang.wenlvhui.model.service.home.wllx;
 
 import com.sugang.wenlvhui.model.bean.home.wllx.WllxDetalisBean;
-import com.sugang.wenlvhui.model.bean.home.wllx.WllxListBean;
+
 import com.sugang.wenlvhui.utils.Urls;
 
 import java.util.Map;

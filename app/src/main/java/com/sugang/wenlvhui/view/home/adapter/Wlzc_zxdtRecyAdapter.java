@@ -1,10 +1,7 @@
 package com.sugang.wenlvhui.view.home.adapter;
 
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +12,11 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
-import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
+import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
 import com.sugang.wenlvhui.utils.TimeUtils;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -28,13 +28,20 @@ import io.reactivex.annotations.NonNull;
 
 
 public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdapter.Holder> implements View.OnClickListener {
+
     private List<NewsBean> list;
     private Context context;
     private boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
+    WlzePagePresenter presenter;
 
-    public Wlzc_zxdtRecyAdapter(List<NewsBean> list) {
+    public Wlzc_zxdtRecyAdapter(List<NewsBean> list, WlzePagePresenter presenter) {
         this.list = list;
+        this.presenter = presenter;
+    }
+
+    public Wlzc_zxdtRecyAdapter(List<NewsBean> newsBeans, WlzcXmggListPresenterImp presenter) {
+
     }
 
     @NonNull
@@ -68,16 +75,17 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
     public void onBindViewHolder(final Holder holder, int position) {
 
         final NewsBean data = list.get(position);
-        holder.itemWlzcZxdtrecyCommentNumText.setText(data.getComment_num() + "");
-        holder.itemWlzcZxdtrecyfenlieText.setText(data.getTitleTypeName() + "");
+        holder.itemWlzcZxdtrecyfenlieText.setText(data.getTitle_type());
+        holder.itemWlzcZxdtrecyCommentNumText.setText(data.getCommens() + "");
+        final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itemWlzcZxdtrecyTitleText.setText(data.getTitle() + "");
-        holder.itemWlzcZxdtrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
-        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getIs_up() + "");
-        holder.itemWlzcZxdtrecySeeNumText.setText(data.getComment_num() + "");
+        holder.itemWlzcZxdtrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreate_date()));
+        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() + "");
+        holder.itemWlzcZxdtrecySeeNumText.setText(data.getBrowse() + "");
         holder.itemWlzcZxdtrecyFromText.setText(data.getSource() + "");
         holder.itemView.setTag(position);
         Glide.with(context).load(data.getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWlzcZxdtrecyImage);
-        if (data.getIs_up() == 0) {
+        if (data.getIslike() == 0) {
             isLike = false;
         } else {
             isLike = true;
@@ -90,23 +98,13 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getUp_num() - 1 + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (data.getType() == 2) {
-//                            i60.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() - 1 + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getUp_num() + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
 
@@ -120,23 +118,13 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getUp_num() + 1 + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() + 1 + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getUp_num() + "");
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() + "");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
                 }

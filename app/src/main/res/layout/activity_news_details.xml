@@ -1,10 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#ffffff"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".view.home.culturaltravel.NewsDetailsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/NewsDetailsReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/NewsDetailsShareButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/share" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/NewsDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="好书推荐"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/NewsDetails_TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_57"
+            android:layout_marginBottom="@dimen/px_44"
+            android:text="@string/app_name"
+            android:textColor="@color/H5"
+            android:textSize="@dimen/px_24" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/px_10"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/NewsDetails_DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_18" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/px_10"
+                android:id="@+id/NewsDetailsStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转自："
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_18" />
+
+            <TextView
+                android:id="@+id/NewsDetailsFromText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转自："
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_18" />
+        </com.zhy.autolayout.AutoLinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/H4"
+            android:layout_height="@dimen/px_2"></View>
+        <TextView
+            android:layout_marginTop="@dimen/px_42"
+            android:id="@+id/NewsDetailsContentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_width="match_parent"
+            android:background="@color/H4"
+            android:layout_height="@dimen/px_2"></View>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/NewsDetailsIsLikeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/NewsDetailsIsLikeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/dianzan_pass" />
+
+                <TextView
+                    android:id="@+id/NewsDetailsIsLikeNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="1923"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/NewsDetailsCommentButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/NewsDetailsCommentImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/comment" />
+
+                <TextView
+                    android:id="@+id/NewsDetailsCommentNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="1923"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="浏览量："
+                    android:textColor="@color/H4"
+
+                    android:textSize="@dimen/px_18" />
+
+                <TextView
+                    android:id="@+id/NewsDetailsSeeNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="1923"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>
