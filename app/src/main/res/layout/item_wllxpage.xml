@@ -9,6 +9,7 @@
     <ImageView
         android:id="@+id/item_wllxpageImage"
         android:layout_width="@dimen/px_319"
+        android:scaleType="fitXY"
         android:layout_height="@dimen/px_231"
         android:layout_marginTop="@dimen/px_30"
         />

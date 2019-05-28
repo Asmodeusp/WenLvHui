@@ -30,11 +30,7 @@
         <activity android:name=".view.myself.MyCollectionListActivity" />
         <activity android:name=".view.myself.MyCollectionActivity" />
         <activity android:name=".view.home.travelroute.WllxYlyjActivity" />
-        <activity android:name=".view.home.travelroute.WllxYxyActivity" />
-        <activity android:name=".view.home.travelroute.WllxYllxActivity" />
-        <activity android:name=".view.home.travelroute.WllxRqhbActivity" />
         <activity android:name=".view.home.travelroute.WllxNjhlActivity" />
-        <activity android:name=".view.home.travelroute.WllxZmhyActivity" />
         <activity android:name=".view.home.localcuisine.FoodActivity" />
         <activity android:name=".view.home.localcuisine.RestaurantActivity" />
         <activity android:name=".view.home.intangiblecultural.ShouyiDetailActivity" />

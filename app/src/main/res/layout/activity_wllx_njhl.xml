@@ -4,10 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/H8"
     android:orientation="vertical"
     tools:context=".view.home.travelroute.WllxNjhlActivity">
-<android.support.v7.widget.RecyclerView
-    android:id="@+id/WllxNjhlRecycler"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/WllxNjhl_ReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <TextView
+            android:id="@+id/WllxNjhlTYPEText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文创非遗"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/WllxNjhlRecyclerRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/WllxNjhlRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_50"
+        android:background="@color/H8"></View>
 </com.zhy.autolayout.AutoLinearLayout>

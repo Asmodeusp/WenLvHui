@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoRelativeLayout;
 
 import butterknife.BindView;
@@ -53,12 +55,17 @@ public class TravelrouteSecondFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.TravelrouteFirst_YLLXButton:
-                startActivity(new Intent(getActivity(),WllxYllxActivity.class));
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "野驴路线");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 4);
+                startActivity(new Intent(getActivity(),WllxNjhlActivity.class));
                 break;
             case R.id.TravelrouteFirst_YXYButton:
-                startActivity(new Intent(getActivity(),WllxYxyActivity.class));
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "研学游");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 5);
+                startActivity(new Intent(getActivity(),WllxNjhlActivity.class));
                 break;
             case R.id.TravelrouteFirst_YLYJButton:
+
                 startActivity(new Intent(getActivity(),WllxYlyjActivity.class));
                 break;
         }

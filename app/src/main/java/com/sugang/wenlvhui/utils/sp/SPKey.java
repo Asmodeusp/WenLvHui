@@ -27,4 +27,6 @@ public class SPKey {
     public static String COLLECTION_TYPE="collectionType";
     //文旅路线
     public static String WLLX_ID="wllx_id";
+    public static String WLLX_TYPE ="wllx_type";
+    public static String WLLX_TYPEID ="wllx_typeid";
 }

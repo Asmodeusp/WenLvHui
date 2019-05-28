@@ -16,6 +16,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxPageBean;
+import com.sugang.wenlvhui.presenter.home.wypx.WypxPagePresenterImp;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -31,9 +34,11 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
+    WypxPagePresenterImp presenter;
 
-    public LiteraryTrainingDetailsRecyclerAdapter(List<WypxPageBean.DataBean.SchoolsBean> list) {
+    public LiteraryTrainingDetailsRecyclerAdapter(List<WypxPageBean.DataBean.SchoolsBean> list, WypxPagePresenterImp presenter) {
         this.list = list;
+        this.presenter = presenter;
     }
 
     @NonNull
@@ -66,17 +71,18 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
+        final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itemView.setTag(position);
         final WypxPageBean.DataBean.SchoolsBean data = list.get(position);
         holder.itemWypxrecyNameText.setText(data.getName());
         Glide.with(context).load(data.getLogo()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWypxrecyImage);
         holder.itemWypxrecyAddressText.setText(data.getCity() + "   |   " + data.getArea());
-        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum()+"");
+        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
         if (data.getIslike() == 0) {
 
-            isLike =false;
-        }else{
-            isLike =true;
+            isLike = false;
+        } else {
+            isLike = true;
         }
         //设置喜欢图片
         if (isLike) {
@@ -88,22 +94,12 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
                     if (isLike) {
                         holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
                         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() - 1 + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        presenter.iSlike(userId + "", "6", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
                         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "1");
-//                       }
+                        presenter.iSlike(userId + "", "6", data.getId() + "");
                         isLike = true;
                     }
 
@@ -118,27 +114,18 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
                     if (isLike) {
                         holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
                         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + 1 + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "1");
-//                        }
+                        presenter.iSlike(userId+"","6",data.getId()+"");
                         isLike = false;
                     } else {
                         holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
                         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
-//                        if (list.get(position).getType() == 1) {
-//                            presenter.UgcFabulous(list.get(position).getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (list.get(position).getType() == 2) {
-//                            presenter.PgcCollection(list.get(position).getPgcDynamicDto().getCatalogId(), "0");
-//                        }
+                        presenter.iSlike(userId+"","6",data.getId()+"");
                         isLike = true;
                     }
 
                 }
-            });}
+            });
+        }
     }
 
 

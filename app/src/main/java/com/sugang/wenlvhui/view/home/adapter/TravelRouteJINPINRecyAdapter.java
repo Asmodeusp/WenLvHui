@@ -68,40 +68,40 @@ public class TravelRouteJINPINRecyAdapter extends RecyclerView.Adapter<TravelRou
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
        BrigadesBean data = list.get(position);
-        holder.itemWllxpageText.setText(data.getName());
+        holder.itemWllxpageText.setText(data.getReservedFields1());
         Glide.with(context).load(data.getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWllxpageImage);
 //        holder.itemWllxpageDateText.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
-//        if (data.getRecommendClass() == 1) {
-//            holder.itemHstjZxzrBookStartOne.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartTwo.setVisibility(View.GONE);
-//            holder.itemHstjZxzrBookStartThree.setVisibility(View.GONE);
-//            holder.itemHstjZxzrBookStartFour.setVisibility(View.GONE);
-//            holder.itemHstjZxzrBookStartFive.setVisibility(View.GONE);
-//        } else if (data.getRecommendClass() == 2) {
-//            holder.itemHstjZxzrBookStartOne.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartTwo.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartThree.setVisibility(View.GONE);
-//            holder.itemHstjZxzrBookStartFour.setVisibility(View.GONE);
-//            holder.itemHstjZxzrBookStartFive.setVisibility(View.GONE);
-//        } else if (data.getRecommendClass() == 3) {
-//            holder.itemHstjZxzrBookStartOne.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartTwo.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartThree.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartFour.setVisibility(View.GONE);
-//            holder.itemHstjZxzrBookStartFive.setVisibility(View.GONE);
-//        } else if (data.getRecommendClass() == 4) {
-//            holder.itemHstjZxzrBookStartOne.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartTwo.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartThree.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartFour.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartFive.setVisibility(View.GONE);
-//        } else if (data.getRecommendClass() == 5) {
-//            holder.itemHstjZxzrBookStartOne.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartTwo.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartThree.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartFour.setVisibility(View.VISIBLE);
-//            holder.itemHstjZxzrBookStartFive.setVisibility(View.VISIBLE);
-//        }
+        if (data.getRecommend() == 1) {
+            holder.itemWllxpageStartOne.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartTwo.setVisibility(View.GONE);
+            holder.itemWllxpageStartThree.setVisibility(View.GONE);
+            holder.itemWllxpageStartFour.setVisibility(View.GONE);
+            holder.itemWllxpageStartFive.setVisibility(View.GONE);
+        } else if (data.getRecommend() == 2) {
+            holder.itemWllxpageStartOne.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartTwo.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartThree.setVisibility(View.GONE);
+            holder.itemWllxpageStartFour.setVisibility(View.GONE);
+            holder.itemWllxpageStartFive.setVisibility(View.GONE);
+        } else if (data.getRecommend() == 3) {
+            holder.itemWllxpageStartOne.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartTwo.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartThree.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartFour.setVisibility(View.GONE);
+            holder.itemWllxpageStartFive.setVisibility(View.GONE);
+        } else if (data.getRecommend() == 4) {
+            holder.itemWllxpageStartOne.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartTwo.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartThree.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartFour.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartFive.setVisibility(View.GONE);
+        } else if (data.getRecommend() == 5) {
+            holder.itemWllxpageStartOne.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartTwo.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartThree.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartFour.setVisibility(View.VISIBLE);
+            holder.itemWllxpageStartFive.setVisibility(View.VISIBLE);
+        }
     }
 
 

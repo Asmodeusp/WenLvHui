@@ -35,8 +35,14 @@
             android:textSize="@dimen/px_30" />
 
     </com.zhy.autolayout.AutoRelativeLayout>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/LiteraryTrainingDetailsRecycler"
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/LiteraryTrainingDetailsRecyclerRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/LiteraryTrainingDetailsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 </com.zhy.autolayout.AutoLinearLayout>

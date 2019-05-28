@@ -35,10 +35,12 @@ public class Urls {
     public static final String SCHOOL_DETAILS = "ymSchool/getSchoolById";
     //文旅路线首页
     public static final String WLLX_PAGE = "wenbrigade/index";
-    //连载目录页
+    //文旅路线列表
     public static final String WLLX_LIST = "wenbrigade/list";
-    //连载页阅读
-    public static final String SERIALIZATION_CATALOG_READ = "userPgcInfo/getCatalogInfoPayPage";
+    //文旅路线详情
+    public static final String WLLX_DETAILS = "/wenbrigade/details";
+    //点赞
+    public static final String ISLIKE = "/ymup/insert";
     //评论列表
     public static final String COMMENT_LIST = "ugcCommentInfo/getCommentList";
     //Pgc点赞

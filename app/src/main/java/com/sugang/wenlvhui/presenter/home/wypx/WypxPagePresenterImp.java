@@ -3,10 +3,12 @@ package com.sugang.wenlvhui.presenter.home.wypx;
 import android.util.Log;
 
 import com.sugang.wenlvhui.contract.home.wypx.WypxPageContract;
+import com.sugang.wenlvhui.model.bean.IsLikeBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.Wenlvzhengcebean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxPageBean;
 import com.sugang.wenlvhui.model.service.home.wlze.WlzcpageService;
 import com.sugang.wenlvhui.model.service.home.wypx.WypxPageService;
+import com.sugang.wenlvhui.model.service.other.IsLikeService;
 import com.sugang.wenlvhui.utils.RetrofitUtils;
 
 import java.util.HashMap;
@@ -40,6 +42,41 @@ public class WypxPagePresenterImp implements WypxPageContract.WypxPagePresenter 
                     public void onNext(WypxPageBean wenlvzhengcebean) {
                         if (wenlvzhengcebean.getMes() .equals("成功")) {
                             view.showWypxPageBean(wenlvzhengcebean);
+                        } else {
+                            view.showError(wenlvzhengcebean.getMes());
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    @Override
+    public void iSlike(String userid, String textType, String textId) {
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put("userid",userid);
+        paramMap.put("textType",textType);
+        paramMap.put("textId",textId);
+        RetrofitUtils.getInstance().getService(IsLikeService.class)
+                .GetIsLikeBean(paramMap)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<IsLikeBean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+                    @Override
+                    public void onNext(IsLikeBean wenlvzhengcebean) {
+                        if (wenlvzhengcebean.getMes() .equals("成功")) {
+                            view.ShowiSlike(wenlvzhengcebean);
                         } else {
                             view.showError(wenlvzhengcebean.getMes());
                         }

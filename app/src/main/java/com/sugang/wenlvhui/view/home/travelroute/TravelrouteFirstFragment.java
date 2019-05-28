@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoRelativeLayout;
 
 import butterknife.BindView;
@@ -55,13 +57,23 @@ public class TravelrouteFirstFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.TravelrouteFirst_ZMHYButton:
-                startActivity(new Intent(getActivity(),WllxZmhyActivity.class));
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "周末嗨游");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 1);
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "农家嗨乐");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 2);
+                startActivity(new Intent(getActivity(), WllxNjhlActivity.class));
                 break;
             case R.id.TravelrouteFirst_NJHLButton:
-                startActivity(new Intent(getActivity(),WllxNjhlActivity.class));
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "农家嗨乐");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 2);
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "人气嗨爆");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 3);
+                startActivity(new Intent(getActivity(), WllxNjhlActivity.class));
                 break;
             case R.id.TravelrouteFirst_RQHBButton:
-                startActivity(new Intent(getActivity(),WllxRqhbActivity.class));
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "人气嗨爆");
+                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 3);
+                startActivity(new Intent(getActivity(), WllxNjhlActivity.class));
                 break;
         }
     }

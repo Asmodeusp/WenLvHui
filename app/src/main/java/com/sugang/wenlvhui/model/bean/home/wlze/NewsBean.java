@@ -41,7 +41,7 @@ public class NewsBean {
     private String substance;
     private int textType;
     private String title;
-    private int titleType;
+    private String titleType;
     private String titleTypeName;
     private int up_num;
 
@@ -173,11 +173,11 @@ public class NewsBean {
         this.title = title;
     }
 
-    public int getTitleType() {
+    public String getTitleType() {
         return titleType;
     }
 
-    public void setTitleType(int titleType) {
+    public void setTitleType(String titleType) {
         this.titleType = titleType;
     }
 
