@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -125,6 +126,7 @@ public class LiteraryTrainingDetailsActivity extends BaseActivity<WypxPagePresen
 
     @Override
     public void ShowiSlike(IsLikeBean isLikeBean) {
+
 
     }
 

@@ -14,6 +14,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wypx.WypxDetalisContract;
+import com.sugang.wenlvhui.model.bean.ImgsBean;
 import com.sugang.wenlvhui.model.bean.VideosBean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxDetalisBean;
 import com.sugang.wenlvhui.presenter.home.wypx.WypxDetalisPresenterImp;
@@ -53,7 +54,7 @@ public class WypxDetalisActivity extends BaseActivity<WypxDetalisPresenterImp> i
     FrameLayout WypxDetalisViewPager;
     @BindView(R.id.WypxDetalis_HeadImage)
     ImageView WypxDetalisHeadImage;
-    public List<WypxDetalisBean.DataBean.ImgsBean> imgs
+    public List<ImgsBean> imgs
             = new ArrayList<>();
     public List<VideosBean> video = new ArrayList<>();
     public String details;
@@ -69,6 +70,7 @@ public class WypxDetalisActivity extends BaseActivity<WypxDetalisPresenterImp> i
 
     @Override
     protected void init() {
+        SPUtils.put(this,"HQ","WypxDetalisActivity");
         WypxDetalisJieshaoButton.setBackgroundColor(getResources().getColor(R.color.H9));
         WypxDetalisZhaoPianButton.setBackgroundColor(getResources().getColor(R.color.H11));
         WypxDetalisShiPinButton.setBackgroundColor(getResources().getColor(R.color.H11));
@@ -103,6 +105,7 @@ public class WypxDetalisActivity extends BaseActivity<WypxDetalisPresenterImp> i
                 WypxDetalisShiPinButton.setBackgroundColor(getResources().getColor(R.color.H11));
                 setContentView(R.id.WypxDetalis_ViewPager, WypxZhaopianFragment.class);
                 break;
+
             case R.id.WypxDetalis_ShiPinButton:
                 WypxDetalisJieshaoButton.setBackgroundColor(getResources().getColor(R.color.H11));
                 WypxDetalisZhaoPianButton.setBackgroundColor(getResources().getColor(R.color.H11));

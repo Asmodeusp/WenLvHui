@@ -3,6 +3,7 @@ package com.sugang.wenlvhui.view.home.culturaltravel;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -14,10 +15,12 @@ import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wlze.WlzcXmggListContract;
 import com.sugang.wenlvhui.model.bean.IsLikeBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.WlzcXmggListBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
+import com.sugang.wenlvhui.view.home.adapter.Wlzc_zxdtListAdapter;
 import com.sugang.wenlvhui.view.home.adapter.Wlzc_zxdtRecyAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 
@@ -39,8 +42,8 @@ public class ZixundongtailistActivity extends BaseActivity<WlzcXmggListPresenter
     private int page = 1;
     private boolean IsRresh;
     private int id;
-    private List<NewsBean> newsBeans =new ArrayList<>();
-    private Wlzc_zxdtRecyAdapter wlzc_zxdtRecyAdapter;
+    private List<NewsTBean> newsBeans =new ArrayList<>();
+    private Wlzc_zxdtListAdapter wlzc_zxdtRecyAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -50,9 +53,9 @@ public class ZixundongtailistActivity extends BaseActivity<WlzcXmggListPresenter
     @Override
     protected void init() {
         ZixundongtailistRecycler.setLayoutManager(new LinearLayoutManager(this));
-        wlzc_zxdtRecyAdapter = new Wlzc_zxdtRecyAdapter(newsBeans, presenter);
+        wlzc_zxdtRecyAdapter = new Wlzc_zxdtListAdapter(newsBeans, presenter);
         ZixundongtailistRecycler.setAdapter(wlzc_zxdtRecyAdapter);
-        wlzc_zxdtRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zxdtRecyAdapter.RecyclerViewOnCLickListener() {
+        wlzc_zxdtRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zxdtListAdapter.RecyclerViewOnCLickListener() {
             @Override
             public void myClick(View view, int position) {
                 SPUtils.put(ZixundongtailistActivity.this, SPKey.NEWS_TYPE,"资讯动态");
@@ -65,7 +68,7 @@ public class ZixundongtailistActivity extends BaseActivity<WlzcXmggListPresenter
             public void onRefresh(RefreshLayout refreshLayout) {
                 IsRresh =true;
 
-                presenter.getWlzcXmggListBeanData(id + "", "2", "1");
+                presenter.getWlzcXmggListBeanData(id + "", "1", "1");
             }
         });
         ZixundongtailistRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -73,7 +76,7 @@ public class ZixundongtailistActivity extends BaseActivity<WlzcXmggListPresenter
             public void onLoadMore(RefreshLayout refreshLayout) {
                 IsRresh =false;
                 page++;
-                presenter.getWlzcXmggListBeanData(id + "", "2", page+"");
+                presenter.getWlzcXmggListBeanData(id + "", "1", page+"");
             }
         });
     }
@@ -81,7 +84,7 @@ public class ZixundongtailistActivity extends BaseActivity<WlzcXmggListPresenter
     @Override
     protected void loadDate() {
         id = (int) SPUtils.get(this, SPKey.USER_ID, 0);
-        presenter.getWlzcXmggListBeanData(id + "", "2", page + "");
+        presenter.getWlzcXmggListBeanData(id + "", "1", page + "");
     }
 
 

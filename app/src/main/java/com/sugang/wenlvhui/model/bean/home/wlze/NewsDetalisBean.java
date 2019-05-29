@@ -12,7 +12,7 @@ public class NewsDetalisBean {
 
     private int code;
     private String mes;
-    private List<NewsBean> data;
+    private List<NewsTBean> data;
 
     public int getCode() {
         return code;
@@ -30,11 +30,11 @@ public class NewsDetalisBean {
         this.mes = mes;
     }
 
-    public List<NewsBean> getData() {
+    public List<NewsTBean> getData() {
         return data;
     }
 
-    public void setData(List<NewsBean> data) {
+    public void setData(List<NewsTBean> data) {
         this.data = data;
     }
 

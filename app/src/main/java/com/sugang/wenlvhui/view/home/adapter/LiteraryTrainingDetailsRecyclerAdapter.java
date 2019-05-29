@@ -5,6 +5,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,7 +80,6 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
         holder.itemWypxrecyAddressText.setText(data.getCity() + "   |   " + data.getArea());
         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
         if (data.getIslike() == 0) {
-
             isLike = false;
         } else {
             isLike = true;
@@ -92,13 +92,15 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
                 @Override
                 public void onClick(View v) {
                     if (isLike) {
-                        holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() - 1 + "");
+                        holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
+                        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum()+ "");
+
                         presenter.iSlike(userId + "", "6", data.getId() + "");
                         isLike = false;
                     } else {
-                        holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
+                        holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
+                        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum()-1 + "");
+
                         presenter.iSlike(userId + "", "6", data.getId() + "");
                         isLike = true;
                     }
@@ -112,13 +114,15 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
                 @Override
                 public void onClick(View v) {
                     if (isLike) {
-                        holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + 1 + "");
-                        presenter.iSlike(userId+"","6",data.getId()+"");
-                        isLike = false;
-                    } else {
                         holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
                         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
+                        presenter.iSlike(userId+"","6",data.getId()+"");
+
+                        isLike = false;
+                    } else {
+                        holder.itemWypxrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
+                        holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() +1+ "");
+
                         presenter.iSlike(userId+"","6",data.getId()+"");
                         isLike = true;
                     }

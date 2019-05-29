@@ -113,6 +113,7 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
             //项目公告
             CulturalTravelPolicyXiangMuGongGaoRecycler.setLayoutManager(new LinearLayoutManager(this));
             final List<NewsBean> peoject = wenlvzhengcebean.getData().getProject();
+
             CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter adapter = new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(peoject,presenter);
             adapter.setRecyclerViewOnCLickListener(new CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter.RecyclerViewOnCLickListener() {
 
@@ -157,7 +158,7 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
 
     @Override
     public void ShowiSlike(IsLikeBean isLikeBean) {
-
+            Log.d("CulturalTravelPolicyAct", isLikeBean.getMes());
     }
 
     @Override

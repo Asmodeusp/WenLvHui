@@ -19,6 +19,6 @@ public interface WldzPageContract {
 
 
         //猜你喜欢
-        void getWldzArtistindexBean(String page);
+        void getWldzArtistindexBean(String page,String num);
     }
 }

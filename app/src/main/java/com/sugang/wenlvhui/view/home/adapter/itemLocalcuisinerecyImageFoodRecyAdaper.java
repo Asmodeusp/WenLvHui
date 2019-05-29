@@ -9,13 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
-import com.sugang.wenlvhui.model.bean.ImgsBean;
-import com.sugang.wenlvhui.model.bean.home.wypx.WypxDetalisBean;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.List;
@@ -24,30 +20,33 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class ZhaopianFragmentRecyclerAdapter extends RecyclerView.Adapter<ZhaopianFragmentRecyclerAdapter.Holder> implements View.OnClickListener {
+public class itemLocalcuisinerecyImageFoodRecyAdaper extends RecyclerView.Adapter<itemLocalcuisinerecyImageFoodRecyAdaper.Holder> implements View.OnClickListener {
 
 
-
-    private List<ImgsBean> list;
+    private List<String> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
 
-    public ZhaopianFragmentRecyclerAdapter(List<ImgsBean> list) {
+
+    public itemLocalcuisinerecyImageFoodRecyAdaper(List<String> list) {
         this.list = list;
+
     }
+
+
+
 
     @NonNull
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
 
-        View inflate = LayoutInflater.from(context).inflate(R.layout.item_wypx_image, parent, false);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.item_itemlocalcuisinerecyimagefoodrecy, parent, false);
         Holder holder = new Holder(inflate);
         inflate.setOnClickListener(this);
         return holder;
     }
-
 
     @Override
     public void onClick(View v) {
@@ -66,12 +65,8 @@ public class ZhaopianFragmentRecyclerAdapter extends RecyclerView.Adapter<Zhaopi
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(@NonNull final Holder holder, int position) {
-        holder.itemView.setTag(position);
-        Glide.with(context).load(list.get(position).getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.Photo);
-        if (list.get(position).getDetalis()!=null) {
-            holder.PhotoDetalisText.setText(list.get(position).getDetalis());
-        }
+    public void onBindViewHolder(@NonNull  Holder holder, int position) {
+        Glide.with(context).load(list.get(position)).into( holder.itemItemlocalcuisinerecyimagefoodrecyImage);
 
     }
 
@@ -82,10 +77,9 @@ public class ZhaopianFragmentRecyclerAdapter extends RecyclerView.Adapter<Zhaopi
     }
 
     public class Holder extends RecyclerView.ViewHolder {
-        @BindView(R.id.Photo)
-        ImageView Photo;
-        @BindView(R.id.PhotoDetalisText)
-        TextView PhotoDetalisText;
+
+        @BindView(R.id.item_itemlocalcuisinerecyimagefoodrecyImage)
+        ImageView itemItemlocalcuisinerecyimagefoodrecyImage;
         public Holder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -95,3 +89,6 @@ public class ZhaopianFragmentRecyclerAdapter extends RecyclerView.Adapter<Zhaopi
 
 
 }
+
+
+

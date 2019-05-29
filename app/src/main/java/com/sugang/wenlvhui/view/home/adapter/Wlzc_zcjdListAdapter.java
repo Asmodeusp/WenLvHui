@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
 import com.sugang.wenlvhui.utils.TimeUtils;
@@ -27,21 +28,19 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdapter.Holder> implements View.OnClickListener {
+public class Wlzc_zcjdListAdapter extends RecyclerView.Adapter<Wlzc_zcjdListAdapter.Holder> implements View.OnClickListener {
 
-    private List<NewsBean> list;
+    private List<NewsTBean> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
-    WlzePagePresenter presenter;
+    WlzcXmggListPresenterImp presenter;
 
-    public Wlzc_zcjdRecyAdapter(List<NewsBean> list, WlzePagePresenter presenter) {
-        this.list = list;
-        this.presenter = presenter;
-    }
 
-    public Wlzc_zcjdRecyAdapter(List<NewsBean> newsBeans, WlzcXmggListPresenterImp presenter) {
+
+    public Wlzc_zcjdListAdapter(List<NewsTBean> newsBeans, WlzcXmggListPresenterImp presenter) {
         this.list = newsBeans;
+        this.presenter = presenter;
     }
 
     @NonNull
@@ -74,12 +73,12 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
-        final NewsBean data = list.get(position);
+        final NewsTBean data = list.get(position);
         holder.itemWlzeZcjdfenlieText.setText(data.getTitle_type());
         holder.itemWlzeZcjdCommentNumText.setText(data.getCommens() + "");
         final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itemWlzeZcjdTitleText.setText(data.getTitle() + "");
-        holder.itemWlzeZcjdDataText.setText(TimeUtils.getBirthdatyData(data.getCreate_date()));
+        holder.itemWlzeZcjdDataText.setText(TimeUtils.strToDateLong(data.getCreate_date()));
         holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
         holder.itemWlzeZcjdSeeNumText.setText(data.getBrowse() + "");
         holder.itemWlzeZcjdFromText.setText(data.getSource() + "");

@@ -16,7 +16,9 @@ import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
 import com.sugang.wenlvhui.model.bean.VideosBean;
 import com.sugang.wenlvhui.model.bean.home.wypx.WypxDetalisBean;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.home.adapter.ShipinFragmentRecyclerAdapter;
+import com.sugang.wenlvhui.view.home.culturaltravelcustomization.WldzDetalisActivity;
 
 import java.util.ArrayList;
 
@@ -51,7 +53,14 @@ public class WypxShipinFragment extends BaseFragment {
 
     @Override
     protected void loadDate() {
-        videos.addAll(((WypxDetalisActivity) getActivity()).video);
+        String hq = (String) SPUtils.get(getActivity(), "HQ", "");
+        if (hq.equals("WypxDetalisActivity")) {
+            videos.addAll(((WypxDetalisActivity) getActivity()).video);
+        }
+        if (hq.equals("WldzDetalisActivity")) {
+            videos.addAll(((WldzDetalisActivity) getActivity()).video);
+        }
+
         WypxShipinFragmentRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         ShipinFragmentRecyclerAdapter shipinFragmentRecyclerAdapter = new ShipinFragmentRecyclerAdapter(videos);
         WypxShipinFragmentRecycler.setAdapter(shipinFragmentRecyclerAdapter);

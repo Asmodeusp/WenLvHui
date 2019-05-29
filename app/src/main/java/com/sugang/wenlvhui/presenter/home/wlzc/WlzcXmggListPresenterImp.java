@@ -22,8 +22,8 @@ public class WlzcXmggListPresenterImp implements WlzcXmggListContract.WlzcXmggLi
     @Override
     public void getWlzcXmggListBeanData(String userId, String text_type,String page) {
         Map<String, String> paramMap = new HashMap<>();
-        paramMap.put("user_id",userId);
-        paramMap.put("text_type",text_type);
+        paramMap.put("userid",userId);
+        paramMap.put("type",text_type);
         paramMap.put("page",page);
         paramMap.put("num","10");
         RetrofitUtils.getInstance().getService(WlzcXmggListService.class)
@@ -47,7 +47,7 @@ public class WlzcXmggListPresenterImp implements WlzcXmggListContract.WlzcXmggLi
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.d("WlzcXmggListPresenterIm", e.toString());
+
                     }
 
                     @Override

@@ -17,8 +17,14 @@ public class Urls {
     public static final String HSTJ_ZXZR = "book/book_index_new";
     //艺人主页
     public static final String ARTIST_INDEX = "artist/artist_index";
+    //艺人详情
+    public static final String ARTIST_DETAIL = "artist/artist_detail";
+    //艺人搜索
+    public static final String ARTIST_SERCH = "artist/selectBykey";
     //地方美食主页
     public static final String RESTAURANT_LIST = "restaurant/restaurant_list";
+    //餐馆详情
+    public static final String RESTAURANT_DETAIL = "restaurant/restaurant_detail";
     //判断手机号是否注册
     public static final String REGISTER_PHOTO = "user/getTel";
     //用户注册

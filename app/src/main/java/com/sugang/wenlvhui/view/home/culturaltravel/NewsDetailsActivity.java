@@ -12,6 +12,7 @@ import com.sugang.wenlvhui.contract.home.wlze.WlzeDetalisContract;
 import com.sugang.wenlvhui.model.bean.IsLikeBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsDetalisBean;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzeDetalisPresenterImp;
 import com.sugang.wenlvhui.utils.TimeUtils;
 import com.sugang.wenlvhui.utils.sp.SPKey;
@@ -79,7 +80,7 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
     }
 
 
-    @OnClick({R.id.NewsDetailsReturnButton, R.id.NewsDetailsShareButton, R.id.NewsDetailsIsLikeButton, R.id.NewsDetailsCommentButton})
+    @OnClick({R.id.NewsDetailsReturnButton, R.id.NewsDetailsShareButton, R.id.NewsDetailsCommentButton})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.NewsDetailsReturnButton:
@@ -87,8 +88,7 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
                 break;
             case R.id.NewsDetailsShareButton:
                 break;
-            case R.id.NewsDetailsIsLikeButton:
-                break;
+
             case R.id.NewsDetailsCommentButton:
                 break;
         }
@@ -97,9 +97,9 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
     @Override
     public void showNewsDetalisBean(NewsDetalisBean wenlvzhengcebean) {
         if (wenlvzhengcebean.getData()!=null) {
-            final NewsBean newsBean = wenlvzhengcebean.getData().get(0);
+            final NewsTBean newsBean = wenlvzhengcebean.getData().get(0);
             NewsDetailsTitleText.setText(newsBean.getTitle());
-            NewsDetailsDateText.setText(TimeUtils.getBirthdatyData(newsBean.getCreate_date()));
+            NewsDetailsDateText.setText(TimeUtils.strToDateLong(newsBean.getCreate_date()));
             NewsDetailsStatusText.setText(newsBean.getStatus());
             if (newsBean.getSource()!=null) {
                 NewsDetailsFromText.setText(newsBean.getSource());
@@ -118,6 +118,7 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
                     .bind(this)
                     .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
                     .into(NewsDetailsContentText); // 设置目标TextView
+            NewsDetailsIsLikeNumText.setText(newsBean.getLikes()+"");
             if (newsBean.getIslike() == 0) {
                 isLike = false;
             } else {
@@ -131,13 +132,15 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
                     @Override
                     public void onClick(View v) {
                         if (isLike) {
-                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                            NewsDetailsIsLikeNumText.setText(newsBean.getLikes() - 1 + "");
+                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan);
+                           NewsDetailsIsLikeNumText.setText(newsBean.getLikes()+ "");
+
                             presenter.iSlike(userId + "", "2", newsBean.getId() + "");
                             isLike = false;
                         } else {
-                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan);
-                            NewsDetailsIsLikeNumText.setText(newsBean.getLikes() + "");
+                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
+                           NewsDetailsIsLikeNumText.setText(newsBean.getLikes()-1 + "");
+
                             presenter.iSlike(userId + "", "2", newsBean.getId() + "");
                             isLike = true;
                         }
@@ -151,20 +154,24 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
                     @Override
                     public void onClick(View v) {
                         if (isLike) {
-                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan);
-                            NewsDetailsIsLikeNumText.setText(newsBean.getLikes() + 1 + "");
-                            presenter.iSlike(userId + "", "2", newsBean.getId() + "");
+                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
+                           NewsDetailsIsLikeNumText.setText(newsBean.getLikes() + "");
+                            presenter.iSlike(userId+"","2",newsBean.getId()+"");
+
                             isLike = false;
                         } else {
-                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                            NewsDetailsIsLikeNumText.setText(newsBean.getLikes() + "");
-                            presenter.iSlike(userId + "", "2", newsBean.getId() + "");
+                            NewsDetailsIsLikeImage.setImageResource(R.mipmap.dianzan);
+                           NewsDetailsIsLikeNumText.setText(newsBean.getLikes() +1+ "");
+
+                            presenter.iSlike(userId+"","2",newsBean.getId()+"");
                             isLike = true;
                         }
 
                     }
                 });
             }
+            NewsDetailsSeeNumText.setText(newsBean.getBrowse()+"");
+            NewsDetailsCommentNumText.setText(newsBean.getCommens()+"");
         }
 
     }

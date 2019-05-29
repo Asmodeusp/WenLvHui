@@ -30,4 +30,8 @@ public class SPKey {
     public static String WLLX_ID = "wllx_id";
     public static String WLLX_TYPE = "wllx_type";
     public static String WLLX_TYPEID = "wllx_typeid";
+    //文旅定制
+    public static String WLDZ_YIRENTYPE = "wldz_yirentype";
+    public static String WLDZ_YIRENDETAILS = "wldz_yirenDetails";
+    public static String WLDZ_YIRENEXPERIENCE = "wldz_yirenExperience";
 }

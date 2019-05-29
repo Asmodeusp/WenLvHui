@@ -40,13 +40,13 @@ public class WlzcXmggListBean {
     }
 
     public static class DataBean {
-        private List<NewsBean> lists;
+        private List<NewsTBean> lists;
 
-        public List<NewsBean> getLists() {
+        public List<NewsTBean> getLists() {
             return lists;
         }
 
-        public void setLists(List<NewsBean> lists) {
+        public void setLists(List<NewsTBean> lists) {
             this.lists = lists;
         }
 

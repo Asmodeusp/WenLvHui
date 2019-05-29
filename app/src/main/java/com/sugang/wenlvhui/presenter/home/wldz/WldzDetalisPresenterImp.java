@@ -1,9 +1,11 @@
 package com.sugang.wenlvhui.presenter.home.wldz;
 
-
-import com.sugang.wenlvhui.contract.home.wldz.WldzPageContract;
+import com.sugang.wenlvhui.contract.home.wldz.WldzDetalisContract;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
+import com.sugang.wenlvhui.model.bean.home.wldz.WldzDetalisBean;
+import com.sugang.wenlvhui.model.service.home.wldz.WldzDetalisService;
 import com.sugang.wenlvhui.model.service.home.wldz.WldzPageService;
+import com.sugang.wenlvhui.model.service.home.wllx.WllxDetailsService;
 import com.sugang.wenlvhui.utils.RetrofitUtils;
 
 import java.util.HashMap;
@@ -14,30 +16,29 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class WldzPagePresenterImp implements WldzPageContract.WldzPagePresenter {
-    WldzPageContract.WldzPageView view;
+public class WldzDetalisPresenterImp implements WldzDetalisContract.WldzDetalisPresenter {
+    WldzDetalisContract.WldzDetalisView view;
 
     @Override
-    public void getWldzArtistindexBean(String page,String num) {
+    public void getWldzDetalisBean(String id) {
         Map<String, String> paramMap = new HashMap<>();
-        paramMap.put("page",page);
-        paramMap.put("num",num);
-        RetrofitUtils.getInstance().getService(WldzPageService.class)
-                .GetWldzArtistindexBean(paramMap)
+        paramMap.put("id",id);
+        RetrofitUtils.getInstance().getService(WldzDetalisService.class)
+                .GetWldzDetalisBean(paramMap)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<WldzArtistindexBean>() {
+                .subscribe(new Observer<WldzDetalisBean>() {
                     @Override
                     public void onSubscribe(Disposable d) {
 
                     }
 
                     @Override
-                    public void onNext(WldzArtistindexBean bookTuijianBean) {
-                        if (bookTuijianBean.getMes() .equals("成功")) {
-                            view.showWldzArtistindexBean(bookTuijianBean);
+                    public void onNext(WldzDetalisBean wldzDetalisBean) {
+                        if (wldzDetalisBean.getMes() .equals("成功")) {
+                            view.showWldzDetalisBean(wldzDetalisBean);
                         } else {
-                            view.showError(bookTuijianBean.getMes());
+                            view.showError(wldzDetalisBean.getMes());
                         }
                     }
 
@@ -52,11 +53,9 @@ public class WldzPagePresenterImp implements WldzPageContract.WldzPagePresenter 
                 });
     }
 
-
-
     @Override
-    public void actualView(WldzPageContract.WldzPageView wldzPageView) {
-        this.view = wldzPageView;
+    public void actualView(WldzDetalisContract.WldzDetalisView wldzDetalisView) {
+        this.view = wldzDetalisView;
     }
 
     @Override

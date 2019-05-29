@@ -1,5 +1,6 @@
 package com.sugang.wenlvhui.model.bean.home.wypx;
 
+import com.sugang.wenlvhui.model.bean.ImgsBean;
 import com.sugang.wenlvhui.model.bean.VideosBean;
 
 import java.util.List;
@@ -166,30 +167,6 @@ public class WypxDetalisBean {
             this.videos = videos;
         }
 
-        public static class ImgsBean {
-            /**
-             * detalis : jfksdgkwjdgi
-             * img : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
-             */
 
-            private String detalis;
-            private String img;
-
-            public String getDetalis() {
-                return detalis;
-            }
-
-            public void setDetalis(String detalis) {
-                this.detalis = detalis;
-            }
-
-            public String getImg() {
-                return img;
-            }
-
-            public void setImg(String img) {
-                this.img = img;
-            }
-        }
     }
 }

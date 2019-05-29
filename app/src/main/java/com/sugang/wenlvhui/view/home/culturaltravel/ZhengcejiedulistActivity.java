@@ -3,6 +3,7 @@ package com.sugang.wenlvhui.view.home.culturaltravel;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -14,10 +15,12 @@ import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wlze.WlzcXmggListContract;
 import com.sugang.wenlvhui.model.bean.IsLikeBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.WlzcXmggListBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
+import com.sugang.wenlvhui.view.home.adapter.Wlzc_zcjdListAdapter;
 import com.sugang.wenlvhui.view.home.adapter.Wlzc_zcjdRecyAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 
@@ -39,8 +42,8 @@ public class ZhengcejiedulistActivity extends BaseActivity<WlzcXmggListPresenter
     private int page = 1;
     private boolean IsRresh;
     private int id;
-    private List<NewsBean> newsBeans =new ArrayList<>();
-    private Wlzc_zcjdRecyAdapter wlzc_zcjdRecyAdapter;
+    private List<NewsTBean> newsBeans =new ArrayList<>();
+    private Wlzc_zcjdListAdapter wlzc_zcjdRecyAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -50,9 +53,9 @@ public class ZhengcejiedulistActivity extends BaseActivity<WlzcXmggListPresenter
     @Override
     protected void init() {
         ZhengcejiedulistRecycler.setLayoutManager(new LinearLayoutManager(this));
-        wlzc_zcjdRecyAdapter = new Wlzc_zcjdRecyAdapter(newsBeans, presenter);
+        wlzc_zcjdRecyAdapter = new Wlzc_zcjdListAdapter(newsBeans, presenter);
         ZhengcejiedulistRecycler.setAdapter(wlzc_zcjdRecyAdapter);
-        wlzc_zcjdRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zcjdRecyAdapter.RecyclerViewOnCLickListener() {
+        wlzc_zcjdRecyAdapter.setRecyclerViewOnCLickListener(new Wlzc_zcjdListAdapter.RecyclerViewOnCLickListener() {
             @Override
             public void myClick(View view, int position) {
                 SPUtils.put(ZhengcejiedulistActivity.this, SPKey.NEWS_TYPE,"政策解读");
@@ -91,6 +94,7 @@ public class ZhengcejiedulistActivity extends BaseActivity<WlzcXmggListPresenter
 
     @Override
     public void showWlzcXmggListBean(WlzcXmggListBean wlzcXmggListBean) {
+
         if (wlzcXmggListBean.getData() != null) {
             if (IsRresh) {
                 newsBeans.clear();

@@ -36,7 +36,7 @@ public class RegisterPresenterImp implements RegisterContract.RegisterPresenter 
 
                     @Override
                     public void onNext(RegisterBean registerBean) {
-                        Log.d("RegisterPresenterImp", registerBean.getMsg());
+
                         if (registerBean.getMsg().equals("注册成功")) {
                             view.showRegisterBean(registerBean);
                         }else{

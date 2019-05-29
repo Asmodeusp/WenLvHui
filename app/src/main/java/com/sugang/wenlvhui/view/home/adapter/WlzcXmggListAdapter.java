@@ -5,7 +5,6 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
-import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
-import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
 import com.sugang.wenlvhui.utils.TimeUtils;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
@@ -28,20 +26,26 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerView.Adapter<CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter.Holder> implements View.OnClickListener {
+public class WlzcXmggListAdapter extends RecyclerView.Adapter<WlzcXmggListAdapter.Holder> implements View.OnClickListener {
 
-    private List<NewsBean> list;
+
+    private List<NewsTBean> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
-    WlzePagePresenter presenter;
 
-    public CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter(List<NewsBean> list, WlzePagePresenter presenter) {
-        this.list = list;
+
+
+     SendISlike sendISlike;
+
+
+
+    WlzcXmggListPresenterImp presenter;
+
+    public WlzcXmggListAdapter(List<NewsTBean> newsBeans, WlzcXmggListPresenterImp presenter) {
+        this.list = newsBeans;
         this.presenter = presenter;
     }
-
-
 
     @NonNull
     @Override
@@ -61,10 +65,17 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
         }
     }
 
+
     public interface RecyclerViewOnCLickListener {
         void myClick(View view, int position);
     }
+    public interface SendISlike {
+        void sendLike( int dataId);
+    }
+    public void getSendISlike(SendISlike iSlike) {
+        sendISlike =iSlike;
 
+    }
     public void setRecyclerViewOnCLickListener(RecyclerViewOnCLickListener myCLick) {
         this.myCLick = myCLick;
     }
@@ -72,12 +83,12 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, final int position) {
-        final NewsBean data = list.get(position);
+        final NewsTBean data = list.get(position);
         final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itmeWlzcXmggrecyCommentNumText.setText(data.getCommens() + "");
         holder.itmeWlzcXmggrecyfenlieText.setText(data.getTitle_type());
         holder.itmeWlzcXmggrecyTitleText.setText(data.getTitle() + "");
-        holder.itmeWlzcXmggrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreate_date()));
+        holder.itmeWlzcXmggrecyDataText.setText(TimeUtils.strToDateLong(data.getCreate_date()));
         holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + "");
         holder.itmeWlzcXmggrecySeeNumText.setText(data.getBrowse() + "");
         holder.itmeWlzcXmggrecyFromText.setText(data.getSource() + "");
@@ -96,14 +107,14 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
                 public void onClick(View v) {
                     if (isLike) {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes()+ "");
-                        Log.d("Wlzc_zxdtRecyAdapter", "1");
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + "");
+                        sendISlike.sendLike(data.getId());
                         presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes()-1 + "");
-                        Log.d("Wlzc_zxdtRecyAdapter", "2");
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() - 1 + "");
+                        sendISlike.sendLike(data.getId());
                         presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
@@ -119,21 +130,20 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
                     if (isLike) {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
                         holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + "");
-                        presenter.iSlike(userId+"","2",data.getId()+"");
-                        Log.d("Wlzc_zxdtRecyAdapter", "3");
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
+                        sendISlike.sendLike(data.getId());
                         isLike = false;
                     } else {
                         holder.itmeWlzcXmggrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() +1+ "");
-                        presenter.iSlike(userId+"","2",data.getId()+"");
-
+                        holder.itmeWlzcXmggrecyIsLikeNumText.setText(data.getLikes() + 1 + "");
+                        sendISlike.sendLike(data.getId());
+                        presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
 
                 }
             });
         }
-        
         //点击评论
         holder.itmeWlzcXmggrecyCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,7 +162,6 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
     public class Holder extends RecyclerView.ViewHolder {
         @BindView(R.id.itme_wlzc_xmggrecyfenlieText)
         TextView itmeWlzcXmggrecyfenlieText;
-
         @BindView(R.id.itme_wlzc_xmggrecyTitleText)
         TextView itmeWlzcXmggrecyTitleText;
         @BindView(R.id.itme_wlzc_xmggrecyDataText)
@@ -180,9 +189,4 @@ public class CulturalTravelPolicyXiangMuGongGaoRecyclerAdapter extends RecyclerV
             AutoUtils.autoSize(itemView);
         }
     }
-
-
 }
-
-
-

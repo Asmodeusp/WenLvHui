@@ -11,6 +11,7 @@ import com.sugang.wenlvhui.utils.RetrofitUtils;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -22,7 +23,7 @@ public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
     @Override
     public void getWenlvzhengcebeanData(String userId) {
         Map<String, String> paramMap = new HashMap<>();
-        paramMap.put("user_id",userId);
+        paramMap.put("user_id", userId);
         RetrofitUtils.getInstance().getService(WlzcpageService.class)
                 .GetWenlvPageData(paramMap)
                 .subscribeOn(Schedulers.newThread())
@@ -35,7 +36,7 @@ public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
 
                     @Override
                     public void onNext(Wenlvzhengcebean wenlvzhengcebean) {
-                        if (wenlvzhengcebean.getMsg() .equals("成功")) {
+                        if (wenlvzhengcebean.getMsg().equals("成功")) {
                             view.showWenlvzhengcebean(wenlvzhengcebean);
                         } else {
                             view.showError(wenlvzhengcebean.getMsg());
@@ -57,9 +58,9 @@ public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
     @Override
     public void iSlike(String userid, String textType, String textId) {
         Map<String, String> paramMap = new HashMap<>();
-        paramMap.put("userid",userid);
-        paramMap.put("textType",textType);
-        paramMap.put("textId",textId);
+        paramMap.put("userid", userid);
+        paramMap.put("textType", textType);
+        paramMap.put("textId", textId);
         RetrofitUtils.getInstance().getService(IsLikeService.class)
                 .GetIsLikeBean(paramMap)
                 .subscribeOn(Schedulers.newThread())
@@ -68,9 +69,11 @@ public class WlzePagePresenter implements WlzePageContract.WlzePagePresenter {
                     @Override
                     public void onSubscribe(Disposable d) {
                     }
+
                     @Override
                     public void onNext(IsLikeBean wenlvzhengcebean) {
-                        if (wenlvzhengcebean.getMes() .equals("成功")) {
+
+                        if (wenlvzhengcebean.getMes().equals("成功")) {
                             view.ShowiSlike(wenlvzhengcebean);
                         } else {
                             view.showError(wenlvzhengcebean.getMes());

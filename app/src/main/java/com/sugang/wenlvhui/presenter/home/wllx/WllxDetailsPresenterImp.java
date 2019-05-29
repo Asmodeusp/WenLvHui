@@ -1,11 +1,9 @@
 package com.sugang.wenlvhui.presenter.home.wllx;
 
+
 import com.sugang.wenlvhui.contract.home.wllx.WllxDetailsContract;
-import com.sugang.wenlvhui.contract.home.wllx.WllxListContract;
 import com.sugang.wenlvhui.model.bean.home.wllx.WllxDetalisBean;
-import com.sugang.wenlvhui.model.bean.home.wllx.WllxListBean;
 import com.sugang.wenlvhui.model.service.home.wllx.WllxDetailsService;
-import com.sugang.wenlvhui.model.service.home.wllx.WllxListService;
 import com.sugang.wenlvhui.utils.RetrofitUtils;
 
 import java.util.HashMap;

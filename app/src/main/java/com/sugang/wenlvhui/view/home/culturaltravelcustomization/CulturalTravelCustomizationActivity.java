@@ -1,5 +1,6 @@
 package com.sugang.wenlvhui.view.home.culturaltravelcustomization;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,8 @@ import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wldz.WldzPageContract;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
 import com.sugang.wenlvhui.presenter.home.wldz.WldzPagePresenterImp;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.home.adapter.WldzArtistAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 
@@ -47,21 +50,28 @@ public class CulturalTravelCustomizationActivity extends BaseActivity<WldzPagePr
 
     @Override
     protected void init() {
-
+        CulturalTravelCustomizationShaiXuanButton.setVisibility(View.GONE);
     }
 
     @Override
     protected void loadDate() {
-        presenter.getWldzArtistindexBean("1");
+        presenter.getWldzArtistindexBean("1","4");
     }
 
     @Override
-    public void showWldzArtistindexBean(WldzArtistindexBean wldzArtistindexBean) {
+    public void showWldzArtistindexBean(final WldzArtistindexBean wldzArtistindexBean) {
         if (wldzArtistindexBean.getData() != null) {
-            Glide.with(this).load(wldzArtistindexBean.getData().getBackage_img().getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelCustomizationImage);
+            Glide.with(this).load(wldzArtistindexBean.getData().getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelCustomizationImage);
             CulturalTravelCustomizationRecy.setLayoutManager(new LinearLayoutManager(this));
-            WldzArtistAdapter wldzArtistAdapter = new WldzArtistAdapter(wldzArtistindexBean.getData().getArtistList());
+            WldzArtistAdapter wldzArtistAdapter = new WldzArtistAdapter(wldzArtistindexBean.getData().getArtists());
             CulturalTravelCustomizationRecy.setAdapter(wldzArtistAdapter);
+            wldzArtistAdapter.setRecyclerViewOnCLickListener(new WldzArtistAdapter.RecyclerViewOnCLickListener() {
+                @Override
+                public void myClick(View view, int position) {
+                    SPUtils.put(CulturalTravelCustomizationActivity.this, SPKey.WLDZ_YIRENTYPE,wldzArtistindexBean.getData().getArtists().get(position).getId());
+                    startActivity(new Intent(CulturalTravelCustomizationActivity.this,WldzDetalisActivity.class));
+                }
+            });
         }
     }
 
@@ -83,8 +93,10 @@ public class CulturalTravelCustomizationActivity extends BaseActivity<WldzPagePr
             case R.id.CulturalTravelCustomizationRenzhengButton:
                 break;
             case R.id.CulturalTravelCustomization_SerchEd:
+                startActivity(new Intent(this,WldzSerchActivity.class));
                 break;
             case R.id.CulturalTravelCustomization_ArtistMoreButton:
+                    startActivity(new Intent(this,WldzListActivity.class));
                 break;
         }
     }

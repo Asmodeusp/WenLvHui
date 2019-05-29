@@ -22,6 +22,7 @@ import com.zhy.autolayout.AutoLinearLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.jzvd.JZVideoPlayerStandard;
 
 //地方美食
 public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> implements DfmsPageContract.DfmsPageView {
@@ -61,6 +62,7 @@ public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> imp
         switch (view.getId()) {
             case R.id.LocalcuisineReturnButton:
                 finish();
+                JZVideoPlayerStandard.releaseAllVideos();
                 break;
             case R.id.LocalcuisineQuyuButton:
                 break;
@@ -78,26 +80,18 @@ public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> imp
             localcuisineBCRecyAdapter.setRecyclerViewOnCLickListener(new LocalcuisineBCRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
+                    JZVideoPlayerStandard.releaseAllVideos();
                     SPUtils.put(LocalcuisineActivity.this, SPKey.RESTAURANT_ID,restaurantPageBean.getData().getBichi().get(position).getId());
                     startActivity(new Intent(LocalcuisineActivity.this,RestaurantActivity.class));
                 }
             });
-            for (RestaurantPageBean.DataBean.TeseBean teseBean : restaurantPageBean.getData().getTese()) {
-                for (RestaurantPageBean.DataBean.TeseBean.FoodListBean foodListBean : teseBean.getFoodList()) {
-                    if (foodListBean.getImgOrVideo()==2) {
-                        teseBean.setType(1);
-                        break;
-                    }
-                }
-
-            }
-
             LocalcuisineTSRecy.setLayoutManager(new LinearLayoutManager(this));
             LocalcuisineTSRecyAdapter localcuisineTSRecyAdapter = new LocalcuisineTSRecyAdapter(restaurantPageBean.getData().getTese(), this);
             LocalcuisineTSRecy.setAdapter(localcuisineTSRecyAdapter);
             localcuisineBCRecyAdapter.setRecyclerViewOnCLickListener(new LocalcuisineBCRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
+                    JZVideoPlayerStandard.releaseAllVideos();
                     SPUtils.put(LocalcuisineActivity.this, SPKey.RESTAURANT_ID,restaurantPageBean.getData().getTese().get(position).getId());
                     startActivity(new Intent(LocalcuisineActivity.this,RestaurantActivity.class));
                 }

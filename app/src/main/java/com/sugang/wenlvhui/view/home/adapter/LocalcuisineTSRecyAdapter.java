@@ -17,6 +17,7 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.dfms.RestaurantPageBean;
 import com.sugang.wenlvhui.utils.GlideUtils;
+import com.sugang.wenlvhui.utils.Urls;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -61,7 +62,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         holder.itemView.setTag(position);
         RestaurantPageBean.DataBean.TeseBean data = mList.get(position);
-        if (holder instanceof ViewHolderOne &&ONE_ITEM == data.getType()) {
+        if (holder instanceof ViewHolderOne && ONE_ITEM == data.getType()) {
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidAddressText.setText(data.getCity() + "-" + data.getArea());
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoCommentText.setText(data.getComment_num() + "");
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodPriceText.setText(data.getAverageConsumption() + "元/人");
@@ -72,6 +73,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
                 public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {
 
                 }
+
                 @Override
                 public void onLoadingError(String source, Exception e) {
 
@@ -110,18 +112,13 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
                 ((ViewHolderOne) holder).itemLocalcuisinerecyVidoStartFive.setVisibility(View.VISIBLE);
             }
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoNameText.setText(data.getRestaurantName());
-            ArrayList<RestaurantPageBean.DataBean.TeseBean.FoodListBean> foodListBeans = new ArrayList<>();
-            for (RestaurantPageBean.DataBean.TeseBean.FoodListBean foodListBean : data.getFoodList()) {
-                if (foodListBean.getImgOrVideo() == 2) {
-                    foodListBeans.add(foodListBean);
-                }
-            }
+
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoVido
-                    .setUp(foodListBeans.get(0).getVideoUrl()
+                    .setUp(data.getFoodList().get(0).getVideoUrl()
                             , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL);
 
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoVido.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            Glide.with(mContext).load(foodListBeans.get(0).getImgUrl()).into(((ViewHolderOne) holder).itemLocalcuisinerecyVidoVido.thumbImageView);
+            Glide.with(mContext).load(data.getFoodList().get(0).getImgUrl()).into(((ViewHolderOne) holder).itemLocalcuisinerecyVidoVido.thumbImageView);
         } else if (holder instanceof ViewHolderTwo) {
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageAddressText.setText(data.getCity() + "-" + data.getArea());
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageCommentText.setText(data.getComment_num() + "");
@@ -133,6 +130,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
                 public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {
 
                 }
+
                 @Override
                 public void onLoadingError(String source, Exception e) {
 
@@ -170,14 +168,13 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
                 ((ViewHolderTwo) holder).itemLocalcuisinerecyImageStartFive.setVisibility(View.VISIBLE);
             }
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageNameText.setText(data.getRestaurantName());
-            ArrayList<RestaurantPageBean.DataBean.TeseBean.FoodListBean> foodListBeans = new ArrayList<>();
+            ArrayList<String> urls = new ArrayList<>();
             for (RestaurantPageBean.DataBean.TeseBean.FoodListBean foodListBean : data.getFoodList()) {
-                if (foodListBean.getImgOrVideo() == 2) {
-                    foodListBeans.add(foodListBean);
-                }
-
+                urls.add(foodListBean.getImgUrl());
             }
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageFoodRecy.setLayoutManager(new LinearLayoutManager(mContext));
+            itemLocalcuisinerecyImageFoodRecyAdaper itemLocalcuisinerecyImageFoodRecyAdaper = new itemLocalcuisinerecyImageFoodRecyAdaper(urls);
+            ((ViewHolderTwo) holder).itemLocalcuisinerecyImageFoodRecy.setAdapter(itemLocalcuisinerecyImageFoodRecyAdaper);
         }
 
     }
@@ -185,14 +182,15 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
 
     @Override
     public int getItemViewType(int position) {
-        if (position % 2 == 1) {
+        if (mList.get(position).getType() == 1) {
             return ONE_ITEM;
-        } else if (position % 2 == 0) {
+        } else if (mList.get(position).getType() == 2) {
             return TWO_ITEM;
         } else {
             return 0;
         }
     }
+
     @Override
     public int getItemCount() {
         return mList.isEmpty() ? 0 : mList.size();

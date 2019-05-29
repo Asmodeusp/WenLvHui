@@ -103,6 +103,8 @@
             android:layout_height="@dimen/px_2"></View>
         <TextView
             android:layout_marginTop="@dimen/px_42"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginRight="@dimen/px_28"
             android:id="@+id/NewsDetailsContentText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

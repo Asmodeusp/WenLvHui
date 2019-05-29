@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.model.bean.home.wldz.ArtistsBean;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -25,12 +26,12 @@ import butterknife.ButterKnife;
 
 public class WldzArtistAdapter extends RecyclerView.Adapter<WldzArtistAdapter.Holder> implements View.OnClickListener {
 
-    private List<WldzArtistindexBean.DataBean.ArtistListBean> list;
+    private List<ArtistsBean> list;
     private Context context;
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
 
-    public WldzArtistAdapter(List<WldzArtistindexBean.DataBean.ArtistListBean> list) {
+    public WldzArtistAdapter(List<ArtistsBean> list) {
         this.list = list;
     }
 
@@ -65,10 +66,10 @@ public class WldzArtistAdapter extends RecyclerView.Adapter<WldzArtistAdapter.Ho
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
-        WldzArtistindexBean.DataBean.ArtistListBean data = list.get(position);
-        holder.itemWldzArtistDetailsText.setText(data.getArtistDetails());
-        Glide.with(context).load(data.getArtistLogourl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWldzArtistImage);
-        holder.itemWldzArtistNameText.setText(data.getTypeName()+"   |   "+data.getArtistName());
+        ArtistsBean data = list.get(position);
+        holder.itemWldzArtistDetailsText.setText(data.getArtist_details());
+        Glide.with(context).load(data.getArtist_logourl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWldzArtistImage);
+        holder.itemWldzArtistNameText.setText(data.getArtist_type()+"   |   "+data.getArtist_name());
     }
 
 

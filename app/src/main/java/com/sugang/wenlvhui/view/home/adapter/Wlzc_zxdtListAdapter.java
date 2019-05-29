@@ -2,7 +2,6 @@ package com.sugang.wenlvhui.view.home.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzePagePresenter;
 import com.sugang.wenlvhui.utils.TimeUtils;
@@ -28,21 +28,18 @@ import butterknife.ButterKnife;
 import io.reactivex.annotations.NonNull;
 
 
-public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdapter.Holder> implements View.OnClickListener {
+public class Wlzc_zxdtListAdapter extends RecyclerView.Adapter<Wlzc_zxdtListAdapter.Holder> implements View.OnClickListener {
 
-    private List<NewsBean> list;
+    private List<NewsTBean> list;
     private Context context;
     private boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
-    WlzePagePresenter presenter;
+    WlzcXmggListPresenterImp presenter;
 
-    public Wlzc_zxdtRecyAdapter(List<NewsBean> list, WlzePagePresenter presenter) {
-        this.list = list;
-        this.presenter = presenter;
-    }
 
-    public Wlzc_zxdtRecyAdapter(List<NewsBean> newsBeans, WlzcXmggListPresenterImp presenter) {
+    public Wlzc_zxdtListAdapter(List<NewsTBean> newsBeans, WlzcXmggListPresenterImp presenter) {
         this.list = newsBeans;
+        this.presenter =presenter;
     }
 
     @NonNull
@@ -75,13 +72,13 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
     @Override
     public void onBindViewHolder(final Holder holder, int position) {
 
-        final NewsBean data = list.get(position);
+        final NewsTBean data = list.get(position);
         holder.itemWlzcZxdtrecyfenlieText.setText(data.getTitle_type());
         holder.itemWlzcZxdtrecyCommentNumText.setText(data.getCommens() + "");
         final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itemWlzcZxdtrecyTitleText.setText(data.getTitle() + "");
 
-        holder.itemWlzcZxdtrecyDataText.setText(TimeUtils.getBirthdatyData(data.getCreate_date()));
+        holder.itemWlzcZxdtrecyDataText.setText(TimeUtils.strToDateLong(data.getCreate_date()));
         holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() + "");
         holder.itemWlzcZxdtrecySeeNumText.setText(data.getBrowse() + "");
         holder.itemWlzcZxdtrecyFromText.setText(data.getSource() + "");
@@ -102,13 +99,13 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
                     if (isLike) {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
                         holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes()+ "");
-                        Log.d("Wlzc_zxdtRecyAdapter", "data.getId():" + data.getId());
+
                         presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = false;
                     } else {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
                         holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes()-1 + "");
-                        Log.d("Wlzc_zxdtRecyAdapter", "data.getId():" + data.getId());
+
                         presenter.iSlike(userId + "", "2", data.getId() + "");
                         isLike = true;
                     }
@@ -125,12 +122,12 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
                         holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() + "");
                         presenter.iSlike(userId+"","2",data.getId()+"");
-                        Log.d("Wlzc_zxdtRecyAdapter", "data.getId():" + data.getId());
+
                         isLike = false;
                     } else {
                         holder.itemWlzcZxdtrecyIsLikeImage.setImageResource(R.mipmap.dianzan);
                         holder.itemWlzcZxdtrecyIsLikeNumText.setText(data.getLikes() +1+ "");
-                        Log.d("Wlzc_zxdtRecyAdapter", "data.getId():" + data.getId());
+
                         presenter.iSlike(userId+"","2",data.getId()+"");
                         isLike = true;
                     }
