@@ -1,16 +1,14 @@
 package com.sugang.wenlvhui.view.home.prefebook;
 
-import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.hstj.HstjpageContract;
@@ -18,7 +16,6 @@ import com.sugang.wenlvhui.model.bean.home.hstj.BookTuijianBean;
 import com.sugang.wenlvhui.model.bean.home.hstj.HstjLikeBean;
 import com.sugang.wenlvhui.model.bean.home.hstj.HstjNewBean;
 import com.sugang.wenlvhui.presenter.home.hstj.HstjPagePresenterImp;
-import com.sugang.wenlvhui.utils.GlideUtils;
 import com.sugang.wenlvhui.view.home.adapter.Hstj_cnxhRecyAdapter;
 import com.sugang.wenlvhui.view.home.adapter.Hstj_zxzrRecyclerAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
@@ -27,8 +24,8 @@ import com.zhy.autolayout.AutoRelativeLayout;
 import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 //好书推荐
 public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp> implements HstjpageContract.HstjpageView {
@@ -69,7 +66,7 @@ public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp>
     @BindView(R.id.RecommendedBooks_HstjBookKStartFive)
     ImageView RecommendedBooksHstjBookKStartFive;
     @BindView(R.id.RecommendedBooks_HstjUserHeadImage)
-    ImageView RecommendedBooksHstjUserHeadImage;
+    CircleImageView RecommendedBooksHstjUserHeadImage;
     @BindView(R.id.RecommendedBooks_HstjUserNameText)
     TextView RecommendedBooksHstjUserNameText;
     @BindView(R.id.RecommendedBooks_HstjUserTuijianNnmText)
@@ -197,21 +194,12 @@ public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp>
 
     private void initTuijian() {
         //好书推荐数据渲染
-        Glide.with(this).load(tuijian.getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(RecommendedBooksHstjBookImage);
+        Glide.with(this).load(tuijian.getImgUrl()).error(R.mipmap.icon).into(RecommendedBooksHstjBookImage);
         RecommendedBooksHstjBookAutherText.setText(tuijian.getBookAuther());
         RecommendedBooksHstjBookNameText.setText(tuijian.getBookName());
         RecommendedBooksHstjJJText.setText("    " + tuijian.getBookDetail());
-        GlideUtils.loadCircleImage(tuijian.getUser().getHeadPic(), RecommendedBooksHstjUserHeadImage, new GlideUtils.ImageLoadListener<String, GlideDrawable>() {
-            @Override
-            public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {
+        Glide.with(this).load(tuijian.getUser().getHeadPic()).error(R.mipmap.icon).into( RecommendedBooksHstjUserHeadImage);
 
-            }
-
-            @Override
-            public void onLoadingError(String source, Exception e) {
-
-            }
-        }, R.mipmap.icon);
         RecommendedBooksHstjUserNameText.setText(tuijian.getUser().getName());
         RecommendedBooksHstjUserTuijianNnmText.setText(tuijian.getRecommendedNumber() + "人推荐");
         if (tuijian.getRecommendClass() == 1) {

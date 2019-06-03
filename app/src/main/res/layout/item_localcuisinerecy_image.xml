@@ -123,6 +123,7 @@
 
     </com.zhy.autolayout.AutoLinearLayout>
    <android.support.v7.widget.RecyclerView
+       android:layout_marginTop="@dimen/px_20"
        android:id="@+id/item_localcuisinerecy_imageFootRecy"
        android:layout_width="match_parent"
        android:orientation="horizontal"

@@ -45,6 +45,10 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
         this.list = newsBeans;
     }
 
+    public Wlzc_zxdtRecyAdapter(List<NewsBean> newsBeans) {
+        this.list  =newsBeans;
+    }
+
     @NonNull
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -86,7 +90,7 @@ public class Wlzc_zxdtRecyAdapter extends RecyclerView.Adapter<Wlzc_zxdtRecyAdap
         holder.itemWlzcZxdtrecySeeNumText.setText(data.getBrowse() + "");
         holder.itemWlzcZxdtrecyFromText.setText(data.getSource() + "");
         holder.itemView.setTag(position);
-        Glide.with(context).load(data.getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWlzcZxdtrecyImage);
+        Glide.with(context).load(data.getImage()).error(R.mipmap.icon).into(holder.itemWlzcZxdtrecyImage);
         if (data.getIslike() == 0) {
             isLike = false;
         } else {

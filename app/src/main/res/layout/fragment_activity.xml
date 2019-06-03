@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".view.activity.ActivityFragment">
 
     <com.zhy.autolayout.AutoRelativeLayout
@@ -16,13 +16,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/px_30"
-            android:textColor="#FFFFFF"
             android:text="活动"
-           />
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
     </com.zhy.autolayout.AutoRelativeLayout>
 
-    <com.sugang.wenlvhui.view.ui.MyScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -32,10 +31,10 @@
             android:orientation="vertical">
 
             <ImageView
-                android:scaleType="fitXY"
                 android:id="@+id/Activity_HeadImage"
                 android:layout_width="match_parent"
-                android:layout_height="382px" />
+                android:layout_height="382px"
+                android:scaleType="fitXY" />
 
             <com.zhy.autolayout.AutoLinearLayout
                 android:id="@+id/group"
@@ -257,6 +256,7 @@
                     android:weightSum="2">
 
                     <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/Activity_RILIButton"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -269,14 +269,15 @@
                             android:src="@mipmap/rili" />
 
                         <TextView
-                            android:textColor="@color/H3"
-                            android:textSize="20px"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="日历" />
+                            android:text="日历"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
                     </com.zhy.autolayout.AutoLinearLayout>
 
                     <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/Activity_DITuButton"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -287,19 +288,190 @@
                             android:layout_width="@dimen/px_44"
                             android:layout_height="@dimen/px_44"
                             android:src="@mipmap/map" />
+
                         <TextView
-                            android:textColor="@color/H3"
-                            android:textSize="20px"
-                            android:text="地图"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="地图"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
                     </com.zhy.autolayout.AutoLinearLayout>
                 </com.zhy.autolayout.AutoLinearLayout>
             </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:id="@+id/Activity_ActivityRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/Activity_ActivityRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px_28"
+                        android:layout_marginRight="@dimen/px_28"></android.support.v7.widget.RecyclerView>
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+
+                        android:id="@+id/Activity_ZhiNengPaiXuTextLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/H8"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/Activity_ZUIXINText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="最新"
+
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_ZUIREText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="最热"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:background="@color/H8"
+                        android:id="@+id/Activity_ZhuangTaiPaiXuLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/Activity_WeiKaiShiText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="未开始"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_JinXinZhongText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="进行中"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_YiJieshuText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="已结束"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/Activity_LeiBiePaiXuLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/H8"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/Activity_HuiminText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="惠民"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_YanChuText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="演出"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_SheQuText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="社区"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_QinZiText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="亲子"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/Activity_LiShiText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50"
+                            android:background="@drawable/wenzishape"
+                            android:gravity="center"
+                            android:text="历史"
+                            android:textColor="@color/H3"
+                            android:textSize="20px" />
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/px_80"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2"></com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
         </com.zhy.autolayout.AutoLinearLayout>
-
-
-    </com.sugang.wenlvhui.view.ui.MyScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 </com.zhy.autolayout.AutoLinearLayout>

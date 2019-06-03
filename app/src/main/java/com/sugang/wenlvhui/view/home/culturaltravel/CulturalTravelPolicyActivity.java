@@ -108,7 +108,7 @@ public class CulturalTravelPolicyActivity extends BaseActivity<WlzePagePresenter
     public void showWenlvzhengcebean(final Wenlvzhengcebean wenlvzhengcebean) {
 
         if (wenlvzhengcebean.getData()!=null) {
-            Glide.with(this).load(wenlvzhengcebean.getData().getFirst().getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelPolicyHeadImage);
+            Glide.with(this).load(wenlvzhengcebean.getData().getFirst().getImage()).error(R.mipmap.icon).into(CulturalTravelPolicyHeadImage);
             id = wenlvzhengcebean.getData().getFirst().getId();
             //项目公告
             CulturalTravelPolicyXiangMuGongGaoRecycler.setLayoutManager(new LinearLayoutManager(this));

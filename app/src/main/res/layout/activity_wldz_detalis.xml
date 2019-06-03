@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/H8"
     android:orientation="vertical"
-    tools:context=".view.home.culturaltravelcustomizationWldzDetalisActivity">
+    tools:context=".view.home.culturaltravelcustomization.WldzDetalisActivity">
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="match_parent"

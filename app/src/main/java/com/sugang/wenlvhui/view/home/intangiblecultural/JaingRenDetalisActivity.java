@@ -5,14 +5,25 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
+import com.sugang.wenlvhui.contract.home.wcfy.JiangrenDetalisContract;
+import com.sugang.wenlvhui.model.bean.VideosBean;
+import com.sugang.wenlvhui.model.bean.home.wcfy.JiangRenDetalisBean;
+import com.sugang.wenlvhui.presenter.home.wcfy.JiangrenDetalisPresenterImp;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class JaingRenDetalisActivity extends BaseActivity {
+public class JaingRenDetalisActivity extends BaseActivity<JiangrenDetalisPresenterImp>implements JiangrenDetalisContract.JiangrenDetalisView {
 
 
     @BindView(R.id.JiangrenDetalis_ReturnButton)
@@ -49,6 +60,9 @@ public class JaingRenDetalisActivity extends BaseActivity {
     AutoLinearLayout JiangrenDetalisShipinButton;
     @BindView(R.id.JiangrenDetalis_Viewpager)
     ViewPager JiangrenDetalisViewpager;
+    public ArrayList<VideosBean> videosBeans = new ArrayList<>();
+    public List<JiangRenDetalisBean.DataBean.ShopBean.ProductListBean> productList= new ArrayList<>();
+
 
     @Override
     protected int getLayoutId() {
@@ -65,7 +79,9 @@ public class JaingRenDetalisActivity extends BaseActivity {
 
     @Override
     protected void loadDate() {
-
+        int id = (int) SPUtils.get(this, SPKey.USER_ID, 0);
+        int ShopId = (int) SPUtils.get(this, SPKey.SHOP_ID, 0);
+        presenter.getJiangrenDetalisBean(id+"",ShopId+"");
     }
 
 
@@ -102,5 +118,28 @@ public class JaingRenDetalisActivity extends BaseActivity {
                 JiangrenDetalisZuoPinLine.setVisibility(View.INVISIBLE);
                 break;
         }
+    }
+
+    @Override
+    public void showJiangRenDetalisBean(JiangRenDetalisBean jiangRenPageBean) {
+        if (jiangRenPageBean.getData()!=null) {
+            JiangRenDetalisBean.DataBean data = jiangRenPageBean.getData();
+            JiangrenDetalisNameText.setText(data.getShop().getShopsName());
+            Glide.with(this).load(data.getShop().getProvince()).error(R.mipmap.icon).into(JiangrenDetalisBackgroundImage);
+            Glide.with(this).load(data.getShop().getImgUrl()).error(R.mipmap.icon).into(JiangrenDetalisHeadImage);
+            JiangrenDetalisShopDetalisText.setText(data.getShop().getShopsSlogan());
+            JiangrenDetalisProductNumberText.setText(data.getShop().getProduct_num()+"");
+            JiangrenDetalisAdressText.setText(data.getShop().getAddrDetail());
+            String shopsDetail = data.getShop().getShopsDetail();
+//            SPUtils.put(this,SPKey.SHOP_DETAILS,shopsDetail);
+            videosBeans.addAll(data.getShop().getVideoList());
+            productList .addAll( data.getShop().getProductList());
+        }
+
+    }
+
+    @Override
+    public void showError(String string) {
+
     }
 }

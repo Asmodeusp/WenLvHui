@@ -2,6 +2,7 @@ package com.sugang.wenlvhui.view.home.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,75 +71,15 @@ public class JaingRenRecyAdapter extends RecyclerView.Adapter<JaingRenRecyAdapte
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
         JiangRenPageBean.DataBean.ShopsBean data = list.get(position);
-
-        Glide.with(context).load(data.getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWcfyjiangrenHeadImage);
+//        Log.d("JaingRenRecyAdapter", data.getImgUrl());
+        Glide.with(context).load(data.getImgUrl()).into(holder.itemWcfyjiangrenHeadImage);
 
         holder.itemWcfyjiangrenNameText.setText(data.getShopsName());
         holder.itemWcfyjiangrenWorksNumberText.setText(data.getProduct_num() + "");
         //查看数量
-//       holder.itemWcfyjiangrenSeeNumberText.setText(data.get());
-        if (data.getIs_up() == 0) {
-            isLike = false;
-        } else {
-            isLike = true;
-        }
-        if (isLike) {
-            holder.itemWcfyjiangrenIsLikeImage.setImageResource(R.mipmap.dianzan);
-            //喜欢点击事件
-            holder.itemWcfyjiangrenIsLikeButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (isLike) {
-                        holder.itemWcfyjiangrenIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "0");
-//                        }
-                        isLike = false;
-                    } else {
-                        holder.itemWcfyjiangrenIsLikeImage.setImageResource(R.mipmap.dianzan);
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "1");
-//                        }
-                        isLike = true;
-                    }
+       holder.itemWcfyjiangrenSeeNumberText.setText(data.getBrowse()+"");
 
-                }
-            });
-        } else {
-            holder.itemWcfyjiangrenIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-            //喜欢点击事件
-            holder.itemWcfyjiangrenIsLikeButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (isLike) {
-                        holder.itemWcfyjiangrenIsLikeImage.setImageResource(R.mipmap.dianzan);
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "1");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "1");
-//                        }
-                        isLike = false;
-                    } else {
-                        holder.itemWcfyjiangrenIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-//                        if (data.getType() == 1) {
-//                            presenter.UgcFabulous(data.getUgcDynamicDto().getUgcId(), "0");
-//                        }
-//                        if (data.getType() == 2) {
-//                            presenter.PgcCollection(data.getPgcDynamicDto().getCatalogId(), "0");
-//                        }
-                        isLike = true;
-                    }
 
-                }
-            });
-        }
     }
 
 

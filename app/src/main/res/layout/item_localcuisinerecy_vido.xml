@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/item_localcuisinerecy_vidoHeadImage"
             android:layout_width="63px"
             android:layout_height="63px" />
@@ -123,6 +123,7 @@
 
     </com.zhy.autolayout.AutoLinearLayout>
     <cn.jzvd.JZVideoPlayerStandard
+        android:layout_marginTop="@dimen/px_20"
         android:id="@+id/item_localcuisinerecy_vidoVido"
         android:layout_width="match_parent"
         android:layout_height="314px"/>

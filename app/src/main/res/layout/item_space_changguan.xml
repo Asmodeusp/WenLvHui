@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/px_30"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="@dimen/px_323"
+        android:id="@+id/item_space_changguanIamge"
+        android:layout_height="@dimen/px_268" />
+    <TextView
+        android:id="@+id/item_space_changguanName"
+        android:textColor="@color/H5"
+        android:textSize="@dimen/px_22"
+        android:layout_marginTop="@dimen/px_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+<com.zhy.autolayout.AutoRelativeLayout
+    android:layout_marginTop="@dimen/px_34"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="场馆面积:"
+            android:textColor="@color/H4"
+            android:textSize="@dimen/px_22" />
+
+        <TextView
+            android:id="@+id/item_space_changguanMianJiText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_5"
+            android:text="123"
+            android:textColor="@color/H4"
+            android:textSize="@dimen/px_22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_5"
+            android:text="㎡"
+            android:textColor="@color/H4"
+            android:textSize="@dimen/px_22" />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <TextView
+        android:text="详情  >"
+        android:textColor="@color/H4"
+        android:textSize="@dimen/px_22"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+</com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

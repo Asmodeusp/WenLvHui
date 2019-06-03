@@ -10,6 +10,13 @@ public class VideosBean {
 
     private String detalis;
     private String img;
+
+    public VideosBean(String detalis, String img, String video) {
+        this.detalis = detalis;
+        this.img = img;
+        this.video = video;
+    }
+
     private String video;
 
     public String getDetalis() {

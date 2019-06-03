@@ -68,7 +68,7 @@ public class Hstj_zxzrRecyclerAdapter extends RecyclerView.Adapter<Hstj_zxzrRecy
         holder.itemView.setTag(position);
         HstjNewBean.DataBean.NewBean data = list.get(position);
         holder.itemHstjZxzrBookAutorText.setText(data.getBookAuther());
-        Glide.with(context).load(data.getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemHstjZxzrBookImage);
+        Glide.with(context).load(data.getImgUrl()).error(R.mipmap.icon).into(holder.itemHstjZxzrBookImage);
         holder.itemHstjZxzrBookNameText.setText(data.getBookName());
         if (data.getRecommendClass() == 1) {
             holder.itemHstjZxzrBookStartOne.setVisibility(View.VISIBLE);

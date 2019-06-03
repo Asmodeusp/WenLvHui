@@ -35,12 +35,17 @@ public class Wlzc_zcjdListAdapter extends RecyclerView.Adapter<Wlzc_zcjdListAdap
     boolean isLike = true;
     private RecyclerViewOnCLickListener myCLick;
     WlzcXmggListPresenterImp presenter;
-
+    private String s;
 
 
     public Wlzc_zcjdListAdapter(List<NewsTBean> newsBeans, WlzcXmggListPresenterImp presenter) {
         this.list = newsBeans;
         this.presenter = presenter;
+    }
+
+    public Wlzc_zcjdListAdapter(List<NewsTBean> newsBeans, String s) {
+        this.list = newsBeans;
+        this.s = s;
     }
 
     @NonNull
@@ -79,61 +84,69 @@ public class Wlzc_zcjdListAdapter extends RecyclerView.Adapter<Wlzc_zcjdListAdap
         final Integer userId = (Integer) SPUtils.get(context, SPKey.USER_ID, 0);
         holder.itemWlzeZcjdTitleText.setText(data.getTitle() + "");
         holder.itemWlzeZcjdDataText.setText(TimeUtils.strToDateLong(data.getCreate_date()));
-        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
-        holder.itemWlzeZcjdSeeNumText.setText(data.getBrowse() + "");
-        holder.itemWlzeZcjdFromText.setText(data.getSource() + "");
-        holder.itemView.setTag(position);
-        if (data.getIslike() == 0) {
-
-            isLike = false;
+        if (s.equals("s")) {
+            holder.itemWlzeZcjdIsLikeNumText.setVisibility(View.GONE);
+            holder.itemWlzeZcjdSeeNumText.setVisibility(View.GONE);
+            holder.itemWlzeZcjdFromText.setVisibility(View.GONE);
+            holder.itemWlzeZcjdIsLikeImage.setVisibility(View.GONE);
+            holder.itemWlzeZcjdIsLikeButton.setVisibility(View.GONE);
         } else {
-            isLike = true;
-        }
-        //设置喜欢图片
-        if (isLike) {
-            holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
-            //喜欢点击事件
-            holder.itemWlzeZcjdIsLikeButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (isLike) {
-                        holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes()+ "");
+            holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
+            holder.itemWlzeZcjdSeeNumText.setText(data.getBrowse() + "");
+            holder.itemWlzeZcjdFromText.setText(data.getSource() + "");
+            holder.itemView.setTag(position);
+            if (data.getIslike() == 0) {
 
-                        presenter.iSlike(userId + "", "2", data.getId() + "");
-                        isLike = false;
-                    } else {
-                        holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes()-1 + "");
+                isLike = false;
+            } else {
+                isLike = true;
+            }
+            //设置喜欢图片
+            if (isLike) {
+                holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
+                //喜欢点击事件
+                holder.itemWlzeZcjdIsLikeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (isLike) {
+                            holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
+                            holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
 
-                        presenter.iSlike(userId + "", "2", data.getId() + "");
-                        isLike = true;
+                            presenter.iSlike(userId + "", "2", data.getId() + "");
+                            isLike = false;
+                        } else {
+                            holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
+                            holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() - 1 + "");
+
+                            presenter.iSlike(userId + "", "2", data.getId() + "");
+                            isLike = true;
+                        }
+
                     }
+                });
+            } else {
+                holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
+                //喜欢点击事件
+                holder.itemWlzeZcjdIsLikeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (isLike) {
+                            holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
+                            holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
+                            presenter.iSlike(userId + "", "2", data.getId() + "");
 
-                }
-            });
-        } else {
-            holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-            //喜欢点击事件
-            holder.itemWlzeZcjdIsLikeButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (isLike) {
-                        holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan_pass);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + "");
-                        presenter.iSlike(userId+"","2",data.getId()+"");
+                            isLike = false;
+                        } else {
+                            holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
+                            holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() + 1 + "");
 
-                        isLike = false;
-                    } else {
-                        holder.itemWlzeZcjdIsLikeImage.setImageResource(R.mipmap.dianzan);
-                        holder.itemWlzeZcjdIsLikeNumText.setText(data.getLikes() +1+ "");
+                            presenter.iSlike(userId + "", "2", data.getId() + "");
+                            isLike = true;
+                        }
 
-                        presenter.iSlike(userId+"","2",data.getId()+"");
-                        isLike = true;
                     }
-
-                }
-            });
+                });
+            }
         }
     }
 

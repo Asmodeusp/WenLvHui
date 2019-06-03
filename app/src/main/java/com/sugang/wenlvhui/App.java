@@ -3,6 +3,7 @@ package com.sugang.wenlvhui;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.zhy.autolayout.config.AutoLayoutConifg;
 
@@ -16,9 +17,9 @@ public class App extends Application {
         AutoLayoutConifg.getInstance().useDeviceSize();
     }
 
-//    @Override
-//    protected void attachBaseContext(Context base) {
-//        super.attachBaseContext(base);
-//        MultiDex.install(this);
-//    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 }

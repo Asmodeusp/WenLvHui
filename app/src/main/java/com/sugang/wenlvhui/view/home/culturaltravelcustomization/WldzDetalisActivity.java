@@ -86,7 +86,7 @@ public class WldzDetalisActivity extends BaseActivity<WldzDetalisPresenterImp> i
         if (wllxDetalisBean.getData() != null) {
             WldzDetalisBean.DataBean.ArtistBean data = wllxDetalisBean.getData().getArtist();
             WldzDetalisNameText.setText(data.getArtistName());
-            Glide.with(this).load(data.getBackgroundUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(WldzDetalisBackgroundImage);
+            Glide.with(this).load(data.getBackgroundUrl()).error(R.mipmap.icon).into(WldzDetalisBackgroundImage);
 
             String phone = data.getArtistPhone();
             if (phone.length() == 11) {
@@ -94,7 +94,7 @@ public class WldzDetalisActivity extends BaseActivity<WldzDetalisPresenterImp> i
                 WldzDetalisPhoneNumberText.setText(maskNumber);
 
             }
-            Glide.with(this).load(data.getArtistLogourl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(WldzDetalisHeadImage);
+            Glide.with(this).load(data.getArtistLogourl()).error(R.mipmap.icon).into(WldzDetalisHeadImage);
             SPUtils.put(this, SPKey.WLDZ_YIRENDETAILS, data.getArtistDetails());
             SPUtils.put(this, SPKey.WLDZ_YIRENEXPERIENCE, data.getArtistExperience());
             imgs.addAll(wllxDetalisBean.getData().getImgs());

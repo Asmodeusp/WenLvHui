@@ -20,8 +20,9 @@ import com.zhy.autolayout.AutoLinearLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.jzvd.JZVideoPlayerStandard;
 
-public class MainActivity extends BaseActivity {
+public class  MainActivity extends BaseActivity {
 
 
     @BindView(R.id.Container)
@@ -77,22 +78,27 @@ public class MainActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.HomeButton:
+                JZVideoPlayerStandard.releaseAllVideos();
                 setContentView(R.id.Container, HomePageFragment.class);
                 setSpaceTextAndImage(R.color.H1, R.color.H1, R.color.H1, R.color.H1,R.color.H2, R.mipmap.myself, R.mipmap.circle, R.mipmap.space, R.mipmap.activity,R.mipmap.home_pass);
                 break;
             case R.id.SpaceButton:
+                JZVideoPlayerStandard.releaseAllVideos();
                 setContentView(R.id.Container, SpaceFragment.class);
                 setSpaceTextAndImage(R.color.H2, R.color.H1, R.color.H1, R.color.H1,R.color.H1, R.mipmap.myself, R.mipmap.circle, R.mipmap.space_pass, R.mipmap.activity,R.mipmap.home);
                 break;
             case R.id.ActivityButton:
+                JZVideoPlayerStandard.releaseAllVideos();
                 setContentView(R.id.Container, ActivityFragment.class);
                 setSpaceTextAndImage(R.color.H1, R.color.H1, R.color.H1, R.color.H2,R.color.H1, R.mipmap.myself, R.mipmap.circle, R.mipmap.space, R.mipmap.activity_pass,R.mipmap.home);
                 break;
             case R.id.CircleButton:
+                JZVideoPlayerStandard.releaseAllVideos();
                 setContentView(R.id.Container, CircleFragment.class);
                 setSpaceTextAndImage(R.color.H1, R.color.H1, R.color.H2, R.color.H1, R.color.H1, R.mipmap.myself, R.mipmap.circle_pass, R.mipmap.space, R.mipmap.activity,R.mipmap.home);
                 break;
             case R.id.MyselfButton:
+                JZVideoPlayerStandard.releaseAllVideos();
                 setContentView(R.id.Container, MyselfFragment.class);
                 setSpaceTextAndImage(R.color.H1, R.color.H2, R.color.H1, R.color.H1,R.color.H1, R.mipmap.myself_pass, R.mipmap.circle, R.mipmap.space, R.mipmap.activity,R.mipmap.home);
                 break;

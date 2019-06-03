@@ -56,6 +56,8 @@ public class WldzSerchActivity extends BaseActivity<WldzSerchPresenterImp> imple
 
     @Override
     protected void init() {
+        WldzSerchSousuoRefreshLayout.setEnableRefresh(false);
+
         WldzSerchSousuoRefreshLayout.finishRefresh();
         WldzSerchSousuoRecycler.setLayoutManager(new LinearLayoutManager(this));
         wlzc_zxdtRecyAdapter = new WldzArtistAdapter(newsBeans);

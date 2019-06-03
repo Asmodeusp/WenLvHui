@@ -1,10 +1,8 @@
 package com.sugang.wenlvhui.view.home.adapter;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.dfms.RestaurantPageBean;
-import com.sugang.wenlvhui.utils.GlideUtils;
-import com.sugang.wenlvhui.utils.Urls;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -27,6 +22,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.jzvd.JZVideoPlayerStandard;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
@@ -62,23 +58,14 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         holder.itemView.setTag(position);
         RestaurantPageBean.DataBean.TeseBean data = mList.get(position);
-        if (holder instanceof ViewHolderOne && ONE_ITEM == data.getType()) {
+        if (holder instanceof ViewHolderOne ) {
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidAddressText.setText(data.getCity() + "-" + data.getArea());
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoCommentText.setText(data.getComment_num() + "");
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodPriceText.setText(data.getAverageConsumption() + "元/人");
             //餐馆类别
             ((ViewHolderOne) holder).itemLocalcuisinerecyVidoFoodTypeText.setText(data.getRestaurantType());
-            GlideUtils.loadCircleImage(data.getRestaurantImg(), ((ViewHolderOne) holder).itemLocalcuisinerecyVidoHeadImage, new GlideUtils.ImageLoadListener<String, GlideDrawable>() {
-                @Override
-                public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {
+            Glide.with(mContext).load(data.getRestaurantImg()).error(R.mipmap.icon).into(((ViewHolderOne) holder).itemLocalcuisinerecyVidoHeadImage);
 
-                }
-
-                @Override
-                public void onLoadingError(String source, Exception e) {
-
-                }
-            });
             //设置星星数
             if (data.getStarClass() == 1) {
                 ((ViewHolderOne) holder).itemLocalcuisinerecyVidoStartOne.setVisibility(View.VISIBLE);
@@ -125,17 +112,8 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageFoodPriceText.setText(data.getAverageConsumption() + "元/人");
             //餐馆类别
             ((ViewHolderTwo) holder).itemLocalcuisinerecyImageFoodTypeText.setText(data.getRestaurantType());
-            GlideUtils.loadCircleImage(data.getRestaurantImg(), ((ViewHolderTwo) holder).itemLocalcuisinerecyImageHeadImage, new GlideUtils.ImageLoadListener<String, GlideDrawable>() {
-                @Override
-                public void onLoadingComplete(String uri, ImageView view, GlideDrawable resource) {
+            Glide.with(mContext).load(data.getRestaurantImg()).error(R.mipmap.icon).into(((ViewHolderTwo) holder).itemLocalcuisinerecyImageHeadImage);
 
-                }
-
-                @Override
-                public void onLoadingError(String source, Exception e) {
-
-                }
-            });
             //设置星星数
             if (data.getStarClass() == 1) {
                 ((ViewHolderTwo) holder).itemLocalcuisinerecyImageStartOne.setVisibility(View.VISIBLE);
@@ -199,7 +177,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
 
     class ViewHolderOne extends RecyclerView.ViewHolder {
         @BindView(R.id.item_localcuisinerecy_vidoHeadImage)
-        ImageView itemLocalcuisinerecyVidoHeadImage;
+        CircleImageView itemLocalcuisinerecyVidoHeadImage;
         @BindView(R.id.item_localcuisinerecy_vidoNameText)
         TextView itemLocalcuisinerecyVidoNameText;
         @BindView(R.id.item_localcuisinerecy_vidoStartOne)
@@ -244,7 +222,7 @@ public class LocalcuisineTSRecyAdapter extends RecyclerView.Adapter<RecyclerView
 
     class ViewHolderTwo extends RecyclerView.ViewHolder {
         @BindView(R.id.item_localcuisinerecy_imageHeadImage)
-        ImageView itemLocalcuisinerecyImageHeadImage;
+        CircleImageView itemLocalcuisinerecyImageHeadImage;
         @BindView(R.id.item_localcuisinerecy_imageNameText)
         TextView itemLocalcuisinerecyImageNameText;
         @BindView(R.id.item_localcuisinerecy_imageStartOne)

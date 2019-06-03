@@ -116,7 +116,7 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
     public void showWllxPageBeanBean(WllxPageBean wllxPageBeanBean) {
         if (wllxPageBeanBean.getData()!=null) {
             data = wllxPageBeanBean.getData();
-            Glide.with(this).load(wllxPageBeanBean.getData().getFirst().getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(TravelRouteFirstImage);
+            Glide.with(this).load(wllxPageBeanBean.getData().getFirst().getImg()).error(R.mipmap.icon).into(TravelRouteFirstImage);
             TravelRouteJINPINRecy.setLayoutManager(new GridLayoutManager(this,2));
             TravelRouteJINPINRecyAdapter travelRouteJINPINRecyAdapter = new TravelRouteJINPINRecyAdapter(data.getBrigades());
             TravelRouteJINPINRecy.setAdapter(travelRouteJINPINRecyAdapter);

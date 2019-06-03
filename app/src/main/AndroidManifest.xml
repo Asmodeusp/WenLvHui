@@ -25,7 +25,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.home.culturaltravelcustomization.WldzSerchActivity"></activity>
+        <activity android:name=".view.space.SpaceChangguanActivity"></activity>
+        <activity android:name=".view.space.SpaceDetalisActivity" />
+        <activity android:name=".view.comment.CommentActivity" />
+        <activity android:name=".view.activity.ActivityListActivity" />
+        <activity android:name=".view.activity.ActivityDetalisActivity" />
+        <activity android:name=".view.home.culturaltravelcustomization.WldzSerchActivity" />
         <activity android:name=".view.home.culturaltravelcustomization.WldzListActivity" />
         <activity android:name=".view.home.culturaltravelcustomization.WldzDetalisActivity" />
         <activity android:name=".view.home.travelroute.WllxDetalisActivity" />

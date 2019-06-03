@@ -66,12 +66,11 @@ public class ShouYiRecyclerAdapter extends RecyclerView.Adapter<ShouYiRecyclerAd
         holder.itemView.setTag(position);
         ShouYiPageBean.DataBean.SelectProductBean data = list.get(position);
 
-        Glide.with(context).load(data.getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWcfyshouyiImage);
+        Glide.with(context).load(data.getImgUrl()).error(R.mipmap.icon).into(holder.itemWcfyshouyiImage);
 
         holder.itemWcfyshouyiNameText.setText(data.getProductName());
         holder.itemWcfyshouyiAddressText.setText(data.getCity() + "-"+data.getArea());
         holder.itemWcfyshouyiSeeNumberText.setText(data.getBrowse()+"");
-//        holder.itemWcfyshouyiShopText.setText(data.getBrowse()+"");
         if (data.getIsUp() == 0) {
             isLike = false;
         } else {

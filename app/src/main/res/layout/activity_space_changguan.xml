@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/H8"
+    android:orientation="vertical"
+    tools:context=".view.space.SpaceChangguanActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/SpaceChangguanReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/SpaceChangguanNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文旅路线"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/SpaceChangguanImage"
+        android:layout_width="match_parent"
+        android:layout_height="440px" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginTop="@dimen/px_40"
+        android:layout_marginRight="@dimen/px_28"
+        android:layout_marginBottom="@dimen/px_42"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/SpaceChangguanSecondNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfgfa"
+            android:textColor="@color/H5"
+            android:textSize="@dimen/px_24" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="面积:"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+
+            <TextView
+                android:id="@+id/SpaceChangguanMianjiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_5"
+                android:text="123"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_5"
+                android:text="㎡"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="容纳人数:"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+
+            <TextView
+                android:id="@+id/SpaceChangguanRongNaRenShuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_5"
+                android:text="123"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配套设施:"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+
+            <TextView
+                android:id="@+id/SpaceChangguanPeiTaoSheShiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_5"
+                android:text="123"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_22" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:gravity="center_vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话:"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_22" />
+
+                <TextView
+                    android:id="@+id/SpaceChangguanPhoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_5"
+                    android:text="123"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_22" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/SpaceChangguanYuYuebutton"
+                android:layout_width="@dimen/px_166"
+                android:layout_height="@dimen/px_37"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/loginbutton"
+                android:gravity="center"
+                android:text="预约"
+                android:textColor="@color/H8"
+                android:textSize="@dimen/px_22" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8px"
+        android:background="@color/H1"></View>
+
+    <TextView
+        android:layout_marginTop="@dimen/px_36"
+        android:layout_marginLeft="@dimen/px_28"
+        android:textColor="@color/H5"
+        android:textSize="@dimen/px_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="场馆介绍" />
+    <TextView
+        android:id="@+id/SpaceChangguanJieShaoText"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginRight="@dimen/px_28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.zhy.autolayout.AutoLinearLayout>

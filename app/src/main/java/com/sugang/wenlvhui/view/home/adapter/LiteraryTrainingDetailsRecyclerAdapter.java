@@ -76,7 +76,7 @@ public class LiteraryTrainingDetailsRecyclerAdapter extends RecyclerView.Adapter
         holder.itemView.setTag(position);
         final WypxPageBean.DataBean.SchoolsBean data = list.get(position);
         holder.itemWypxrecyNameText.setText(data.getName());
-        Glide.with(context).load(data.getLogo()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWypxrecyImage);
+        Glide.with(context).load(data.getLogo()).error(R.mipmap.icon).into(holder.itemWypxrecyImage);
         holder.itemWypxrecyAddressText.setText(data.getCity() + "   |   " + data.getArea());
         holder.itemWypxrecyIsLikeNumber.setText(data.getLikenum() + "");
         if (data.getIslike() == 0) {

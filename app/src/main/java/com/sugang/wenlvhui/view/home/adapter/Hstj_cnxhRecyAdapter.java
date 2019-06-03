@@ -66,7 +66,7 @@ public class Hstj_cnxhRecyAdapter extends RecyclerView.Adapter<Hstj_cnxhRecyAdap
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
         HstjLikeBean.DataBean.LikeBean data = list.get(position);
-        Glide.with(context).load(data.getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemHstjCnxhBookImage);
+        Glide.with(context).load(data.getImgUrl()).error(R.mipmap.icon).into(holder.itemHstjCnxhBookImage);
         holder.itemHstjCnxhBookName.setText(data.getBookName());
 
     }

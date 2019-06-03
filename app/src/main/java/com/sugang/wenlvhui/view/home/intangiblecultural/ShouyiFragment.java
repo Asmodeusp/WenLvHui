@@ -89,9 +89,9 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
     public void showShouYiPageBean(ShouYiPageBean shouYiPageBean) {
         if (shouYiPageBean.getData() != null) {
             data = shouYiPageBean.getData();
-            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(0).getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ShouYiFirtImage);
-            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(1).getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ShouYiSecondImage);
-            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(2).getImgUrl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(ShouYiThirdImage);
+            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(0).getImgUrl()).error(R.mipmap.icon).into(ShouYiFirtImage);
+            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(1).getImgUrl()).error(R.mipmap.icon).into(ShouYiSecondImage);
+            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(2).getImgUrl()).error(R.mipmap.icon).into(ShouYiThirdImage);
             ShouYiFirtTextView.setText(shouYiPageBean.getData().getAllday().get(0).getProductName());
             ShouYiSecondText.setText(shouYiPageBean.getData().getAllday().get(1).getProductName());
             ShouYiThirdText.setText(shouYiPageBean.getData().getAllday().get(2).getProductName());

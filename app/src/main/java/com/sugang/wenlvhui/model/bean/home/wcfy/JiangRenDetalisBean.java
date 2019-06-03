@@ -1,13 +1,16 @@
 package com.sugang.wenlvhui.model.bean.home.wcfy;
 
+import com.sugang.wenlvhui.model.bean.VideosBean;
+
 import java.util.List;
 
 public class JiangRenDetalisBean {
 
+
     /**
      * msg : 成功
      * code : 0
-     * data : {"shop":{"addrDetail":"新华街4号","area":"兴庆区","city":"银川","createDate":1557059444000,"createUser":1,"experienceList":[],"id":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","is_up":0,"productList":[{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}],"product_num":2,"province":"宁夏","shopsDetail":"创建于2019年4月，过来就随便了","shopsName":"村田陶艺工作室","shopsSlogan":"玩物本无价，人心有高低","upList":[],"up_num":0,"videoList":[]}}
+     * data : {"shop":{"addrDetail":"县城","area":"金凤区","browse":123,"city":"银川","createDate":1559192828000,"createUser":6,"experienceList":[],"id":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","is_up":0,"latitude":"66","longitude":"33","productList":[{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}],"product_num":2,"province":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","shopsDetail":"","shopsName":"张宝嘉皮影播放工作室","shopsSlogan":"吃喝玩乐","upList":[],"up_num":0,"videoList":[{"detalis":"匠人视频1","id":278,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频2","id":279,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频3","id":280,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频4","id":281,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频5","id":282,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"}]}}
      */
 
     private String msg;
@@ -40,7 +43,7 @@ public class JiangRenDetalisBean {
 
     public static class DataBean {
         /**
-         * shop : {"addrDetail":"新华街4号","area":"兴庆区","city":"银川","createDate":1557059444000,"createUser":1,"experienceList":[],"id":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","is_up":0,"productList":[{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}],"product_num":2,"province":"宁夏","shopsDetail":"创建于2019年4月，过来就随便了","shopsName":"村田陶艺工作室","shopsSlogan":"玩物本无价，人心有高低","upList":[],"up_num":0,"videoList":[]}
+         * shop : {"addrDetail":"县城","area":"金凤区","browse":123,"city":"银川","createDate":1559192828000,"createUser":6,"experienceList":[],"id":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","is_up":0,"latitude":"66","longitude":"33","productList":[{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}],"product_num":2,"province":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","shopsDetail":"","shopsName":"张宝嘉皮影播放工作室","shopsSlogan":"吃喝玩乐","upList":[],"up_num":0,"videoList":[{"detalis":"匠人视频1","id":278,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频2","id":279,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频3","id":280,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频4","id":281,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频5","id":282,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"}]}
          */
 
         private ShopBean shop;
@@ -55,34 +58,40 @@ public class JiangRenDetalisBean {
 
         public static class ShopBean {
             /**
-             * addrDetail : 新华街4号
-             * area : 兴庆区
+             * addrDetail : 县城
+             * area : 金凤区
+             * browse : 123
              * city : 银川
-             * createDate : 1557059444000
-             * createUser : 1
+             * createDate : 1559192828000
+             * createUser : 6
              * experienceList : []
              * id : 1
              * imgUrl : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
              * is_up : 0
-             * productList : [{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}]
+             * latitude : 66
+             * longitude : 33
+             * productList : [{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}]
              * product_num : 2
-             * province : 宁夏
-             * shopsDetail : 创建于2019年4月，过来就随便了
-             * shopsName : 村田陶艺工作室
-             * shopsSlogan : 玩物本无价，人心有高低
+             * province : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
+             * shopsDetail :
+             * shopsName : 张宝嘉皮影播放工作室
+             * shopsSlogan : 吃喝玩乐
              * upList : []
              * up_num : 0
-             * videoList : []
+             * videoList : [{"detalis":"匠人视频1","id":278,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频2","id":279,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频3","id":280,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频4","id":281,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频5","id":282,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"}]
              */
 
             private String addrDetail;
             private String area;
+            private int browse;
             private String city;
             private long createDate;
             private int createUser;
             private int id;
             private String imgUrl;
             private int is_up;
+            private String latitude;
+            private String longitude;
             private int product_num;
             private String province;
             private String shopsDetail;
@@ -92,7 +101,7 @@ public class JiangRenDetalisBean {
             private List<?> experienceList;
             private List<ProductListBean> productList;
             private List<?> upList;
-            private List<?> videoList;
+            private List<VideosBean> videoList;
 
             public String getAddrDetail() {
                 return addrDetail;
@@ -108,6 +117,14 @@ public class JiangRenDetalisBean {
 
             public void setArea(String area) {
                 this.area = area;
+            }
+
+            public int getBrowse() {
+                return browse;
+            }
+
+            public void setBrowse(int browse) {
+                this.browse = browse;
             }
 
             public String getCity() {
@@ -156,6 +173,22 @@ public class JiangRenDetalisBean {
 
             public void setIs_up(int is_up) {
                 this.is_up = is_up;
+            }
+
+            public String getLatitude() {
+                return latitude;
+            }
+
+            public void setLatitude(String latitude) {
+                this.latitude = latitude;
+            }
+
+            public String getLongitude() {
+                return longitude;
+            }
+
+            public void setLongitude(String longitude) {
+                this.longitude = longitude;
             }
 
             public int getProduct_num() {
@@ -230,11 +263,11 @@ public class JiangRenDetalisBean {
                 this.upList = upList;
             }
 
-            public List<?> getVideoList() {
+            public List<VideosBean> getVideoList() {
                 return videoList;
             }
 
-            public void setVideoList(List<?> videoList) {
+            public void setVideoList(List<VideosBean> videoList) {
                 this.videoList = videoList;
             }
 
@@ -249,6 +282,7 @@ public class JiangRenDetalisBean {
                  * price : 52
                  * priceDq : 12
                  * productDatile : 戴在手上
+                 * productImage : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
                  * productName : 手心里手签
                  * productPoint : 好看，好用
                  * shopsId : 1
@@ -264,6 +298,7 @@ public class JiangRenDetalisBean {
                 private int price;
                 private int priceDq;
                 private String productDatile;
+                private String productImage;
                 private String productName;
                 private String productPoint;
                 private int shopsId;
@@ -335,6 +370,14 @@ public class JiangRenDetalisBean {
                     this.productDatile = productDatile;
                 }
 
+                public String getProductImage() {
+                    return productImage;
+                }
+
+                public void setProductImage(String productImage) {
+                    this.productImage = productImage;
+                }
+
                 public String getProductName() {
                     return productName;
                 }
@@ -383,6 +426,8 @@ public class JiangRenDetalisBean {
                     this.commentList = commentList;
                 }
             }
+
+
         }
     }
 }

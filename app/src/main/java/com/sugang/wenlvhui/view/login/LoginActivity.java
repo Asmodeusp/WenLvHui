@@ -77,8 +77,10 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
                     Toast.makeText(this, "请检查您的手机号或密码是否输入", Toast.LENGTH_SHORT).show();
                 } else if (!LoginPhoneNumber.getText().toString().trim().matches(telRegex)) {
                     Toast.makeText(this, "请输入正确手机号", Toast.LENGTH_SHORT).show();
+                }else{
+                    presenter.getLoginBean(LoginPhoneNumber.getText().toString().trim(), LoginInputPassword.getText().toString().trim());
                 }
-                presenter.getLoginBean(LoginPhoneNumber.getText().toString().trim(), LoginInputPassword.getText().toString().trim());
+
                 break;
         }
     }
@@ -87,8 +89,10 @@ public class LoginActivity extends BaseActivity<LoginPresenterImp> implements Lo
     public void showLoginBean(LoginBean loginBean) {
         if (loginBean.getMsg().equals("登陆失败")) {
             Toast.makeText(this, "请输入正确手机号和密码", Toast.LENGTH_SHORT).show();
-        }else if(loginBean.getDate().getUser().getUsertype()==3||loginBean.getDate().getUser().getUsertype()==9){
+        }else if(loginBean.getDate().getUser().getUsertype()==3){
            Toast.makeText(this, "请使用正确账号", Toast.LENGTH_SHORT).show();
+        }else if(loginBean.getDate().getUser().getUsertype()==9){
+            Toast.makeText(this, "请使用正确账号", Toast.LENGTH_SHORT).show();
         }else{
             SPUtils.put(this, SPKey.IS_LOGIN, true);
             startActivity(new Intent(LoginActivity.this, MainActivity.class));

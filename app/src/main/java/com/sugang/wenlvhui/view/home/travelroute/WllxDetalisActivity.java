@@ -101,7 +101,7 @@ public class WllxDetalisActivity extends BaseActivity<WllxDetailsPresenterImp> i
         if (WllxDetailsBeanBean.getData()!=null) {
             WllxDetalisBean.DataBean data = WllxDetailsBeanBean.getData();
             WllxDetalisHeadText.setText(data.getReservedFields1());
-            Glide.with(this).load(data.getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(WllxDetalisImage);
+            Glide.with(this).load(data.getImg()).error(R.mipmap.icon).into(WllxDetalisImage);
             WllxDetalisNameText.setText(data.getReservedFields1());
             if (data.getRecommend() == 1) {
                 WllxDetailsStartOne.setVisibility(View.VISIBLE);

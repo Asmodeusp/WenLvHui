@@ -61,7 +61,7 @@ public class CulturalTravelCustomizationActivity extends BaseActivity<WldzPagePr
     @Override
     public void showWldzArtistindexBean(final WldzArtistindexBean wldzArtistindexBean) {
         if (wldzArtistindexBean.getData() != null) {
-            Glide.with(this).load(wldzArtistindexBean.getData().getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(CulturalTravelCustomizationImage);
+            Glide.with(this).load(wldzArtistindexBean.getData().getImg()).error(R.mipmap.icon).into(CulturalTravelCustomizationImage);
             CulturalTravelCustomizationRecy.setLayoutManager(new LinearLayoutManager(this));
             WldzArtistAdapter wldzArtistAdapter = new WldzArtistAdapter(wldzArtistindexBean.getData().getArtists());
             CulturalTravelCustomizationRecy.setAdapter(wldzArtistAdapter);

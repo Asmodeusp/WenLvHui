@@ -18,12 +18,15 @@ public class SPKey {
     public static String NEWS_TYPE = "NewsType";
     //文创非遗 匠人
     public static String SHOP_ID = "Shop_id";
+    public static String SHOP_DETAILS = "Shop_details";
     public static String PRODUCT_ID = "Product_id";
     //定位经纬度
     public static String LATITUDE = "latitude";
     public static String LONGITUDE = "longitude";
     //地方美食
     public static String RESTAURANT_ID = "RestaurantId";
+    public static String RESTAURANT_NAME = "RestaurantName";
+    public static String FOOD_ID = "FoodId";
     //我的
     public static String COLLECTION_TYPE = "collectionType";
     //文旅路线
@@ -34,4 +37,18 @@ public class SPKey {
     public static String WLDZ_YIRENTYPE = "wldz_yirentype";
     public static String WLDZ_YIRENDETAILS = "wldz_yirenDetails";
     public static String WLDZ_YIRENEXPERIENCE = "wldz_yirenExperience";
+    //活动
+    public static String ACTIVITYID = "ActivityId";
+    public static String ACTIVITYDATETIME = "ActivityDateTime";
+    public static String ACTIVITYPHONE = "ActivityPhone";
+    public static String ACTIVITYPERSENNUMBER = "ActivityPersenNumber";
+    public static String ACTIVITYHDZZ = "ActivityHDZZ";
+    public static String ACTIVITYHDGZ = "ActivityHDGZ";
+    public static String ACTIVITYJXSZ = "ActivityJXSZ";
+    public static String ACTIVITYPJXZ = "ActivityPJXZ";
+    public static String ACTIVITYCONTENT = "ActivityContent";
+    public static String ACTIVITYTYPE = "ActivityType";
+    //空间
+    public static String SPACEID ="SpaceId";
+    public static String SPACECHANGGUANID ="SpaceChangguanId";
 }

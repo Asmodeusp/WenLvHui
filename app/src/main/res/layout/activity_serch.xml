@@ -43,6 +43,7 @@
         </com.zhy.autolayout.AutoLinearLayout>
 
         <EditText
+            android:id="@+id/serch_Ed"
             android:gravity="center"
             android:layout_width="500px"
             android:layout_height="@dimen/px_40"
@@ -52,11 +53,16 @@
             android:hint="大家都在搜"
             />
     </com.zhy.autolayout.AutoRelativeLayout>
-
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/Serch_SousuoReciRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <android.support.v7.widget.RecyclerView
         android:layout_marginRight="@dimen/px_28"
         android:layout_marginLeft="@dimen/px_28"
         android:id="@+id/Serch_SousuoReciRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 </com.zhy.autolayout.AutoLinearLayout>

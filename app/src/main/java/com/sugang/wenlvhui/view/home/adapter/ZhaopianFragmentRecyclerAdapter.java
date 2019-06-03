@@ -68,7 +68,7 @@ public class ZhaopianFragmentRecyclerAdapter extends RecyclerView.Adapter<Zhaopi
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
-        Glide.with(context).load(list.get(position).getImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.Photo);
+        Glide.with(context).load(list.get(position).getImg()).error(R.mipmap.icon).into(holder.Photo);
         if (list.get(position).getDetalis()!=null) {
             holder.PhotoDetalisText.setText(list.get(position).getDetalis());
         }

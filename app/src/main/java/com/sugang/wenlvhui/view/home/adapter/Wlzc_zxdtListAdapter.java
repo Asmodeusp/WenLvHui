@@ -83,7 +83,7 @@ public class Wlzc_zxdtListAdapter extends RecyclerView.Adapter<Wlzc_zxdtListAdap
         holder.itemWlzcZxdtrecySeeNumText.setText(data.getBrowse() + "");
         holder.itemWlzcZxdtrecyFromText.setText(data.getSource() + "");
         holder.itemView.setTag(position);
-        Glide.with(context).load(data.getImage()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWlzcZxdtrecyImage);
+        Glide.with(context).load(data.getImage()).error(R.mipmap.icon).into(holder.itemWlzcZxdtrecyImage);
         if (data.getIslike() == 0) {
             isLike = false;
         } else {
@@ -177,6 +177,4 @@ public class Wlzc_zxdtListAdapter extends RecyclerView.Adapter<Wlzc_zxdtListAdap
             AutoUtils.autoSize(itemView);
         }
     }
-
-
 }

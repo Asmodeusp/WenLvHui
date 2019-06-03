@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.model.bean.home.wlze.NewsBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsTBean;
 import com.sugang.wenlvhui.presenter.home.wlzc.WlzcXmggListPresenterImp;
 import com.sugang.wenlvhui.utils.TimeUtils;
@@ -45,6 +46,10 @@ public class WlzcXmggListAdapter extends RecyclerView.Adapter<WlzcXmggListAdapte
     public WlzcXmggListAdapter(List<NewsTBean> newsBeans, WlzcXmggListPresenterImp presenter) {
         this.list = newsBeans;
         this.presenter = presenter;
+    }
+
+    public WlzcXmggListAdapter(List<NewsBean> newsBeans) {
+
     }
 
     @NonNull

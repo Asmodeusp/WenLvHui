@@ -46,7 +46,7 @@
 
                 <TextView
                     android:id="@+id/IntangibleCulturalHeritage_ShouYiText"
-                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_marginTop="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="手艺"
@@ -66,10 +66,9 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
                 <TextView
                     android:id="@+id/IntangibleCulturalHeritage_JiangRenText"
-                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_marginTop="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="匠人"
@@ -80,6 +79,7 @@
                     android:id="@+id/IntangibleCulturalHeritage_JiangRenLine"
                     android:layout_width="@dimen/px_59"
                     android:layout_height="@dimen/px_9"
+
                     android:layout_alignParentBottom="true"
                     android:background="@color/H2"></View>
             </com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="@dimen/px_30"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_spacePageHead_Image"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:src="@mipmap/icon" />
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_30"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_spacePageNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="斯蒂芬规划局"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_spacePageData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="asd"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:text="浏览量："
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+
+                <TextView
+                    android:id="@+id/item_spacePageSeeNumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:text="浏览量："
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:id="@+id/item_spacePageDetalis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@color/H4"
+        android:textSize="@dimen/px_22" />
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/item_spacePageImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_400"
+        android:layout_marginTop="@dimen/px_10" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/px_50"
+            android:layout_height="@dimen/px_50"
+            android:src="@mipmap/location" />
+
+        <TextView
+            android:id="@+id/item_spacePageAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_2"
+            android:text="1234"
+            android:textColor="@color/H4"
+            android:textSize="@dimen/px_20" />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <View
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/H7"
+        ></View>
+</com.zhy.autolayout.AutoLinearLayout>

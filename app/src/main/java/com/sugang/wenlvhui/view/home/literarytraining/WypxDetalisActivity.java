@@ -123,7 +123,7 @@ public class WypxDetalisActivity extends BaseActivity<WypxDetalisPresenterImp> i
         if (WypxDetalisBean.getData() != null) {
             WypxDetalisBean.DataBean data = WypxDetalisBean.getData();
             WypxDetalisNameText.setText(data.getName());
-            Glide.with(this).load(data.getBackImg()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(WypxDetalisBackgroundImage);
+            Glide.with(this).load(data.getBackImg()).error(R.mipmap.icon).into(WypxDetalisBackgroundImage);
             WypxDetalisAddressText.setText(data.getAddress());
             String phone = data.getPhone();
             if (phone.length() == 11) {
@@ -131,7 +131,7 @@ public class WypxDetalisActivity extends BaseActivity<WypxDetalisPresenterImp> i
                 WypxDetalisPhoneNumberText.setText(maskNumber);
 
             }
-            Glide.with(this).load(data.getLogourl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(WypxDetalisHeadImage);
+            Glide.with(this).load(data.getLogourl()).error(R.mipmap.icon).into(WypxDetalisHeadImage);
             SPUtils.put(this, SPKey.SCHOOL_DEATLIS, data.getDetails());
             imgs.addAll(data.getImgs());
             video.addAll(data.getVideos());

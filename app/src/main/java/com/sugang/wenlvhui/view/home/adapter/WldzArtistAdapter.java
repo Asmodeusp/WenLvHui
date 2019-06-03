@@ -68,7 +68,7 @@ public class WldzArtistAdapter extends RecyclerView.Adapter<WldzArtistAdapter.Ho
         holder.itemView.setTag(position);
         ArtistsBean data = list.get(position);
         holder.itemWldzArtistDetailsText.setText(data.getArtist_details());
-        Glide.with(context).load(data.getArtist_logourl()).skipMemoryCache(true).error(R.mipmap.icon).diskCacheStrategy(DiskCacheStrategy.SOURCE).into(holder.itemWldzArtistImage);
+        Glide.with(context).load(data.getArtist_logourl()).error(R.mipmap.icon).into(holder.itemWldzArtistImage);
         holder.itemWldzArtistNameText.setText(data.getArtist_type()+"   |   "+data.getArtist_name());
     }
 
