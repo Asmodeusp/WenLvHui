@@ -10,7 +10,7 @@ public class JiangRenDetalisBean {
     /**
      * msg : 成功
      * code : 0
-     * data : {"shop":{"addrDetail":"县城","area":"金凤区","browse":123,"city":"银川","createDate":1559192828000,"createUser":6,"experienceList":[],"id":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","is_up":0,"latitude":"66","longitude":"33","productList":[{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}],"product_num":2,"province":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","shopsDetail":"","shopsName":"张宝嘉皮影播放工作室","shopsSlogan":"吃喝玩乐","upList":[],"up_num":0,"videoList":[{"detalis":"匠人视频1","id":278,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频2","id":279,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频3","id":280,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频4","id":281,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频5","id":282,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"}]}}
+     * data : {"shop":{"addrDetail":"某某路","area":"兴庆区","browse":123,"city":"银川","createDate":1559930324000,"createUser":57,"experienceList":[],"id":27,"imgUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","is_up":0,"latitude":"133.55","longitude":"123.45","productList":[{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1},{"browse":712,"commentList":[],"createDate":1559923200000,"id":28,"price":129,"priceDq":129,"productDatile":"<p><\/p><p><\/p><p>温和不刺激，保湿滋润，清洁度强，质量好，物流快，味道好闻，很便宜，正品，绝对的正品 物美价廉 清洁力度好 很温和 赶紧买去感觉很不错噢 应该是正品 据说清洁能力不错 很温和 质量非常好,与卖家描述的完全一致, 真的很喜欢,完全超出期望值,发货速 度非常快,包装非常仔细、严实,物流公司服务态度很好,运送速度很快,很满意的一次购物质量很好, 希望更多的朋友信赖. 店主态度特好, 我会再次光顾的好卖家 赞，发货迅速，态度很好，很满意！很好很好！网上购物这么激烈，没想到店家的服务这么好，商品质量好而价低廉， 很热情的卖家，下次还来希望下次还有机会合作祝你生意兴隆质量非常好，出乎我的意料包装非常仔细。下次有机会再找你，店家人蛮好的，东东很不错,淘到心意的宝贝是一件让人很开心的\r\n\r\n<\/p><p><\/p><p><br><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"美国EltaMD进口温和氨基酸泡沫洗面奶","productPoint":"送礼好评","shopsId":27,"status":1},{"browse":712,"commentList":[],"createDate":1559923200000,"id":29,"price":129,"priceDq":129,"productDatile":"<p><\/p><div>正在使用用。效果还不清楚。以下是凑字数请忽略。珊珊芭蕾舞剧都记得记得记得你的呢记得那年的你都不说你的呢你懂的那件事都记得记得你的呢都记得你当年的聚集地你对武术记得记得记得喝喝喝喝酒就记得叫呃呃记得叫谁的家了\u2026\u2026我在这里吃饭去了\u2026\u2026\u2026\u2026不知道你是不是有问题吧。。不知道怎么了。我说的不是我喜欢那个不一定的作用。<\/div><div><br><\/div>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/d633e326-31f5-46ab-a583-2da8cb3f6e14.jpg","productName":"澳洲Swisse进口男性备孕胶囊","productPoint":"原味的哦！","shopsId":27,"status":2}],"product_num":3,"province":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","shopsDetail":"店铺描述","shopsName":"店铺名字","shopsSlogan":"店铺标语","upList":[],"up_num":0,"videoList":[]}}
      */
 
     private String msg;
@@ -43,7 +43,7 @@ public class JiangRenDetalisBean {
 
     public static class DataBean {
         /**
-         * shop : {"addrDetail":"县城","area":"金凤区","browse":123,"city":"银川","createDate":1559192828000,"createUser":6,"experienceList":[],"id":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","is_up":0,"latitude":"66","longitude":"33","productList":[{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}],"product_num":2,"province":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","shopsDetail":"","shopsName":"张宝嘉皮影播放工作室","shopsSlogan":"吃喝玩乐","upList":[],"up_num":0,"videoList":[{"detalis":"匠人视频1","id":278,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频2","id":279,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频3","id":280,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频4","id":281,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频5","id":282,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"}]}
+         * shop : {"addrDetail":"某某路","area":"兴庆区","browse":123,"city":"银川","createDate":1559930324000,"createUser":57,"experienceList":[],"id":27,"imgUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","is_up":0,"latitude":"133.55","longitude":"123.45","productList":[{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1},{"browse":712,"commentList":[],"createDate":1559923200000,"id":28,"price":129,"priceDq":129,"productDatile":"<p><\/p><p><\/p><p>温和不刺激，保湿滋润，清洁度强，质量好，物流快，味道好闻，很便宜，正品，绝对的正品 物美价廉 清洁力度好 很温和 赶紧买去感觉很不错噢 应该是正品 据说清洁能力不错 很温和 质量非常好,与卖家描述的完全一致, 真的很喜欢,完全超出期望值,发货速 度非常快,包装非常仔细、严实,物流公司服务态度很好,运送速度很快,很满意的一次购物质量很好, 希望更多的朋友信赖. 店主态度特好, 我会再次光顾的好卖家 赞，发货迅速，态度很好，很满意！很好很好！网上购物这么激烈，没想到店家的服务这么好，商品质量好而价低廉， 很热情的卖家，下次还来希望下次还有机会合作祝你生意兴隆质量非常好，出乎我的意料包装非常仔细。下次有机会再找你，店家人蛮好的，东东很不错,淘到心意的宝贝是一件让人很开心的\r\n\r\n<\/p><p><\/p><p><br><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"美国EltaMD进口温和氨基酸泡沫洗面奶","productPoint":"送礼好评","shopsId":27,"status":1},{"browse":712,"commentList":[],"createDate":1559923200000,"id":29,"price":129,"priceDq":129,"productDatile":"<p><\/p><div>正在使用用。效果还不清楚。以下是凑字数请忽略。珊珊芭蕾舞剧都记得记得记得你的呢记得那年的你都不说你的呢你懂的那件事都记得记得你的呢都记得你当年的聚集地你对武术记得记得记得喝喝喝喝酒就记得叫呃呃记得叫谁的家了\u2026\u2026我在这里吃饭去了\u2026\u2026\u2026\u2026不知道你是不是有问题吧。。不知道怎么了。我说的不是我喜欢那个不一定的作用。<\/div><div><br><\/div>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/d633e326-31f5-46ab-a583-2da8cb3f6e14.jpg","productName":"澳洲Swisse进口男性备孕胶囊","productPoint":"原味的哦！","shopsId":27,"status":2}],"product_num":3,"province":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","shopsDetail":"店铺描述","shopsName":"店铺名字","shopsSlogan":"店铺标语","upList":[],"up_num":0,"videoList":[]}
          */
 
         private ShopBean shop;
@@ -58,27 +58,27 @@ public class JiangRenDetalisBean {
 
         public static class ShopBean {
             /**
-             * addrDetail : 县城
-             * area : 金凤区
+             * addrDetail : 某某路
+             * area : 兴庆区
              * browse : 123
              * city : 银川
-             * createDate : 1559192828000
-             * createUser : 6
+             * createDate : 1559930324000
+             * createUser : 57
              * experienceList : []
-             * id : 1
-             * imgUrl : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
+             * id : 27
+             * imgUrl : https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg
              * is_up : 0
-             * latitude : 66
-             * longitude : 33
-             * productList : [{"browse":200,"categoryId":1,"commentList":[],"createDate":1556985600000,"createUser":1,"id":1,"price":52,"priceDq":12,"productDatile":"戴在手上","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"手心里手签","productPoint":"好看，好用","shopsId":1,"skuId":"BQ20190505203156","status":1},{"browse":1200,"categoryId":2,"commentList":[],"id":2,"price":388,"priceDq":388,"productDatile":"采用紫檀木雕刻而成，送人大气","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"定情信物古风圆章纯银紫檀创...","productPoint":"送女朋友","shopsId":2,"skuId":"BQ20190505203312","status":1},{"browse":256,"categoryId":1,"commentList":[],"id":3,"price":129,"priceDq":129,"productDatile":"啊啊啊啊啊啊啊啊啊","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"空间方式/手心里金鱼金属书签","productPoint":"送礼好评","shopsId":3,"skuId":"BQ20190505203416","status":1},{"browse":652,"categoryId":3,"commentList":[],"id":4,"price":69,"priceDq":69,"productDatile":"哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇","productImage":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","productName":"中国风文创产品创意设计书签定制版","productPoint":"好东西","shopsId":1,"skuId":"BQ20190505203602","status":1}]
-             * product_num : 2
-             * province : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
-             * shopsDetail :
-             * shopsName : 张宝嘉皮影播放工作室
-             * shopsSlogan : 吃喝玩乐
+             * latitude : 133.55
+             * longitude : 123.45
+             * productList : [{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1},{"browse":712,"commentList":[],"createDate":1559923200000,"id":28,"price":129,"priceDq":129,"productDatile":"<p><\/p><p><\/p><p>温和不刺激，保湿滋润，清洁度强，质量好，物流快，味道好闻，很便宜，正品，绝对的正品 物美价廉 清洁力度好 很温和 赶紧买去感觉很不错噢 应该是正品 据说清洁能力不错 很温和 质量非常好,与卖家描述的完全一致, 真的很喜欢,完全超出期望值,发货速 度非常快,包装非常仔细、严实,物流公司服务态度很好,运送速度很快,很满意的一次购物质量很好, 希望更多的朋友信赖. 店主态度特好, 我会再次光顾的好卖家 赞，发货迅速，态度很好，很满意！很好很好！网上购物这么激烈，没想到店家的服务这么好，商品质量好而价低廉， 很热情的卖家，下次还来希望下次还有机会合作祝你生意兴隆质量非常好，出乎我的意料包装非常仔细。下次有机会再找你，店家人蛮好的，东东很不错,淘到心意的宝贝是一件让人很开心的\r\n\r\n<\/p><p><\/p><p><br><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"美国EltaMD进口温和氨基酸泡沫洗面奶","productPoint":"送礼好评","shopsId":27,"status":1},{"browse":712,"commentList":[],"createDate":1559923200000,"id":29,"price":129,"priceDq":129,"productDatile":"<p><\/p><div>正在使用用。效果还不清楚。以下是凑字数请忽略。珊珊芭蕾舞剧都记得记得记得你的呢记得那年的你都不说你的呢你懂的那件事都记得记得你的呢都记得你当年的聚集地你对武术记得记得记得喝喝喝喝酒就记得叫呃呃记得叫谁的家了\u2026\u2026我在这里吃饭去了\u2026\u2026\u2026\u2026不知道你是不是有问题吧。。不知道怎么了。我说的不是我喜欢那个不一定的作用。<\/div><div><br><\/div>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/d633e326-31f5-46ab-a583-2da8cb3f6e14.jpg","productName":"澳洲Swisse进口男性备孕胶囊","productPoint":"原味的哦！","shopsId":27,"status":2}]
+             * product_num : 3
+             * province : https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg
+             * shopsDetail : 店铺描述
+             * shopsName : 店铺名字
+             * shopsSlogan : 店铺标语
              * upList : []
              * up_num : 0
-             * videoList : [{"detalis":"匠人视频1","id":278,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频2","id":279,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频3","id":280,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频4","id":281,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"},{"detalis":"匠人视频5","id":282,"imageType":2,"imgName":"匠人1","imgType":5,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":3,"pid":1,"upDate":1556520815000,"videoUrl":"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"}]
+             * videoList : []
              */
 
             private String addrDetail;
@@ -273,27 +273,24 @@ public class JiangRenDetalisBean {
 
             public static class ProductListBean {
                 /**
-                 * browse : 200
-                 * categoryId : 1
+                 * browse : 256
                  * commentList : []
-                 * createDate : 1556985600000
-                 * createUser : 1
-                 * id : 1
-                 * price : 52
-                 * priceDq : 12
-                 * productDatile : 戴在手上
-                 * productImage : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
-                 * productName : 手心里手签
-                 * productPoint : 好看，好用
-                 * shopsId : 1
-                 * skuId : BQ20190505203156
+                 * createDate : 1559923200000
+                 * id : 27
+                 * price : 129
+                 * priceDq : 129
+                 * productDatile : <p></p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤</em>各国各地出现的时间不一。<em>内裤</em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤</em>款式和面料上...
+
+                 </p>
+                 * productImage : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg
+                 * productName : 老张的原味内裤
+                 * productPoint : 原味的哦！
+                 * shopsId : 27
                  * status : 1
                  */
 
                 private int browse;
-                private int categoryId;
                 private long createDate;
-                private int createUser;
                 private int id;
                 private int price;
                 private int priceDq;
@@ -302,7 +299,6 @@ public class JiangRenDetalisBean {
                 private String productName;
                 private String productPoint;
                 private int shopsId;
-                private String skuId;
                 private int status;
                 private List<?> commentList;
 
@@ -314,28 +310,12 @@ public class JiangRenDetalisBean {
                     this.browse = browse;
                 }
 
-                public int getCategoryId() {
-                    return categoryId;
-                }
-
-                public void setCategoryId(int categoryId) {
-                    this.categoryId = categoryId;
-                }
-
                 public long getCreateDate() {
                     return createDate;
                 }
 
                 public void setCreateDate(long createDate) {
                     this.createDate = createDate;
-                }
-
-                public int getCreateUser() {
-                    return createUser;
-                }
-
-                public void setCreateUser(int createUser) {
-                    this.createUser = createUser;
                 }
 
                 public int getId() {
@@ -402,14 +382,6 @@ public class JiangRenDetalisBean {
                     this.shopsId = shopsId;
                 }
 
-                public String getSkuId() {
-                    return skuId;
-                }
-
-                public void setSkuId(String skuId) {
-                    this.skuId = skuId;
-                }
-
                 public int getStatus() {
                     return status;
                 }
@@ -426,8 +398,6 @@ public class JiangRenDetalisBean {
                     this.commentList = commentList;
                 }
             }
-
-
         }
     }
 }

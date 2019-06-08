@@ -3,23 +3,27 @@ package com.sugang.wenlvhui.model.bean.space;
 import java.util.List;
 
 public class SpaceBean {
+
     /**
-     * addr : 银川市金凤区任命广场
-     * backupField1 : http://pic11.nipic.com/20101208/6332275#_140730007350#_2.jpg
-     * browse : 126
-     * createDate : 1559446817000
-     * dateil : ing科技馆
-     * id : 1
-     * latitude : 134.11
-     * longitude : 134.11
-     * openDate : 朝九晚五
-     * spaceImage : [{"detalis":"阿萨德推哦怕","id":2,"imageType":1,"imgName":"空间1","imgType":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":1,"pid":1,"upDate":1556509310000,"videoUrl":"1"},{"detalis":"岁的法国v回家看了","id":1,"imageType":1,"imgName":"空间1","imgType":1,"imgUrl":"http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg","paixu":1,"pid":1,"upDate":1556508540000,"videoUrl":"2"}]
-     * spaceMeasure : 1123
-     * spaceName : 宁夏科技馆
+     * addr : 保护剂能尽快
+     * backImg : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/35e975ae-357f-429e-833a-7eda9acd6981.png
+     * backupField1 : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/9259d6d1-5b7f-4df5-9b5d-bb56a46ff104.png
+     * browse : 56
+     * createDate : 1559958183000
+     * dateil : <p></p><p></p><p></p><p>防御i了vbjkl;</p><p></p><p><br></p><p></p><p><br></p>
+     * id : 10
+     * latitude : 66
+     * longitude : 33
+     * openDate : 2019-10-3
+     * spaceImage : []
+     * spaceMeasure : 233
+     * spaceName : 金凤——万达
+     * spaceTitle : 不回家
      * tel : 15011148387
      */
 
     private String addr;
+    private String backImg;
     private String backupField1;
     private int browse;
     private long createDate;
@@ -30,8 +34,9 @@ public class SpaceBean {
     private String openDate;
     private int spaceMeasure;
     private String spaceName;
+    private String spaceTitle;
     private String tel;
-    private List<SpaceImageBean> spaceImage;
+    private List<?> spaceImage;
 
     public String getAddr() {
         return addr;
@@ -39,6 +44,14 @@ public class SpaceBean {
 
     public void setAddr(String addr) {
         this.addr = addr;
+    }
+
+    public String getBackImg() {
+        return backImg;
+    }
+
+    public void setBackImg(String backImg) {
+        this.backImg = backImg;
     }
 
     public String getBackupField1() {
@@ -121,6 +134,14 @@ public class SpaceBean {
         this.spaceName = spaceName;
     }
 
+    public String getSpaceTitle() {
+        return spaceTitle;
+    }
+
+    public void setSpaceTitle(String spaceTitle) {
+        this.spaceTitle = spaceTitle;
+    }
+
     public String getTel() {
         return tel;
     }
@@ -129,118 +150,12 @@ public class SpaceBean {
         this.tel = tel;
     }
 
-    public List<SpaceImageBean> getSpaceImage() {
+    public List<?> getSpaceImage() {
         return spaceImage;
     }
 
-    public void setSpaceImage(List<SpaceImageBean> spaceImage) {
+    public void setSpaceImage(List<?> spaceImage) {
         this.spaceImage = spaceImage;
-    }
-
-    public static class SpaceImageBean {
-        /**
-         * detalis : 阿萨德推哦怕
-         * id : 2
-         * imageType : 1
-         * imgName : 空间1
-         * imgType : 1
-         * imgUrl : http://pic11.nipic.com/20101208/6332275_140730007350_2.jpg
-         * paixu : 1
-         * pid : 1
-         * upDate : 1556509310000
-         * videoUrl : 1
-         */
-
-        private String detalis;
-        private int id;
-        private int imageType;
-        private String imgName;
-        private int imgType;
-        private String imgUrl;
-        private int paixu;
-        private int pid;
-        private long upDate;
-        private String videoUrl;
-
-        public String getDetalis() {
-            return detalis;
-        }
-
-        public void setDetalis(String detalis) {
-            this.detalis = detalis;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public int getImageType() {
-            return imageType;
-        }
-
-        public void setImageType(int imageType) {
-            this.imageType = imageType;
-        }
-
-        public String getImgName() {
-            return imgName;
-        }
-
-        public void setImgName(String imgName) {
-            this.imgName = imgName;
-        }
-
-        public int getImgType() {
-            return imgType;
-        }
-
-        public void setImgType(int imgType) {
-            this.imgType = imgType;
-        }
-
-        public String getImgUrl() {
-            return imgUrl;
-        }
-
-        public void setImgUrl(String imgUrl) {
-            this.imgUrl = imgUrl;
-        }
-
-        public int getPaixu() {
-            return paixu;
-        }
-
-        public void setPaixu(int paixu) {
-            this.paixu = paixu;
-        }
-
-        public int getPid() {
-            return pid;
-        }
-
-        public void setPid(int pid) {
-            this.pid = pid;
-        }
-
-        public long getUpDate() {
-            return upDate;
-        }
-
-        public void setUpDate(long upDate) {
-            this.upDate = upDate;
-        }
-
-        public String getVideoUrl() {
-            return videoUrl;
-        }
-
-        public void setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
-        }
     }
 }
 

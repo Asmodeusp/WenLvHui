@@ -63,10 +63,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.youth.banner.Banner
+                <ImageView
                     android:id="@+id/ShouyiDetailFlyBanner"
                     android:layout_width="match_parent"
-                    android:layout_height="821px"></com.youth.banner.Banner>
+                    android:layout_height="821px"/>
 
             </com.zhy.autolayout.AutoRelativeLayout>
 

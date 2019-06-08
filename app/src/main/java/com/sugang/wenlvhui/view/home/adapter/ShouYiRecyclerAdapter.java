@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
+import com.sugang.wenlvhui.model.bean.home.wcfy.ProductListBean;
 import com.sugang.wenlvhui.model.bean.home.wcfy.ShouYiPageBean;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -25,13 +26,15 @@ import io.reactivex.annotations.NonNull;
 public class ShouYiRecyclerAdapter extends RecyclerView.Adapter<ShouYiRecyclerAdapter.Holder> implements View.OnClickListener {
 
 
-    private List<ShouYiPageBean.DataBean.SelectProductBean> list;
+    private List<ProductListBean> list;
     private Context context;
     private RecyclerViewOnCLickListener myCLick;
     private boolean isLike = true;
+    private int a ;
 
-    public ShouYiRecyclerAdapter(List<ShouYiPageBean.DataBean.SelectProductBean> list) {
+    public ShouYiRecyclerAdapter(List<ProductListBean> list,int a) {
         this.list = list;
+        this.a =a;
     }
 
     @NonNull
@@ -64,10 +67,11 @@ public class ShouYiRecyclerAdapter extends RecyclerView.Adapter<ShouYiRecyclerAd
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
-        ShouYiPageBean.DataBean.SelectProductBean data = list.get(position);
-
-        Glide.with(context).load(data.getImgUrl()).error(R.mipmap.icon).into(holder.itemWcfyshouyiImage);
-
+        ProductListBean data = list.get(position);
+        if (a==0) {
+            holder.itemWcfyshouyiAddressText.setVisibility(View.GONE);
+        }
+        Glide.with(context).load(data.getProductImage()).error(R.mipmap.icon).into(holder.itemWcfyshouyiImage);
         holder.itemWcfyshouyiNameText.setText(data.getProductName());
         holder.itemWcfyshouyiAddressText.setText(data.getCity() + "-"+data.getArea());
         holder.itemWcfyshouyiSeeNumberText.setText(data.getBrowse()+"");

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/H8"
+    android:orientation="vertical"
+    tools:context=".view.home.travelroute.FabuyoujiActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/FabuyoujiReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/FabuyoujiFaBuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/px_30"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="@dimen/px_150"
+                android:layout_height="wrap_content"
+                android:textColor="@color/H8"
+                android:text="发布"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_160"
+            android:text="发布游记"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginRight="@dimen/px_28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/H1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/action_undo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/undo" />
+
+            <ImageButton
+                android:id="@+id/action_redo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/redo" />
+
+            <ImageButton
+                android:id="@+id/action_bold"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/bold" />
+
+            <ImageButton
+                android:id="@+id/action_italic"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/italic" />
+
+
+            <ImageButton
+                android:id="@+id/action_heading1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/h1" />
+
+            <ImageButton
+                android:id="@+id/action_heading2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/h2" />
+
+            <ImageButton
+                android:id="@+id/action_heading3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/h3" />
+
+            <ImageButton
+                android:id="@+id/action_heading4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/h4" />
+
+            <ImageButton
+                android:id="@+id/action_heading5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/h5" />
+
+            <ImageButton
+                android:id="@+id/action_heading6"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/h6" />
+
+
+            <ImageButton
+                android:id="@+id/action_align_left"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/justify_left" />
+
+            <ImageButton
+                android:id="@+id/action_align_center"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/justify_center" />
+
+            <ImageButton
+                android:id="@+id/action_align_right"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/justify_right" />
+
+            <ImageButton
+                android:id="@+id/action_insert_bullets"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/bullets" />
+
+            <ImageButton
+                android:id="@+id/action_insert_numbers"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/numbers" />
+
+
+            <ImageButton
+                android:id="@+id/action_insert_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@mipmap/insert_image" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.sugang.wenlvhui.view.richeditor.RichEditor
+        android:id="@+id/editor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_500"
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginRight="@dimen/px_28" />
+</com.zhy.autolayout.AutoLinearLayout>

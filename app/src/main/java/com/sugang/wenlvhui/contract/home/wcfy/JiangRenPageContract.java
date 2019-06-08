@@ -16,6 +16,6 @@ public interface JiangRenPageContract {
 
     interface JiangRenPagePresenter extends BasePresenter<JiangRenPageView> {
         //猜你喜欢
-        void getJiangRenPageBean(String user_id);
+        void getJiangRenPageBean(String user_id,String page);
     }
 }

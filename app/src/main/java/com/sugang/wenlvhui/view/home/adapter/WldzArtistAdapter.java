@@ -1,6 +1,7 @@
 package com.sugang.wenlvhui.view.home.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
@@ -18,6 +19,8 @@ import com.sugang.wenlvhui.model.bean.home.wldz.ArtistsBean;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
+import com.zzhoujay.richtext.ImageHolder;
+import com.zzhoujay.richtext.RichText;
 
 import java.util.List;
 
@@ -67,7 +70,21 @@ public class WldzArtistAdapter extends RecyclerView.Adapter<WldzArtistAdapter.Ho
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
         ArtistsBean data = list.get(position);
-        holder.itemWldzArtistDetailsText.setText(data.getArtist_details());
+        RichText
+                .from(data.getArtist_details()) // 数据源
+                .autoFix(true) // 是否自动修复，默认true
+                .autoPlay(true) // gif图片是否自动播放
+                .showBorder(true) // 是否显示图片边框
+                .borderColor(Color.RED) // 图片边框颜色
+                .borderSize(10) // 边框尺寸
+                .borderRadius(50) // 图片边框圆角弧度
+                .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
+                .noImage(true) // 不显示并且不加载图片
+                .resetSize(false)
+                .bind(context)
+                .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
+                .into( holder.itemWldzArtistDetailsText); // 设置目标TextView
+
         Glide.with(context).load(data.getArtist_logourl()).error(R.mipmap.icon).into(holder.itemWldzArtistImage);
         holder.itemWldzArtistNameText.setText(data.getArtist_type()+"   |   "+data.getArtist_name());
     }

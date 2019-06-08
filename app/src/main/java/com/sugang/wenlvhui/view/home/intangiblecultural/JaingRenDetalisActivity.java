@@ -92,12 +92,8 @@ public class JaingRenDetalisActivity extends BaseActivity<JiangrenDetalisPresent
                 finish();
                 break;
             case R.id.JiangrenDetalis_ShareButton:
-
-
                 break;
             case R.id.JiangrenDetalis_IsLikeButton:
-
-
                 break;
             case R.id.JiangrenDetalis_ZuoPinButton:
                 setContentView(R.id.JiangrenDetalis_Viewpager, JiangrenZuopinFragment.class);
@@ -131,7 +127,7 @@ public class JaingRenDetalisActivity extends BaseActivity<JiangrenDetalisPresent
             JiangrenDetalisProductNumberText.setText(data.getShop().getProduct_num()+"");
             JiangrenDetalisAdressText.setText(data.getShop().getAddrDetail());
             String shopsDetail = data.getShop().getShopsDetail();
-//            SPUtils.put(this,SPKey.SHOP_DETAILS,shopsDetail);
+            SPUtils.put(this,SPKey.SHOP_DETAILS,shopsDetail);
             videosBeans.addAll(data.getShop().getVideoList());
             productList .addAll( data.getShop().getProductList());
         }

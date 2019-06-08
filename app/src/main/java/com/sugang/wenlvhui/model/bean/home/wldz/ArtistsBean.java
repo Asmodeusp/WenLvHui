@@ -20,7 +20,7 @@ public class ArtistsBean {
     private String artist_experience;
     private int recommend;
     private int id;
-    private int artist_type;
+    private String artist_type;
     private String artist_details;
     private int artist_browse;
     private int artist_status;
@@ -73,11 +73,11 @@ public class ArtistsBean {
         this.id = id;
     }
 
-    public int getArtist_type() {
+    public String getArtist_type() {
         return artist_type;
     }
 
-    public void setArtist_type(int artist_type) {
+    public void setArtist_type(String artist_type) {
         this.artist_type = artist_type;
     }
 

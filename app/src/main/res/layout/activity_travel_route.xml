@@ -140,6 +140,7 @@
     </android.support.v4.widget.NestedScrollView>
 
     <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/FaBuYoujiButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

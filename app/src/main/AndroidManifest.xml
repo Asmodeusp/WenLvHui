@@ -25,7 +25,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.space.SpaceChangguanActivity"></activity>
+        <activity android:name=".view.home.intangiblecultural.ShouyiSerchActivity"></activity>
+        <activity android:name=".view.home.intangiblecultural.JiangrenSerchActivity" />
+        <activity android:name=".view.home.travelroute.FabuyoujiActivity" />
+        <activity android:name=".view.space.SpaceChangguanActivity" />
         <activity android:name=".view.space.SpaceDetalisActivity" />
         <activity android:name=".view.comment.CommentActivity" />
         <activity android:name=".view.activity.ActivityListActivity" />

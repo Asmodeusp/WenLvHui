@@ -173,7 +173,6 @@ public class NewsDetailsActivity extends BaseActivity<WlzeDetalisPresenterImp> i
             NewsDetailsSeeNumText.setText(newsBean.getBrowse()+"");
             NewsDetailsCommentNumText.setText(newsBean.getCommens()+"");
         }
-
     }
 
     @Override

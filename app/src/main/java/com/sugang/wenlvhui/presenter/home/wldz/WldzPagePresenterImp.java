@@ -1,6 +1,8 @@
 package com.sugang.wenlvhui.presenter.home.wldz;
 
 
+import android.util.Log;
+
 import com.sugang.wenlvhui.contract.home.wldz.WldzPageContract;
 import com.sugang.wenlvhui.model.bean.home.wldz.WldzArtistindexBean;
 import com.sugang.wenlvhui.model.service.home.wldz.WldzPageService;

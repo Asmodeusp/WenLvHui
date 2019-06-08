@@ -1,22 +1,25 @@
 package com.sugang.wenlvhui.view.home.intangiblecultural;
 
 
-import android.os.Bundle;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
-import com.youth.banner.Banner;
+import com.sugang.wenlvhui.contract.home.wcfy.ShouYiDetalisContract;
+import com.sugang.wenlvhui.model.bean.home.wcfy.ShouYiDetalisBean;
+import com.sugang.wenlvhui.presenter.home.wcfy.ShouYiDetalisPresenterImp;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
-
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ShouyiDetailActivity extends BaseActivity {
+public class ShouyiDetailActivity extends BaseActivity<ShouYiDetalisPresenterImp> implements ShouYiDetalisContract.ShouYiDetalisView {
 
 
     @BindView(R.id.ShouyiDetail_ReturnButton)
@@ -24,7 +27,7 @@ public class ShouyiDetailActivity extends BaseActivity {
     @BindView(R.id.ShouyiDetail_ShareButton)
     AutoLinearLayout ShouyiDetailShareButton;
     @BindView(R.id.ShouyiDetailFlyBanner)
-    Banner ShouyiDetailFlyBanner;
+    ImageView ShouyiDetailFlyBanner;
     @BindView(R.id.ShouyiDetail_ProductNameText)
     TextView ShouyiDetailProductNameText;
     @BindView(R.id.ShouyiDetail_Parice)
@@ -49,7 +52,7 @@ public class ShouyiDetailActivity extends BaseActivity {
     AutoLinearLayout ShouyiDetailJionShopingCarButton;
     @BindView(R.id.ShouyiDetail_LiJiGouMaiButton)
     AutoLinearLayout ShouyiDetailLiJiGouMaiButton;
-
+    boolean islike =true;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_shouyi_detail;
@@ -62,7 +65,8 @@ public class ShouyiDetailActivity extends BaseActivity {
 
     @Override
     protected void loadDate() {
-
+        int o = (int) SPUtils.get(this, SPKey.PRODUCT_ID, 0);
+        presenter.getShouYiDetalisBean(o+"");
     }
 
 
@@ -75,17 +79,39 @@ public class ShouyiDetailActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.ShouyiDetail_ShareButton:
+
                 break;
             case R.id.ShouyiDetail_CommentText:
+
                 break;
             case R.id.ShouyiDetail_goShopPageButton:
                 break;
             case R.id.ShouyiDetail_CollectionButton:
+                if (islike) {
+                    ShouyiDetailCollectionImage.setImageResource(R.mipmap.dianzan_pass);
+                    islike =false;
+                }else{
+                    ShouyiDetailCollectionImage.setImageResource(R.mipmap.dianzan);
+                }
                 break;
             case R.id.ShouyiDetail_JionShopingCarButton:
                 break;
             case R.id.ShouyiDetail_LiJiGouMaiButton:
                 break;
         }
+    }
+
+    @Override
+    public void showShouYiDetalisBean(ShouYiDetalisBean shouYiPageBean) {
+        if (shouYiPageBean.getData()!= null) {
+            ShouYiDetalisBean.DataBean data = shouYiPageBean.getData();
+//            Glide.with(this).load(data.getProduct().)
+
+        }
+    }
+
+    @Override
+    public void showError(String string) {
+
     }
 }

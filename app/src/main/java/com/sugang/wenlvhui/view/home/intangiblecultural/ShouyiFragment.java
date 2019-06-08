@@ -80,7 +80,7 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
                 SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(2).getId());
                 break;
             case R.id.ShouYi_SerchEd:
-
+                startActivity(new Intent(getActivity(),ShouyiSerchActivity.class));
                 break;
         }
     }
@@ -89,14 +89,14 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
     public void showShouYiPageBean(ShouYiPageBean shouYiPageBean) {
         if (shouYiPageBean.getData() != null) {
             data = shouYiPageBean.getData();
-            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(0).getImgUrl()).error(R.mipmap.icon).into(ShouYiFirtImage);
-            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(1).getImgUrl()).error(R.mipmap.icon).into(ShouYiSecondImage);
-            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(2).getImgUrl()).error(R.mipmap.icon).into(ShouYiThirdImage);
+            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(0).getProductImage()).error(R.mipmap.icon).into(ShouYiFirtImage);
+            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(1).getProductImage()).error(R.mipmap.icon).into(ShouYiSecondImage);
+            Glide.with(this).load(shouYiPageBean.getData().getAllday().get(2).getProductImage()).error(R.mipmap.icon).into(ShouYiThirdImage);
             ShouYiFirtTextView.setText(shouYiPageBean.getData().getAllday().get(0).getProductName());
             ShouYiSecondText.setText(shouYiPageBean.getData().getAllday().get(1).getProductName());
             ShouYiThirdText.setText(shouYiPageBean.getData().getAllday().get(2).getProductName());
             ShouYiRecycler.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-            ShouYiRecyclerAdapter shouYiRecyclerAdapter = new ShouYiRecyclerAdapter(shouYiPageBean.getData().getSelect_product());
+            ShouYiRecyclerAdapter shouYiRecyclerAdapter = new ShouYiRecyclerAdapter(shouYiPageBean.getData().getSelect_product(),1);
             ShouYiRecycler.setAdapter(shouYiRecyclerAdapter);
             shouYiRecyclerAdapter.setRecyclerViewOnCLickListener(new ShouYiRecyclerAdapter.RecyclerViewOnCLickListener() {
                 @Override
@@ -105,10 +105,8 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
                     SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getSelect_product().get(position).getId());
                 }
             });
-
         }
     }
-
     @Override
     public void showError(String string) {
 

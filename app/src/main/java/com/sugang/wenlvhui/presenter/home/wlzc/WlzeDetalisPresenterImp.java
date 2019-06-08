@@ -1,5 +1,7 @@
 package com.sugang.wenlvhui.presenter.home.wlzc;
 
+import android.util.Log;
+
 import com.sugang.wenlvhui.contract.home.wlze.WlzeDetalisContract;
 import com.sugang.wenlvhui.model.bean.IsLikeBean;
 import com.sugang.wenlvhui.model.bean.home.wlze.NewsDetalisBean;
@@ -43,7 +45,6 @@ public class WlzeDetalisPresenterImp implements WlzeDetalisContract.WlzeDetalisP
 
                     @Override
                     public void onError(Throwable e) {
-
                     }
 
                     @Override

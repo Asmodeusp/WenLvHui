@@ -68,6 +68,8 @@ public class CulturalTravelCustomizationActivity extends BaseActivity<WldzPagePr
             wldzArtistAdapter.setRecyclerViewOnCLickListener(new WldzArtistAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
+                    SPUtils.put(CulturalTravelCustomizationActivity.this, SPKey.WLDZ_YIRENDETAILS, wldzArtistindexBean.getData().getArtists().get(position).getArtist_details());
+                    SPUtils.put(CulturalTravelCustomizationActivity.this, SPKey.WLDZ_YIRENEXPERIENCE,  wldzArtistindexBean.getData().getArtists().get(position).getArtist_experience());
                     SPUtils.put(CulturalTravelCustomizationActivity.this, SPKey.WLDZ_YIRENTYPE,wldzArtistindexBean.getData().getArtists().get(position).getId());
                     startActivity(new Intent(CulturalTravelCustomizationActivity.this,WldzDetalisActivity.class));
                 }

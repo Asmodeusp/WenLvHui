@@ -2,6 +2,7 @@ package com.sugang.wenlvhui.view.home.travelroute;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
@@ -11,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
 import com.sugang.wenlvhui.contract.home.wllx.WllxPageContract;
@@ -26,6 +26,7 @@ import com.zhy.autolayout.AutoLinearLayout;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 //文旅路线
@@ -49,7 +50,10 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
     @BindView(R.id.TravelRoute_JINPINRecy)
     RecyclerView TravelRouteJINPINRecy;
     ArrayList<Fragment> fragments = new ArrayList<>();
+    @BindView(R.id.FaBuYoujiButton)
+    AutoLinearLayout FaBuYoujiButton;
     private WllxPageBean.DataBean data;
+    private int id;
 
     @Override
     protected int getLayoutId() {
@@ -58,6 +62,7 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
 
     @Override
     protected void init() {
+        TravelRouteShaiXuanButton.setVisibility(View.GONE);
         TravelrouteFirstFragment featureOneFragment = new TravelrouteFirstFragment();
         TravelrouteSecondFragment featureTwoFragment = new TravelrouteSecondFragment();
         fragments.add(featureOneFragment);
@@ -97,7 +102,7 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
     }
 
 
-    @OnClick({R.id.TravelRouteReturnButton, R.id.TravelRouteShaiXuanButton, R.id.TravelRoute_SerchEd, R.id.TravelRoute_FirstImage})
+    @OnClick({R.id.TravelRouteReturnButton, R.id.TravelRouteShaiXuanButton, R.id.TravelRoute_SerchEd, R.id.TravelRoute_FirstImage, R.id.FaBuYoujiButton})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.TravelRouteReturnButton:
@@ -108,23 +113,29 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
             case R.id.TravelRoute_SerchEd:
                 break;
             case R.id.TravelRoute_FirstImage:
+                SPUtils.put(TravelRouteActivity.this, SPKey.WLLX_ID, id);
+                startActivity(new Intent(TravelRouteActivity.this, WllxDetalisActivity.class));
+                break;
+            case R.id.FaBuYoujiButton:
+               startActivity(new Intent(this,FabuyoujiActivity.class));
                 break;
         }
     }
 
     @Override
     public void showWllxPageBeanBean(WllxPageBean wllxPageBeanBean) {
-        if (wllxPageBeanBean.getData()!=null) {
+        if (wllxPageBeanBean.getData() != null) {
             data = wllxPageBeanBean.getData();
+            id = data.getFirst().getId();
             Glide.with(this).load(wllxPageBeanBean.getData().getFirst().getImg()).error(R.mipmap.icon).into(TravelRouteFirstImage);
-            TravelRouteJINPINRecy.setLayoutManager(new GridLayoutManager(this,2));
+            TravelRouteJINPINRecy.setLayoutManager(new GridLayoutManager(this, 2));
             TravelRouteJINPINRecyAdapter travelRouteJINPINRecyAdapter = new TravelRouteJINPINRecyAdapter(data.getBrigades());
             TravelRouteJINPINRecy.setAdapter(travelRouteJINPINRecyAdapter);
             travelRouteJINPINRecyAdapter.setRecyclerViewOnCLickListener(new TravelRouteJINPINRecyAdapter.RecyclerViewOnCLickListener() {
                 @Override
                 public void myClick(View view, int position) {
-                    SPUtils.put(TravelRouteActivity.this, SPKey.WLLX_ID,data.getBrigades().get(position).getId());
-                    startActivity(new Intent(TravelRouteActivity.this,WllxDetalisActivity.class));
+                    SPUtils.put(TravelRouteActivity.this, SPKey.WLLX_ID, data.getBrigades().get(position).getId());
+                    startActivity(new Intent(TravelRouteActivity.this, WllxDetalisActivity.class));
                 }
             });
         }
@@ -136,4 +147,6 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
     public void showError(String string) {
 
     }
+
+
 }

@@ -18,9 +18,10 @@ import io.reactivex.schedulers.Schedulers;
 public class JiangRenPagePresenterImp implements JiangRenPageContract.JiangRenPagePresenter {
     JiangRenPageContract.JiangRenPageView view;
     @Override
-    public void getJiangRenPageBean(String user_id) {
+    public void getJiangRenPageBean(String user_id,String page) {
         Map<String, String> paramMap = new HashMap<>();
         paramMap.put("user_id",user_id);
+        paramMap.put("page",page);
         RetrofitUtils.getInstance().getService(JiangRenPageService.class)
                 .GetJiangRenPageBeanData(paramMap)
                 .subscribeOn(Schedulers.newThread())

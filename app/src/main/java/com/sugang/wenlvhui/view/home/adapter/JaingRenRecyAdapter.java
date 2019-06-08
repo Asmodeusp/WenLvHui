@@ -16,6 +16,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.home.dfms.RestaurantPageBean;
 import com.sugang.wenlvhui.model.bean.home.wcfy.JiangRenPageBean;
+import com.sugang.wenlvhui.model.bean.home.wcfy.ShopsBean;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
@@ -31,12 +32,12 @@ import io.reactivex.annotations.NonNull;
 public class JaingRenRecyAdapter extends RecyclerView.Adapter<JaingRenRecyAdapter.Holder> implements View.OnClickListener {
 
 
-    private List<JiangRenPageBean.DataBean.ShopsBean> list;
+    private List<ShopsBean> list;
     private Context context;
     private RecyclerViewOnCLickListener myCLick;
     private boolean isLike = true;
 
-    public JaingRenRecyAdapter(List<JiangRenPageBean.DataBean.ShopsBean> list) {
+    public JaingRenRecyAdapter(List<ShopsBean> list) {
         this.list = list;
     }
 
@@ -70,9 +71,9 @@ public class JaingRenRecyAdapter extends RecyclerView.Adapter<JaingRenRecyAdapte
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
         holder.itemView.setTag(position);
-        JiangRenPageBean.DataBean.ShopsBean data = list.get(position);
-//        Log.d("JaingRenRecyAdapter", data.getImgUrl());
-        Glide.with(context).load(data.getImgUrl()).into(holder.itemWcfyjiangrenHeadImage);
+        ShopsBean data = list.get(position);
+
+        Glide.with(context).load(data.getImgUrl()).error(R.mipmap.icon).into(holder.itemWcfyjiangrenHeadImage);
 
         holder.itemWcfyjiangrenNameText.setText(data.getShopsName());
         holder.itemWcfyjiangrenWorksNumberText.setText(data.getProduct_num() + "");
@@ -110,6 +111,5 @@ public class JaingRenRecyAdapter extends RecyclerView.Adapter<JaingRenRecyAdapte
             AutoUtils.autoSize(itemView);
         }
     }
-
 
 }

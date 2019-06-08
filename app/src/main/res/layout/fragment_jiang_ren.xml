@@ -24,10 +24,18 @@
                 android:gravity="center"
                 android:text="大家正在搜：胡桃夹子"
                 android:textColor="@color/H6" />
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/JaingRen_Recy"
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/JaingRen_RefreshLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/JaingRen_Recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
         </com.zhy.autolayout.AutoLinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

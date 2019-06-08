@@ -1,6 +1,7 @@
 package com.sugang.wenlvhui.view.adaptr;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,8 @@ import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.model.bean.space.SpaceBean;
 import com.sugang.wenlvhui.utils.TimeUtils;
 import com.zhy.autolayout.utils.AutoUtils;
+import com.zzhoujay.richtext.ImageHolder;
+import com.zzhoujay.richtext.RichText;
 
 import java.util.List;
 
@@ -67,9 +70,23 @@ public class SpacePageAdapter extends RecyclerView.Adapter<SpacePageAdapter.Hold
         SpaceBean data = list.get(position);
         holder.itemSpacePageAddressText.setText(data.getAddr());
         holder.itemSpacePageData.setText(TimeUtils.getBirthdatyData(data.getCreateDate()));
-        holder.itemSpacePageDetalis.setText(data.getDateil());
+
+        RichText
+                .from(data.getDateil()) // 数据源
+                .autoFix(true) // 是否自动修复，默认true
+                .autoPlay(true) // gif图片是否自动播放
+                .showBorder(true) // 是否显示图片边框
+                .borderColor(Color.RED) // 图片边框颜色
+                .borderSize(10) // 边框尺寸
+                .borderRadius(50) // 图片边框圆角弧度
+                .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
+                .noImage(true) // 不显示并且不加载图片
+                .resetSize(false)
+                .bind(this)
+                .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
+                .into(holder.itemSpacePageDetalis); // 设置目标TextView
         Glide.with(context).load(data.getBackupField1()).into(holder.itemSpacePageHeadImage);
-        Glide.with(context).load(data.getSpaceImage().get(0).getImgUrl()).into(holder.itemSpacePageImage);
+        Glide.with(context).load(data.getBackImg()).into(holder.itemSpacePageImage);
         holder.itemSpacePageNameText.setText(data.getSpaceName());
         holder.itemSpacePageSeeNumberText.setText(data.getBrowse()+"");
     }
