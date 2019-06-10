@@ -46,6 +46,7 @@ public class LocalcuisineActivity extends BaseActivity<DfmsPagePresenterImp> imp
 
     @Override
     protected void init() {
+        LocalcuisineQuyuButton.setVisibility(View.GONE);
 
 
     }

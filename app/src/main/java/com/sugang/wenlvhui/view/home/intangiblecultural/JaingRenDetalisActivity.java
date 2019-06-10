@@ -2,6 +2,7 @@ package com.sugang.wenlvhui.view.home.intangiblecultural;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -59,7 +60,7 @@ public class JaingRenDetalisActivity extends BaseActivity<JiangrenDetalisPresent
     @BindView(R.id.JiangrenDetalis_ShipinButton)
     AutoLinearLayout JiangrenDetalisShipinButton;
     @BindView(R.id.JiangrenDetalis_Viewpager)
-    ViewPager JiangrenDetalisViewpager;
+    FrameLayout JiangrenDetalisViewpager;
     public ArrayList<VideosBean> videosBeans = new ArrayList<>();
     public List<JiangRenDetalisBean.DataBean.ShopBean.ProductListBean> productList= new ArrayList<>();
 

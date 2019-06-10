@@ -7,8 +7,11 @@
     tools:context=".view.home.intangiblecultural.JiangrenJieshaoFragment">
 
     <TextView
+        android:layout_marginTop="@dimen/px_34"
         android:layout_marginLeft="@dimen/px_28"
         android:layout_marginRight="@dimen/px_28"
+        android:text="123456"
+
         android:id="@+id/jieshao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

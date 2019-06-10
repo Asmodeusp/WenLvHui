@@ -43,13 +43,15 @@ public class Urls {
     //文旅路线列表
     public static final String WLLX_LIST = "wenbrigade/list";
     //文旅路线详情
-    public static final String WLLX_DETAILS = "/wenbrigade/details";
+    public static final String WLLX_DETAILS = "wenbrigade/details";
+    //文旅路线搜索
+    public static final String WLLX_SERCH = "wenbrigade/searchByKey";
     //发布游记
-    public static final String YLYJFABU = "/wildtravels/insert";//参数{userid:userid,content:content}
+    public static final String YLYJFABU = "wildtravels/insert";//参数{userid:userid,content:content}
     //游记列表
-    public static final String YLYJLIST = "/wildtravels/findall";//参数{userid:userid,page:page,num:num}
+    public static final String YLYJLIST = "wildtravels/findall";//参数{userid:userid,page:page,num:num}
     //游记详情
-    public static final String YLYJDETALIS = "/wildtravels/findone";//参数{id:id}
+    public static final String YLYJDETALIS = "wildtravels/findone";//参数{id:id}
     //文旅榜单
 
     //匠人主页
@@ -88,6 +90,8 @@ public class Urls {
     public static final String HSTJ_CNXH = "book/book_index_like";
     // 好书推荐  最新最热
     public static final String HSTJ_ZXZR = "book/book_index_new";
+    //书籍详情
+    public static final String BOOKDETALIS = " book/findone";
     //点赞
     public static final String ISLIKE = "/ymup/insert";
     //评论

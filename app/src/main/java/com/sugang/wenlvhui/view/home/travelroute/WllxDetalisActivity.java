@@ -1,6 +1,7 @@
 package com.sugang.wenlvhui.view.home.travelroute;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,6 +19,8 @@ import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.AutoRelativeLayout;
+import com.zzhoujay.richtext.ImageHolder;
+import com.zzhoujay.richtext.RichText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -138,9 +141,51 @@ public class WllxDetalisActivity extends BaseActivity<WllxDetailsPresenterImp> i
             WllxDetalisChenRenPariceText.setText(data.getAdult()+"");
             WllxDetalisJiatingPariceText.setText(data.getSetMeal()+"");
             WllxDetalisChildrenPariceText.setText(data.getChildren()+"");
-            WllxDetaliXingchenganpaiText.setText(data.getTripArrange());
-            WllxDetaliFeiyongxuzhiText.setText(data.getFeeNotice());
-            WllxDetaliAnquanjinshiText.setText(data.getSecurityTip());
+
+            RichText
+                    .from(data.getTripArrange()) // 数据源
+                    .autoFix(true) // 是否自动修复，默认true
+                    .autoPlay(true) // gif图片是否自动播放
+                    .showBorder(true) // 是否显示图片边框
+                    .borderColor(Color.RED) // 图片边框颜色
+                    .borderSize(10) // 边框尺寸
+                    .borderRadius(50) // 图片边框圆角弧度
+                    .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
+
+                    .resetSize(false)
+                    .bind(this)
+                    .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
+                    .into(WllxDetaliXingchenganpaiText); // 设置目标TextView
+            RichText
+                    .from(data.getFeeNotice()) // 数据源
+                    .autoFix(true) // 是否自动修复，默认true
+                    .autoPlay(true) // gif图片是否自动播放
+                    .showBorder(true) // 是否显示图片边框
+                    .borderColor(Color.RED) // 图片边框颜色
+                    .borderSize(10) // 边框尺寸
+                    .borderRadius(50) // 图片边框圆角弧度
+                    .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
+
+                    .resetSize(false)
+                    .bind(this)
+                    .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
+                    .into(WllxDetaliFeiyongxuzhiText); // 设置目标TextView
+            RichText
+                    .from(data.getSecurityTip()) // 数据源
+                    .autoFix(true) // 是否自动修复，默认true
+                    .autoPlay(true) // gif图片是否自动播放
+                    .showBorder(true) // 是否显示图片边框
+                    .borderColor(Color.RED) // 图片边框颜色
+                    .borderSize(10) // 边框尺寸
+                    .borderRadius(50) // 图片边框圆角弧度
+                    .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
+
+                    .resetSize(false)
+                    .bind(this)
+                    .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
+                    .into(WllxDetaliAnquanjinshiText); // 设置目标TextView
+
+
         }
 
     }

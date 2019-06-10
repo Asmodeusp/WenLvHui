@@ -16,11 +16,16 @@ import android.widget.PopupWindow;
 import com.google.gson.Gson;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
+import com.sugang.wenlvhui.contract.home.wllx.WllxFabuContract;
 import com.sugang.wenlvhui.model.bean.FileBean;
+import com.sugang.wenlvhui.model.bean.home.wllx.WllxfabuBean;
+import com.sugang.wenlvhui.presenter.home.wllx.WllxFabuPresenterImp;
 import com.sugang.wenlvhui.utils.Urls;
 import com.sugang.wenlvhui.utils.photo.BitmapUtils;
 import com.sugang.wenlvhui.utils.photo.PhotoHelp;
 import com.sugang.wenlvhui.utils.photo.PhotoUtils;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.richeditor.RichEditor;
 import com.zhy.autolayout.AutoLinearLayout;
 
@@ -39,7 +44,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class FabuyoujiActivity extends BaseActivity implements View.OnClickListener {
+public class FabuyoujiActivity extends BaseActivity<WllxFabuPresenterImp> implements WllxFabuContract.WllxFabuView {
 
 
     @BindView(R.id.FabuyoujiReturnButton)
@@ -80,9 +85,6 @@ public class FabuyoujiActivity extends BaseActivity implements View.OnClickListe
     ImageButton actionInsertImage;
     @BindView(R.id.editor)
     RichEditor editor;
-    private AutoLinearLayout selector_popup_dissmis_line;
-    private AutoLinearLayout selector_popup_imgLibily_line;
-    private AutoLinearLayout selector_popup_photo_line;
     private PopupWindow popupWindow;
     //这是相册权限
     private final int STORAGE_PERMISSIONS_REQUEST_CODE = 100;
@@ -94,7 +96,9 @@ public class FabuyoujiActivity extends BaseActivity implements View.OnClickListe
     private final int CODE_CAMERA_REQUEST = 400;
     private String filePath;
     private String fileName;
-    private FileBean fileBean ;
+    private FileBean fileBean;
+
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_fabuyouji;
@@ -106,6 +110,7 @@ public class FabuyoujiActivity extends BaseActivity implements View.OnClickListe
         editor.setEditorHeight(200);
         editor.setEditorFontColor(getResources().getColor(R.color.H4));
         editor.setPlaceholder("请在这边书写你要发布的内容");
+
     }
 
     @Override
@@ -113,11 +118,16 @@ public class FabuyoujiActivity extends BaseActivity implements View.OnClickListe
 
     }
 
-    @OnClick({R.id.FabuyoujiReturnButton, R.id.action_undo, R.id.action_redo, R.id.action_bold, R.id.action_italic, R.id.action_heading1, R.id.action_heading2, R.id.action_heading3, R.id.action_heading4, R.id.action_heading5, R.id.action_heading6, R.id.action_align_left, R.id.action_align_center, R.id.action_align_right, R.id.action_insert_bullets, R.id.action_insert_numbers, R.id.action_insert_image})
+    @OnClick({R.id.FabuyoujiFaBuButton, R.id.FabuyoujiReturnButton, R.id.action_undo, R.id.action_redo, R.id.action_bold, R.id.action_italic, R.id.action_heading1, R.id.action_heading2, R.id.action_heading3, R.id.action_heading4, R.id.action_heading5, R.id.action_heading6, R.id.action_align_left, R.id.action_align_center, R.id.action_align_right, R.id.action_insert_bullets, R.id.action_insert_numbers, R.id.action_insert_image})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.FabuyoujiReturnButton:
                 finish();
+                break;
+            case R.id.FabuyoujiFaBuButton:
+
+                int o = (int) SPUtils.get(FabuyoujiActivity.this, SPKey.USER_ID, 0);
+                presenter.getWllxFabuBean(o+"", editor.getHtml());
                 break;
             case R.id.action_undo:
                 editor.undo();
@@ -165,40 +175,14 @@ public class FabuyoujiActivity extends BaseActivity implements View.OnClickListe
                 editor.setNumbers();
                 break;
             case R.id.action_insert_image:
-
-                showPopueWindow();
+//                showPopueWindow();
+                PhotoHelp.autoObtainStoragePermission(FabuyoujiActivity.this, STORAGE_PERMISSIONS_REQUEST_CODE, CODE_GALLERY_REQUEST);
                 break;
+
         }
     }
 
-    private void showPopueWindow() {
-        View view = LayoutInflater.from(this).inflate(R.layout.img_selector_popup, null);
-        selector_popup_dissmis_line = view.findViewById(R.id.selector_popup_dissmis_line);
-        selector_popup_imgLibily_line = view.findViewById(R.id.selector_popup_imgLibily_line);
-        selector_popup_photo_line = view.findViewById(R.id.selector_popup_photo_line);
-        //获取屏幕宽高
-        int weight = getResources().getDisplayMetrics().widthPixels;
-        int height = getResources().getDisplayMetrics().heightPixels * 1 / 4;
 
-        popupWindow = new PopupWindow(view, weight, height);
-        // popupWindow.setAnimationStyle(R.style.anim_popup_dir);
-        popupWindow.setFocusable(true);
-        //点击外部popueWindow消失
-        popupWindow.setOutsideTouchable(true);
-        selector_popup_imgLibily_line.setOnClickListener(this);
-        selector_popup_photo_line.setOnClickListener(this);
-        selector_popup_dissmis_line.setOnClickListener(this);
-        //popupWindow消失屏幕变为不透明
-        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-            @Override
-            public void onDismiss() {
-                WindowManager.LayoutParams lp = getWindow().getAttributes();
-                lp.alpha = 1.0f;
-                getWindow().setAttributes(lp);
-            }
-        });
-        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
-    }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -213,80 +197,72 @@ public class FabuyoujiActivity extends BaseActivity implements View.OnClickListe
                 break;
         }
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) switch (requestCode) {
-            case CODE_CAMERA_REQUEST://拍照完成回调
-                fileName = BitmapUtils.compressImageUpload(filePath);
-                UpLoadImage();
-                editor.insertImage(fileBean.getData().getPath(),"");
-                break;
             case CODE_GALLERY_REQUEST://访问相册完成回调
-
                 String path = PhotoUtils.getPath(FabuyoujiActivity.this, data.getData());
                 fileName = BitmapUtils.compressImageUpload(path);
-                 UpLoadImage();
-                editor.insertImage(fileBean.getData().getPath(),"");
+
+                UpLoadImage();
+
                 break;
         }
     }
 
     private void UpLoadImage() {
-        OkHttpClient okHttpClient = new OkHttpClient();
-        //上传的图片
 
+        OkHttpClient okHttpClient = new OkHttpClient();
         //2.通过new MultipartBody build() 创建requestBody对象，
         RequestBody requestBody = new MultipartBody.Builder()
                 //设置类型是表单
                 .setType(MultipartBody.FORM)
                 //添加数据
-                .addFormDataPart("file", "hh.png",
-                        RequestBody.create(MediaType.parse("image/png"),  new File(fileName)))
+                .addFormDataPart("file", fileName,
+                        RequestBody.create(MediaType.parse("image/jpg"), new File(fileName)))
                 .build();
         //3.创建Request对象，设置URL地址，将RequestBody作为post方法的参数传入
-        final Request request = new Request.Builder().url(Urls.BASE_URL+"uploadflv/upload").post(requestBody).build();
+        final Request request = new Request.Builder().url(Urls.BASE_URL + "uploadflv/upload").post(requestBody).build();
         //4.创建一个call对象,参数就是Request请求对象
         Call call = okHttpClient.newCall(request);
         //5.请求加入调度,重写回调方法
         call.enqueue(new Callback() {
 
 
-
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.d("FabuyoujiActivity", e.toString());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String string = response.body().string();
                 fileBean = new Gson().fromJson(string, FileBean.class);
+                fileBean.getData().getPath();
+                editor.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        editor.insertImage(fileBean.getData().getPath(), "");
+                    }
+                });
+
             }
         });
 
 
+    }
 
 
+    @Override
+    public void showWllxFabuBeanBean(WllxfabuBean WllxFabuBeanBean) {
+        if (WllxFabuBeanBean.getMes().equals("成功")) {
+            finish();
+        }
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.selector_popup_imgLibily_line:
-                PhotoHelp.autoObtainStoragePermission(FabuyoujiActivity.this, STORAGE_PERMISSIONS_REQUEST_CODE, CODE_GALLERY_REQUEST);
-                popupWindow.dismiss();
-                break;
-//                相机
-            case R.id.selector_popup_photo_line:
-                filePath = PhotoHelp.getFilePath();
-                PhotoHelp.applyForCameraPermission(FabuyoujiActivity.this, CAMERA_PERMISSIONS_REQUEST_CODE, filePath, CODE_CAMERA_REQUEST);
-                popupWindow.dismiss();
-                break;
-//                取消
-            case R.id.selector_popup_dissmis_line:
-                popupWindow.dismiss();
-                break;
-        }
+    public void showError(String string) {
+
     }
 }

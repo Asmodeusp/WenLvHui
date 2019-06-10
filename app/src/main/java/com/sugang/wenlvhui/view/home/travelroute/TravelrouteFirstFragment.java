@@ -59,15 +59,15 @@ public class TravelrouteFirstFragment extends BaseFragment {
             case R.id.TravelrouteFirst_ZMHYButton:
                 SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "周末嗨游");
                 SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 1);
-                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "农家嗨乐");
-                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 2);
+//                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "农家嗨乐");
+//                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 2);
                 startActivity(new Intent(getActivity(), WllxNjhlActivity.class));
                 break;
             case R.id.TravelrouteFirst_NJHLButton:
                 SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "农家嗨乐");
                 SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 2);
-                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "人气嗨爆");
-                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 3);
+//                SPUtils.put(getActivity(), SPKey.WLLX_TYPE, "人气嗨爆");
+//                SPUtils.put(getActivity(), SPKey.WLLX_TYPEID, 3);
                 startActivity(new Intent(getActivity(), WllxNjhlActivity.class));
                 break;
             case R.id.TravelrouteFirst_RQHBButton:

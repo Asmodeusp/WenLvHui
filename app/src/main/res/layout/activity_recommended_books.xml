@@ -231,7 +231,6 @@
                         android:gravity="center_vertical">
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:scaleType="fitXY"
                             android:id="@+id/RecommendedBooks_HstjUserHeadImage"
                             android:layout_width="78px"
                             android:layout_height="@dimen/px_78"

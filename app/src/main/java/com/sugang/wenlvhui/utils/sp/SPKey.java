@@ -33,6 +33,7 @@ public class SPKey {
     public static String WLLX_ID = "wllx_id";
     public static String WLLX_TYPE = "wllx_type";
     public static String WLLX_TYPEID = "wllx_typeid";
+    public static String WLLX_YLYJID = "wllx_Ylyjid";
     //文旅定制
     public static String WLDZ_YIRENTYPE = "wldz_yirentype";
     public static String WLDZ_YIRENDETAILS = "wldz_yirenDetails";
@@ -51,4 +52,6 @@ public class SPKey {
     //空间
     public static String SPACEID ="SpaceId";
     public static String SPACECHANGGUANID ="SpaceChangguanId";
+    //好书推荐
+    public static final String BOOKID ="BookId";
 }

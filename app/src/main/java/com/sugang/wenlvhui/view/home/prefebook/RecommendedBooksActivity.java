@@ -1,5 +1,7 @@
 package com.sugang.wenlvhui.view.home.prefebook;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -7,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseActivity;
@@ -16,17 +18,20 @@ import com.sugang.wenlvhui.model.bean.home.hstj.BookTuijianBean;
 import com.sugang.wenlvhui.model.bean.home.hstj.HstjLikeBean;
 import com.sugang.wenlvhui.model.bean.home.hstj.HstjNewBean;
 import com.sugang.wenlvhui.presenter.home.hstj.HstjPagePresenterImp;
+import com.sugang.wenlvhui.utils.sp.SPKey;
+import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.home.adapter.Hstj_cnxhRecyAdapter;
 import com.sugang.wenlvhui.view.home.adapter.Hstj_zxzrRecyclerAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.AutoRelativeLayout;
+import com.zzhoujay.richtext.ImageHolder;
+import com.zzhoujay.richtext.RichText;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
-
 //好书推荐
 public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp> implements HstjpageContract.HstjpageView {
 
@@ -164,6 +169,13 @@ public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp>
     private void initZXZR() {
         RecommendedBooksZXZRRecy.setLayoutManager(new GridLayoutManager(this,3));
         hstj_zxzrRecyclerAdapter = new Hstj_zxzrRecyclerAdapter(booknews);
+        hstj_zxzrRecyclerAdapter.setRecyclerViewOnCLickListener(new Hstj_zxzrRecyclerAdapter.RecyclerViewOnCLickListener() {
+            @Override
+            public void myClick(View view, int position) {
+                SPUtils.put(RecommendedBooksActivity.this, SPKey.BOOKID,booknews.get(position).getId());
+                startActivity(new Intent(RecommendedBooksActivity.this,BookDetalisActivity.class));
+            }
+        });
         RecommendedBooksZXZRRecy.setAdapter(hstj_zxzrRecyclerAdapter);
         hstj_zxzrRecyclerAdapter.notifyDataSetChanged();
     }
@@ -183,6 +195,13 @@ public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp>
         RecommendedBooksCNXHRecy .setLayoutManager(new GridLayoutManager(this,4));
         hstj_cnxhRecyAdapter = new Hstj_cnxhRecyAdapter(bookcnxh);
         RecommendedBooksCNXHRecy.setAdapter(hstj_cnxhRecyAdapter);
+        hstj_cnxhRecyAdapter.setRecyclerViewOnCLickListener(new Hstj_cnxhRecyAdapter.RecyclerViewOnCLickListener() {
+            @Override
+            public void myClick(View view, int position) {
+                SPUtils.put(RecommendedBooksActivity.this, SPKey.BOOKID,bookcnxh.get(position).getId());
+                startActivity(new Intent(RecommendedBooksActivity.this,BookDetalisActivity.class));
+            }
+        });
         hstj_cnxhRecyAdapter.notifyDataSetChanged();
 
     }
@@ -195,11 +214,29 @@ public class RecommendedBooksActivity extends BaseActivity<HstjPagePresenterImp>
     private void initTuijian() {
         //好书推荐数据渲染
         Glide.with(this).load(tuijian.getImgUrl()).error(R.mipmap.icon).into(RecommendedBooksHstjBookImage);
+        RecommendedBooksHstjBookImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SPUtils.put(RecommendedBooksActivity.this, SPKey.BOOKID,tuijian.getId());
+                startActivity(new Intent(RecommendedBooksActivity.this,BookDetalisActivity.class));
+            }
+        });
         RecommendedBooksHstjBookAutherText.setText(tuijian.getBookAuther());
         RecommendedBooksHstjBookNameText.setText(tuijian.getBookName());
-        RecommendedBooksHstjJJText.setText("    " + tuijian.getBookDetail());
         Glide.with(this).load(tuijian.getUser().getHeadPic()).error(R.mipmap.icon).into( RecommendedBooksHstjUserHeadImage);
-
+        RichText
+                .from(tuijian.getBookDetail()) // 数据源
+                .autoFix(true) // 是否自动修复，默认true
+                .autoPlay(true) // gif图片是否自动播放
+                .showBorder(true) // 是否显示图片边框
+                .borderColor(Color.RED) // 图片边框颜色
+                .borderSize(10) // 边框尺寸
+                .borderRadius(50) // 图片边框圆角弧度
+                .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
+                .resetSize(false)
+                .bind(this)
+                .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
+                .into(RecommendedBooksHstjJJText); // 设置目标
         RecommendedBooksHstjUserNameText.setText(tuijian.getUser().getName());
         RecommendedBooksHstjUserTuijianNnmText.setText(tuijian.getRecommendedNumber() + "人推荐");
         if (tuijian.getRecommendClass() == 1) {

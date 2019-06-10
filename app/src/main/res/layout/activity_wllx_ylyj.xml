@@ -34,7 +34,10 @@
             android:textColor="#FFFFFF"
             android:textSize="@dimen/px_30" />
     </com.zhy.autolayout.AutoRelativeLayout>
-
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/WllxYlyj_RefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/WllxYlyj_Recycler"
         android:layout_width="match_parent"
@@ -42,6 +45,8 @@
         android:layout_marginLeft="@dimen/px_28"
         android:layout_marginTop="@dimen/px_20"
         android:layout_marginRight="@dimen/px_28"></android.support.v7.widget.RecyclerView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 
 
 </com.zhy.autolayout.AutoLinearLayout>

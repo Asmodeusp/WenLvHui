@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/H8"
+    android:orientation="vertical"
+    tools:context=".view.home.prefebook.BookDetalisActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/BookDetalisReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/BookDetalisShaiXuanButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/screen" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/BookDetalisRenzhengButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_98"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/renzheng" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="书籍详情 "
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/BookDetalisBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_80"
+                android:layout_marginTop="@dimen/px_102"
+                android:text="穆斯林葬礼"
+                android:textColor="@color/H5"
+                android:textSize="@dimen/px_24" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_80"
+                android:layout_marginTop="@dimen/px_16"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作者："
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_20" />
+
+                <TextView
+                    android:id="@+id/BookDetalisBookAuther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作者："
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_20" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/kk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_80"
+                android:layout_marginTop="@dimen/px_40">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:id="@+id/BookDetalisStartOne"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisStartTwo"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisStartThree"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisStartFour"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisStartFive"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/start" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/BookDetalisKStartOne"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisKStartTwo"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisKStartThree"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisKStartFour"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+
+                    <ImageView
+                        android:id="@+id/BookDetalisKStartFive"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_marginRight="@dimen/px_0_5"
+                        android:src="@mipmap/kongstart" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/BookDetalisBookTagRecy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_80"
+                android:layout_marginTop="@dimen/px_24"></android.support.v7.widget.RecyclerView>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_80"
+                android:layout_marginTop="@dimen/px_16"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/location" />
+
+                <TextView
+                    android:id="@+id/BookDetalisBookAddress"
+                    android:layout_width="@dimen/px_300"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/BookDetalisBookImage"
+                android:layout_width="210px"
+                android:layout_height="@dimen/px_309"
+                android:layout_marginTop="@dimen/px_62" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_150"
+        android:background="@color/H7">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/BookDetalisUserHeadImage"
+                android:layout_width="78px"
+                android:layout_height="@dimen/px_78"
+                android:layout_marginLeft="@dimen/px_28"
+                android:layout_marginTop="@dimen/px_26"
+                android:layout_marginBottom="@dimen/px_26" />
+
+            <TextView
+                android:id="@+id/BookDetalisUserNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_15"
+                android:text="张金龙"
+                android:textColor="@color/H3"
+                android:textSize="@dimen/px_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_16"
+                android:text="推荐此书"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_24" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/BookDetalisUserTuijianNnmText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_58"
+                android:layout_marginRight="@dimen/px_28"
+                android:layout_marginBottom="@dimen/px_50"
+                android:text="23445推荐"
+                android:textColor="@color/H4"
+                android:textSize="@dimen/px_24" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_marginBottom="@dimen/px_28"
+        android:text="简介"
+        android:textColor="@color/H3"
+        android:textSize="@dimen/px_24" />
+
+    <TextView
+        android:id="@+id/BookDetalisJJText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_10"
+        android:layout_marginTop="@dimen/px_18"
+        android:layout_marginRight="@dimen/px_10"
+        android:layout_marginBottom="@dimen/px_36"
+        android:text="  我是你爸爸" />
+    <TextView
+        android:id="@+id/BookDetalisBookCommentButton"
+        android:textColor="@color/H4"
+        android:textSize="@dimen/px_20"
+        android:layout_marginLeft="@dimen/px_28"
+        android:layout_marginRight="@dimen/px_28"
+        android:text="评论列表  >"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.zhy.autolayout.AutoLinearLayout>

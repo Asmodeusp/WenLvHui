@@ -51,6 +51,7 @@
     </com.zhy.autolayout.AutoRelativeLayout>
 
     <com.sugang.wenlvhui.view.ui.MyScrollView
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -62,7 +63,11 @@
 
 
             <ImageView
+                android:layout_marginTop="@dimen/px_30"
                 android:id="@+id/Food_FoodIamge"
+                android:scaleType="fitXY"
+                android:layout_marginRight="@dimen/px_28"
+                android:layout_marginLeft="@dimen/px_28"
                 android:layout_width="match_parent"
                 android:layout_height="429px" />
 

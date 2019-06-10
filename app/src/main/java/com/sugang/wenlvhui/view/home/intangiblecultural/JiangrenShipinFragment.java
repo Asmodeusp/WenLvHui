@@ -28,7 +28,7 @@ public class JiangrenShipinFragment extends BaseFragment {
 
     @BindView(R.id.JiangrenShipinRecy)
     RecyclerView JiangrenShipinRecy;
-    Unbinder unbinder;
+
 
     public JiangrenShipinFragment() {
         // Required empty public constructor

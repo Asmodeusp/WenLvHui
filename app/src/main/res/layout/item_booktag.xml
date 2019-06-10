@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tagtext"
+        android:background="@drawable/tag"
+        android:text="yuede"
+        android:gravity="center"
+        android:textColor="@color/H2"
+        android:textSize="20px"
+        android:layout_width="93px"
+        android:layout_height="33px" />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -111,6 +111,7 @@ public class TravelRouteActivity extends BaseActivity<WllxPagePresenterImp> impl
             case R.id.TravelRouteShaiXuanButton:
                 break;
             case R.id.TravelRoute_SerchEd:
+                startActivity(new Intent(this,WllxSerchActivity.class));
                 break;
             case R.id.TravelRoute_FirstImage:
                 SPUtils.put(TravelRouteActivity.this, SPKey.WLLX_ID, id);

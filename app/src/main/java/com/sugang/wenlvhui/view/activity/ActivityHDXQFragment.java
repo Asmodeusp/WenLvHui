@@ -73,7 +73,7 @@ public class ActivityHDXQFragment extends BaseFragment {
                 .borderSize(10) // 边框尺寸
                 .borderRadius(50) // 图片边框圆角弧度
                 .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
-                .noImage(true) // 不显示并且不加载图片
+
                 .resetSize(false)
                 .bind(getActivity())
                 .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
@@ -87,7 +87,7 @@ public class ActivityHDXQFragment extends BaseFragment {
                 .borderSize(10) // 边框尺寸
                 .borderRadius(50) // 图片边框圆角弧度
                 .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
-                .noImage(true) // 不显示并且不加载图片
+
                 .resetSize(false)
                 .bind(getActivity())
                 .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
@@ -101,7 +101,7 @@ public class ActivityHDXQFragment extends BaseFragment {
                 .borderSize(10) // 边框尺寸
                 .borderRadius(50) // 图片边框圆角弧度
                 .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
-                .noImage(true) // 不显示并且不加载图片
+
                 .resetSize(false)
                 .bind(getActivity())
                 .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
@@ -115,7 +115,7 @@ public class ActivityHDXQFragment extends BaseFragment {
                 .borderSize(10) // 边框尺寸
                 .borderRadius(50) // 图片边框圆角弧度
                 .size(ImageHolder.MATCH_PARENT, ImageHolder.WRAP_CONTENT) // 图片占位区域的宽高
-                .noImage(true) // 不显示并且不加载图片
+
                 .resetSize(false)
                 .bind(getActivity())
                 .clickable(true) // 是否可点击，默认只有设置了点击监听才可点击
