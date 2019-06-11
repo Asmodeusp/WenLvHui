@@ -14,10 +14,11 @@ import java.util.List;
       回首向来萧瑟处，无人等在灯火阑珊处**/
 public class ShouYiDetalisBean {
 
+
     /**
      * msg : 成功
      * code : 0
-     * data : {"product":{"browse":256,"commentList":[],"commentNum":0,"createDate":1559923200000,"id":27,"imageList":[],"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1},"shop":{"addrDetail":"某某路","area":"兴庆区","browse":123,"city":"银川","createDate":1559930324000,"createUser":57,"experienceList":[],"id":27,"imgUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","latitude":"133.55","longitude":"123.45","productList":[],"province":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","shopsDetail":"店铺描述","shopsName":"店铺名字","shopsSlogan":"店铺标语","upList":[],"videoList":[]},"product_list":[{"browse":56,"commentList":[],"createDate":1559836800000,"id":26,"price":512,"priceDq":556,"productDatile":"<p><\/p><p>这款商品性价比很高yao，赶快下单了<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"投影仪","productPoint":"送礼好评","shopsId":25,"status":1},{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1}]}
+     * data : {"product":{"browse":256,"commentList":[],"commentNum":0,"createDate":1559923200000,"id":27,"imageList":[],"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1},"shop":{"addrDetail":"某某路","area":"兴庆区","browse":123,"city":"银川","createDate":1559930324000,"createUser":57,"experienceList":[],"id":27,"imgUrl":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","latitude":"133.55","longitude":"123.45","productList":[],"province":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","shopsDetail":"<p><\/p><p>这款商品性价比很高yao，赶快下单了<\/p>","shopsName":"店铺名字","shopsSlogan":"店铺标语","upList":[],"videoList":[]},"product_list":[{"browse":56,"commentList":[],"createDate":1559836800000,"id":26,"price":512,"priceDq":556,"productDatile":"<p><\/p><p>这款商品性价比很高yao，赶快下单了<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"投影仪","productPoint":"送礼好评","shopsId":27,"status":1},{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1}]}
      */
 
     private String msg;
@@ -50,9 +51,9 @@ public class ShouYiDetalisBean {
 
     public static class DataBean {
         /**
-         * product : {"browse":256,"commentList":[],"commentNum":0,"createDate":1559923200000,"id":27,"imageList":[],"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1}
-         * shop : {"addrDetail":"某某路","area":"兴庆区","browse":123,"city":"银川","createDate":1559930324000,"createUser":57,"experienceList":[],"id":27,"imgUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","latitude":"133.55","longitude":"123.45","productList":[],"province":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg","shopsDetail":"店铺描述","shopsName":"店铺名字","shopsSlogan":"店铺标语","upList":[],"videoList":[]}
-         * product_list : [{"browse":56,"commentList":[],"createDate":1559836800000,"id":26,"price":512,"priceDq":556,"productDatile":"<p><\/p><p>这款商品性价比很高yao，赶快下单了<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"投影仪","productPoint":"送礼好评","shopsId":25,"status":1},{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1}]
+         * product : {"browse":256,"commentList":[],"commentNum":0,"createDate":1559923200000,"id":27,"imageList":[],"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1}
+         * shop : {"addrDetail":"某某路","area":"兴庆区","browse":123,"city":"银川","createDate":1559930324000,"createUser":57,"experienceList":[],"id":27,"imgUrl":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","latitude":"133.55","longitude":"123.45","productList":[],"province":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","shopsDetail":"<p><\/p><p>这款商品性价比很高yao，赶快下单了<\/p>","shopsName":"店铺名字","shopsSlogan":"店铺标语","upList":[],"videoList":[]}
+         * product_list : [{"browse":56,"commentList":[],"createDate":1559836800000,"id":26,"price":512,"priceDq":556,"productDatile":"<p><\/p><p>这款商品性价比很高yao，赶快下单了<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg","productName":"投影仪","productPoint":"送礼好评","shopsId":27,"status":1},{"browse":256,"commentList":[],"createDate":1559923200000,"id":27,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤<\/em>各国各地出现的时间不一。<em>内裤<\/em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤<\/em>款式和面料上...\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg","productName":"老张的原味内裤","productPoint":"原味的哦！","shopsId":27,"status":1}]
          */
 
         private ProductBean product;
@@ -96,6 +97,7 @@ public class ShouYiDetalisBean {
              * productDatile : <p></p><p>一般指贴身的下身内衣，分男装与女装两种。而且根据性别不同，款式也越来越多花样了。穿<em>内裤</em>各国各地出现的时间不一。<em>内裤</em>并不是古已有之的，汉代以前，女人下体无衣，到了汉朝才穿上开裆裤。直至现代，<em>内裤</em>款式和面料上...
 
              </p>
+             * productImage : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/5ca7f12f-8c9d-453e-b483-6e2e726b0663.jpg
              * productName : 老张的原味内裤
              * productPoint : 原味的哦！
              * shopsId : 27
@@ -109,6 +111,7 @@ public class ShouYiDetalisBean {
             private int price;
             private int priceDq;
             private String productDatile;
+            private String productImage;
             private String productName;
             private String productPoint;
             private int shopsId;
@@ -172,6 +175,14 @@ public class ShouYiDetalisBean {
                 this.productDatile = productDatile;
             }
 
+            public String getProductImage() {
+                return productImage;
+            }
+
+            public void setProductImage(String productImage) {
+                this.productImage = productImage;
+            }
+
             public String getProductName() {
                 return productName;
             }
@@ -231,12 +242,12 @@ public class ShouYiDetalisBean {
              * createUser : 57
              * experienceList : []
              * id : 27
-             * imgUrl : https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg
+             * imgUrl : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg
              * latitude : 133.55
              * longitude : 123.45
              * productList : []
-             * province : https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559898862196&di=1cfef6cb3cc788fb6edd073312ab4e3e&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3538711690%2C1860102064%26fm%3D214%26gp%3D0.jpg
-             * shopsDetail : 店铺描述
+             * province : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg
+             * shopsDetail : <p></p><p>这款商品性价比很高yao，赶快下单了</p>
              * shopsName : 店铺名字
              * shopsSlogan : 店铺标语
              * upList : []
@@ -419,7 +430,7 @@ public class ShouYiDetalisBean {
              * productImage : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/08/1d5f4be3-7db2-4de4-a337-4ae4f41eeae3.jpg
              * productName : 投影仪
              * productPoint : 送礼好评
-             * shopsId : 25
+             * shopsId : 27
              * status : 1
              */
 

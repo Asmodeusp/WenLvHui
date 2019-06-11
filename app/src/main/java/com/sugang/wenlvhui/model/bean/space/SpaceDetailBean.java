@@ -1,18 +1,21 @@
 package com.sugang.wenlvhui.model.bean.space;
 
 public class SpaceDetailBean {
+
     /**
-     * browse : 12
-     * id : 1
-     * spaceId : 1
-     * spacePolicyDetail : 第三方为双丰收的方式上单V型成V型成verfwefcsdvjhndfggfdf法国法国后能否吧
-     * videoUrl : http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4
+     * browse : 996
+     * id : 8
+     * spaceId : 10
+     * spacePolicyDetail : qwertyui
+     * videoBackimg :
+     * videoUrl : export_xls?file=019/06/09老张的原味内裤制作过程.flv
      */
 
     private int browse;
     private int id;
     private int spaceId;
     private String spacePolicyDetail;
+    private String videoBackimg;
     private String videoUrl;
 
     public int getBrowse() {
@@ -45,6 +48,14 @@ public class SpaceDetailBean {
 
     public void setSpacePolicyDetail(String spacePolicyDetail) {
         this.spacePolicyDetail = spacePolicyDetail;
+    }
+
+    public String getVideoBackimg() {
+        return videoBackimg;
+    }
+
+    public void setVideoBackimg(String videoBackimg) {
+        this.videoBackimg = videoBackimg;
     }
 
     public String getVideoUrl() {

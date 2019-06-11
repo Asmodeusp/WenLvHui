@@ -17,6 +17,7 @@ import com.sugang.wenlvhui.model.bean.space.SpaceDongTaiBean;
 import com.sugang.wenlvhui.presenter.space.SpaceDongTaiPresenterImp;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
+import com.sugang.wenlvhui.view.adaptr.SpaceDongTaiRecyclerAdapter;
 import com.sugang.wenlvhui.view.adaptr.SpacePageAdapter;
 
 import butterknife.BindView;
@@ -58,7 +59,8 @@ public class SpaceDongTaiFragment extends BaseFragment<SpaceDongTaiPresenterImp>
     @Override
     public void showSpaceDongTaiBean(SpaceDongTaiBean activityPageBean) {
         SpaceDongTaiRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-//        SpaceDongTaiRecycler.setAdapter(new SpacePageAdapter(activityPageBean.getData().getSpace_detail()));
+        SpaceDongTaiRecyclerAdapter spaceDongTaiRecyclerAdapter = new SpaceDongTaiRecyclerAdapter(activityPageBean.getData().getSpace_detail());
+        SpaceDongTaiRecycler.setAdapter(spaceDongTaiRecyclerAdapter);
     }
 
     @Override

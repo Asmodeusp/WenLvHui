@@ -80,5 +80,6 @@ dependencies {
     implementation 'cn.jzvd:jiaozivideoplayer:6.2.9'
     //圆形图
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.recker.flybanner:flybanner:1.3'
 
 }

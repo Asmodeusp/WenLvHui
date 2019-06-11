@@ -11,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.sugang.wenlvhui.App;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
+import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.MainActivity;
 import com.sugang.wenlvhui.view.login.LoginActivity;
@@ -24,6 +26,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,7 +37,7 @@ public class MyselfFragment extends BaseFragment {
     @BindView(R.id.Myself_UserNameText)
     TextView MyselfUserNameText;
     @BindView(R.id.Myself_UserHeandImage)
-    ImageView MyselfUserHeandImage;
+    CircleImageView MyselfUserHeandImage;
     @BindView(R.id.Myself_CollectionButton)
     AutoLinearLayout MyselfCollectionButton;
     @BindView(R.id.Myself_CardCouponButton)
@@ -79,7 +82,11 @@ public class MyselfFragment extends BaseFragment {
 
     @Override
     protected void init() {
-
+        String Head = (String) SPUtils.get(getActivity(), SPKey.HEAD_PIC, "");
+        Glide.with(getActivity()).load(Head).into(MyselfUserHeandImage);
+        String username = (String) SPUtils.get(getActivity(), SPKey.USERNAME, "");
+        MyselfUserNameText.setText(username);
+        MyselfRenZhengCenterButton.setVisibility(View.GONE);
     }
 
     @Override

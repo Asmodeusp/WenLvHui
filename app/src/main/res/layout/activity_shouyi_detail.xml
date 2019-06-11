@@ -64,6 +64,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:scaleType="fitXY"
                     android:id="@+id/ShouyiDetailFlyBanner"
                     android:layout_width="match_parent"
                     android:layout_height="821px"/>
@@ -71,6 +72,7 @@
             </com.zhy.autolayout.AutoRelativeLayout>
 
             <TextView
+                android:layout_marginTop="@dimen/px_40"
                 android:id="@+id/ShouyiDetail_ProductNameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -123,7 +125,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/px_33"
-                        android:text="56"
+                        android:text="266"
                         android:textColor="@color/H4"
                         android:textSize="@dimen/px_24" />
 
@@ -163,6 +165,7 @@
                         android:id="@+id/ShouyiDetail_ShopImage"
                         android:layout_width="@dimen/px_104"
                         android:layout_height="@dimen/px_104"
+                        android:scaleType="centerCrop"
                         android:layout_marginLeft="@dimen/px_28"
                         android:layout_marginTop="@dimen/px_30"
                         android:layout_marginRight="@dimen/px_18" />

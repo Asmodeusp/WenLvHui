@@ -408,37 +408,21 @@
                 <com.zhy.autolayout.AutoLinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/px_36"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:layout_marginBottom="@dimen/px_20"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="共"
-                        android:textColor="@color/H4"
-                        android:textSize="@dimen/px_22" />
 
-                    <TextView
-                        android:id="@+id/WllxDetalisCommentNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="30"
-                        android:textColor="@color/H4"
-                        android:textSize="@dimen/px_22" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="条评论   >"
+                        android:text="查看评论   >"
                         android:textColor="@color/H4"
                         android:textSize="@dimen/px_22" />
                 </com.zhy.autolayout.AutoLinearLayout>
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/WllxDetalisCommentRecycler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/px_40"></android.support.v7.widget.RecyclerView>
+
             </com.zhy.autolayout.AutoLinearLayout>
 
             <View

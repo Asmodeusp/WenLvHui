@@ -4,6 +4,7 @@ package com.sugang.wenlvhui.view.space;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -66,7 +67,8 @@ public class SpaceGuanCangFragment extends BaseFragment<SpaceGuanCangPresenterIm
 
     @Override
     protected void init() {
-
+        String SpaceFImage = (String) SPUtils.get(getActivity(), SPKey.SPACEFImage, "");
+        Glide.with(getActivity()).load(SpaceFImage).into(SpaceGuanCangImage);
     }
 
     @Override
@@ -84,7 +86,7 @@ public class SpaceGuanCangFragment extends BaseFragment<SpaceGuanCangPresenterIm
             SpaceGuanCangMianJiText.setText(data.getGuancang().getSpaceMeasure() + "");
             SpaceGuanCangDateText.setText(data.getGuancang().getOpenDate());
             SpaceGuanCangPhoneText.setText(data.getGuancang().getTel());
-            SpaceGuanCangRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
+            SpaceGuanCangRecycler.setLayoutManager(new GridLayoutManager(getActivity(),2));
             SpaceChangGuanAdapter spaceChangGuanAdapter = new SpaceChangGuanAdapter(data.getGuancang().getSpaceDetail());
             SpaceGuanCangRecycler.setAdapter(spaceChangGuanAdapter);
             spaceChangGuanAdapter.setRecyclerViewOnCLickListener(new SpaceChangGuanAdapter.RecyclerViewOnCLickListener() {

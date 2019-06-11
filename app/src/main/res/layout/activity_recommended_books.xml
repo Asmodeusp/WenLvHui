@@ -36,6 +36,7 @@
             android:gravity="center">
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="@dimen/px_50"
                 android:layout_height="@dimen/px_50"
                 android:src="@mipmap/screen" />
@@ -60,6 +61,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/RecommendedBooks_SerchEd"
                 android:layout_width="match_parent"
                 android:layout_height="40px"

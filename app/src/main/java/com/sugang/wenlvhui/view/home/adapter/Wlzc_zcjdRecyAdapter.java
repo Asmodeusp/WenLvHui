@@ -63,9 +63,9 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
         }
     }
 
-    public interface RecyclerViewOnCLickListener {
-        void myClick(View view, int position);
-    }
+public interface RecyclerViewOnCLickListener {
+    void myClick(View view, int position);
+}
 
     public void setRecyclerViewOnCLickListener(RecyclerViewOnCLickListener myCLick) {
         this.myCLick = myCLick;
@@ -144,36 +144,36 @@ public class Wlzc_zcjdRecyAdapter extends RecyclerView.Adapter<Wlzc_zcjdRecyAdap
         return list.isEmpty() ? 0 : list.size();
     }
 
-    public class Holder extends RecyclerView.ViewHolder {
-        @BindView(R.id.item_wlze_zcjdfenlieText)
-        TextView itemWlzeZcjdfenlieText;
-        @BindView(R.id.item_wlze_zcjdTitleText)
-        TextView itemWlzeZcjdTitleText;
-        @BindView(R.id.item_wlze_zcjdDataText)
-        TextView itemWlzeZcjdDataText;
-        @BindView(R.id.item_wlze_zcjdFromText)
-        TextView itemWlzeZcjdFromText;
-        @BindView(R.id.item_wlze_zcjdIsLikeImage)
-        ImageView itemWlzeZcjdIsLikeImage;
-        @BindView(R.id.item_wlze_zcjdIsLikeNumText)
-        TextView itemWlzeZcjdIsLikeNumText;
-        @BindView(R.id.item_wlze_zcjdIsLikeButton)
-        AutoLinearLayout itemWlzeZcjdIsLikeButton;
-        @BindView(R.id.item_wlze_zcjdCommentImage)
-        ImageView itemWlzeZcjdCommentImage;
-        @BindView(R.id.item_wlze_zcjdCommentNumText)
-        TextView itemWlzeZcjdCommentNumText;
-        @BindView(R.id.item_wlze_zcjdCommentButton)
-        AutoLinearLayout itemWlzeZcjdCommentButton;
-        @BindView(R.id.item_wlze_zcjdSeeNumText)
-        TextView itemWlzeZcjdSeeNumText;
+public class Holder extends RecyclerView.ViewHolder {
+    @BindView(R.id.item_wlze_zcjdfenlieText)
+    TextView itemWlzeZcjdfenlieText;
+    @BindView(R.id.item_wlze_zcjdTitleText)
+    TextView itemWlzeZcjdTitleText;
+    @BindView(R.id.item_wlze_zcjdDataText)
+    TextView itemWlzeZcjdDataText;
+    @BindView(R.id.item_wlze_zcjdFromText)
+    TextView itemWlzeZcjdFromText;
+    @BindView(R.id.item_wlze_zcjdIsLikeImage)
+    ImageView itemWlzeZcjdIsLikeImage;
+    @BindView(R.id.item_wlze_zcjdIsLikeNumText)
+    TextView itemWlzeZcjdIsLikeNumText;
+    @BindView(R.id.item_wlze_zcjdIsLikeButton)
+    AutoLinearLayout itemWlzeZcjdIsLikeButton;
+    @BindView(R.id.item_wlze_zcjdCommentImage)
+    ImageView itemWlzeZcjdCommentImage;
+    @BindView(R.id.item_wlze_zcjdCommentNumText)
+    TextView itemWlzeZcjdCommentNumText;
+    @BindView(R.id.item_wlze_zcjdCommentButton)
+    AutoLinearLayout itemWlzeZcjdCommentButton;
+    @BindView(R.id.item_wlze_zcjdSeeNumText)
+    TextView itemWlzeZcjdSeeNumText;
 
-        public Holder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
-            AutoUtils.autoSize(itemView);
-        }
+    public Holder(View itemView) {
+        super(itemView);
+        ButterKnife.bind(this, itemView);
+        AutoUtils.autoSize(itemView);
     }
+}
 
 
 }

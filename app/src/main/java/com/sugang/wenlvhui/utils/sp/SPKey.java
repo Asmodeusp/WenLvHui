@@ -51,6 +51,11 @@ public class SPKey {
     public static String ACTIVITYTYPE = "ActivityType";
     //空间
     public static String SPACEID ="SpaceId";
+    public static String SPACEImage ="SpaceImage";
+    public static String SPACEFImage ="SpaceFImage";
+    public static String SPACEAddress ="SpaceAddress";
+    public static String SPACEDate ="SpaceDate";
+    public static String SPACEName ="SpaceName";
     public static String SPACECHANGGUANID ="SpaceChangguanId";
     //好书推荐
     public static final String BOOKID ="BookId";

@@ -2,6 +2,8 @@ package com.sugang.wenlvhui.view.home.intangiblecultural;
 
 
 
+import android.content.Intent;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,6 +17,7 @@ import com.sugang.wenlvhui.model.bean.home.wcfy.ShouYiDetalisBean;
 import com.sugang.wenlvhui.presenter.home.wcfy.ShouYiDetalisPresenterImp;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
+import com.sugang.wenlvhui.view.home.adapter.ShouyiDetalisRecyAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -53,6 +56,8 @@ public class ShouyiDetailActivity extends BaseActivity<ShouYiDetalisPresenterImp
     @BindView(R.id.ShouyiDetail_LiJiGouMaiButton)
     AutoLinearLayout ShouyiDetailLiJiGouMaiButton;
     boolean islike =true;
+    private int id;
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_shouyi_detail;
@@ -85,6 +90,9 @@ public class ShouyiDetailActivity extends BaseActivity<ShouYiDetalisPresenterImp
 
                 break;
             case R.id.ShouyiDetail_goShopPageButton:
+                SPUtils.put(this, SPKey.SHOP_ID, id);
+                startActivity(new Intent(this, JaingRenDetalisActivity.class));
+                startActivity(new Intent());
                 break;
             case R.id.ShouyiDetail_CollectionButton:
                 if (islike) {
@@ -105,8 +113,23 @@ public class ShouyiDetailActivity extends BaseActivity<ShouYiDetalisPresenterImp
     public void showShouYiDetalisBean(ShouYiDetalisBean shouYiPageBean) {
         if (shouYiPageBean.getData()!= null) {
             ShouYiDetalisBean.DataBean data = shouYiPageBean.getData();
-//            Glide.with(this).load(data.getProduct().)
+            Glide.with(this).load(data.getProduct().getProductImage()).into(ShouyiDetailFlyBanner);
+            ShouyiDetailProductNameText.setText(data.getProduct().getProductName());
+            ShouyiDetailParice.setText(data.getProduct().getPrice()+"");
+            ShouyiDetailCommentText.setText(data.getProduct().getCommentNum()+"");
+            Glide.with(this).load(data.getShop().getImgUrl()).into(ShouyiDetailShopImage);
+            ShouyiDetailShopName.setText(data.getShop().getShopsName());
+            id = data.getShop().getId();
+            ShouyiDetailShopRecy.setLayoutManager(new GridLayoutManager(this,2));
+            ShouyiDetalisRecyAdapter shouyiDetalisRecyAdapter = new ShouyiDetalisRecyAdapter(data.getProduct_list());
+            ShouyiDetailShopRecy.setAdapter(shouyiDetalisRecyAdapter);
+            shouyiDetalisRecyAdapter.setRecyclerViewOnCLickListener(new ShouyiDetalisRecyAdapter.RecyclerViewOnCLickListener() {
+                @Override
+                public void myClick(View view, int position) {
 
+                    startActivity(new Intent(ShouyiDetailActivity.this,ShouyiDetailActivity.class));
+                }
+            });
         }
     }
 

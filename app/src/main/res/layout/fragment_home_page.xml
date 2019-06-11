@@ -16,12 +16,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.youth.banner.Banner
+            <com.recker.flybanner.FlyBanner
+                android:padding="@dimen/px_10"
                 android:id="@+id/HomePager_Banner"
                 android:layout_width="match_parent"
-                android:layout_height="428px"></com.youth.banner.Banner>
+                android:layout_height="428px"></com.recker.flybanner.FlyBanner>
 
             <android.support.v4.view.ViewPager
+                android:layout_marginTop="@dimen/px_10"
                 android:id="@+id/HomePager_ViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="140px"></android.support.v4.view.ViewPager>
@@ -354,6 +356,9 @@
                             android:id="@+id/HomePager_ZhengCeDescribeText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:lines="4"
+                            android:ellipsize="end"
+
                             android:layout_marginRight="@dimen/px_32"
                             android:text="2019/3/51234567876trertyhjhgfddrtyufdgfdgdggdgdgd"
                             android:textColor="@color/H4"

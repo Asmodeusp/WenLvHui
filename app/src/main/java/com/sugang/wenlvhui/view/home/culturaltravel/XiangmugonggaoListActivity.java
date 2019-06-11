@@ -73,7 +73,6 @@ public class XiangmugonggaoListActivity extends BaseActivity<WlzcXmggListPresent
             @Override
             public void onRefresh(RefreshLayout refreshLayout) {
                 IsRresh =true;
-
                 presenter.getWlzcXmggListBeanData(id + "", "3", "1");
             }
         });

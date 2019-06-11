@@ -62,6 +62,7 @@
 
         <ImageView
             android:id="@+id/JiangrenDetalis_HeadImage"
+            android:scaleType="centerCrop"
             android:layout_width="@dimen/px_104"
             android:layout_height="@dimen/px_104"
             android:layout_marginLeft="@dimen/px_28"

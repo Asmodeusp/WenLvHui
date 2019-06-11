@@ -69,10 +69,7 @@ public class WllxDetalisActivity extends BaseActivity<WllxDetailsPresenterImp> i
     TextView WllxDetalisJiatingPariceText;
     @BindView(R.id.WllxDetalis_ChildrenPariceText)
     TextView WllxDetalisChildrenPariceText;
-    @BindView(R.id.WllxDetalisCommentNumber)
-    TextView WllxDetalisCommentNumber;
-    @BindView(R.id.WllxDetalisCommentRecycler)
-    RecyclerView WllxDetalisCommentRecycler;
+
     @BindView(R.id.WllxDetalisCommentButton)
     AutoLinearLayout WllxDetalisCommentButton;
     @BindView(R.id.WllxDetali_XingchenganpaiText)
@@ -137,7 +134,7 @@ public class WllxDetalisActivity extends BaseActivity<WllxDetailsPresenterImp> i
                 WllxDetailsStartFour.setVisibility(View.VISIBLE);
                 WllxDetailsStartFive.setVisibility(View.VISIBLE);
             }
-//            WllxDetailsAddressText.setText(data.);
+            WllxDetailsAddressText.setText(data.getReservedFields2());
             WllxDetalisChenRenPariceText.setText(data.getAdult()+"");
             WllxDetalisJiatingPariceText.setText(data.getSetMeal()+"");
             WllxDetalisChildrenPariceText.setText(data.getChildren()+"");

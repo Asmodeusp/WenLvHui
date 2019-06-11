@@ -68,16 +68,19 @@ public class ShouyiFragment extends BaseFragment<ShouYiPagePresenterImp> impleme
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ShouYi_FirtImage:
-                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+
                 SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(0).getId());
+                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
                 break;
             case R.id.ShouYi_SecondImage:
-                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+
                 SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(1).getId());
+                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
                 break;
             case R.id.ShouYi_ThirdImage:
-                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
+
                 SPUtils.put(getActivity(), SPKey.PRODUCT_ID, data.getAllday().get(2).getId());
+                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
                 break;
             case R.id.ShouYi_SerchEd:
                 startActivity(new Intent(getActivity(),ShouyiSerchActivity.class));

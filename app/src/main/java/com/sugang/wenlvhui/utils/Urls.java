@@ -3,6 +3,8 @@ package com.sugang.wenlvhui.utils;
 public class Urls {
     //基本路径
     public static final String BASE_URL = "http://www.zwwlh.com:8012/";
+    //主页
+    public static final String HOMEPAGE = "index/index_data";
     //判断手机号是否注册
     public static final String REGISTER_PHOTO = "user/getTel";
     //用户注册
@@ -37,7 +39,6 @@ public class Urls {
     public static final String SPACE_CHANGGUAN = "ymSpaceTbl/space_detail";
     //上传图片
     public static final String UPLOADIMAGE ="uploadflv/upload";
-
     //文旅路线首页
     public static final String WLLX_PAGE = "wenbrigade/index";
     //文旅路线列表
@@ -98,6 +99,9 @@ public class Urls {
     public static final String COMMENTLIST ="ymComment/findAll";
     //添加评论
     public static final String COMMENTINSERT ="ymComment/insert";
-
+    //圈子
+    public static final String CircleCNXH = "ymCirleTbl/caini_xihuan";
+    //文旅榜单
+    public static final String WLBD ="book//bangdan";
 
 }

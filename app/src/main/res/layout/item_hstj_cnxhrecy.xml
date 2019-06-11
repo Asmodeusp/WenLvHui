@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/item_hstj_cnxhBookImage"
         android:layout_width="@dimen/px_140"
-        android:layout_height="@dimen/px_210"
-        android:scaleType="fitXY" />
+        android:layout_height="@dimen/px_180"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:layout_marginLeft="10px"

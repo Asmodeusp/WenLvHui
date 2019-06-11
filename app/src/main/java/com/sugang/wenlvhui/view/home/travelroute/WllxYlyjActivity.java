@@ -19,6 +19,7 @@ import com.sugang.wenlvhui.presenter.home.wllx.WllxylyjListPresenterImp;
 import com.sugang.wenlvhui.utils.sp.SPKey;
 import com.sugang.wenlvhui.utils.sp.SPUtils;
 import com.sugang.wenlvhui.view.home.adapter.TravelRouteJINPINRecyAdapter;
+import com.sugang.wenlvhui.view.home.adapter.WllxYlyjRecyclerAdapter;
 import com.zhy.autolayout.AutoLinearLayout;
 
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class WllxYlyjActivity extends BaseActivity<WllxylyjListPresenterImp> imp
     private boolean IsRresh;
     private int userId;
     private List<WllxylyjListBean.DataBean.ListsBean> lists = new ArrayList<>();
+    private WllxYlyjRecyclerAdapter wllxYlyjRecyclerAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -50,15 +52,15 @@ public class WllxYlyjActivity extends BaseActivity<WllxylyjListPresenterImp> imp
     @Override
     protected void init() {
         WllxYlyjRecycler.setLayoutManager(new LinearLayoutManager(this));
-//        travelRouteJINPINRecyAdapter = new TravelRouteJINPINRecyAdapter(brigades);
-//        WllxNjhlRecycler.setAdapter(travelRouteJINPINRecyAdapter);
-//        travelRouteJINPINRecyAdapter.setRecyclerViewOnCLickListener(new TravelRouteJINPINRecyAdapter.RecyclerViewOnCLickListener() {
-//            @Override
-//            public void myClick(View view, int position) {
-//                SPUtils.put(WllxYlyjActivity.this, SPKey.WLLX_YLYJID, brigades.get(position).getId());
-//                startActivity(new Intent(WllxYlyjActivity.this, WllxDetalisActivity.class));
-//            }
-//        });
+        wllxYlyjRecyclerAdapter = new WllxYlyjRecyclerAdapter(lists);
+        WllxYlyjRecycler.setAdapter(wllxYlyjRecyclerAdapter);
+        wllxYlyjRecyclerAdapter.setRecyclerViewOnCLickListener(new WllxYlyjRecyclerAdapter.RecyclerViewOnCLickListener() {
+            @Override
+            public void myClick(View view, int position) {
+                SPUtils.put(WllxYlyjActivity.this, SPKey.WLLX_YLYJID, lists.get(position).getId());
+                startActivity(new Intent(WllxYlyjActivity.this, WllxDetalisActivity.class));
+            }
+        });
         WllxYlyjRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshLayout) {
@@ -91,7 +93,16 @@ public class WllxYlyjActivity extends BaseActivity<WllxylyjListPresenterImp> imp
     @Override
     public void showWllxylyjListBeanBean(WllxylyjListBean WllxylyjListBeanBean) {
         if (WllxylyjListBeanBean.getData() != null) {
-            lists.addAll(WllxylyjListBeanBean.getData().getLists());
+            if (IsRresh) {
+                lists.clear();
+                lists.addAll(WllxylyjListBeanBean.getData().getLists());
+                wllxYlyjRecyclerAdapter.notifyDataSetChanged();
+                WllxYlyjRefreshLayout.finishRefresh();
+            } else {
+                lists.addAll(WllxylyjListBeanBean.getData().getLists());
+                wllxYlyjRecyclerAdapter.notifyDataSetChanged();
+                WllxYlyjRefreshLayout.finishLoadMore();
+            }
         }
     }
 

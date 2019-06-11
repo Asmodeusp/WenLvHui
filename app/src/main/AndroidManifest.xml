@@ -25,7 +25,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.home.prefebook.BookDetalisActivity"></activity>
+        <activity android:name=".view.circle.MyFollowActivity"></activity>
+        <activity android:name=".view.circle.MyCircleActivity" />
+        <activity android:name=".view.circle.CirleDetalisActivity" />
+        <activity android:name=".view.circle.MoreCirleActivity" />
+        <activity android:name=".view.home.prefebook.BookDetalisActivity" />
         <activity android:name=".view.home.travelroute.WllxSerchActivity" />
         <activity android:name=".view.home.intangiblecultural.ShouyiSerchActivity" />
         <activity android:name=".view.home.intangiblecultural.JiangrenSerchActivity" />

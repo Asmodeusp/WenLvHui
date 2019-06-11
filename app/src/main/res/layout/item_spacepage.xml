@@ -40,7 +40,7 @@
                     android:id="@+id/item_spacePageData"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="asd"
+                    android:text="2019-06-09"
                     android:textColor="@color/H4"
                     android:textSize="@dimen/px_18" />
 

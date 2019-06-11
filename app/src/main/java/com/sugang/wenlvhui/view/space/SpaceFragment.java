@@ -47,8 +47,6 @@ public class SpaceFragment extends BaseFragment<SpacePagePresenterImp> implement
 
     public SpaceFragment() {
     }
-
-
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_space;
@@ -64,6 +62,11 @@ public class SpaceFragment extends BaseFragment<SpacePagePresenterImp> implement
             @Override
             public void myClick(View view, int position) {
                 SPUtils.put(getActivity(), SPKey.SPACEID,space_list.get(position).getId());
+                SPUtils.put(getActivity(), SPKey.SPACEAddress,space_list.get(position).getAddr());
+                SPUtils.put(getActivity(), SPKey.SPACEImage,space_list.get(position).getBackupField1());
+                SPUtils.put(getActivity(), SPKey.SPACEFImage,space_list.get(position).getBackImg());
+                SPUtils.put(getActivity(), SPKey.SPACEDate,space_list.get(position).getCreateDate());
+                SPUtils.put(getActivity(), SPKey.SPACEName,space_list.get(position).getSpaceName());
                 startActivity(new Intent(getActivity(), SpaceDetalisActivity.class));
             }
         });
@@ -80,7 +83,6 @@ public class SpaceFragment extends BaseFragment<SpacePagePresenterImp> implement
     @Override
     protected void loadDate() {
         presenter.getSpacePageBean(page + "");
-
     }
 
     @OnClick({R.id.Space_FenLeiShaiXuanButton, R.id.Space_DiTuFenBuButton})

@@ -7,199 +7,206 @@
     android:background="@color/H8"
     android:orientation="vertical"
     tools:context=".view.home.localcuisine.RestaurantActivity">
-<android.support.v4.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <com.zhy.autolayout.AutoLinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="80px"
-            android:background="@color/H3">
 
-            <com.zhy.autolayout.AutoLinearLayout
-                android:id="@+id/Restaurant_ReturnButton"
-                android:layout_width="@dimen/px_80"
-                android:layout_height="match_parent"
-                android:gravity="center">
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/H3">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Restaurant_ReturnButton"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:src="@mipmap/goback" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="商家详情"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="481px">
 
                 <ImageView
-                    android:layout_width="@dimen/px_50"
-                    android:layout_height="@dimen/px_50"
-                    android:src="@mipmap/goback" />
-            </com.zhy.autolayout.AutoLinearLayout>
+                    android:id="@+id/Restaurant_BackgroundImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="429px"
+                    android:scaleType="fitXY" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="商家详情"
-                android:textColor="#FFFFFF"
-                android:textSize="@dimen/px_30" />
-        </com.zhy.autolayout.AutoRelativeLayout>
+                <ImageView
+                    android:id="@+id/Restaurant_HeadImage"
+                    android:layout_width="@dimen/px_104"
+                    android:layout_height="@dimen/px_104"
+                    android:layout_marginLeft="@dimen/px_28"
+                    android:layout_marginTop="377px" />
 
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="481px">
+                <TextView
+                    android:id="@+id/Restaurant_RestaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_148"
+                    android:layout_marginTop="377px"
+                    android:text="@string/app_name"
+                    android:textColor="@color/H8"
+                    android:textSize="@dimen/px_22" />
 
-            <ImageView
-                android:id="@+id/Restaurant_BackgroundImage"
-                android:layout_width="match_parent"
-                android:layout_height="429px"
-                android:scaleType="fitXY" />
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/px_148"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/Restaurant_HeadImage"
-                android:layout_width="@dimen/px_104"
-                android:layout_height="@dimen/px_104"
-                android:layout_marginLeft="@dimen/px_28"
-                android:layout_marginTop="377px" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人均消费："
+                        android:textColor="@color/H4"
+                        android:textSize="@dimen/px_20" />
 
-            <TextView
-                android:id="@+id/Restaurant_RestaurantName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/px_148"
-                android:layout_marginTop="377px"
-                android:text="@string/app_name"
-                android:textColor="@color/H8"
-                android:textSize="@dimen/px_22" />
+                    <TextView
+                        android:id="@+id/Restaurant_RestaurantpinjunParice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2px"
+                        android:text="1234"
+                        android:textColor="@color/H4"
+                        android:textSize="@dimen/px_20" />
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/Restaurant_RestaurantIsLikeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+
+                            android:id="@+id/Restaurant_RestaurantIsLikeImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_74"
+                            android:src="@mipmap/dianzan" />
+
+                        <TextView
+                            android:id="@+id/Restaurant_RestaurantIsLikeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_10"
+                            android:text="收藏"
+                            android:textColor="@color/H4"
+                            android:textSize="@dimen/px_20" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
 
             <com.zhy.autolayout.AutoLinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="@dimen/px_148"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="人均消费："
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:src="@mipmap/location" />
+
+                <TextView
+                    android:id="@+id/Restaurant_RestaurantAdressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ningxia"
                     android:textColor="@color/H4"
                     android:textSize="@dimen/px_20" />
-
-                <TextView
-                    android:id="@+id/Restaurant_RestaurantpinjunParice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2px"
-                    android:text="1234"
-                    android:textColor="@color/H4"
-                    android:textSize="@dimen/px_20" />
-
-
-                <com.zhy.autolayout.AutoLinearLayout
-                    android:visibility="gone"
-                    android:id="@+id/Restaurant_RestaurantIsLikeButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-
-                        android:id="@+id/Restaurant_RestaurantIsLikeImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/px_74"
-                        android:src="@mipmap/dianzan" />
-
-                    <TextView
-                        android:id="@+id/Restaurant_RestaurantIsLikeText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/px_10"
-                        android:text="收藏"
-                        android:textColor="@color/H4"
-                        android:textSize="@dimen/px_20" />
-                </com.zhy.autolayout.AutoLinearLayout>
-
             </com.zhy.autolayout.AutoLinearLayout>
-        </com.zhy.autolayout.AutoRelativeLayout>
 
-        <com.zhy.autolayout.AutoLinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/px_38"
-                android:src="@mipmap/location" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/Restaurant_RestaurantAdressText"
-                android:layout_width="wrap_content"
+                <View
+                    android:layout_width="@dimen/px_303"
+                    android:layout_height="2px"
+                    android:background="@color/H4"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_24"
+                    android:layout_marginRight="@dimen/px_24"
+                    android:text="不得不吃"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_24" />
+
+                <View
+                    android:layout_width="@dimen/px_303"
+                    android:layout_height="2px"
+                    android:background="@color/H4"></View>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Restaurant_BuDeBuChiRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ningxia"
-                android:textColor="@color/H4"
-                android:textSize="@dimen/px_20" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/px_303"
+                    android:layout_height="2px"
+                    android:background="@color/H4"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_24"
+                    android:layout_marginRight="@dimen/px_24"
+                    android:text="不容错过"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_24" />
+
+                <View
+                    android:layout_width="@dimen/px_303"
+                    android:layout_height="2px"
+                    android:background="@color/H4"></View>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Restaurant_BuRongCuoGuoRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
         </com.zhy.autolayout.AutoLinearLayout>
-
-        <com.zhy.autolayout.AutoLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <View
-            android:layout_width="@dimen/px_303"
-            android:layout_height="2px"
-            android:background="@color/H4"></View>
-
-        <TextView
-            android:layout_marginLeft="@dimen/px_24"
-            android:textSize="@dimen/px_24"
-            android:layout_marginRight="@dimen/px_24"
-            android:textColor="@color/H4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="不得不吃" />
-
-        <View
-            android:layout_width="@dimen/px_303"
-            android:layout_height="2px"
-            android:background="@color/H4"></View>
-    </com.zhy.autolayout.AutoLinearLayout>
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/Restaurant_BuDeBuChiRecycler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-        <com.zhy.autolayout.AutoLinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="@dimen/px_303"
-                android:layout_height="2px"
-                android:background="@color/H4"></View>
-
-            <TextView
-                android:layout_marginLeft="@dimen/px_24"
-                android:textSize="@dimen/px_24"
-                android:layout_marginRight="@dimen/px_24"
-                android:textColor="@color/H4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="不容错过" />
-
-            <View
-                android:layout_width="@dimen/px_303"
-                android:layout_height="2px"
-                android:background="@color/H4"></View>
-        </com.zhy.autolayout.AutoLinearLayout>
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/Restaurant_BuRongCuoGuoRecycler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-    </com.zhy.autolayout.AutoLinearLayout>
-</android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 </com.zhy.autolayout.AutoLinearLayout>
