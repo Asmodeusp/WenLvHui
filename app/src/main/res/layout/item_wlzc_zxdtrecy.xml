@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="28px"
+    android:layout_marginRight="@dimen/px_28"
     android:background="#ffffff"
     android:layout_marginTop="@dimen/px_28"
     android:orientation="vertical">
@@ -36,36 +37,6 @@
             android:textColor="@color/H3"
             android:textSize="@dimen/px_24" />
     </com.zhy.autolayout.AutoLinearLayout>
-
-    <com.zhy.autolayout.AutoLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10px"
-        android:layout_marginBottom="@dimen/px_24"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/item_wlzc_zxdtrecyDataText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="2018年12月60日"
-            android:textColor="@color/H4"
-            android:textSize="@dimen/px_18" />
-
-        <TextView
-            android:id="@+id/item_wlzc_zxdtrecyFromText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="转自：中国人民网"
-            android:textColor="@color/H4"
-            android:textSize="@dimen/px_18" />
-
-
-    </com.zhy.autolayout.AutoLinearLayout>
-
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,7 +47,34 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:orientation="vertical">
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="@dimen/px_24"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/item_wlzc_zxdtrecyDataText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="2018年12月60日"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+
+                <TextView
+                    android:id="@+id/item_wlzc_zxdtrecyFromText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="转自：中国人民网"
+                    android:textColor="@color/H4"
+                    android:textSize="@dimen/px_18" />
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
             <TextView
                 android:id="@+id/item_wlzc_zxdtrecyContentText"
                 android:layout_width="wrap_content"
@@ -88,7 +86,7 @@
 
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:weightSum="3">
 
                 <com.zhy.autolayout.AutoLinearLayout
@@ -169,14 +167,14 @@
 
         <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2">
 
             <ImageView
                 android:id="@+id/item_wlzc_zxdtrecyImage"
-                android:scaleType="fitXY"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:scaleType="centerCrop"
+                android:layout_width="@dimen/px_300"
+                android:layout_height="@dimen/px_185" />
         </com.zhy.autolayout.AutoLinearLayout>
 
     </com.zhy.autolayout.AutoLinearLayout>
@@ -185,5 +183,5 @@
         android:layout_marginTop="@dimen/px_6"
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:background="@color/H4"></View>
+        android:background="@color/H7"></View>
 </com.zhy.autolayout.AutoLinearLayout>

@@ -47,7 +47,7 @@
     </com.zhy.autolayout.AutoRelativeLayout>
 
     <ImageView
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:id="@+id/SpaceChangguanImage"
         android:layout_width="match_parent"
         android:layout_height="440px" />

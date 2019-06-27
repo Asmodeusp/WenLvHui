@@ -18,7 +18,7 @@ public class HomePageBean {
     /**
      * msg : 成功
      * code : 0
-     * data : {"product":[{"browse":712,"commentList":[],"createDate":1560182400000,"id":48,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>&nbsp;上世纪六、七十年代的宣传画现在看来实属\u201c另类文化\u201d，但它却是其时政治、文化生活中的\u201c宠儿\u201d。考察这些宣传画时，我们得将之置放在上世纪六、七十年代，即\u201c文革\u201d时期这一特别的时代背景中，因为\u201c文革\u201d首先是一场\u201c革命\u201d，而革命要靠宣传，这就促使了宣传画的勃生，由于宣传要求简明直截，这就规制了宣传画的写实性，然而，要强调的是写实又不等于真实，非但不等于真实，有时甚至是对真实的完全歪曲。最后要说明的是，宣传画价值的高低分野并不在于政治的介入与否，而在于是否有\u201c真的情感\u201d能够融入其中。\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/b8a82de1-35b8-46fa-aeb3-884faf83e98a.jpg","productName":"祖国山河一片红","productPoint":"送礼好评","shopsId":40,"status":1},{"browse":712,"commentList":[],"createDate":1560182400000,"id":47,"price":480,"priceDq":480,"productDatile":"<p><\/p><p><font size=\"5\">买家必看：<\/font><\/p><p><font size=\"5\">0001&nbsp;&nbsp; 实物拍摄，如实描述，不发次品<\/font><\/p><p><font size=\"5\">0002&nbsp;&nbsp; 尺寸大小：约长0.7米X宽0.5米（130多个品种。有几个品种的画要小一些，）<\/font><\/p><p><font size=\"5\">0003&nbsp;&nbsp; 年代后来印刷。纸张微黄。<\/font><\/p><p><font size=\"5\">0004&nbsp;&nbsp; 非老画，购6张不同的包邮（云贵桂，海南省，青甘宁，不包邮，四川，重庆，东北三省如果韵达能到的地方包邮。），购10张不同再加送一张。<\/font><\/p><p><font size=\"5\">0005&nbsp;&nbsp;&nbsp; 材质纸制，泛黄古色古香，轻微做旧。<\/font><\/p><p><font size=\"5\">0006&nbsp;&nbsp;&nbsp; 实物拍摄，无任何PS处理。<\/font><\/p><p><font size=\"5\">0007&nbsp;&nbsp; 售后，如果不满意请7天退换货。<\/font><\/p><p><font size=\"5\">0008&nbsp;&nbsp;&nbsp; 以下3种买家注意不要乱拍：<\/font><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/780b7b8b-e3c9-4a3a-b47d-5d3e14bbfbaf.jpg","productName":"主席伟人画像 ","productPoint":"送礼好评","shopsId":39,"status":1},{"browse":256,"commentList":[],"createDate":1560182400000,"id":46,"price":173.75,"priceDq":173.75,"productDatile":"<p><\/p><p>仿古做旧的字画<\/p><p>外围大小尺寸：158X58厘米<\/p><p>材料锦表，画芯宣纸<\/p><p><font size=\"4\"><\/font><font color=\"#000000\" size=\"5\" face=\"黑体\"><\/font><\/p><p><font size=\"4\"><\/font><font color=\"#000000\" size=\"5\" face=\"黑体\">温馨提示：<\/font><\/p><p><font size=\"4\"><\/font><font size=\"4\" face=\"黑体\">1，字画为仿古做旧，不是老的哦。亲们看清楚再拍哦！<\/font><\/p><p><font size=\"4\"><\/font><font size=\"4\" face=\"黑体\">2，字画均已精装装裱， 可直接悬挂。送礼或者自家客厅装饰都是很有档次的哦。<\/font><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/e53865d2-5376-408f-bb92-b459cbebe627.jpg","productName":"关公画像","productPoint":"送礼好评","shopsId":40,"status":1}],"wnelv":{"backupField1":0,"browse":6,"cotent":"<p><\/p><p><\/p><p><strong>央视网消息<\/strong>（新闻联播）：6月8日出版的《人民日报》将重刊习近平总书记17年前所作的《&lt;福州古厝&gt;序》。2002年，时任福建省省长的习近平同志，为《福州古厝》一书撰写了序言，以深邃的思考，生动的笔触，深刻揭示了戚公祠、马尾昭忠祠、林文忠祠、开元寺等古建筑的丰富文化内涵，作出了保护好古建筑、保护好文物就是保存历史、保存城市文脉的重要论断，阐明了经济发展和生态、人文环境保护同等重要的关系。对于我们更好传承文明、增强文明自信，具有重要而深远的意义。\r\n\r\n<\/p><p><\/p><p><br><\/p>","createDate":1560170361000,"id":162,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/10/32cf8ad9-b731-4996-8f16-63fb5248473a.jpg","source":"我手写的","status":"2","textType":1,"title":"《人民日报》将重刊习近平总书记《<福州古厝>序》","titleType":"金融"},"circleList":[{"browse":1234,"circleAdmin":57,"circleDetail":"本圈子是书法圈","circleName":"书法大家0","circleRegulations":"注意语言","createDate":1560069968000,"createUser":58,"dictionaryId":17,"id":15,"imgUrl":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/07/a5dd543e-d0a7-4298-9998-534650786256.jpg","regulationsDate":1560069968000}],"policy":{"browse":712,"commentList":[],"cotent":"<p><\/p><p><\/p><p><\/p><p><\/p><p>告诉广大人民要爱国<\/p><p><\/p><p><br><\/p><p><\/p><p><br><\/p><p><\/p><p><br><\/p>","createDate":1560188410000,"giveDefault":"1","id":125,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/255eb565-792d-4180-8898-78d0df509ed3.jpg","source":"我自己写的","status":"1","textType":1,"title":"拔河"}}
+     * data : {"product":[{"browse":56789,"commentList":[],"createDate":1561046400000,"id":66,"price":678,"priceDq":567,"productDatile":"<p><\/p><p>台风天会与关于ii'o'o'i<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/21/13ae31e2-9c50-42da-98a3-7e218c186ab0.jpg","productName":"AAA尼塞科都是","productPoint":"好看","shopsId":48,"status":1},{"browse":56789,"commentList":[],"createDate":1561046400000,"id":65,"price":678,"priceDq":567,"productDatile":"<p><\/p><p>发射点发射点<\/p>","productImage":"","productName":"牛奶巧克力","productPoint":"好看","shopsId":48,"status":1},{"browse":56789,"commentList":[],"createDate":1561046400000,"id":64,"price":678,"priceDq":567,"productDatile":"<p><\/p><p><\/p><p>法撒旦发<\/p><p><\/p><p><br><\/p>","productImage":"","productName":"AAA牛奶巧克力","productPoint":"好看","shopsId":45,"status":1}],"wnelv":{"backupField1":0,"browse":17,"cotent":"<p><\/p><p><\/p><p><strong>央视网消息<\/strong>（新闻联播）：6月8日出版的《人民日报》将重刊习近平总书记17年前所作的《&lt;福州古厝&gt;序》。2002年，时任福建省省长的习近平同志，为《福州古厝》一书撰写了序言，以深邃的思考，生动的笔触，深刻揭示了戚公祠、马尾昭忠祠、林文忠祠、开元寺等古建筑的丰富文化内涵，作出了保护好古建筑、保护好文物就是保存历史、保存城市文脉的重要论断，阐明了经济发展和生态、人文环境保护同等重要的关系。对于我们更好传承文明、增强文明自信，具有重要而深远的意义。\r\n\r\n<\/p><p><\/p><p><br><\/p>","createDate":1560170361000,"id":162,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/10/32cf8ad9-b731-4996-8f16-63fb5248473a.jpg","source":"我手写的","status":"2","textType":1,"title":"《人民日报》将重刊习近平总书记《<福州古厝>序》","titleType":"金融"},"circleList":[{"browse":1234,"circleAdmin":57,"circleDetail":"本圈子是书法圈","circleName":"亡暮森南","circleRegulations":"本群群规:\\n\r\n        1.所有人进群请加小区和房号。\\n\r\n        2.请互相尊重，杜绝人身攻击，如有脏话出口，恶意怼人的立即踢。\\n\r\n        3.我们是南站雨花整体 ，学区讨论也是南站雨花整体，不区分小区，恶意拉帮结派，不利于团结的立即踢。\\n\r\n        4.如对个人有异议，请理性讨论，不要上升到针对小区的争论和攻击，大家就事论事，不要牵连无辜。\\n\r\n        5.对学区不利的意见可以先跟管理员或群主私聊，不要大群讨论，以防被人利用。","createDate":1560217777000,"createUser":58,"dictionaryId":17,"id":15,"imgUrl":"http://pic1.win4000.com/wallpaper/9/583e3db973764.jpg","regulationsDate":1560217777000}],"policy":{"browse":90,"commentList":[],"cotent":"<p><\/p><p>法撒旦发<\/p>","createDate":1561108240000,"giveDefault":"2","id":132,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/21/b71ff954-6970-4aed-aa8b-0c678f9e2413.jpg","source":"自己创建","status":"1","textType":2,"title":"拉花花"}}
      */
 
     private String msg;
@@ -51,10 +51,10 @@ public class HomePageBean {
 
     public static class DataBean {
         /**
-         * product : [{"browse":712,"commentList":[],"createDate":1560182400000,"id":48,"price":129,"priceDq":129,"productDatile":"<p><\/p><p>&nbsp;上世纪六、七十年代的宣传画现在看来实属\u201c另类文化\u201d，但它却是其时政治、文化生活中的\u201c宠儿\u201d。考察这些宣传画时，我们得将之置放在上世纪六、七十年代，即\u201c文革\u201d时期这一特别的时代背景中，因为\u201c文革\u201d首先是一场\u201c革命\u201d，而革命要靠宣传，这就促使了宣传画的勃生，由于宣传要求简明直截，这就规制了宣传画的写实性，然而，要强调的是写实又不等于真实，非但不等于真实，有时甚至是对真实的完全歪曲。最后要说明的是，宣传画价值的高低分野并不在于政治的介入与否，而在于是否有\u201c真的情感\u201d能够融入其中。\r\n\r\n<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/b8a82de1-35b8-46fa-aeb3-884faf83e98a.jpg","productName":"祖国山河一片红","productPoint":"送礼好评","shopsId":40,"status":1},{"browse":712,"commentList":[],"createDate":1560182400000,"id":47,"price":480,"priceDq":480,"productDatile":"<p><\/p><p><font size=\"5\">买家必看：<\/font><\/p><p><font size=\"5\">0001&nbsp;&nbsp; 实物拍摄，如实描述，不发次品<\/font><\/p><p><font size=\"5\">0002&nbsp;&nbsp; 尺寸大小：约长0.7米X宽0.5米（130多个品种。有几个品种的画要小一些，）<\/font><\/p><p><font size=\"5\">0003&nbsp;&nbsp; 年代后来印刷。纸张微黄。<\/font><\/p><p><font size=\"5\">0004&nbsp;&nbsp; 非老画，购6张不同的包邮（云贵桂，海南省，青甘宁，不包邮，四川，重庆，东北三省如果韵达能到的地方包邮。），购10张不同再加送一张。<\/font><\/p><p><font size=\"5\">0005&nbsp;&nbsp;&nbsp; 材质纸制，泛黄古色古香，轻微做旧。<\/font><\/p><p><font size=\"5\">0006&nbsp;&nbsp;&nbsp; 实物拍摄，无任何PS处理。<\/font><\/p><p><font size=\"5\">0007&nbsp;&nbsp; 售后，如果不满意请7天退换货。<\/font><\/p><p><font size=\"5\">0008&nbsp;&nbsp;&nbsp; 以下3种买家注意不要乱拍：<\/font><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/780b7b8b-e3c9-4a3a-b47d-5d3e14bbfbaf.jpg","productName":"主席伟人画像 ","productPoint":"送礼好评","shopsId":39,"status":1},{"browse":256,"commentList":[],"createDate":1560182400000,"id":46,"price":173.75,"priceDq":173.75,"productDatile":"<p><\/p><p>仿古做旧的字画<\/p><p>外围大小尺寸：158X58厘米<\/p><p>材料锦表，画芯宣纸<\/p><p><font size=\"4\"><\/font><font color=\"#000000\" size=\"5\" face=\"黑体\"><\/font><\/p><p><font size=\"4\"><\/font><font color=\"#000000\" size=\"5\" face=\"黑体\">温馨提示：<\/font><\/p><p><font size=\"4\"><\/font><font size=\"4\" face=\"黑体\">1，字画为仿古做旧，不是老的哦。亲们看清楚再拍哦！<\/font><\/p><p><font size=\"4\"><\/font><font size=\"4\" face=\"黑体\">2，字画均已精装装裱， 可直接悬挂。送礼或者自家客厅装饰都是很有档次的哦。<\/font><\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/e53865d2-5376-408f-bb92-b459cbebe627.jpg","productName":"关公画像","productPoint":"送礼好评","shopsId":40,"status":1}]
-         * wnelv : {"backupField1":0,"browse":6,"cotent":"<p><\/p><p><\/p><p><strong>央视网消息<\/strong>（新闻联播）：6月8日出版的《人民日报》将重刊习近平总书记17年前所作的《&lt;福州古厝&gt;序》。2002年，时任福建省省长的习近平同志，为《福州古厝》一书撰写了序言，以深邃的思考，生动的笔触，深刻揭示了戚公祠、马尾昭忠祠、林文忠祠、开元寺等古建筑的丰富文化内涵，作出了保护好古建筑、保护好文物就是保存历史、保存城市文脉的重要论断，阐明了经济发展和生态、人文环境保护同等重要的关系。对于我们更好传承文明、增强文明自信，具有重要而深远的意义。\r\n\r\n<\/p><p><\/p><p><br><\/p>","createDate":1560170361000,"id":162,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/10/32cf8ad9-b731-4996-8f16-63fb5248473a.jpg","source":"我手写的","status":"2","textType":1,"title":"《人民日报》将重刊习近平总书记《<福州古厝>序》","titleType":"金融"}
-         * circleList : [{"browse":1234,"circleAdmin":57,"circleDetail":"本圈子是书法圈","circleName":"书法大家0","circleRegulations":"注意语言","createDate":1560069968000,"createUser":58,"dictionaryId":17,"id":15,"imgUrl":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/07/a5dd543e-d0a7-4298-9998-534650786256.jpg","regulationsDate":1560069968000}]
-         * policy : {"browse":712,"commentList":[],"cotent":"<p><\/p><p><\/p><p><\/p><p><\/p><p>告诉广大人民要爱国<\/p><p><\/p><p><br><\/p><p><\/p><p><br><\/p><p><\/p><p><br><\/p>","createDate":1560188410000,"giveDefault":"1","id":125,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/255eb565-792d-4180-8898-78d0df509ed3.jpg","source":"我自己写的","status":"1","textType":1,"title":"拔河"}
+         * product : [{"browse":56789,"commentList":[],"createDate":1561046400000,"id":66,"price":678,"priceDq":567,"productDatile":"<p><\/p><p>台风天会与关于ii'o'o'i<\/p>","productImage":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/21/13ae31e2-9c50-42da-98a3-7e218c186ab0.jpg","productName":"AAA尼塞科都是","productPoint":"好看","shopsId":48,"status":1},{"browse":56789,"commentList":[],"createDate":1561046400000,"id":65,"price":678,"priceDq":567,"productDatile":"<p><\/p><p>发射点发射点<\/p>","productImage":"","productName":"牛奶巧克力","productPoint":"好看","shopsId":48,"status":1},{"browse":56789,"commentList":[],"createDate":1561046400000,"id":64,"price":678,"priceDq":567,"productDatile":"<p><\/p><p><\/p><p>法撒旦发<\/p><p><\/p><p><br><\/p>","productImage":"","productName":"AAA牛奶巧克力","productPoint":"好看","shopsId":45,"status":1}]
+         * wnelv : {"backupField1":0,"browse":17,"cotent":"<p><\/p><p><\/p><p><strong>央视网消息<\/strong>（新闻联播）：6月8日出版的《人民日报》将重刊习近平总书记17年前所作的《&lt;福州古厝&gt;序》。2002年，时任福建省省长的习近平同志，为《福州古厝》一书撰写了序言，以深邃的思考，生动的笔触，深刻揭示了戚公祠、马尾昭忠祠、林文忠祠、开元寺等古建筑的丰富文化内涵，作出了保护好古建筑、保护好文物就是保存历史、保存城市文脉的重要论断，阐明了经济发展和生态、人文环境保护同等重要的关系。对于我们更好传承文明、增强文明自信，具有重要而深远的意义。\r\n\r\n<\/p><p><\/p><p><br><\/p>","createDate":1560170361000,"id":162,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/10/32cf8ad9-b731-4996-8f16-63fb5248473a.jpg","source":"我手写的","status":"2","textType":1,"title":"《人民日报》将重刊习近平总书记《<福州古厝>序》","titleType":"金融"}
+         * circleList : [{"browse":1234,"circleAdmin":57,"circleDetail":"本圈子是书法圈","circleName":"亡暮森南","circleRegulations":"本群群规:\\n\r\n        1.所有人进群请加小区和房号。\\n\r\n        2.请互相尊重，杜绝人身攻击，如有脏话出口，恶意怼人的立即踢。\\n\r\n        3.我们是南站雨花整体 ，学区讨论也是南站雨花整体，不区分小区，恶意拉帮结派，不利于团结的立即踢。\\n\r\n        4.如对个人有异议，请理性讨论，不要上升到针对小区的争论和攻击，大家就事论事，不要牵连无辜。\\n\r\n        5.对学区不利的意见可以先跟管理员或群主私聊，不要大群讨论，以防被人利用。","createDate":1560217777000,"createUser":58,"dictionaryId":17,"id":15,"imgUrl":"http://pic1.win4000.com/wallpaper/9/583e3db973764.jpg","regulationsDate":1560217777000}]
+         * policy : {"browse":90,"commentList":[],"cotent":"<p><\/p><p>法撒旦发<\/p>","createDate":1561108240000,"giveDefault":"2","id":132,"image":"http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/21/b71ff954-6970-4aed-aa8b-0c678f9e2413.jpg","source":"自己创建","status":"1","textType":2,"title":"拉花花"}
          */
 
         private WnelvBean wnelv;
@@ -97,7 +97,7 @@ public class HomePageBean {
         public static class WnelvBean {
             /**
              * backupField1 : 0
-             * browse : 6
+             * browse : 17
              * cotent : <p></p><p></p><p><strong>央视网消息</strong>（新闻联播）：6月8日出版的《人民日报》将重刊习近平总书记17年前所作的《&lt;福州古厝&gt;序》。2002年，时任福建省省长的习近平同志，为《福州古厝》一书撰写了序言，以深邃的思考，生动的笔触，深刻揭示了戚公祠、马尾昭忠祠、林文忠祠、开元寺等古建筑的丰富文化内涵，作出了保护好古建筑、保护好文物就是保存历史、保存城市文脉的重要论断，阐明了经济发展和生态、人文环境保护同等重要的关系。对于我们更好传承文明、增强文明自信，具有重要而深远的意义。
 
              </p><p></p><p><br></p>
@@ -214,17 +214,17 @@ public class HomePageBean {
 
         public static class PolicyBean {
             /**
-             * browse : 712
+             * browse : 90
              * commentList : []
-             * cotent : <p></p><p></p><p></p><p></p><p>告诉广大人民要爱国</p><p></p><p><br></p><p></p><p><br></p><p></p><p><br></p>
-             * createDate : 1560188410000
-             * giveDefault : 1
-             * id : 125
-             * image : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/255eb565-792d-4180-8898-78d0df509ed3.jpg
-             * source : 我自己写的
+             * cotent : <p></p><p>法撒旦发</p>
+             * createDate : 1561108240000
+             * giveDefault : 2
+             * id : 132
+             * image : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/21/b71ff954-6970-4aed-aa8b-0c678f9e2413.jpg
+             * source : 自己创建
              * status : 1
-             * textType : 1
-             * title : 拔河
+             * textType : 2
+             * title : 拉花花
              */
 
             private int browse;
@@ -330,19 +330,17 @@ public class HomePageBean {
 
         public static class ProductBean {
             /**
-             * browse : 712
+             * browse : 56789
              * commentList : []
-             * createDate : 1560182400000
-             * id : 48
-             * price : 129
-             * priceDq : 129
-             * productDatile : <p></p><p>&nbsp;上世纪六、七十年代的宣传画现在看来实属“另类文化”，但它却是其时政治、文化生活中的“宠儿”。考察这些宣传画时，我们得将之置放在上世纪六、七十年代，即“文革”时期这一特别的时代背景中，因为“文革”首先是一场“革命”，而革命要靠宣传，这就促使了宣传画的勃生，由于宣传要求简明直截，这就规制了宣传画的写实性，然而，要强调的是写实又不等于真实，非但不等于真实，有时甚至是对真实的完全歪曲。最后要说明的是，宣传画价值的高低分野并不在于政治的介入与否，而在于是否有“真的情感”能够融入其中。
-
-             </p>
-             * productImage : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/11/b8a82de1-35b8-46fa-aeb3-884faf83e98a.jpg
-             * productName : 祖国山河一片红
-             * productPoint : 送礼好评
-             * shopsId : 40
+             * createDate : 1561046400000
+             * id : 66
+             * price : 678
+             * priceDq : 567
+             * productDatile : <p></p><p>台风天会与关于ii'o'o'i</p>
+             * productImage : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/21/13ae31e2-9c50-42da-98a3-7e218c186ab0.jpg
+             * productName : AAA尼塞科都是
+             * productPoint : 好看
+             * shopsId : 48
              * status : 1
              */
 
@@ -461,14 +459,19 @@ public class HomePageBean {
              * browse : 1234
              * circleAdmin : 57
              * circleDetail : 本圈子是书法圈
-             * circleName : 书法大家0
-             * circleRegulations : 注意语言
-             * createDate : 1560069968000
+             * circleName : 亡暮森南
+             * circleRegulations : 本群群规:\n
+             1.所有人进群请加小区和房号。\n
+             2.请互相尊重，杜绝人身攻击，如有脏话出口，恶意怼人的立即踢。\n
+             3.我们是南站雨花整体 ，学区讨论也是南站雨花整体，不区分小区，恶意拉帮结派，不利于团结的立即踢。\n
+             4.如对个人有异议，请理性讨论，不要上升到针对小区的争论和攻击，大家就事论事，不要牵连无辜。\n
+             5.对学区不利的意见可以先跟管理员或群主私聊，不要大群讨论，以防被人利用。
+             * createDate : 1560217777000
              * createUser : 58
              * dictionaryId : 17
              * id : 15
-             * imgUrl : http://47.92.174.98:8011/uploadflv/export_xls?file=/var/yimen/upload//2019/06/07/a5dd543e-d0a7-4298-9998-534650786256.jpg
-             * regulationsDate : 1560069968000
+             * imgUrl : http://pic1.win4000.com/wallpaper/9/583e3db973764.jpg
+             * regulationsDate : 1560217777000
              */
 
             private int browse;

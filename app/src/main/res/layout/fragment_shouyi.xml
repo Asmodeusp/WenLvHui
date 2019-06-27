@@ -60,7 +60,7 @@
                         <ImageView
                             android:id="@+id/ShouYi_FirtImage"
                             android:layout_width="@dimen/px_316"
-                            android:scaleType="fitXY"
+                            android:scaleType="centerCrop"
                             android:layout_height="391px"
                             android:layout_marginLeft="@dimen/px_28"
                             android:tint="#444B4646" />
@@ -91,7 +91,7 @@
                             android:layout_weight="1">
 
                             <ImageView
-                                android:scaleType="fitXY"
+                                android:scaleType="centerCrop"
                                 android:id="@+id/ShouYi_SecondImage"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -116,7 +116,7 @@
                             android:layout_weight="1">
 
                             <ImageView
-                                android:scaleType="fitXY"
+                                android:scaleType="centerCrop"
                                 android:id="@+id/ShouYi_ThirdImage"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"

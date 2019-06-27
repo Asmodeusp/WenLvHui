@@ -4,6 +4,7 @@ package com.sugang.wenlvhui.view.myself;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,8 +85,8 @@ public class MyselfFragment extends BaseFragment {
     protected void init() {
         String Head = (String) SPUtils.get(getActivity(), SPKey.HEAD_PIC, "");
         Glide.with(getActivity()).load(Head).into(MyselfUserHeandImage);
-        String username = (String) SPUtils.get(getActivity(), SPKey.USERNAME, "");
-        MyselfUserNameText.setText(username);
+//        Log.d("MyselfFragment", "SPUtils.get(getActivity(), SPKey.USERNAME " + SPUtils.get(getActivity(), SPKey.USERNAME, ""));
+//        MyselfUserNameText.setText(username);
         MyselfRenZhengCenterButton.setVisibility(View.GONE);
     }
 

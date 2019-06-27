@@ -92,9 +92,9 @@ public class Urls {
     // 好书推荐  最新最热
     public static final String HSTJ_ZXZR = "book/book_index_new";
     //书籍详情
-    public static final String BOOKDETALIS = " book/findone";
+    public static final String BOOKDETALIS = "book/findone";
     //点赞
-    public static final String ISLIKE = "/ymup/insert";
+    public static final String ISLIKE = "ymup/insert";
     //评论
     public static final String COMMENTLIST ="ymComment/findAll";
     //添加评论

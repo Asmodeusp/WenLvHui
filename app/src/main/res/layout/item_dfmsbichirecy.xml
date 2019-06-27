@@ -10,7 +10,7 @@
         android:layout_width="145px"
         android:layout_height="145px"
         android:layout_marginLeft="28px"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"

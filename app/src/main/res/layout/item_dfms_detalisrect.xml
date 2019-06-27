@@ -12,7 +12,7 @@
         android:id="@+id/item_dfms_detalisrectImage"
         android:layout_width="@dimen/px_323"
         android:layout_height="@dimen/px_268"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/item_dfms_detalisrectName"

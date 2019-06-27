@@ -52,7 +52,7 @@
                     android:id="@+id/Restaurant_BackgroundImage"
                     android:layout_width="match_parent"
                     android:layout_height="429px"
-                    android:scaleType="fitXY" />
+                    android:scaleType="centerCrop" />
 
                 <ImageView
                     android:id="@+id/Restaurant_HeadImage"

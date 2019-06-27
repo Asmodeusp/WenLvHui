@@ -44,7 +44,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="480px"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/haizei" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -176,7 +176,7 @@
                     android:textSize="@dimen/px_22" />
 
                 <ImageView
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:src="@mipmap/timg"
                     android:id="@+id/item_spacePageImage"
                     android:layout_width="match_parent"

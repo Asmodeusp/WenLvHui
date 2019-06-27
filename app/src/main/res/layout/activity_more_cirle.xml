@@ -75,7 +75,8 @@
             android:layout_marginTop="@dimen/px_30">
 
             <ImageView
-                android:layout_width="@dimen/px_178"
+                android:layout_width="@dimen/px_200"
+                android:scaleType="fitXY"
                 android:src="@mipmap/moreone"
                 android:layout_height="100px" />
 
@@ -85,6 +86,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="@dimen/px_400"
                     android:layout_height="wrap_content"
                     android:text="这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍...."
@@ -92,6 +94,7 @@
                     android:textSize="@dimen/px_18" />
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/px_20"
@@ -143,8 +146,8 @@
 
             <ImageView
                 android:src="@mipmap/moretwo"
-                android:scaleType="centerCrop"
-                android:layout_width="@dimen/px_178"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/px_200"
                 android:layout_height="100px" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -153,6 +156,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="@dimen/px_400"
                     android:layout_height="wrap_content"
                     android:text="这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍...."
@@ -160,6 +164,7 @@
                     android:textSize="@dimen/px_18" />
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/px_20"
@@ -210,9 +215,9 @@
             android:layout_marginTop="@dimen/px_30">
 
             <ImageView
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@mipmap/morethree"
-                android:layout_width="@dimen/px_178"
+                android:layout_width="@dimen/px_200"
                 android:layout_height="100px" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -221,6 +226,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="@dimen/px_400"
                     android:layout_height="wrap_content"
                     android:text="这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍...."
@@ -228,6 +234,7 @@
                     android:textSize="@dimen/px_18" />
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/px_20"
@@ -278,9 +285,9 @@
             android:layout_marginTop="@dimen/px_30">
 
             <ImageView
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@mipmap/morefour"
-                android:layout_width="@dimen/px_178"
+                android:layout_width="@dimen/px_200"
                 android:layout_height="100px" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -289,6 +296,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="@dimen/px_400"
                     android:layout_height="wrap_content"
                     android:text="这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍...."
@@ -296,6 +304,7 @@
                     android:textSize="@dimen/px_18" />
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/px_20"
@@ -347,8 +356,8 @@
 
             <ImageView
                 android:src="@mipmap/morefive"
-                android:scaleType="centerCrop"
-                android:layout_width="@dimen/px_178"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/px_200"
                 android:layout_height="match_parent" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -357,6 +366,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="@dimen/px_400"
                     android:layout_height="wrap_content"
                     android:text="这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍...."
@@ -364,6 +374,7 @@
                     android:textSize="@dimen/px_18" />
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/px_20"
@@ -415,8 +426,8 @@
 
             <ImageView
                 android:src="@mipmap/moresix"
-                android:scaleType="centerCrop"
-                android:layout_width="@dimen/px_178"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/px_200"
                 android:layout_height="100px" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -425,6 +436,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="@dimen/px_400"
                     android:layout_height="wrap_content"
                     android:text="这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍这里是圈子介绍...."
@@ -432,6 +444,7 @@
                     android:textSize="@dimen/px_18" />
 
                 <TextView
+                    android:layout_marginLeft="@dimen/px_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/px_20"

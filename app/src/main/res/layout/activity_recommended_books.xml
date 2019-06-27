@@ -117,7 +117,7 @@
                         android:id="@+id/RecommendedBooks_HstjBookImage"
                         android:layout_width="@dimen/px_176"
                         android:layout_height="@dimen/px_220"
-                        android:scaleType="fitXY"
+                        android:scaleType="centerCrop"
                         android:src="@mipmap/photo" />
 
                     <TextView

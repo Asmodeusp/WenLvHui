@@ -33,7 +33,7 @@
             <ImageView
                 android:id="@+id/Activity_HeadImage"
                 android:layout_width="match_parent"
-                android:layout_height="382px"
+                android:layout_height="@dimen/px_358"
                 android:scaleType="fitXY" />
 
             <com.zhy.autolayout.AutoLinearLayout

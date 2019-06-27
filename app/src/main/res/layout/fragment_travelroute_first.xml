@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="@dimen/px_248"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/zmhy" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -55,7 +55,7 @@
             <ImageView
                 android:layout_width="@dimen/px_248"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/njhl" />
 
             <com.zhy.autolayout.AutoLinearLayout
@@ -91,7 +91,7 @@
             <ImageView
                 android:layout_width="@dimen/px_248"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/rqhb" />
 
             <com.zhy.autolayout.AutoLinearLayout

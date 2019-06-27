@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:id="@+id/ShouyiDetailFlyBanner"
                     android:layout_width="match_parent"
                     android:layout_height="821px"/>

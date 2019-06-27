@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:id="@+id/item_wcfy_jiangren_listImage"
         android:layout_width="@dimen/px_324"
         android:layout_height="@dimen/px_272" />

@@ -91,10 +91,10 @@ public class SetPasswordActivity extends BaseActivity<RegisterPresenterImp> impl
                 SPUtils.put(SetPasswordActivity.this, SPKey.USERNAME, user.getUsername());
             }
             if (user.getHeadPic() != null) {
-                SPUtils.put(SetPasswordActivity.this, SPKey.USERNAME, user.getHeadPic());
+                SPUtils.put(SetPasswordActivity.this, SPKey.HEAD_PIC, user.getHeadPic());
             }
             if (user.getUsertype() != 0) {
-                SPUtils.put(SetPasswordActivity.this, SPKey.USERNAME, user.getUsertype());
+                SPUtils.put(SetPasswordActivity.this, SPKey.USER_TYPE, user.getUsertype());
             }
             SPUtils.put(SetPasswordActivity.this, SPKey.IS_LOGIN, true);
             startActivity(new Intent(SetPasswordActivity.this, MainActivity.class));

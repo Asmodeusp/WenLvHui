@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.recker.flybanner.FlyBanner;
 import com.sugang.wenlvhui.R;
 import com.sugang.wenlvhui.base.BaseFragment;
@@ -61,17 +62,17 @@ public class HomePageFragment extends BaseFragment<HomePagePresenterImp> impleme
     View FeatrueOne;
     @BindView(R.id.Featrue_Two)
     View FeatrueTwo;
-    @BindView(R.id.YouHui_Image)
-    ImageView YouHuiImage;
-    @BindView(R.id.HomePager_YouHuijuanButton)
-    AutoLinearLayout HomePagerYouHuijuanButton;
-    @BindView(R.id.HomePager_WeiJiangxinButton)
-    AutoLinearLayout HomePagerWeiJiangxinButton;
-    @BindView(R.id.HomePager_GeiShiGuangButton)
-    AutoLinearLayout HomePagerGeiShiGuangButton;
-    @BindView(R.id.HomePager_WeiJiangxinImage)
-    ImageView HomePagerWeiJiangxinImage;
-    @BindView(R.id.HomePager_GeiShiGuangImage)
+//    @BindView(R.id.YouHui_Image)
+//    ImageView YouHuiImage;
+//    @BindView(R.id.HomePager_YouHuijuanButton)
+//    AutoLinearLayout HomePagerYouHuijuanButton;
+//    @BindView(R.id.HomePager_WeiJiangxinButton)
+//    AutoLinearLayout HomePagerWeiJiangxinButton;
+//    @BindView(R.id.HomePager_GeiShiGuangButton)
+//    AutoLinearLayout HomePagerGeiShiGuangButton;
+//    @BindView(R.id.HomePager_WeiJiangxinImage)
+//    ImageView HomePagerWeiJiangxinImage;
+//    @BindView(R.id.HomePager_GeiShiGuangImage)
     ImageView HomePagerGeiShiGuangImage;
     @BindView(R.id.HomePager_ZuiXinHuoDongMoreButton)
     AutoLinearLayout HomePagerZuiXinHuoDongMoreButton;
@@ -129,9 +130,9 @@ public class HomePageFragment extends BaseFragment<HomePagePresenterImp> impleme
             public void onPageSelected(int i) {
                 if (i == 0) {
                     FeatrueOne.setBackgroundColor(getResources().getColor(R.color.H2));
-                    FeatrueTwo.setBackgroundColor(getResources().getColor(R.color.H1));
+                    FeatrueTwo.setBackgroundColor(getResources().getColor(R.color.H7));
                 } else {
-                    FeatrueOne.setBackgroundColor(getResources().getColor(R.color.H1));
+                    FeatrueOne.setBackgroundColor(getResources().getColor(R.color.H7));
                     FeatrueTwo.setBackgroundColor(getResources().getColor(R.color.H2));
                 }
 
@@ -150,21 +151,10 @@ public class HomePageFragment extends BaseFragment<HomePagePresenterImp> impleme
         presenter.getHomePageBeanData();
     }
 
-    @OnClick({R.id.HomePager_YouHuijuanButton, R.id.HomePager_WeiJiangxinButton, R.id.HomePager_GeiShiGuangButton, R.id.HomePager_ZuiXinHuoDongMoreButton, R.id.HomePager_ZuiXinHuoDongImage, R.id.HomePager_ZuiXinZiXunMoreButton, R.id.HomePager_ZhengCeImage})
+    @OnClick({ R.id.HomePager_ZuiXinHuoDongMoreButton, R.id.HomePager_ZuiXinHuoDongImage, R.id.HomePager_ZuiXinZiXunMoreButton, R.id.HomePager_ZhengCeImage})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.HomePager_YouHuijuanButton:
-                SPUtils.put(getActivity(), SPKey.PRODUCT_ID, youHuiid);
-                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
-                break;
-            case R.id.HomePager_WeiJiangxinButton:
-                SPUtils.put(getActivity(), SPKey.PRODUCT_ID, weiJiangxinid);
-                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
-                break;
-            case R.id.HomePager_GeiShiGuangButton:
-                SPUtils.put(getActivity(), SPKey.PRODUCT_ID, geiShiGuangid);
-                startActivity(new Intent(getActivity(), ShouyiDetailActivity.class));
-                break;
+
             case R.id.HomePager_ZuiXinHuoDongMoreButton:
                 SPUtils.put(getActivity(), SPKey.ACTIVITYTYPE, "演出");
                 startActivity(new Intent(getActivity(), ActivityListActivity.class));
@@ -205,14 +195,11 @@ public class HomePageFragment extends BaseFragment<HomePagePresenterImp> impleme
                 }
             });
 
-            Glide.with(getActivity()).load(data.getProduct().get(0).getProductImage()).into(YouHuiImage);
-            youHuiid = data.getProduct().get(0).getId();
-            Glide.with(getActivity()).load(data.getProduct().get(1).getProductImage()).into(HomePagerWeiJiangxinImage);
-            weiJiangxinid = data.getProduct().get(1).getId();
-            Glide.with(getActivity()).load(data.getProduct().get(2).getProductImage()).into(HomePagerGeiShiGuangImage);
-            geiShiGuangid = data.getProduct().get(2).getId();
+
+//            Glide.with(getActivity()).load(data.getProduct().get(2).getProductImage()).into(HomePagerGeiShiGuangImage);
+
             Glide.with(getActivity()).load(data.getPolicy().getImage()).into(HomePagerZuiXinHuoDongImage);
-            policyid = data.getPolicy().getId();
+
             HomePagerZhengCeTitleText.setText(data.getWnelv().getTitle());
             HomePagerZhengCeTimeText.setText(TimeUtils.getBirthdatyData(data.getWnelv().getCreateDate()));
             HomePagerZhengCeAuthorText.setText(data.getWnelv().getStatus());

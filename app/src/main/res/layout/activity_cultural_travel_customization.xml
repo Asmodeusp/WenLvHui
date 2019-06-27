@@ -83,7 +83,7 @@
                     android:id="@+id/CulturalTravelCustomization_Image"
                     android:layout_width="match_parent"
                     android:layout_height="376px"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:src="@mipmap/beijin" />
 
             </com.zhy.autolayout.AutoRelativeLayout>

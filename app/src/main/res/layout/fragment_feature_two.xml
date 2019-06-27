@@ -2,12 +2,13 @@
 <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="115px"
     android:weightSum="4"
     android:background="#ffffff"
     tools:context=".view.home.features.FeatureTwoFragment">
 <!--文旅榜单-->
     <com.zhy.autolayout.AutoLinearLayout
+        android:layout_marginLeft="@dimen/px_40"
         android:id="@+id/Featrue_LiteraryBrigadeListButton"
         android:layout_width="0dp"
         android:orientation="vertical"
@@ -19,6 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:layout_marginTop="@dimen/px_10"
+            android:textSize="@dimen/px_21"
+            android:textColor="#000"
             android:layout_gravity="center_horizontal"
             android:text="文旅榜单"
             android:layout_width="wrap_content"
@@ -39,6 +43,9 @@
         <TextView
             android:layout_gravity="center_horizontal"
             android:text="文旅定制"
+            android:layout_marginTop="@dimen/px_10"
+            android:textSize="@dimen/px_21"
+            android:textColor="#000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </com.zhy.autolayout.AutoLinearLayout>
@@ -55,6 +62,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:layout_marginTop="@dimen/px_10"
+            android:textSize="@dimen/px_21"
+            android:textColor="#000"
             android:layout_gravity="center_horizontal"
             android:text="文旅政策"
             android:layout_width="wrap_content"
@@ -62,6 +72,7 @@
     </com.zhy.autolayout.AutoLinearLayout>
     <!--好书推荐-->
     <com.zhy.autolayout.AutoLinearLayout
+        android:layout_marginRight="@dimen/px_40"
         android:id="@+id/Featrue_RecommendedBooksButton"
         android:layout_width="0dp"
         android:orientation="vertical"
@@ -73,6 +84,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:layout_marginTop="@dimen/px_10"
+            android:textSize="@dimen/px_21"
+            android:textColor="#000"
             android:layout_gravity="center_horizontal"
             android:text="好书推荐"
             android:layout_width="wrap_content"

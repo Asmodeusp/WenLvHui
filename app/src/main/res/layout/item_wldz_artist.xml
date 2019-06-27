@@ -6,7 +6,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:id="@+id/item_wldz_artist_Image"
         android:layout_width="220px"
         android:layout_height="220px"

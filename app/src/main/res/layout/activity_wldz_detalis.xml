@@ -45,7 +45,7 @@
             android:id="@+id/WldzDetalis_BackgroundImage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px_422"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                 android:layout_width="@dimen/px_115"
                 android:layout_height="@dimen/px_115"
                 android:layout_marginLeft="@dimen/px_28"
-                android:scaleType="fitXY" />
+                android:scaleType="centerCrop" />
 
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"

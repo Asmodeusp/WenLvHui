@@ -24,7 +24,7 @@
                 android:layout_marginLeft="@dimen/px_28"
                 android:layout_width="match_parent"
                 android:layout_height="440px"
-                android:scaleType="fitXY" />
+                android:scaleType="centerCrop" />
 
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"
@@ -196,7 +196,7 @@
                 android:layout_marginLeft="@dimen/px_28"
                 android:layout_marginTop="@dimen/px_30"
                 android:layout_marginRight="@dimen/px_28"
-                android:scaleType="fitXY" />
+                android:scaleType="centerCrop" />
 
             <View
                 android:layout_width="match_parent"

@@ -15,6 +15,7 @@
         android:layout_marginTop="@dimen/px_34"
         android:layout_marginBottom="@dimen/px_7"
         android:ellipsize="end"
+
         android:singleLine="true"
         android:text="三体"
         android:textColor="@color/H3"

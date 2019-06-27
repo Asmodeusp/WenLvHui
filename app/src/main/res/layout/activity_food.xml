@@ -65,7 +65,7 @@
             <ImageView
                 android:layout_marginTop="@dimen/px_30"
                 android:id="@+id/Food_FoodIamge"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:layout_marginRight="@dimen/px_28"
                 android:layout_marginLeft="@dimen/px_28"
                 android:layout_width="match_parent"
